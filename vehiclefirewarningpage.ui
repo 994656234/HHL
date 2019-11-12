@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VehicleFireWarningPage</class>
+ <widget class="QWidget" name="VehicleFireWarningPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>211</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: rgb(0,0,50);
+}
+QLabel
+{
+
+font:24px,&quot;微软雅黑&quot;;
+border:1px solid black;
+}</string>
+  </property>
+  <widget class="QLabel" name="LBLMP1">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLM1">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLM2">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTC1">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning1_1">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>110</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning1_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>110</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning1_3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>150</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning1_4">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>60</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning2_3">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>100</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning2_4">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>110</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning_cab1_1">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>150</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning_cab1_2">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>60</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning2_1">
+   <property name="geometry">
+    <rect>
+     <x>265</x>
+     <y>109</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning2_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>100</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning3_1">
+   <property name="geometry">
+    <rect>
+     <x>465</x>
+     <y>99</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning3_2">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>100</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning3_3">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>100</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning3_4">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>100</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning4_1">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>100</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning4_2">
+   <property name="geometry">
+    <rect>
+     <x>755</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning4_3">
+   <property name="geometry">
+    <rect>
+     <x>725</x>
+     <y>101</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning4_4">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>101</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning5_1">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>150</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning5_2">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>60</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning5_3">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>110</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_fireWarning5_4">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>110</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>25</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MP1车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum3">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>25</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MP2车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum4">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>25</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MC2车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>25</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MC1车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>62</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_3">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>148</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_4">
+   <property name="geometry">
+    <rect>
+     <x>163</x>
+     <y>79</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_5">
+   <property name="geometry">
+    <rect>
+     <x>203</x>
+     <y>79</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_6">
+   <property name="geometry">
+    <rect>
+     <x>234</x>
+     <y>91</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_7">
+   <property name="geometry">
+    <rect>
+     <x>234</x>
+     <y>119</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_8">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>140</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_9">
+   <property name="geometry">
+    <rect>
+     <x>325</x>
+     <y>69</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_10">
+   <property name="geometry">
+    <rect>
+     <x>365</x>
+     <y>69</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_11">
+   <property name="geometry">
+    <rect>
+     <x>435</x>
+     <y>79</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_12">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>130</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>11</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_13">
+   <property name="geometry">
+    <rect>
+     <x>525</x>
+     <y>69</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>12</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_14">
+   <property name="geometry">
+    <rect>
+     <x>565</x>
+     <y>69</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>13</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_15">
+   <property name="geometry">
+    <rect>
+     <x>645</x>
+     <y>69</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>14</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_16">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>70</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>17</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_17">
+   <property name="geometry">
+    <rect>
+     <x>765</x>
+     <y>70</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>18</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_18">
+   <property name="geometry">
+    <rect>
+     <x>685</x>
+     <y>69</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>15</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_19">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>141</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>16</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_20">
+   <property name="geometry">
+    <rect>
+     <x>815</x>
+     <y>119</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>19</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_21">
+   <property name="geometry">
+    <rect>
+     <x>815</x>
+     <y>91</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>20</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_22">
+   <property name="geometry">
+    <rect>
+     <x>865</x>
+     <y>79</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>21</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_23">
+   <property name="geometry">
+    <rect>
+     <x>895</x>
+     <y>79</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:14px,&quot;微软雅黑&quot;;
+border:0px,black;
+background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string>22</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab1_direction">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>104</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/arrowleft.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab1_active">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>110</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 176, 80);
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab2_active">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>110</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 176, 80);
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab2_direction">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>104</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/arrowright.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>60</y>
+     <width>41</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border-top-left-radius:8px;
+border-bottom-left-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>60</y>
+     <width>41</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border-top-right-radius:8px;
+border-bottom-right-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>LBLMP1</zorder>
+  <zorder>LBLM1</zorder>
+  <zorder>LBLM2</zorder>
+  <zorder>LBLTC1</zorder>
+  <zorder>lbl_fireWarning1_1</zorder>
+  <zorder>lbl_fireWarning1_2</zorder>
+  <zorder>lbl_fireWarning1_3</zorder>
+  <zorder>lbl_fireWarning1_4</zorder>
+  <zorder>lbl_fireWarning2_3</zorder>
+  <zorder>lbl_fireWarning2_4</zorder>
+  <zorder>lbl_fireWarning_cab1_1</zorder>
+  <zorder>lbl_fireWarning_cab1_2</zorder>
+  <zorder>lbl_fireWarning2_1</zorder>
+  <zorder>lbl_fireWarning2_2</zorder>
+  <zorder>lbl_fireWarning3_1</zorder>
+  <zorder>lbl_fireWarning3_2</zorder>
+  <zorder>lbl_fireWarning3_3</zorder>
+  <zorder>lbl_fireWarning3_4</zorder>
+  <zorder>lbl_fireWarning4_1</zorder>
+  <zorder>lbl_fireWarning4_2</zorder>
+  <zorder>lbl_fireWarning4_3</zorder>
+  <zorder>lbl_fireWarning4_4</zorder>
+  <zorder>lbl_fireWarning5_1</zorder>
+  <zorder>lbl_fireWarning5_2</zorder>
+  <zorder>lbl_fireWarning5_3</zorder>
+  <zorder>lbl_fireWarning5_4</zorder>
+  <zorder>lbl_metroNum2</zorder>
+  <zorder>lbl_metroNum3</zorder>
+  <zorder>lbl_metroNum4</zorder>
+  <zorder>lbl_metroNum1</zorder>
+  <zorder>lbl_metroNum1_2</zorder>
+  <zorder>lbl_metroNum1_3</zorder>
+  <zorder>lbl_metroNum1_4</zorder>
+  <zorder>lbl_metroNum1_5</zorder>
+  <zorder>lbl_metroNum1_6</zorder>
+  <zorder>lbl_metroNum1_7</zorder>
+  <zorder>lbl_metroNum1_8</zorder>
+  <zorder>lbl_metroNum1_9</zorder>
+  <zorder>lbl_metroNum1_10</zorder>
+  <zorder>lbl_metroNum1_11</zorder>
+  <zorder>lbl_metroNum1_12</zorder>
+  <zorder>lbl_metroNum1_13</zorder>
+  <zorder>lbl_metroNum1_14</zorder>
+  <zorder>lbl_metroNum1_15</zorder>
+  <zorder>lbl_metroNum1_16</zorder>
+  <zorder>lbl_metroNum1_17</zorder>
+  <zorder>lbl_metroNum1_18</zorder>
+  <zorder>lbl_metroNum1_19</zorder>
+  <zorder>lbl_metroNum1_20</zorder>
+  <zorder>lbl_metroNum1_21</zorder>
+  <zorder>lbl_metroNum1_22</zorder>
+  <zorder>lbl_metroNum1_23</zorder>
+  <zorder>lbl_cab1_direction</zorder>
+  <zorder>lbl_cab1_active</zorder>
+  <zorder>lbl_cab2_active</zorder>
+  <zorder>lbl_cab2_direction</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

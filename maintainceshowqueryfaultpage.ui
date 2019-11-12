@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaintainceShowQueryFaultPage</class>
+ <widget class="QWidget" name="MaintainceShowQueryFaultPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>706</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color:rgb(0,0,50);
+}QPushButton
+{
+font: 20px, &quot;微软雅黑&quot;;
+color: black;
+background:transparent;
+}</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>469</x>
+     <y>120</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 20px, &quot;微软雅黑&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>故障名称</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNHome">
+   <property name="geometry">
+    <rect>
+     <x>927</x>
+     <y>620</y>
+     <width>91</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/Home.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN8_Next">
+   <property name="geometry">
+    <rect>
+     <x>723</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string>▼▼</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN2">
+   <property name="geometry">
+    <rect>
+     <x>111</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE1">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>150</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+background-color:red;
+color:black;
+text-align:left;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Datail">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>530</y>
+     <width>891</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 16px, &quot;微软雅黑&quot;;
+border:1px solid gray;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN7_Pre">
+   <property name="geometry">
+    <rect>
+     <x>621</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string>▲▲</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTC2">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>10</y>
+     <width>141</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+	background-color:rgb(170,170,170);
+}
+QLabel
+{
+font: 18pt &quot;微软雅黑&quot;;
+color:black;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>H056</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Tc1Directionlbl">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>45</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+border:2px groove gray;border-radius:15px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE3">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>230</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:left;border:1px solid transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC1Cableftdoorlbl">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>90</y>
+     <width>25</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 255, 0);
+background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN4">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN6">
+   <property name="geometry">
+    <rect>
+     <x>519</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE5">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>310</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:left;border:1px solid transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC1Cabrightdoorlbl">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>10</y>
+     <width>25</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 255, 0);
+background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE8">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>430</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:left;border:1px solid transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN3">
+   <property name="geometry">
+    <rect>
+     <x>213</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC1Cablbl">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>10</y>
+     <width>48</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 50);
+border-image: url(:/images/image/trainhead.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC2Cableftdoorlbl">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>10</y>
+     <width>25</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 255, 0);
+background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>120</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 20px, &quot;微软雅黑&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>结束时间</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLMP2">
+   <property name="geometry">
+    <rect>
+     <x>212</x>
+     <y>10</y>
+     <width>141</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+	background-color:rgb(170,170,170);
+}
+QLabel
+{
+	font: 18pt &quot;微软雅黑&quot;;
+color:black;
+}</string>
+   </property>
+   <property name="text">
+    <string>H055</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE6">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>350</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:left;border:1px solid transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE4">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>270</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:left;border:1px solid transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Page">
+   <property name="geometry">
+    <rect>
+     <x>939</x>
+     <y>530</y>
+     <width>71</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 20px, &quot;微软雅黑&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>1/1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE9">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>470</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:left;border:1px solid transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC2Cabrightdoorlbl">
+   <property name="geometry">
+    <rect>
+     <x>962</x>
+     <y>90</y>
+     <width>25</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 255, 0);
+background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>120</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 20px, &quot;微软雅黑&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>发生时间</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Tc2Directionlbl">
+   <property name="geometry">
+    <rect>
+     <x>967</x>
+     <y>45</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+border:2px groove gray;border-radius:15px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE7">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>390</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:left;border:1px solid transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLMP1">
+   <property name="geometry">
+    <rect>
+     <x>662</x>
+     <y>10</y>
+     <width>141</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+	background-color:rgb(170,170,170);
+}
+QLabel
+{
+	font: 18pt &quot;微软雅黑&quot;;
+color:black;
+}</string>
+   </property>
+   <property name="text">
+    <string>H052</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC2Cablbl">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>10</y>
+     <width>48</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/trainhead1.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTC1">
+   <property name="geometry">
+    <rect>
+     <x>812</x>
+     <y>10</y>
+     <width>141</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+	background-color:rgb(170,170,170);
+}
+QLabel
+{
+	font: 18pt &quot;微软雅黑&quot;;
+color:black;
+}</string>
+   </property>
+   <property name="text">
+    <string>H051</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="returnBtn">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+   </property>
+   <property name="text">
+    <string>返  回</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLM1">
+   <property name="geometry">
+    <rect>
+     <x>512</x>
+     <y>10</y>
+     <width>141</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+	background-color:rgb(170,170,170);
+}
+QLabel
+{
+	font: 18pt &quot;微软雅黑&quot;;
+color:black;
+}</string>
+   </property>
+   <property name="text">
+    <string>H053</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmBtn">
+   <property name="geometry">
+    <rect>
+     <x>825</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN5">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_LINE2">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>190</y>
+     <width>981</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid transparent;
+text-align:left;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLM2">
+   <property name="geometry">
+    <rect>
+     <x>362</x>
+     <y>10</y>
+     <width>141</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+	background-color:rgb(170,170,170);
+}
+QLabel
+{
+	font: 18pt &quot;微软雅黑&quot;;
+color:black;
+}</string>
+   </property>
+   <property name="text">
+    <string>H054</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>TC1Cablbl</zorder>
+  <zorder>TC2Cablbl</zorder>
+  <zorder>label_2</zorder>
+  <zorder>BTNHome</zorder>
+  <zorder>BTN8_Next</zorder>
+  <zorder>BTN2</zorder>
+  <zorder>BTN_LINE1</zorder>
+  <zorder>LBL_Datail</zorder>
+  <zorder>BTN7_Pre</zorder>
+  <zorder>LBLTC2</zorder>
+  <zorder>Tc1Directionlbl</zorder>
+  <zorder>BTN_LINE3</zorder>
+  <zorder>TC1Cableftdoorlbl</zorder>
+  <zorder>BTN4</zorder>
+  <zorder>BTN6</zorder>
+  <zorder>BTN_LINE5</zorder>
+  <zorder>TC1Cabrightdoorlbl</zorder>
+  <zorder>BTN_LINE8</zorder>
+  <zorder>BTN3</zorder>
+  <zorder>TC2Cableftdoorlbl</zorder>
+  <zorder>label_3</zorder>
+  <zorder>LBLMP2</zorder>
+  <zorder>BTN_LINE6</zorder>
+  <zorder>BTN_LINE4</zorder>
+  <zorder>LBL_Page</zorder>
+  <zorder>BTN_LINE9</zorder>
+  <zorder>TC2Cabrightdoorlbl</zorder>
+  <zorder>label</zorder>
+  <zorder>Tc2Directionlbl</zorder>
+  <zorder>BTN_LINE7</zorder>
+  <zorder>LBLMP1</zorder>
+  <zorder>LBLTC1</zorder>
+  <zorder>returnBtn</zorder>
+  <zorder>LBLM1</zorder>
+  <zorder>confirmBtn</zorder>
+  <zorder>BTN5</zorder>
+  <zorder>BTN_LINE2</zorder>
+  <zorder>LBLM2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

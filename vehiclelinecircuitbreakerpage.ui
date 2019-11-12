@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VehicleLineCircuitBreakerPage</class>
+ <widget class="QWidget" name="VehicleLineCircuitBreakerPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>211</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: rgb(0,0,50);
+}
+QLabel
+{
+
+font:24px,&quot;微软雅黑&quot;;
+border:1px solid black;
+}</string>
+  </property>
+  <widget class="QLabel" name="LBLM2">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLMP1">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLM1">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTC1">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>60</y>
+     <width>211</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>30</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MC1车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_2">
+   <property name="geometry">
+    <rect>
+     <x>375</x>
+     <y>30</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MP1车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_3">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>30</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MP2车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_metroNum1_4">
+   <property name="geometry">
+    <rect>
+     <x>785</x>
+     <y>30</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(170, 170, 170);
+font:20px,&quot;微软雅黑&quot;;
+border:0px,black</string>
+   </property>
+   <property name="text">
+    <string>MC2车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Reset_MC2">
+   <property name="geometry">
+    <rect>
+     <x>775</x>
+     <y>70</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Reset_MC1">
+   <property name="geometry">
+    <rect>
+     <x>145</x>
+     <y>70</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_VVVF5">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>130</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_VVVF3">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>130</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_VVVF2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>130</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_VVVF6">
+   <property name="geometry">
+    <rect>
+     <x>775</x>
+     <y>130</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_VVVF1">
+   <property name="geometry">
+    <rect>
+     <x>145</x>
+     <y>130</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_VVVF4">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>130</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab2_active">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>106</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 176, 80);
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab2_direction">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>100</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/arrowright.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab1_direction">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>104</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/arrowleft.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab1_active">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>110</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 176, 80);
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>60</y>
+     <width>41</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border-top-left-radius:8px;
+border-bottom-left-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>60</y>
+     <width>41</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border-top-right-radius:8px;
+border-bottom-right-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>LBLM2</zorder>
+  <zorder>LBLMP1</zorder>
+  <zorder>LBLM1</zorder>
+  <zorder>LBLTC1</zorder>
+  <zorder>lbl_metroNum1</zorder>
+  <zorder>lbl_metroNum1_2</zorder>
+  <zorder>lbl_metroNum1_3</zorder>
+  <zorder>lbl_metroNum1_4</zorder>
+  <zorder>BTN_SIV_Reset_MC2</zorder>
+  <zorder>BTN_SIV_Reset_MC1</zorder>
+  <zorder>BTN_VVVF5</zorder>
+  <zorder>BTN_VVVF3</zorder>
+  <zorder>BTN_VVVF2</zorder>
+  <zorder>BTN_VVVF6</zorder>
+  <zorder>BTN_VVVF1</zorder>
+  <zorder>BTN_VVVF4</zorder>
+  <zorder>lbl_cab2_active</zorder>
+  <zorder>lbl_cab2_direction</zorder>
+  <zorder>lbl_cab1_direction</zorder>
+  <zorder>lbl_cab1_active</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

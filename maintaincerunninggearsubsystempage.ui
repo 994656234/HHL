@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaintainceRunningGearSubsystemPage</class>
+ <widget class="QWidget" name="MaintainceRunningGearSubsystemPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>706</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 50);</string>
+  </property>
+  <widget class="QPushButton" name="BTN2">
+   <property name="geometry">
+    <rect>
+     <x>112</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN5">
+   <property name="geometry">
+    <rect>
+     <x>418</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN7">
+   <property name="geometry">
+    <rect>
+     <x>622</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN3">
+   <property name="geometry">
+    <rect>
+     <x>214</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN8">
+   <property name="geometry">
+    <rect>
+     <x>724</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN9">
+   <property name="geometry">
+    <rect>
+     <x>826</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN4">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN6">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNHome">
+   <property name="geometry">
+    <rect>
+     <x>928</x>
+     <y>620</y>
+     <width>91</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/Home.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_4">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>460</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_5">
+   <property name="geometry">
+    <rect>
+     <x>608</x>
+     <y>460</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_2">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>460</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_2">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>310</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_4">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>410</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_5">
+   <property name="geometry">
+    <rect>
+     <x>608</x>
+     <y>310</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_name">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>460</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>4车轴端传感器温度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_1">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>310</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_5">
+   <property name="geometry">
+    <rect>
+     <x>608</x>
+     <y>360</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_name">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>310</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>1车轴端传感器温度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_1">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>410</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_6">
+   <property name="geometry">
+    <rect>
+     <x>698</x>
+     <y>310</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_3">
+   <property name="geometry">
+    <rect>
+     <x>428</x>
+     <y>460</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_1">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>360</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_4">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>310</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_2">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>360</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_6">
+   <property name="geometry">
+    <rect>
+     <x>698</x>
+     <y>460</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_6">
+   <property name="geometry">
+    <rect>
+     <x>698</x>
+     <y>410</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_4">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>360</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_3">
+   <property name="geometry">
+    <rect>
+     <x>428</x>
+     <y>360</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_6">
+   <property name="geometry">
+    <rect>
+     <x>698</x>
+     <y>360</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_name">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>360</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>2车轴端传感器温度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_3">
+   <property name="geometry">
+    <rect>
+     <x>428</x>
+     <y>410</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_2">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>410</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_5">
+   <property name="geometry">
+    <rect>
+     <x>608</x>
+     <y>410</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_1">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>460</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_name">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>410</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>3车轴端传感器温度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_3">
+   <property name="geometry">
+    <rect>
+     <x>428</x>
+     <y>310</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_7">
+   <property name="geometry">
+    <rect>
+     <x>788</x>
+     <y>410</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_7">
+   <property name="geometry">
+    <rect>
+     <x>788</x>
+     <y>360</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_7">
+   <property name="geometry">
+    <rect>
+     <x>788</x>
+     <y>460</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_7">
+   <property name="geometry">
+    <rect>
+     <x>788</x>
+     <y>310</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line3_8">
+   <property name="geometry">
+    <rect>
+     <x>878</x>
+     <y>410</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line2_8">
+   <property name="geometry">
+    <rect>
+     <x>878</x>
+     <y>360</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line4_8">
+   <property name="geometry">
+    <rect>
+     <x>878</x>
+     <y>460</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="line1_8">
+   <property name="geometry">
+    <rect>
+     <x>878</x>
+     <y>310</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_5">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>260</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>1位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_4">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>260</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>单位(℃)</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_6">
+   <property name="geometry">
+    <rect>
+     <x>338</x>
+     <y>260</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>2位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_12">
+   <property name="geometry">
+    <rect>
+     <x>878</x>
+     <y>260</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>8位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_10">
+   <property name="geometry">
+    <rect>
+     <x>698</x>
+     <y>260</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>6位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_9">
+   <property name="geometry">
+    <rect>
+     <x>608</x>
+     <y>260</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>5位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_8">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>260</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>4位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_7">
+   <property name="geometry">
+    <rect>
+     <x>428</x>
+     <y>260</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>3位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_11">
+   <property name="geometry">
+    <rect>
+     <x>788</x>
+     <y>260</y>
+     <width>92</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+font:18px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>7位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>110</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>TDS1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>110</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>TDS2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_lifeSignal">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>150</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>生命信号</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_signalValid">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>信号有效标识</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_lifeSignal_TDS1">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>150</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_signalValid_TDS1">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>190</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_lifeSignal_TDS2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>150</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_signalValid_TDS2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>190</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:2px solid rgb(187,188,247);
+background-color: rgb(0, 0, 50);
+border-left: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-right: 2px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(187,188,247) , stop:1 rgb(19,20,87));
+border-bottom:2px solid  rgb(19,20,87);
+font:16px &quot;微软雅黑&quot; ;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>--</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

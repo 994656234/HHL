@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaintainceInitSetPage</class>
+ <widget class="QWidget" name="MaintainceInitSetPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>706</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 50);</string>
+  </property>
+  <widget class="QPushButton" name="BTN_back">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>620</y>
+     <width>100</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;
+color: white;background-color: rgb(0, 128, 128);
+border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="TC1Btn">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>160</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24px, &quot;微软雅黑&quot;;
+color: white;background-color: rgb(0, 128, 128);
+border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string>TC1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC2HMIDBVlbl">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>100</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font:16px ;
+</string>
+   </property>
+   <property name="text">
+    <string>TC2 HMI DBVersion:</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="HMIReboot">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>440</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24px, &quot;微软雅黑&quot;;
+color: white;background-color: rgb(0, 128, 128);
+border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string>重启HMI</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TC1HMIDBVlbl">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>100</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+font:16px ;
+</string>
+   </property>
+   <property name="text">
+    <string>TC1 HMI DBVersion:</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="TC2Btn">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>160</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;
+color: white;background-color: rgb(0, 128, 128);
+border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string>TC2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="backgroundlbl">
+   <property name="geometry">
+    <rect>
+     <x>102</x>
+     <y>140</y>
+     <width>800</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+border: 2px solid  white;
+border-radius: 12px;
+font:36px ;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>backgroundlbl</zorder>
+  <zorder>TC1Btn</zorder>
+  <zorder>TC2HMIDBVlbl</zorder>
+  <zorder>HMIReboot</zorder>
+  <zorder>TC1HMIDBVlbl</zorder>
+  <zorder>TC2Btn</zorder>
+  <zorder>BTN_back</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

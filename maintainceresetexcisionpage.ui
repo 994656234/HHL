@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaintainceResetExcisionPage</class>
+ <widget class="QWidget" name="MaintainceResetExcisionPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>706</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 50);</string>
+  </property>
+  <widget class="QPushButton" name="BTN9">
+   <property name="geometry">
+    <rect>
+     <x>826</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN2">
+   <property name="geometry">
+    <rect>
+     <x>112</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN5">
+   <property name="geometry">
+    <rect>
+     <x>418</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN6">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNHome">
+   <property name="geometry">
+    <rect>
+     <x>928</x>
+     <y>620</y>
+     <width>91</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/Home.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN8">
+   <property name="geometry">
+    <rect>
+     <x>724</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN7">
+   <property name="geometry">
+    <rect>
+     <x>622</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN4">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN3">
+   <property name="geometry">
+    <rect>
+     <x>214</x>
+     <y>620</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLM2">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>30</y>
+     <width>211</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border:1px solid black;
+font:20px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MC2车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLM1">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>30</y>
+     <width>211</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border:1px solid black;
+font:20px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MP2车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLMP1">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>30</y>
+     <width>211</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border:1px solid black;
+font:20px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MP1车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTC1">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>30</y>
+     <width>211</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border:1px solid black;
+font:20px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MC1车</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Excision_TC1">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>150</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Reset_TC1">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>520</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Reset_M1">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>530</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Excision_M1">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>150</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Excision_M2">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>150</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Reset_M2">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>510</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Excision_TC2">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>150</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_SIV_Reset_TC2">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>520</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Reset_Mp1">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>520</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>DCU故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_Mp1">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>330</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Reset_M1">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>520</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>DCU故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M1">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>295</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF
+切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Reset_M2">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>520</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>DCU故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M2">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>295</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF
+切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Reset_Mp2">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>510</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>DCU故障
+复位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_Mp2">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>330</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF切除</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab1_direction">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>50</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/arrowleft.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab1_active">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>55</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 176, 80);
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab2_direction">
+   <property name="geometry">
+    <rect>
+     <x>972</x>
+     <y>50</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/arrowright.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cab2_active">
+   <property name="geometry">
+    <rect>
+     <x>943</x>
+     <y>55</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 176, 80);
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>68</x>
+     <y>31</y>
+     <width>31</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border-top-left-radius:8px;
+border-bottom-left-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>941</x>
+     <y>31</y>
+     <width>31</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(170,170,170);
+border-top-right-radius:8px;
+border-bottom-right-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M1_2">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>365</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF
+切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M2_2">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>365</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF
+切除</string>
+   </property>
+  </widget>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>BTN9</zorder>
+  <zorder>BTN2</zorder>
+  <zorder>BTN5</zorder>
+  <zorder>BTN1</zorder>
+  <zorder>BTN6</zorder>
+  <zorder>BTNHome</zorder>
+  <zorder>BTN8</zorder>
+  <zorder>BTN7</zorder>
+  <zorder>BTN4</zorder>
+  <zorder>BTN3</zorder>
+  <zorder>LBLM2</zorder>
+  <zorder>LBLM1</zorder>
+  <zorder>LBLMP1</zorder>
+  <zorder>LBLTC1</zorder>
+  <zorder>BTN_SIV_Excision_TC1</zorder>
+  <zorder>BTN_SIV_Reset_TC1</zorder>
+  <zorder>BTN_SIV_Reset_M1</zorder>
+  <zorder>BTN_SIV_Excision_M1</zorder>
+  <zorder>BTN_SIV_Excision_M2</zorder>
+  <zorder>BTN_SIV_Reset_M2</zorder>
+  <zorder>BTN_SIV_Excision_TC2</zorder>
+  <zorder>BTN_SIV_Reset_TC2</zorder>
+  <zorder>BTN_DCU_Reset_Mp1</zorder>
+  <zorder>BTN_DCU_Ele_Excision_Mp1</zorder>
+  <zorder>BTN_DCU_Reset_M1</zorder>
+  <zorder>BTN_DCU_Ele_Excision_M1</zorder>
+  <zorder>BTN_DCU_Reset_M2</zorder>
+  <zorder>BTN_DCU_Ele_Excision_M2</zorder>
+  <zorder>BTN_DCU_Reset_Mp2</zorder>
+  <zorder>BTN_DCU_Ele_Excision_Mp2</zorder>
+  <zorder>lbl_cab1_direction</zorder>
+  <zorder>lbl_cab1_active</zorder>
+  <zorder>lbl_cab2_direction</zorder>
+  <zorder>lbl_cab2_active</zorder>
+  <zorder>BTN_DCU_Ele_Excision_M1_2</zorder>
+  <zorder>BTN_DCU_Ele_Excision_M2_2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

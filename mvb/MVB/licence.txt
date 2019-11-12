@@ -1,0 +1,38 @@
+
+DUAGON SOFTWARE LICENCE
+
+
+Duagon cedes the present software to the customer in source code and/or
+binary form exclusively in order that the customer may modify or test it
+for running on the customer's system containing the Duagon products.
+
+The binary form of the software or the modified software, regardless
+of whether the modifications to the software were made by the customer
+or by Duagon, is ceded to the customer to be used exclusively under
+a run time licence.
+
+All rights, especially the intangible property rights to the software
+and the modified software shall belong exclusively to Duagon regardless
+of whether the modifications to the software were made by the customer
+or by Duagon. Also the rights to the modified software shall belong
+exclusively to Duagon.
+
+The customer may not, either in source code or binary form
+- transmit the software or the modified software to third parties, or
+- use the software or the modified software for purposes other than those
+  specifically mentioned above.
+
+This software is provided by Duagon as is and any express or implied
+warranties, including, but not limited to, the implied warranties of
+merchantability and fitness for a particular purpose are disclaimed.
+In no event shall Duagon be liable for any direct, indirect, incidental,
+special, exemplary or consequential damages (including but not limited to,
+procurement of substitute goods or services; loss of use, data or profits;
+or business interruption) however caused and on any theory of liability,
+whether in contract, strict liability, or tort (including negligence or
+otherwise) arising in any way out of the use of this software, even if
+advised of the possibility of such damage.
+
+By copying, installing or using the present software, the customer declares
+that it has taken cognizance of these software licence regulations and has
+accepted them.
