@@ -17,9 +17,11 @@ enum CurrentForm
     TC_DI3,
     TC_DI4,
     TC_DI5,
+    TC_DI6,
     TC_DO,
     TC_AIM,
     MP_DI,
+    MP_DI2,
     MP_DO,
     M_DI,
     M_DO

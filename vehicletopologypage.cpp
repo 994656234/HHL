@@ -66,31 +66,34 @@ void VehicleTopologyPage::updatePage()
     }
 
     //MC1
-    deviceStatus(ui->lbl_VCU1,database->CTD_CCU1OLINE_B1);
+    setMainFlowDevice(ui->lbl_VCU1,database->CTD_CCU1Active_B1,database->CTD_CCU1OLINE_B1);
     deviceStatus(ui->lbl_ERM1,database->CTD_ERM1OLINE_B1);
     deviceStatus(ui->lbl_RIOM10,database->CTD_RIOM1GWOLINE_B1);
     deviceStatus(ui->lbl_OBCU1,database->CTD_AMCTOLINE_B1);
     deviceStatus(ui->lbl_GV1,database->CTD_BCU1OLINE_B1);
-    //deviceStatus(lbl_PCU1,database->CTD_PIS1OLINE_B1);
     deviceStatus(ui->lbl_DDU1,database->CTD_DDU1OLINE_B1);
     deviceStatus(ui->lbl_RIOM11,database->CTD_RIOM2GWOLINE_B1);
     deviceStatus(ui->lbl_VVVF3_1,database->CTD_TCU1OLINE_B1);
-    deviceStatus(ui->lbl_SIV1,database->CTD_FCU1OLINE_B1);
+    deviceStatus(ui->lbl_SIV1,database->CTD_ACU1OLINE_B1);
     deviceStatus(ui->lbl_ACVP,database->CTD_ACTOLINE_B1);
     deviceStatus(ui->lbl_Panto,database->CTD_PANOLINE_B1);
+    deviceStatus(ui->lbl_FCU1,database->CTD_FCU1OLINE_B1);
+    setMainFlowDevice(ui->lbl_PCU1,database->PIS1CT_P2_B1,database->CTD_PIS1OLINE_B1);
 
     //MP1
     deviceStatus(ui->lbl_VVVF1_1,database->CTD_TCU2OLINE_B1);
     deviceStatus(ui->lbl_VVVF2_1,database->CTD_TCU3OLINE_B1);
     deviceStatus(ui->lbl_ACVP2,database->CTD_AC2OLINE_B1);
+    deviceStatus(ui->lbl_RIOM3,database->CTD_RIOM3GWOLINE_B1);
 
     //MP2
     deviceStatus(ui->lbl_VVVF1_2,database->CTD_TCU4OLINE_B1);
     deviceStatus(ui->lbl_VVVF2_2,database->CTD_TCU5OLINE_B1);
     deviceStatus(ui->lbl_ACVP3,database->CTD_AC3OLINE_B1);
+    deviceStatus(ui->lbl_RIOM4,database->CTD_RIOM6GWOLINE_B1);
 
     //MC2
-    deviceStatus(ui->lbl_VCU2,database->CTD_CCU2OLINE_B1);
+    setMainFlowDevice(ui->lbl_VCU2,database->CTD_CCU2Active_B1,database->CTD_CCU2OLINE_B1);
     deviceStatus(ui->lbl_ERM2,database->CTD_ERM2OLINE_B1);
     deviceStatus(ui->lbl_RIOM10_2,database->CTD_RIOM4GWOLINE_B1);
     deviceStatus(ui->lbl_OBCU2,database->CTD_AMC2OLINE_B1);
@@ -100,7 +103,17 @@ void VehicleTopologyPage::updatePage()
     deviceStatus(ui->lbl_VVVF3_2,database->CTD_TCU6OLINE_B1);
     deviceStatus(ui->lbl_SIV2,database->CTD_ACU2OLINE_B1);
     deviceStatus(ui->lbl_ACVP4,database->CTD_AC4OLINE_B1);
+    deviceStatus(ui->lbl_FCU2,database->CTD_FCU2OLINE_B1);
+    setMainFlowDevice(ui->lbl_PCU2,database->PIS1CT_P2_B1,database->CTD_PIS2OLINE_B1);
 
+    setEDCUstatus(ui->lbl_EDCU5R_1,database->CTD_EDCU1OLINE_B1,database->B1CT_MstrGV_B1);
+    setEDCUstatus(ui->lbl_EDCU6L_1,database->CTD_EDCU2OLINE_B1,database->B2CT_MstrGV_B1);
+    setEDCUstatus(ui->lbl_EDCU5R_2,database->CTD_EDCU3OLINE_B1,database->B3CT_MstrGV_B1);
+    setEDCUstatus(ui->lbl_EDCU6L_2,database->CTD_EDCU4OLINE_B1,database->B4CT_MstrGV_B1);
+    setEDCUstatus(ui->lbl_EDCU5R_3,database->CTD_EDCU5OLINE_B1,database->B5CT_MstrGV_B1);
+    setEDCUstatus(ui->lbl_EDCU6L_3,database->CTD_EDCU6OLINE_B1,database->B6CT_MstrGV_B1);
+    setEDCUstatus(ui->lbl_EDCU5R_4,database->CTD_EDCU7OLINE_B1,database->B7CT_MstrGV_B1);
+    setEDCUstatus(ui->lbl_EDCU6L_4,database->CTD_EDCU8OLINE_B1,database->B8CT_MstrGV_B1);
 
 }
 
@@ -117,3 +130,53 @@ void VehicleTopologyPage::deviceStatus(QLabel *label, bool status)
         label->setStyleSheet(DEVICEOFF);
     }
 }
+
+void VehicleTopologyPage::setMainFlowDevice(QLabel *label, bool flag, bool status)
+{
+    if(status)
+    {
+        if(flag)
+        {
+            label->setStyleSheet(DEVICEON);
+        }
+        else
+        {
+            label->setStyleSheet(DEVICEFLOW);
+        }
+    }
+    else
+    {
+        label->setStyleSheet(DEVICEOFF);
+    }
+}
+
+void VehicleTopologyPage::setEDCUstatus(QLabel *label,bool flag, unsigned short status)
+{
+    if(flag)
+    {
+        if(status==1)
+        {
+            label->setStyleSheet(DEVICEON);
+        }
+        else if(status==2)
+        {
+            label->setStyleSheet(DEVICEFLOW);
+        }
+        else if(status==3)
+        {
+            label->setStyleSheet(DEVICEPARTON);
+        }
+        else
+        {
+            label->setStyleSheet(DEVICEOFF);
+        }
+    }
+    else
+    {
+        label->setStyleSheet(DEVICEOFF);
+    }
+
+
+}
+
+

@@ -21,7 +21,7 @@ QLabel{
 	color:white;
 }</string>
   </property>
-  <widget class="QLabel" name="lbl_RPT_1">
+  <widget class="QLabel" name="lbl_RIOM3">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -276,7 +276,7 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_RPT_2">
+  <widget class="QLabel" name="lbl_RIOM4">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -3287,8 +3287,8 @@ border-radius:3px;</string>
   <zorder>lbl_VVVF3_1</zorder>
   <zorder>lbl_RIOM11</zorder>
   <zorder>lbl_DDU1</zorder>
-  <zorder>lbl_RPT_1</zorder>
-  <zorder>lbl_RPT_2</zorder>
+  <zorder>lbl_RIOM3</zorder>
+  <zorder>lbl_RIOM4</zorder>
   <zorder>label_89</zorder>
   <zorder>label_90</zorder>
   <zorder>lbl_TDS_2</zorder>

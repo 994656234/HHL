@@ -327,7 +327,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>260</y>
+     <y>380</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -351,7 +351,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>320</y>
+     <y>440</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -375,7 +375,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>380</y>
+     <y>500</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -395,11 +395,11 @@ font:16px &quot;微软雅黑&quot;;</string>
     <string>MP-DI</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="MP_DO">
+  <widget class="QPushButton" name="MP_DI2">
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>440</y>
+     <y>560</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -417,6 +417,54 @@ font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>MP-DO</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="TC_DI5">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>260</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:3px solid rgb(19,20,87);
+color: rgb(255, 255, 255);
+border-bottom:3px solid rgb(187,188,247);
+border-left:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));
+border-right:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));
+font:16px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MC-DI5</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="TC_DI6">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>320</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top:3px solid rgb(19,20,87);
+color: rgb(255, 255, 255);
+border-bottom:3px solid rgb(187,188,247);
+border-left:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));
+border-right:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));
+font:16px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MC-DI6</string>
    </property>
   </widget>
  </widget>

@@ -25,6 +25,10 @@ private:
     void deviceStatus(QLabel *label,bool status);
     MainGetDefaultPara *getParam;
 
+    void setMainFlowDevice(QLabel *label,bool flag,bool status);
+
+    void setEDCUstatus(QLabel *label,bool flag,unsigned short status);
+
 };
 
 #endif // VEHICLETOPOLOGYPAGE_H

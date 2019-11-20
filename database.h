@@ -21,6 +21,9 @@ public:
 
     unsigned short HMiCT_LifeSignal_U16;
 
+    unsigned char DiCT_HMISWVerH_U8,DiCT_HMISWVerL_U8,D1CT_HMISWVerH_U8,D1CT_HMISWVerL_U8,D2CT_HMISWVerH_U8,D2CT_HMISWVerL_U8;
+
+
     //制动子系统空压机启动临时定义
 
     unsigned short int Status_HVAC,Status_SIV,Status_TCU,Status_PIS,Status_EDCU,Status_BCU,Status_FIRE,Status_ACP,Status_TUOPU;
@@ -59,6 +62,20 @@ public:
 
     unsigned char DiCT_RunStatSetType_U8;
     unsigned int DiCT_RunStatSetData_U32;
+
+
+    ///zaixian zhuangtai
+    unsigned short B1CT_MstrGV_B1,B2CT_MstrGV_B1,B3CT_MstrGV_B1,B4CT_MstrGV_B1,
+    B5CT_MstrGV_B1,B6CT_MstrGV_B1,B7CT_MstrGV_B1,B8CT_MstrGV_B1;
+
+    //PIS
+    bool  PIS1CT_P2_B1,PIS2CT_P2_B1;
+    //BCU
+    unsigned char B1CT_SWVerHigh_U8,B1CT_SWVerLow_U8,B2CT_SWVerHigh_U8,B2CT_SWVerLow_U8;
+    //FCU
+    unsigned char FCU1CT_usSWRev_B1,FCU2CT_usSWRev_B1;
+    //PIS
+    unsigned char PIS1CT_P178_B1,PIS1CT_P179_B1,PIS1CT_P180_B1,PIS2CT_P178_B1,PIS2CT_P179_B1,PIS2CT_P180_B1;
 
 
 
@@ -168,8 +185,30 @@ public:
 
     unsigned short RM1CT_MCREFSETPOINT_U16, RM1CT_ATCREF_U16, RM4CT_MCREFSETPOINT_U16, RM4CT_ATCREF_U16;
 
+    //CCU_RIOM
+    bool
+    CTR1_DOPANI_B1,CTR1_DOHSCBC_B1, CTR1_DOHSCB0_B1,
+    CTR1_DOVCUEBR_B1, CTR1_DOLOACHF_B1, CTR1_DOWFLR_B1, CTR1_DOTCR_B1,
+    CTR1_DOHVIVDCP_B1,CTR1_DOHIVNC_B1,CTR1_DOLVDR_B1, CTR1_DOLOASMON_B1,
+    CTR1_DOBSOI_B1,CTR1_DOPANDI_B1,CTR1_1i8CHECK1_B1, CTR1_1i8CHECK0_B1;
 
-    //*************************************ERM-CCU*********************************************//
+   bool CTR4_DOPANI_B1, CTR4_DOHSCBC_B1,CTR4_DOHSCB0_B1,
+    CTR4_DOVCUEBR_B1,CTR4_DOLOACHF_B1, CTR4_DOWFLR_B1, CTR4_DOTCR_B1,
+    CTR4_DOHVIVDCP_B1, CTR4_DOHIVNC_B1, CTR4_DOLVDR_B1, CTR4_DOLOASMON_B1,
+    CTR4_DOBSOI_B1, CTR4_DOPANDI_B1,CTR4_1i8CHECK1_B1,CTR4_1i8CHECK0_B1;
+
+   bool
+   CTR3_MP1EXRBATTERY_B1,
+   CTR3_MP1LOYR_B1,
+   CTR3_1i8CHECK1_B1,
+   CTR3_1i8CHECK0_B1;
+
+   bool
+   CTR6_MP1EXRBATTERY_B1,
+   CTR6_MP1LOYR_B1,
+   CTR6_1i8CHECK1_B1,
+   CTR6_1i8CHECK0_B1;
+//*************************************ERM-CCU*********************************************//
     bool E1CT_ERMSWVerValid_B1,  E2CT_ERMSWVerValid_B1;
 
     unsigned char E1CT_ERMPLCVer_U8, E1CT_ERMVxWorksVer_U8, E1CT_ERMMVBSWVer_U8, E1CT_ERMSDBVer_U8,

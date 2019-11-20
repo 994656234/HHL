@@ -52,29 +52,10 @@ QLabel
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="AIN8_Status3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>240</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="AIN7_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>210</y>
      <width>110</width>
      <height>31</height>
@@ -95,7 +76,7 @@ QLabel
     <rect>
      <x>70</x>
      <y>90</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
    </property>
@@ -109,27 +90,8 @@ QLabel
   <widget class="QLabel" name="AIN1_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>30</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN3_Status3">
-   <property name="geometry">
-    <rect>
      <x>490</x>
-     <y>90</y>
+     <y>30</y>
      <width>110</width>
      <height>31</height>
     </rect>
@@ -149,28 +111,9 @@ QLabel
     <rect>
      <x>70</x>
      <y>210</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN1_Status3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>30</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
    </property>
    <property name="text">
     <string/>
@@ -182,7 +125,7 @@ QLabel
   <widget class="QLabel" name="AIN5_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>150</y>
      <width>110</width>
      <height>31</height>
@@ -201,7 +144,7 @@ QLabel
   <widget class="QLabel" name="AIN4_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>120</y>
      <width>110</width>
      <height>31</height>
@@ -238,28 +181,9 @@ QLabel
     <rect>
      <x>70</x>
      <y>240</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN4_Status3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>120</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
    </property>
    <property name="text">
     <string/>
@@ -271,7 +195,7 @@ QLabel
   <widget class="QLabel" name="AIN2_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>60</y>
      <width>110</width>
      <height>31</height>
@@ -290,43 +214,8 @@ QLabel
   <widget class="QLabel" name="AIN6_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>180</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="TrainType3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>0</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TC2-R</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN7_Status3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>210</y>
      <width>110</width>
      <height>31</height>
     </rect>
@@ -360,14 +249,14 @@ QLabel
   <widget class="QLabel" name="TrainType1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>0</y>
      <width>110</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>TC1</string>
+    <string>MC1</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -424,7 +313,7 @@ QLabel
   <widget class="QLabel" name="AIN3_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>90</y>
      <width>110</width>
      <height>31</height>
@@ -445,7 +334,7 @@ QLabel
     <rect>
      <x>70</x>
      <y>30</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
    </property>
@@ -477,7 +366,7 @@ QLabel
     <rect>
      <x>70</x>
      <y>180</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
    </property>
@@ -493,7 +382,7 @@ QLabel
     <rect>
      <x>70</x>
      <y>150</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
    </property>
@@ -536,31 +425,12 @@ QLabel
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="AIN6_Status3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>180</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="lblTitle_3">
    <property name="geometry">
     <rect>
      <x>70</x>
      <y>0</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
    </property>
@@ -571,29 +441,10 @@ QLabel
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="AIN2_Status3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>60</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="AIN8_Status1">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>490</x>
      <y>240</y>
      <width>110</width>
      <height>31</height>
@@ -614,28 +465,9 @@ QLabel
     <rect>
      <x>70</x>
      <y>120</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN5_Status3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>150</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
    </property>
    <property name="text">
     <string/>
@@ -649,7 +481,7 @@ QLabel
     <rect>
      <x>70</x>
      <y>60</y>
-     <width>200</width>
+     <width>421</width>
      <height>31</height>
     </rect>
    </property>
@@ -663,14 +495,14 @@ QLabel
   <widget class="QLabel" name="TrainType2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>0</y>
      <width>110</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>TC1-R</string>
+    <string>MC2</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -679,7 +511,7 @@ QLabel
   <widget class="QLabel" name="AIN1_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>30</y>
      <width>110</width>
      <height>31</height>
@@ -698,7 +530,7 @@ QLabel
   <widget class="QLabel" name="AIN7_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>210</y>
      <width>110</width>
      <height>31</height>
@@ -717,7 +549,7 @@ QLabel
   <widget class="QLabel" name="AIN4_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>120</y>
      <width>110</width>
      <height>31</height>
@@ -736,7 +568,7 @@ QLabel
   <widget class="QLabel" name="AIN6_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>180</y>
      <width>110</width>
      <height>31</height>
@@ -755,7 +587,7 @@ QLabel
   <widget class="QLabel" name="AIN8_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>240</y>
      <width>110</width>
      <height>31</height>
@@ -774,7 +606,7 @@ QLabel
   <widget class="QLabel" name="AIN2_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>60</y>
      <width>110</width>
      <height>31</height>
@@ -793,7 +625,7 @@ QLabel
   <widget class="QLabel" name="AIN3_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>600</x>
      <y>90</y>
      <width>110</width>
      <height>31</height>
@@ -812,176 +644,8 @@ QLabel
   <widget class="QLabel" name="AIN5_Status2">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>150</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="TrainType4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>0</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TC2</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN6_Status4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>180</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN1_Status4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>30</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN4_Status4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>120</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN5_Status4">
-   <property name="geometry">
-    <rect>
      <x>600</x>
      <y>150</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN7_Status4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>210</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN8_Status4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>240</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN3_Status4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>90</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: black;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="AIN2_Status4">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>60</y>
      <width>110</width>
      <height>31</height>
     </rect>

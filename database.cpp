@@ -8,6 +8,10 @@
 
 Database::Database()
 {
+
+    DiCT_HMISWVerH_U8=1;
+    DiCT_HMISWVerL_U8=0;
+
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
     //init HMI-CCU
     DiCT_Year_U8=0;
@@ -112,6 +116,11 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
         HMiCT_LifeSignal_U16++;
         if(HMIPosition==1)
         {
+            crrcRicoMvb->setUnsignedChar(0x310,2,DiCT_HMISWVerH_U8);
+            crrcRicoMvb->setUnsignedChar(0x310,3,DiCT_HMISWVerL_U8);
+            D1CT_HMISWVerH_U8=DiCT_HMISWVerH_U8;
+            D1CT_HMISWVerL_U8=DiCT_HMISWVerL_U8;
+
 
             crrcRicoMvb->setUnsignedInt(0x310,0,HMiCT_LifeSignal_U16);
 
@@ -195,6 +204,11 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
         }
         else if(HMIPosition==2)
         {
+            crrcRicoMvb->setUnsignedChar(0x320,2,D1CT_HMISWVerH_U8);
+            crrcRicoMvb->setUnsignedChar(0x320,3,D1CT_HMISWVerL_U8);
+            D2CT_HMISWVerH_U8=DiCT_HMISWVerH_U8;
+            D2CT_HMISWVerL_U8=DiCT_HMISWVerL_U8;
+
             crrcRicoMvb->setUnsignedInt(0x320,0,HMiCT_LifeSignal_U16);
             crrcRicoMvb->setUnsignedChar(0x320,4,DiCT_Year_U8);
             crrcRicoMvb->setUnsignedChar(0x320,5,DiCT_Month_U8);
@@ -277,6 +291,27 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 
 
     }
+
+
+    //PIS
+    PIS1CT_P2_B1=crrcRicoMvb->getBool(0x910,2,0);
+    PIS2CT_P2_B1=crrcRicoMvb->getBool(0x920,2,0);
+    //BCU
+    B1CT_SWVerHigh_U8=crrcRicoMvb->getUnsignedChar(0x410,0);
+    B1CT_SWVerLow_U8=crrcRicoMvb->getUnsignedChar(0x410,1);
+    B2CT_SWVerHigh_U8=crrcRicoMvb->getUnsignedChar(0x420,0);
+    B2CT_SWVerLow_U8=crrcRicoMvb->getUnsignedChar(0x420,1);
+    //FCU
+    FCU1CT_usSWRev_B1=crrcRicoMvb->getUnsignedChar(0x810,3);
+    FCU2CT_usSWRev_B1=crrcRicoMvb->getUnsignedChar(0x820,3);
+    //PIS
+    PIS1CT_P178_B1=crrcRicoMvb->getUnsignedChar(0x911,0);
+    PIS1CT_P179_B1=crrcRicoMvb->getUnsignedChar(0x911,2);
+    PIS1CT_P180_B1=crrcRicoMvb->getUnsignedChar(0x911,2);
+    PIS2CT_P178_B1=crrcRicoMvb->getUnsignedChar(0x921,0);
+    PIS2CT_P179_B1=crrcRicoMvb->getUnsignedChar(0x921,2);
+    PIS2CT_P180_B1=crrcRicoMvb->getUnsignedChar(0x921,2);
+
 
 
     //*********************************RIOM-CCU**************************************//
@@ -688,6 +723,53 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     RM4CT_ATCREF_U16 = crrcRicoMvb->getUnsignedInt(0x140,2);
 
 
+    //CCU-RIOM
+    CTR1_DOPANI_B1 = crrcRicoMvb->getBool(0x118,19,7);
+    CTR1_DOHSCBC_B1 = crrcRicoMvb->getBool(0x118,19,6);
+    CTR1_DOHSCB0_B1 = crrcRicoMvb->getBool(0x118,19,5);
+    CTR1_DOVCUEBR_B1 = crrcRicoMvb->getBool(0x118,19,4);
+    CTR1_DOLOACHF_B1 = crrcRicoMvb->getBool(0x118,19,3);
+    CTR1_DOWFLR_B1 = crrcRicoMvb->getBool(0x118,20,7);
+    CTR1_DOTCR_B1 = crrcRicoMvb->getBool(0x118,20,6);
+    CTR1_DOHVIVDCP_B1 = crrcRicoMvb->getBool(0x118,20,5);
+    CTR1_DOHIVNC_B1 = crrcRicoMvb->getBool(0x118,20,4);
+    CTR1_DOLVDR_B1 = crrcRicoMvb->getBool(0x118,20,3);
+    CTR1_DOLOASMON_B1 = crrcRicoMvb->getBool(0x118,20,2);
+    CTR1_DOBSOI_B1 = crrcRicoMvb->getBool(0x118,20,1);
+    CTR1_DOPANDI_B1 = crrcRicoMvb->getBool(0x118,20,0);
+    CTR1_1i8CHECK1_B1 = crrcRicoMvb->getBool(0x118,31,7);
+    CTR1_1i8CHECK0_B1 = crrcRicoMvb->getBool(0x118,31,6);
+
+    CTR4_DOPANI_B1 = crrcRicoMvb->getBool(0x148,19,7);
+    CTR4_DOHSCBC_B1 = crrcRicoMvb->getBool(0x148,19,6);
+    CTR4_DOHSCB0_B1 = crrcRicoMvb->getBool(0x148,19,5);
+    CTR4_DOVCUEBR_B1 = crrcRicoMvb->getBool(0x148,19,4);
+    CTR4_DOLOACHF_B1 = crrcRicoMvb->getBool(0x148,19,3);
+    CTR4_DOWFLR_B1 = crrcRicoMvb->getBool(0x148,20,7);
+    CTR4_DOTCR_B1 = crrcRicoMvb->getBool(0x148,20,6);
+    CTR4_DOHVIVDCP_B1 = crrcRicoMvb->getBool(0x148,20,5);
+    CTR4_DOHIVNC_B1 = crrcRicoMvb->getBool(0x148,20,4);
+    CTR4_DOLVDR_B1 = crrcRicoMvb->getBool(0x148,20,3);
+    CTR4_DOLOASMON_B1 = crrcRicoMvb->getBool(0x148,20,2);
+    CTR4_DOBSOI_B1 = crrcRicoMvb->getBool(0x148,20,1);
+    CTR4_DOPANDI_B1 = crrcRicoMvb->getBool(0x148,20,0);
+    CTR4_1i8CHECK1_B1 = crrcRicoMvb->getBool(0x148,31,7);
+    CTR4_1i8CHECK0_B1 = crrcRicoMvb->getBool(0x148,31,6);
+
+    CTR3_MP1EXRBATTERY_B1 = crrcRicoMvb->getBool(0x138,20,7);
+    CTR3_MP1LOYR_B1 = crrcRicoMvb->getBool(0x138,20,6);
+    CTR3_1i8CHECK1_B1 = crrcRicoMvb->getBool(0x138,31,7);
+    CTR3_1i8CHECK0_B1 = crrcRicoMvb->getBool(0x138,31,6);
+
+    CTR6_MP1EXRBATTERY_B1 = crrcRicoMvb->getBool(0x168,20,7);
+    CTR6_MP1LOYR_B1 = crrcRicoMvb->getBool(0x168,20,6);
+    CTR6_1i8CHECK1_B1 = crrcRicoMvb->getBool(0x168,31,7);
+    CTR6_1i8CHECK0_B1 = crrcRicoMvb->getBool(0x168,31,6);
+
+
+
+
+
     //*******************************************ERM-CCU***********************************//
     E1CT_ERMSWVerValid_B1 = crrcRicoMvb->getBool(0x210,15,0);
     E2CT_ERMSWVerValid_B1 = crrcRicoMvb->getBool(0x220,15,0);
@@ -794,6 +876,17 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 
 
     /****************************************************CCU-HMI********************************************/
+    //zaixianhuangtai
+    B1CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x711,18);
+    B2CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x721,18);
+    B3CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x731,18);
+    B4CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x741,18);
+    B5CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x751,18);
+    B6CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x761,18);
+    B7CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x771,18);
+    B8CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x781,18);
+
+
     CTD_CCU1OLINE_B1 = crrcRicoMvb->getBool(0x308,0,0);
     CTD_CCU2OLINE_B1 = crrcRicoMvb->getBool(0x308,0,1);
     CTD_ERM1OLINE_B1 = crrcRicoMvb->getBool(0x308,0,2);

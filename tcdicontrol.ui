@@ -31,7 +31,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH3_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>89</y>
      <width>51</width>
      <height>31</height>
@@ -47,7 +47,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH24_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>349</y>
      <width>51</width>
      <height>31</height>
@@ -63,7 +63,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH17_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>146</y>
      <width>51</width>
      <height>31</height>
@@ -79,9 +79,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH15_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>89</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -95,9 +95,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH16_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>118</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -113,7 +113,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>320</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -127,7 +127,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH18_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>175</y>
      <width>51</width>
      <height>31</height>
@@ -143,7 +143,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH13_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>31</y>
      <width>51</width>
      <height>31</height>
@@ -161,7 +161,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>60</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -175,7 +175,7 @@ QLabel
   <widget class="QLabel" name="lblTitle_9">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>2</y>
      <width>71</width>
      <height>31</height>
@@ -191,9 +191,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH24_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>349</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -207,9 +207,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH23_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>320</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -223,9 +223,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH17_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>146</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -239,7 +239,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH9_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>262</y>
      <width>51</width>
      <height>31</height>
@@ -255,7 +255,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH23">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>320</y>
      <width>71</width>
      <height>31</height>
@@ -273,7 +273,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>175</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -287,7 +287,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH13">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>31</y>
      <width>71</width>
      <height>31</height>
@@ -303,7 +303,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH2_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>60</y>
      <width>51</width>
      <height>31</height>
@@ -319,7 +319,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH3_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>89</y>
      <width>51</width>
      <height>31</height>
@@ -335,7 +335,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH19">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>204</y>
      <width>71</width>
      <height>31</height>
@@ -351,7 +351,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH12_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>349</y>
      <width>51</width>
      <height>31</height>
@@ -367,7 +367,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH10_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>291</y>
      <width>51</width>
      <height>31</height>
@@ -383,7 +383,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH20_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>233</y>
      <width>51</width>
      <height>31</height>
@@ -399,7 +399,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH9_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>262</y>
      <width>51</width>
      <height>31</height>
@@ -415,9 +415,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH14_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>60</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -431,7 +431,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH14_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>60</y>
      <width>51</width>
      <height>31</height>
@@ -463,9 +463,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH18_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>175</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -481,7 +481,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>89</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -497,7 +497,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>204</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -511,7 +511,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH5_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>146</y>
      <width>51</width>
      <height>31</height>
@@ -527,7 +527,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH20">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>233</y>
      <width>71</width>
      <height>31</height>
@@ -543,7 +543,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH22_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>291</y>
      <width>51</width>
      <height>31</height>
@@ -559,7 +559,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH8_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>233</y>
      <width>51</width>
      <height>31</height>
@@ -575,7 +575,7 @@ QLabel
   <widget class="QLabel" name="TrainType5">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>2</y>
      <width>51</width>
      <height>31</height>
@@ -607,7 +607,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH10_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>291</y>
      <width>51</width>
      <height>31</height>
@@ -655,7 +655,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH15_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>89</y>
      <width>51</width>
      <height>31</height>
@@ -673,7 +673,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>146</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -703,7 +703,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH11_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>320</y>
      <width>51</width>
      <height>31</height>
@@ -719,7 +719,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH14_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>60</y>
      <width>51</width>
      <height>31</height>
@@ -735,9 +735,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH13_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>31</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -753,7 +753,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>233</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -767,7 +767,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH21_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>262</y>
      <width>51</width>
      <height>31</height>
@@ -799,7 +799,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH4_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>118</y>
      <width>51</width>
      <height>31</height>
@@ -815,7 +815,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH6_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>175</y>
      <width>51</width>
      <height>31</height>
@@ -831,7 +831,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH15_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>89</y>
      <width>51</width>
      <height>31</height>
@@ -847,7 +847,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH12_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>349</y>
      <width>51</width>
      <height>31</height>
@@ -863,7 +863,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH21">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>262</y>
      <width>71</width>
      <height>31</height>
@@ -879,9 +879,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH19_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>204</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -911,7 +911,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH24_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>349</y>
      <width>51</width>
      <height>31</height>
@@ -929,7 +929,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>118</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -959,7 +959,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH22">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>291</y>
      <width>71</width>
      <height>31</height>
@@ -975,7 +975,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH18_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>175</y>
      <width>51</width>
      <height>31</height>
@@ -991,7 +991,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH7_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>204</y>
      <width>51</width>
      <height>31</height>
@@ -1007,7 +1007,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH7_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>204</y>
      <width>51</width>
      <height>31</height>
@@ -1025,7 +1025,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>349</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -1039,7 +1039,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH17_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>146</y>
      <width>51</width>
      <height>31</height>
@@ -1055,7 +1055,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH22_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>291</y>
      <width>51</width>
      <height>31</height>
@@ -1071,7 +1071,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH8_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>233</y>
      <width>51</width>
      <height>31</height>
@@ -1087,7 +1087,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH23_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>320</y>
      <width>51</width>
      <height>31</height>
@@ -1119,7 +1119,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH18">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>175</y>
      <width>71</width>
      <height>31</height>
@@ -1135,9 +1135,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH20_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>233</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -1151,7 +1151,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH13_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>31</y>
      <width>51</width>
      <height>31</height>
@@ -1167,7 +1167,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH6_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>175</y>
      <width>51</width>
      <height>31</height>
@@ -1183,7 +1183,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH14">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>60</y>
      <width>71</width>
      <height>31</height>
@@ -1199,7 +1199,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH16">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>118</y>
      <width>71</width>
      <height>31</height>
@@ -1215,7 +1215,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH20_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>233</y>
      <width>51</width>
      <height>31</height>
@@ -1231,7 +1231,7 @@ QLabel
   <widget class="QLabel" name="TrainType6">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>2</y>
      <width>51</width>
      <height>31</height>
@@ -1263,7 +1263,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH23_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>320</y>
      <width>51</width>
      <height>31</height>
@@ -1295,7 +1295,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH5_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>146</y>
      <width>51</width>
      <height>31</height>
@@ -1311,7 +1311,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH19_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>204</y>
      <width>51</width>
      <height>31</height>
@@ -1329,7 +1329,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>291</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -1343,7 +1343,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH16_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>118</y>
      <width>51</width>
      <height>31</height>
@@ -1361,7 +1361,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>2</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -1375,7 +1375,7 @@ QLabel
   <widget class="QLabel" name="TrainType2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>2</y>
      <width>51</width>
      <height>31</height>
@@ -1391,7 +1391,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH4_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>118</y>
      <width>51</width>
      <height>30</height>
@@ -1423,7 +1423,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH24">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>349</y>
      <width>71</width>
      <height>31</height>
@@ -1439,7 +1439,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH1_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>31</y>
      <width>51</width>
      <height>31</height>
@@ -1455,7 +1455,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH16_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>118</y>
      <width>51</width>
      <height>31</height>
@@ -1471,7 +1471,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH17">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>146</y>
      <width>71</width>
      <height>31</height>
@@ -1487,9 +1487,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH21_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>262</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -1503,9 +1503,9 @@ QLabel
   <widget class="QLabel" name="lbl_CH22_Name">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>291</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -1535,7 +1535,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH15">
    <property name="geometry">
     <rect>
-     <x>446</x>
+     <x>440</x>
      <y>89</y>
      <width>71</width>
      <height>31</height>
@@ -1553,7 +1553,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>31</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -1567,7 +1567,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH19_State2">
    <property name="geometry">
     <rect>
-     <x>742</x>
+     <x>839</x>
      <y>204</y>
      <width>51</width>
      <height>31</height>
@@ -1583,9 +1583,9 @@ QLabel
   <widget class="QLabel" name="lblTitle_7">
    <property name="geometry">
     <rect>
-     <x>515</x>
+     <x>510</x>
      <y>2</y>
-     <width>180</width>
+     <width>281</width>
      <height>31</height>
     </rect>
    </property>
@@ -1599,7 +1599,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH21_State1">
    <property name="geometry">
     <rect>
-     <x>693</x>
+     <x>790</x>
      <y>262</y>
      <width>51</width>
      <height>31</height>
@@ -1615,7 +1615,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH2_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>60</y>
      <width>51</width>
      <height>31</height>
@@ -1633,7 +1633,7 @@ QLabel
     <rect>
      <x>72</x>
      <y>262</y>
-     <width>180</width>
+     <width>269</width>
      <height>31</height>
     </rect>
    </property>
@@ -1647,7 +1647,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH1_State2">
    <property name="geometry">
     <rect>
-     <x>299</x>
+     <x>390</x>
      <y>31</y>
      <width>51</width>
      <height>31</height>
@@ -1663,7 +1663,7 @@ QLabel
   <widget class="QLabel" name="lbl_CH11_State1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>320</y>
      <width>51</width>
      <height>31</height>
@@ -1679,840 +1679,8 @@ QLabel
   <widget class="QLabel" name="TrainType1">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>340</x>
      <y>2</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH7_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>204</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH6_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>175</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH10_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>291</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH11_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>320</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH9_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>262</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="TrainType4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>2</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH8_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>233</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH1_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>31</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH12_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>349</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="TrainType3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>2</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH2_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>60</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH3_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>89</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH6_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>175</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH4_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>118</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH5_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>146</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH3_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>89</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH8_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>233</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH7_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>204</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH4_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>118</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH11_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>320</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH5_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>146</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH10_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>291</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH12_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>349</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH2_State3">
-   <property name="geometry">
-    <rect>
-     <x>348</x>
-     <y>60</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH9_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>262</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH1_State4">
-   <property name="geometry">
-    <rect>
-     <x>397</x>
-     <y>31</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH18_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>175</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH13_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>31</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH24_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>349</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH14_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>60</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH20_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>233</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH19_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>204</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH22_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>291</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH16_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>118</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH18_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>175</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH20_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>233</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH21_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>262</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH23_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>320</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH16_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>118</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH15_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>89</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH21_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>262</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH14_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>60</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="TrainType8">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>2</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH23_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>320</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH22_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>291</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH17_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>146</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="TrainType7">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>2</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH15_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>89</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH19_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>204</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH13_State4">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>31</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH17_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>146</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_CH24_State3">
-   <property name="geometry">
-    <rect>
-     <x>791</x>
-     <y>349</y>
      <width>51</width>
      <height>31</height>
     </rect>

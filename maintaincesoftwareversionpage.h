@@ -45,12 +45,16 @@ private:
     QString turnNumberToQString(unsigned char status);
     QString turnNumberToQString2(unsigned char status);
     QString turnNumberToQStringDoor(unsigned char status1,unsigned char status2);
-    QString turnNumberToQStringSIV(unsigned char status1,unsigned char status2,unsigned char status3,unsigned char status4 );
+    QString turnNumberToQStringPIS(unsigned char status1,unsigned char status2,unsigned char status3 );
     QString turnNumberToQStringLCU(unsigned char status);
     QString turnNumberToQStringDCU(unsigned short int status);
-    QList<QString> doorStatus,RIOM_LCUStatus,OtherStatus;
+    QList<QString> doorStatussignal,RIOM_LCUStatus,OtherStatus;
     QString turnNumberToQStringHVAC(unsigned char status1,unsigned char status2);
     MainGetDefaultPara *getParam;
+
+    QString doorStatus(unsigned short status);
+    QString TCUVersion(unsigned short status1,unsigned short status2,unsigned short status3);
+
 
 private slots:
     void on_BTN4_pressed();

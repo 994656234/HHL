@@ -203,16 +203,10 @@ bool CrrcRicoMvb::getBool(unsigned short int port, unsigned short int byteOffset
     if (this->portData.contains(port) && byteOffset < 32)
     {
         // pixy is a little endian device
-        if (byteOffset % 2 == 1)
-        {
+
             pointer = (unsigned char *)(this->portData[port]->data);
-            value = *(pointer + byteOffset - 1);
-        }
-        else
-        {
-            pointer = (unsigned char *)(this->portData[port]->data);
-            value = *(pointer + byteOffset + 1);
-        }
+            value = *(pointer + byteOffset);
+
     }
     else
     {
@@ -252,16 +246,10 @@ unsigned char CrrcRicoMvb::getUnsignedChar(unsigned short int port, unsigned sho
     if (this->portData.contains(port) && byteOffset < 32)
     {
         // pixy is a little endian device
-        if (byteOffset % 2 == 1)
-        {
+
             pointer = (unsigned char *)(this->portData[port]->data);
-            value = *(pointer + byteOffset - 1);
-        }
-        else
-        {
-            pointer = (unsigned char *)(this->portData[port]->data);
-            value = *(pointer + byteOffset + 1);
-        }
+            value = *(pointer + byteOffset );
+
 
         return value;
     }
@@ -284,16 +272,10 @@ signed char CrrcRicoMvb::getSignedChar(unsigned short int port, unsigned short i
     if (this->portData.contains(port) && byteOffset < 32)
     {
         // pixy is a little endian device
-        if (byteOffset % 2 == 1)
-        {
+
             pointer = (unsigned char *)(this->portData[port]->data);
-            value = *(signed char *)(pointer + byteOffset - 1);
-        }
-        else
-        {
-            pointer = (unsigned char *)(this->portData[port]->data);
-            value = *(signed char *)(pointer + byteOffset + 1);
-        }
+            value = *(signed char *)(pointer + byteOffset);
+
 
         return value;
     }
@@ -416,16 +398,10 @@ void CrrcRicoMvb::setBool(unsigned short int port, unsigned short int byteOffset
     if (this->portData.contains(port) && byteOffset < 32)
     {
         // pixy is a little endian device
-        if (byteOffset % 2 == 1)
-        {
+
             pointer = (unsigned char *)(this->portData[port]->data);
-            pointer = pointer + byteOffset - 1;
-        }
-        else
-        {
-            pointer = (unsigned char *)(this->portData[port]->data);
-            pointer = pointer + byteOffset + 1;
-        }
+            pointer = pointer + byteOffset ;
+
     }
     else
     {
@@ -461,16 +437,10 @@ void CrrcRicoMvb::setUnsignedChar(unsigned short int port, unsigned short int by
     if (this->portData.contains(port) && byteOffset < 32)
     {
         // pixy is a little endian device
-        if (byteOffset % 2 == 1)
-        {
+
             pointer = (unsigned char *)(this->portData[port]->data);
-            *(pointer + byteOffset - 1) = signal;
-        }
-        else
-        {
-            pointer = (unsigned char *)(this->portData[port]->data);
-            *(pointer + byteOffset + 1) = signal;
-        }
+            *(pointer + byteOffset ) = signal;
+
     }
     else
     {
@@ -490,16 +460,11 @@ void CrrcRicoMvb::setSignedChar(unsigned short int port, unsigned short int byte
     if (this->portData.contains(port) && byteOffset < 32)
     {
         // pixy is a little endian device
-        if (byteOffset % 2 == 1)
-        {
+
+
             pointer = (signed char *)(this->portData[port]->data);
-            *(pointer + byteOffset - 1) = signal;
-        }
-        else
-        {
-            pointer = (signed char *)(this->portData[port]->data);
-            *(pointer + byteOffset + 1) = signal;
-        }
+            *(pointer + byteOffset) = signal;
+
     }
     else
     {

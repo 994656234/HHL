@@ -43,22 +43,18 @@ void TCDIControl::initialName(QList<QString> &names, QString str, QString traint
         labelsName.at(i)->setText(str+"-"+QString::number(i+1));
     }
 
-    if(traintype=="TC")
+    if(traintype=="MC")
     {
         ui->TrainType1->setText("MC1");
-        ui->TrainType2->setText("MC1-R");
-        ui->TrainType3->setText("MC2-R");
-        ui->TrainType4->setText("MC2");
+        ui->TrainType2->setText("MC2");
         ui->TrainType5->setText("MC1");
-        ui->TrainType6->setText("MC1-R");
-        ui->TrainType7->setText("MC2-R");
-        ui->TrainType8->setText("MC2");
+        ui->TrainType6->setText("MC2");
     }
 }
 
 void TCDIControl::updateDi(QList<bool> &state)
 {
-    if(state.length()!=DI_LENGTH*4)
+    if(state.length()!=DI_LENGTH*2)
     {
         qDebug()<< "TCDI's  length do not equal to" << DI_LENGTH*4;
         return;
@@ -72,15 +68,7 @@ void TCDIControl::updateDi(QList<bool> &state)
             <<ui->lbl_CH1_State2<<ui->lbl_CH2_State2<<ui->lbl_CH3_State2<<ui->lbl_CH4_State2<<ui->lbl_CH5_State2<<ui->lbl_CH6_State2
             <<ui->lbl_CH7_State2<<ui->lbl_CH8_State2<<ui->lbl_CH9_State2<<ui->lbl_CH10_State2<<ui->lbl_CH11_State2<<ui->lbl_CH12_State2
             <<ui->lbl_CH13_State2<<ui->lbl_CH14_State2<<ui->lbl_CH15_State2<<ui->lbl_CH16_State2<<ui->lbl_CH17_State2<<ui->lbl_CH18_State2
-            <<ui->lbl_CH19_State2<<ui->lbl_CH20_State2<<ui->lbl_CH21_State2<<ui->lbl_CH22_State2<<ui->lbl_CH23_State2<<ui->lbl_CH24_State2
-            <<ui->lbl_CH1_State3<<ui->lbl_CH2_State3<<ui->lbl_CH3_State3<<ui->lbl_CH4_State3<<ui->lbl_CH5_State3<<ui->lbl_CH6_State3
-            <<ui->lbl_CH7_State3<<ui->lbl_CH8_State3<<ui->lbl_CH9_State3<<ui->lbl_CH10_State3<<ui->lbl_CH11_State3<<ui->lbl_CH12_State3
-            <<ui->lbl_CH13_State3<<ui->lbl_CH14_State3<<ui->lbl_CH15_State3<<ui->lbl_CH16_State3<<ui->lbl_CH17_State3<<ui->lbl_CH18_State3
-            <<ui->lbl_CH19_State3<<ui->lbl_CH20_State3<<ui->lbl_CH21_State3<<ui->lbl_CH22_State3<<ui->lbl_CH23_State3<<ui->lbl_CH24_State3
-            <<ui->lbl_CH1_State4<<ui->lbl_CH2_State4<<ui->lbl_CH3_State4<<ui->lbl_CH4_State4<<ui->lbl_CH5_State4<<ui->lbl_CH6_State4
-            <<ui->lbl_CH7_State4<<ui->lbl_CH8_State4<<ui->lbl_CH9_State4<<ui->lbl_CH10_State4<<ui->lbl_CH11_State4<<ui->lbl_CH12_State4
-            <<ui->lbl_CH13_State4<<ui->lbl_CH14_State4<<ui->lbl_CH15_State4<<ui->lbl_CH16_State4<<ui->lbl_CH17_State4<<ui->lbl_CH18_State4
-            <<ui->lbl_CH19_State4<<ui->lbl_CH20_State4<<ui->lbl_CH21_State4<<ui->lbl_CH22_State4<<ui->lbl_CH23_State4<<ui->lbl_CH24_State4;
+            <<ui->lbl_CH19_State2<<ui->lbl_CH20_State2<<ui->lbl_CH21_State2<<ui->lbl_CH22_State2<<ui->lbl_CH23_State2<<ui->lbl_CH24_State2;
 
 
 

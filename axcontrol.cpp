@@ -39,7 +39,7 @@ void AXControl::initialName(QList<QString> &names)
 
 void AXControl::updateAx(QList<QString> &state)
 {
-    if (state.length() != (AX_LENGTH ) *4)
+    if (state.length() != (AX_LENGTH ) *2)
     {
         //_LOG <<"the length ax"<< state.size()<< "not equal to" << (AX_LENGTH ) * 2;
 
@@ -49,9 +49,7 @@ void AXControl::updateAx(QList<QString> &state)
     QList<QLabel *> labels;
 
     labels<<ui->AIN1_Status1<<ui->AIN2_Status1<<ui->AIN3_Status1<<ui->AIN4_Status1<<ui->AIN5_Status1<<ui->AIN6_Status1<<ui->AIN7_Status1<<ui->AIN8_Status1
-            <<ui->AIN1_Status2<<ui->AIN2_Status2<<ui->AIN3_Status2<<ui->AIN4_Status2<<ui->AIN5_Status2<<ui->AIN6_Status2<<ui->AIN7_Status2<<ui->AIN8_Status2
-            <<ui->AIN1_Status3<<ui->AIN2_Status3<<ui->AIN3_Status3<<ui->AIN4_Status3<<ui->AIN5_Status3<<ui->AIN6_Status3<<ui->AIN7_Status3<<ui->AIN8_Status3
-            <<ui->AIN1_Status4<<ui->AIN2_Status4<<ui->AIN3_Status4<<ui->AIN4_Status4<<ui->AIN5_Status4<<ui->AIN6_Status4<<ui->AIN7_Status4<<ui->AIN8_Status4;
+            <<ui->AIN1_Status2<<ui->AIN2_Status2<<ui->AIN3_Status2<<ui->AIN4_Status2<<ui->AIN5_Status2<<ui->AIN6_Status2<<ui->AIN7_Status2<<ui->AIN8_Status2;
 
     for (int i = 0; i < state.length(); i ++)
     {
