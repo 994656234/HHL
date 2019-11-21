@@ -89,7 +89,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning1_1">
+  <widget class="QLabel" name="lbl_3">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -105,7 +105,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning1_2">
+  <widget class="QLabel" name="lbl_4">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -121,7 +121,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning1_3">
+  <widget class="QLabel" name="lbl_5">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -137,7 +137,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning1_4">
+  <widget class="QLabel" name="lbl_6">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -153,7 +153,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning2_3">
+  <widget class="QLabel" name="lbl_9">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -169,11 +169,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning2_4">
+  <widget class="QLabel" name="lbl_10">
    <property name="geometry">
     <rect>
      <x>430</x>
-     <y>110</y>
+     <y>101</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -185,7 +185,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning_cab1_1">
+  <widget class="QLabel" name="lbl_1">
    <property name="geometry">
     <rect>
      <x>97</x>
@@ -201,7 +201,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning_cab1_2">
+  <widget class="QLabel" name="lbl_2">
    <property name="geometry">
     <rect>
      <x>97</x>
@@ -217,7 +217,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning2_1">
+  <widget class="QLabel" name="lbl_7">
    <property name="geometry">
     <rect>
      <x>265</x>
@@ -233,7 +233,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning2_2">
+  <widget class="QLabel" name="lbl_8">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -249,11 +249,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning3_1">
+  <widget class="QLabel" name="lbl_11">
    <property name="geometry">
     <rect>
      <x>465</x>
-     <y>99</y>
+     <y>101</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -265,7 +265,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning3_2">
+  <widget class="QLabel" name="lbl_12">
    <property name="geometry">
     <rect>
      <x>520</x>
@@ -281,7 +281,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning3_3">
+  <widget class="QLabel" name="lbl_13">
    <property name="geometry">
     <rect>
      <x>560</x>
@@ -297,7 +297,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning3_4">
+  <widget class="QLabel" name="lbl_14">
    <property name="geometry">
     <rect>
      <x>640</x>
@@ -313,7 +313,7 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning4_1">
+  <widget class="QLabel" name="lbl_15">
    <property name="geometry">
     <rect>
      <x>680</x>
@@ -329,11 +329,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning4_2">
+  <widget class="QLabel" name="lbl_16">
    <property name="geometry">
     <rect>
-     <x>755</x>
-     <y>140</y>
+     <x>730</x>
+     <y>100</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -345,42 +345,42 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning4_3">
-   <property name="geometry">
-    <rect>
-     <x>725</x>
-     <y>101</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_fireWarning4_4">
-   <property name="geometry">
-    <rect>
-     <x>760</x>
-     <y>101</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_fireWarning5_1">
+  <widget class="QLabel" name="lbl_19">
    <property name="geometry">
     <rect>
      <x>810</x>
+     <y>101</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_20">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>101</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_17">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
      <y>150</y>
      <width>31</width>
      <height>31</height>
@@ -393,10 +393,10 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning5_2">
+  <widget class="QLabel" name="lbl_18">
    <property name="geometry">
     <rect>
-     <x>810</x>
+     <x>770</x>
      <y>60</y>
      <width>31</width>
      <height>31</height>
@@ -409,11 +409,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning5_3">
+  <widget class="QLabel" name="lbl_21">
    <property name="geometry">
     <rect>
-     <x>860</x>
-     <y>110</y>
+     <x>890</x>
+     <y>60</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -425,11 +425,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_fireWarning5_4">
+  <widget class="QLabel" name="lbl_22">
    <property name="geometry">
     <rect>
-     <x>890</x>
-     <y>110</y>
+     <x>895</x>
+     <y>150</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -727,7 +727,7 @@ background-color:rgb(170,170,170);</string>
    <property name="geometry">
     <rect>
      <x>435</x>
-     <y>79</y>
+     <y>70</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -749,7 +749,7 @@ background-color:rgb(170,170,170);</string>
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>130</y>
+     <y>70</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -836,7 +836,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_16">
    <property name="geometry">
     <rect>
-     <x>730</x>
+     <x>815</x>
      <y>70</y>
      <width>21</width>
      <height>31</height>
@@ -849,7 +849,7 @@ border:0px,black;
 background-color:rgb(170,170,170);</string>
    </property>
    <property name="text">
-    <string>17</string>
+    <string>19</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -858,7 +858,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_17">
    <property name="geometry">
     <rect>
-     <x>765</x>
+     <x>850</x>
      <y>70</y>
      <width>21</width>
      <height>31</height>
@@ -871,7 +871,7 @@ border:0px,black;
 background-color:rgb(170,170,170);</string>
    </property>
    <property name="text">
-    <string>18</string>
+    <string>20</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -902,8 +902,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_19">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>141</y>
+     <x>735</x>
+     <y>140</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -924,7 +924,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_20">
    <property name="geometry">
     <rect>
-     <x>815</x>
+     <x>775</x>
      <y>119</y>
      <width>21</width>
      <height>31</height>
@@ -937,7 +937,7 @@ border:0px,black;
 background-color:rgb(170,170,170);</string>
    </property>
    <property name="text">
-    <string>19</string>
+    <string>17</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -946,7 +946,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_21">
    <property name="geometry">
     <rect>
-     <x>815</x>
+     <x>775</x>
      <y>91</y>
      <width>21</width>
      <height>31</height>
@@ -959,7 +959,7 @@ border:0px,black;
 background-color:rgb(170,170,170);</string>
    </property>
    <property name="text">
-    <string>20</string>
+    <string>18</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -968,8 +968,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_22">
    <property name="geometry">
     <rect>
-     <x>865</x>
-     <y>79</y>
+     <x>870</x>
+     <y>61</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -990,8 +990,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_23">
    <property name="geometry">
     <rect>
-     <x>895</x>
-     <y>79</y>
+     <x>870</x>
+     <y>148</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -1117,28 +1117,28 @@ border-bottom-right-radius:8px;</string>
   <zorder>LBLM1</zorder>
   <zorder>LBLM2</zorder>
   <zorder>LBLTC1</zorder>
-  <zorder>lbl_fireWarning1_1</zorder>
-  <zorder>lbl_fireWarning1_2</zorder>
-  <zorder>lbl_fireWarning1_3</zorder>
-  <zorder>lbl_fireWarning1_4</zorder>
-  <zorder>lbl_fireWarning2_3</zorder>
-  <zorder>lbl_fireWarning2_4</zorder>
-  <zorder>lbl_fireWarning_cab1_1</zorder>
-  <zorder>lbl_fireWarning_cab1_2</zorder>
-  <zorder>lbl_fireWarning2_1</zorder>
-  <zorder>lbl_fireWarning2_2</zorder>
-  <zorder>lbl_fireWarning3_1</zorder>
-  <zorder>lbl_fireWarning3_2</zorder>
-  <zorder>lbl_fireWarning3_3</zorder>
-  <zorder>lbl_fireWarning3_4</zorder>
-  <zorder>lbl_fireWarning4_1</zorder>
-  <zorder>lbl_fireWarning4_2</zorder>
-  <zorder>lbl_fireWarning4_3</zorder>
-  <zorder>lbl_fireWarning4_4</zorder>
-  <zorder>lbl_fireWarning5_1</zorder>
-  <zorder>lbl_fireWarning5_2</zorder>
-  <zorder>lbl_fireWarning5_3</zorder>
-  <zorder>lbl_fireWarning5_4</zorder>
+  <zorder>lbl_3</zorder>
+  <zorder>lbl_4</zorder>
+  <zorder>lbl_5</zorder>
+  <zorder>lbl_6</zorder>
+  <zorder>lbl_9</zorder>
+  <zorder>lbl_10</zorder>
+  <zorder>lbl_1</zorder>
+  <zorder>lbl_2</zorder>
+  <zorder>lbl_7</zorder>
+  <zorder>lbl_8</zorder>
+  <zorder>lbl_11</zorder>
+  <zorder>lbl_12</zorder>
+  <zorder>lbl_13</zorder>
+  <zorder>lbl_14</zorder>
+  <zorder>lbl_15</zorder>
+  <zorder>lbl_16</zorder>
+  <zorder>lbl_19</zorder>
+  <zorder>lbl_20</zorder>
+  <zorder>lbl_17</zorder>
+  <zorder>lbl_18</zorder>
+  <zorder>lbl_21</zorder>
+  <zorder>lbl_22</zorder>
   <zorder>lbl_metroNum2</zorder>
   <zorder>lbl_metroNum3</zorder>
   <zorder>lbl_metroNum4</zorder>

@@ -66,7 +66,13 @@ VehicleStatusArea::VehicleStatusArea(QWidget *parent) :
             <<this->ui->BTNTCU<<this->ui->BTNFire<<this->ui->BTNACP<<this->ui->BTNTolopogy<<this->ui->BTNReset;
 
     labels<<this->ui->LBLHVAC<<this->ui->LBLSIV<<this->ui->LBLEDCU<<this->ui->LBLPIS<<this->ui->LBLBCU
-            <<this->ui->LBLTCU<<this->ui->LBLFire<<this->ui->LBLACP<<this->ui->LBLTolopogy<<this->ui->LBLReset;;
+            <<this->ui->LBLTCU<<this->ui->LBLFire<<this->ui->LBLACP<<this->ui->LBLTolopogy<<this->ui->LBLReset;
+    doorPushButton<<ui->BTNResetFirealarm<<ui->BTNResetFireBEEP;
+    boorStatus<<&database->DiCT_FASReset_B1<<&database->DiCT_FASSlience_B1;
+    for(int i=0;i<doorPushButton.size();i++)
+       {
+           connect(doorPushButton.at(i),SIGNAL(clicked()),this,SLOT(doorPushButtonEvent()));
+       }
 
     Btnstatus<<HVACNORMAL<<SIVNORMAL<<EDCUNORMAL<<PISNORMAL<<BCUNORMAL<<TCUNORMAL<<FIRENORMAL<<ACPNORMAL<<TUOPUNORMAL<<RESETNORMAL;
     for(int i = 0; i<buttons.size();i++)
@@ -79,6 +85,10 @@ VehicleStatusArea::VehicleStatusArea(QWidget *parent) :
     ui->lbl_level_name->hide();
     ui->lbl_level_value->hide();
     ui->lbl_notract_nobrake->show();
+
+    ui->BTNResetFirealarm->hide();
+    ui->BTNResetFireBEEP->hide();
+
 
     this->fireflag=true;
 
@@ -104,51 +114,218 @@ void VehicleStatusArea::changeTrainStatus()
     {
         changePage(uVehicleAirConditionerPage);
         this->ui->LBLHVAC->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
 
     }else if(BTNname == "BTNSIV")
     {
         changePage(uVehicleAuxiliaryPage);
         this->ui->LBLSIV->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
 
     }else if(BTNname == "BTNEDCU")
     {
         changePage(uVehicleDoorPage);
         this->ui->LBLEDCU->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
 
     }else if(BTNname == "BTNPIS")
     {
         changePage(uVehiclePISPage);
         this->ui->LBLPIS->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
 
     }else if(BTNname == "BTNBCU")
     {
         changePage(uVehicleBrakePage);
         this->ui->LBLBCU->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
 
     }else if(BTNname == "BTNTCU")
     {
         changePage(uVehicleTractPage);
         this->ui->LBLTCU->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
 
     }else if(BTNname == "BTNFire")
     {
         changePage(uVehicleFireWarningPage);
         this->ui->LBLFire->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,10,111,31);
+        ui->LBLSpeed->setGeometry(20,60,111,31);
 
+        ui->LBLNetV->setGeometry(820,10,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,10,41,31);
+        ui->LBLNetV_5->setGeometry(930,10,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,65,51,31);
+        ui->lbl_metrospeed->setGeometry(880,65,41,31);
+        ui->LBLNetV_6->setGeometry(930,65,61,31);
+
+        ui->label_3->setGeometry(810,5,191,40);
+        ui->label_4->setGeometry(810,60,191,40);
+        ui->BTNResetFirealarm->show();
+        ui->BTNResetFireBEEP->show();
     }else if(BTNname == "BTNACP")
     {
         changePage(uVehicleAirCompressorPage);
         this->ui->LBLACP->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
 
     }else if(BTNname == "BTNTolopogy")
     {
         changePage(uVehicleTopologyPage);
         this->ui->LBLTolopogy->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
     }
     else if(BTNname=="BTNReset")
     {
         changePage(uVehicleLineCircuitBreakerPage);
         this->ui->LBLReset->setStyleSheet(LABELDOWN);
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
+    }
+    else
+    {
+        ui->lbl_mode->setGeometry(20,80,111,31);
+        ui->LBLSpeed->setGeometry(20,150,111,31);
+
+        ui->LBLNetV->setGeometry(820,80,51,31);
+        ui->LBL_metrolimitspeed->setGeometry(880,80,41,31);
+        ui->LBLNetV_5->setGeometry(930,80,61,31);
+
+        ui->LBLNetV_3->setGeometry(820,160,51,31);
+        ui->lbl_metrospeed->setGeometry(880,160,41,31);
+        ui->LBLNetV_6->setGeometry(930,160,61,31);
+
+        ui->label_3->setGeometry(810,70,191,51);
+        ui->label_4->setGeometry(810,150,191,51);
+        ui->BTNResetFirealarm->hide();
+        ui->BTNResetFireBEEP->hide();
     }
 
 
@@ -357,5 +534,29 @@ void VehicleStatusArea::setProgressBar(bool tract,bool brake,unsigned short valu
 
 }
 
+void VehicleStatusArea::doorPushButtonEvent()
+{
+    int whichButton=((QPushButton*)this->sender())->whatsThis().toInt()-1;
+    database->DiCT_SetFlagChecker_U8=0xAA;
+    *boorStatus[whichButton]=true;
+    ((QPushButton*)this->sender())->setStyleSheet(BTNPRESS);
+    ((QPushButton*)this->sender())->setEnabled(false);
+    time3s[whichButton]=this->startTimer(2000);
+}
+
+void VehicleStatusArea::timerEvent(QTimerEvent *e)
+{
+    for(int i = 0; i < 2;i++)
+        {
+            if(e->timerId() == time3s[i])
+            {
+                killTimer(time3s[i]);
+                doorPushButton.at(i)->setStyleSheet(BTNRELEASE);
+                doorPushButton.at(i)->setEnabled(true);
+                *boorStatus.at(i) = false;
+                database->DiCT_SetFlagChecker_U8=0x55;
+            }
+        }
+}
 
 

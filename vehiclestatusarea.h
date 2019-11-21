@@ -19,7 +19,7 @@ public:
     explicit VehicleStatusArea(QWidget *parent = 0);
     ~VehicleStatusArea();
     void setProgressBar(bool tract,bool brake, unsigned short value ,bool quickBrake);
-
+    void timerEvent(QTimerEvent *e);
     void updatePage();
     void refreshAllButton();
     void hideLabel();
@@ -49,6 +49,7 @@ private:
 private slots:
 
     void changeTrainStatus();
+    void doorPushButtonEvent();
 
 
 

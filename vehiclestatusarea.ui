@@ -1052,6 +1052,28 @@ font:20px,&quot;微软雅黑&quot;;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QPushButton" name="BTNResetFireBEEP">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:14px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>火灾消音</string>
+   </property>
+  </widget>
   <widget class="QPushButton" name="BTNReset">
    <property name="geometry">
     <rect>
@@ -1069,6 +1091,28 @@ font:20px,&quot;微软雅黑&quot;;
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNResetFirealarm">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:14px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>火灾复位</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -1105,13 +1149,9 @@ border-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
   </widget>
+  <zorder>LBLSpeed</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
-  <zorder>LBLSpeed</zorder>
-  <zorder>LBLNetV</zorder>
-  <zorder>lbl_mode</zorder>
   <zorder>LBLHVAC</zorder>
   <zorder>LBLSIV</zorder>
   <zorder>LBLReset</zorder>
@@ -1122,25 +1162,31 @@ border-color: rgb(255, 255, 255);</string>
   <zorder>LBLACP</zorder>
   <zorder>LBLTolopogy</zorder>
   <zorder>LBLTCU</zorder>
-  <zorder>LBL_metrolimitspeed</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
   <zorder>LBLNetV_3</zorder>
-  <zorder>lbl_metrospeed</zorder>
-  <zorder>LBLNetV_5</zorder>
   <zorder>LBLNetV_6</zorder>
+  <zorder>LBLNetV</zorder>
+  <zorder>LBLNetV_5</zorder>
+  <zorder>LBL_metrolimitspeed</zorder>
+  <zorder>lbl_metrospeed</zorder>
+  <zorder>BTNResetFireBEEP</zorder>
+  <zorder>lbl_mode</zorder>
+  <zorder>BTNResetFirealarm</zorder>
   <zorder>widget_2</zorder>
-  <zorder>lbl_level_name</zorder>
   <zorder>lbl_level_value</zorder>
   <zorder>lbl_notract_nobrake</zorder>
-  <zorder>BTNBCU</zorder>
-  <zorder>BTNTCU</zorder>
-  <zorder>BTNFire</zorder>
-  <zorder>BTNACP</zorder>
-  <zorder>BTNReset</zorder>
+  <zorder>lbl_level_name</zorder>
   <zorder>BTNHVAC</zorder>
+  <zorder>BTNBCU</zorder>
   <zorder>BTNSIV</zorder>
+  <zorder>BTNTCU</zorder>
   <zorder>BTNEDCU</zorder>
+  <zorder>BTNFire</zorder>
   <zorder>BTNPIS</zorder>
+  <zorder>BTNACP</zorder>
   <zorder>BTNTolopogy</zorder>
+  <zorder>BTNReset</zorder>
  </widget>
  <resources/>
  <connections/>

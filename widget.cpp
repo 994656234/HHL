@@ -581,7 +581,7 @@ void Widget::showEvent(QShowEvent *)
         }
         //add ports
         {
-            //crrcRicoMvb->addSinkPort(0xfff,MVB_FCode4,256);
+            crrcRicoMvb->addSinkPort(0xfff,MVB_FCode4,256);
             //CCU-ALL
             crrcRicoMvb->addSinkPort(0xF,MVB_FCode3,256);
 

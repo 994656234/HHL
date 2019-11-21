@@ -150,10 +150,10 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setUnsignedChar(0x310,31,DiCT_SetFlagChecker_U8);
 
             crrcRicoMvb->setBool(0x311,0,0,DiCT_HVACEmgcyVenti_B1);
-            crrcRicoMvb->setBool(0x311,0,0,DiCT_HVACVenti_B1);
-            crrcRicoMvb->setBool(0x311,0,0,DiCT_HVACAutoCoolMode_B1);
-            crrcRicoMvb->setBool(0x311,0,0,DiCT_HVACAutoWarmMode_B1);
-            crrcRicoMvb->setBool(0x311,0,0,DiCT_HVACStop_B1);
+            crrcRicoMvb->setBool(0x311,0,1,DiCT_HVACVenti_B1);
+            crrcRicoMvb->setBool(0x311,0,2,DiCT_HVACAutoCoolMode_B1);
+            crrcRicoMvb->setBool(0x311,0,3,DiCT_HVACAutoWarmMode_B1);
+            crrcRicoMvb->setBool(0x311,0,4,DiCT_HVACStop_B1);
 
             crrcRicoMvb->setBool(0x311,1,0,DiCT_Reduce0point5_B1);
             crrcRicoMvb->setBool(0x311,1,1,DiCT_Reduce1_B1);
@@ -236,10 +236,10 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setUnsignedChar(0x320,31,DiCT_SetFlagChecker_U8);
 
             crrcRicoMvb->setBool(0x321,0,0,DiCT_HVACEmgcyVenti_B1);
-            crrcRicoMvb->setBool(0x321,0,0,DiCT_HVACVenti_B1);
-            crrcRicoMvb->setBool(0x321,0,0,DiCT_HVACAutoCoolMode_B1);
-            crrcRicoMvb->setBool(0x321,0,0,DiCT_HVACAutoWarmMode_B1);
-            crrcRicoMvb->setBool(0x321,0,0,DiCT_HVACStop_B1);
+            crrcRicoMvb->setBool(0x321,0,1,DiCT_HVACVenti_B1);
+            crrcRicoMvb->setBool(0x321,0,2,DiCT_HVACAutoCoolMode_B1);
+            crrcRicoMvb->setBool(0x321,0,3,DiCT_HVACAutoWarmMode_B1);
+            crrcRicoMvb->setBool(0x321,0,4,DiCT_HVACStop_B1);
 
             crrcRicoMvb->setBool(0x321,1,0,DiCT_Reduce0point5_B1);
             crrcRicoMvb->setBool(0x321,1,1,DiCT_Reduce1_B1);
@@ -2254,7 +2254,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     FCU2CT_SHD6Alarm4_B1 = crrcRicoMvb->getBool(0x820,10,0);
     FCU2CT_SHD6Flt4_B1 = crrcRicoMvb->getBool(0x820,10,1);
     FCU2CT_SHD7Alarm4_B1 = crrcRicoMvb->getBool(0x820,10,2);
-    FCU2CT_SHD7Flt4_B1 = crrcRicoMvb->getBool(0x810,10,3);
+    FCU2CT_SHD7Flt4_B1 = crrcRicoMvb->getBool(0x820,10,3);
 
 
     //********************************************************PIS-CCU*******************************************//

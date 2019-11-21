@@ -25,6 +25,7 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
     modeSignal<<&database->DiCT_HVACAutoCoolMode_B1<<&database->DiCT_HVACAutoWarmMode_B1<<&database->DiCT_HVACVenti_B1
             <<&database->DiCT_HVACEmgcyVenti_B1<<&database->DiCT_HVACStop_B1;
     modeButtons<<ui->BTN_mode_autoCool<<ui->BTN_mode_autoWarm<<ui->BTN_mode_wind<<ui->BTN_mode_Ventilate<<ui->BTN_mode_stop;
+
     foreach(QPushButton *button,modeButtons)
     {
         connect(button,SIGNAL(pressed()),this,SLOT(modeBTNPressEvent()));
@@ -44,7 +45,6 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
 
     ui->lbl_cab1_active->hide();
     ui->lbl_cab2_active->hide();
-
 
 }
 
@@ -160,7 +160,7 @@ void VehicleSetAirConditionPage::metroBTNPressEvent()
 
 void VehicleSetAirConditionPage::modeBTNPressEvent()
 {
-    m_modeNum=((QPushButton*)this->sender())->whatsThis().toInt()-7;
+    m_modeNum=((QPushButton*)this->sender())->whatsThis().toInt()-5;
     for(int i=0;i<5;i++)
     {
         modeButtons.at(i)->setStyleSheet(BUTTONRELEASE);
@@ -229,8 +229,6 @@ void VehicleSetAirConditionPage::timerEvent(QTimerEvent *e)
     {
         killTimer(timer_2s[1]);
         temButtons.at(m_temNum)->setStyleSheet(BUTTONRELEASE);
-        //*temSignal[m_temNum]=false;
-        //m_modeNum=0;
         switch(m_setTempFlag)
         {
         case 0:
@@ -270,7 +268,7 @@ void VehicleSetAirConditionPage::timerEvent(QTimerEvent *e)
                  ;
         }
         ui->BTN_comfirm1->setStyleSheet(BUTTONRELEASE);
-         database->DiCT_SetFlagChecker_U8=0x55;
+        database->DiCT_SetFlagChecker_U8=0x55;
 
     }
 

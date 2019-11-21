@@ -349,7 +349,7 @@ font:20px &quot;微软雅黑&quot;;</string>
     </rect>
    </property>
    <property name="whatsThis">
-    <string>11</string>
+    <string>13</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-top:3px solid rgb(19,20,87);
@@ -373,7 +373,7 @@ font:16px &quot;微软雅黑&quot;;</string>
     </rect>
    </property>
    <property name="whatsThis">
-    <string>12</string>
+    <string>14</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-top:3px solid rgb(19,20,87);
