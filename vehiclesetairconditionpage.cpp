@@ -41,7 +41,7 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
     m_setTemp = 0;
     m_modeNum = 0;
     m_temNum = 0;
-    m_setTempFlag = 5;
+    m_setTempFlag = 2;
 
     ui->lbl_cab1_active->hide();
     ui->lbl_cab2_active->hide();
@@ -180,11 +180,11 @@ void VehicleSetAirConditionPage::temBTNPressEvent()
     ((QPushButton*)this->sender())->setStyleSheet(BUTTONPRESS);
     if(((QPushButton*)this->sender())->text() == "+")
     {
-        if(m_setTemp<2.5)
+        if(m_setTemp<2)
         {
-           m_setTemp+= 0.5;
+           m_setTemp+= 1;
         }
-        if(m_setTempFlag<10)
+        if(m_setTempFlag<5)
         {
             m_setTempFlag++;
         }
@@ -193,10 +193,10 @@ void VehicleSetAirConditionPage::temBTNPressEvent()
     }
     if(((QPushButton*)this->sender())->text() == "-")
     {
-        if(m_setTemp>-2.5)
+        if(m_setTemp>-2)
         {
 
-            m_setTemp-= 0.5;
+            m_setTemp-= 1;
         }
         if(m_setTempFlag>0)
         {
@@ -213,8 +213,8 @@ void VehicleSetAirConditionPage::timerEvent(QTimerEvent *e)
     if(e->timerId() == timer_2s[0])
     {
         killTimer(timer_2s[0]);
-        modeButtons.at(m_modeNum-1)->setStyleSheet(BUTTONRELEASE);
-        *modeSignal.at(m_modeNum-1)=false;
+        //modeButtons.at(m_modeNum-1)->setStyleSheet(BUTTONRELEASE);
+        //*modeSignal.at(m_modeNum-1)=false;
         //m_modeNum = 0;
         ui->BTN_confirm->setStyleSheet(BUTTONRELEASE);
         for(int i=0;i<5;i++)
@@ -232,20 +232,21 @@ void VehicleSetAirConditionPage::timerEvent(QTimerEvent *e)
         switch(m_setTempFlag)
         {
         case 0:
-            database->DiCT_Reduce2point5_B1=false;
-            break;
-        case 1 :
             database->DiCT_Reduce2_B1=false;
             break;
-        case 2:
-            database->DiCT_Reduce1point5_B1=false;
-            break;
-        case 3 :
+        case 1 :
             database->DiCT_Reduce1_B1=false;
             break;
-        case 4:
-            database->DiCT_Reduce0point5_B1=false;
+        case 2:
+            database->DiCT_Add0_B1=false;
             break;
+        case 3 :
+            database->DiCT_Add1_B1=false;
+            break;
+        case 4:
+            database->DiCT_Add2_B1=false;
+            break;
+/*
         case 5:
             database->DiCT_Add0_B1=false;
             break;
@@ -264,6 +265,7 @@ void VehicleSetAirConditionPage::timerEvent(QTimerEvent *e)
         case 10:
             database->DiCT_Add2point5_B1=false;
             break;
+*/
         default :
                  ;
         }
@@ -280,6 +282,10 @@ void VehicleSetAirConditionPage::on_BTN_confirm_pressed()
         return ;
     ui->BTN_confirm->setStyleSheet(BUTTONPRESS);
     database->DiCT_SetFlagChecker_U8=0xAA;
+    for(int i=0;i<5;i++)
+    {
+        *modeSignal.at(i)=false;
+    }
     *modeSignal.at(m_modeNum-1)=true;
     timer_2s[0] = this->startTimer(2000);
     for(int i=0;i<5;i++)
@@ -297,22 +303,23 @@ void VehicleSetAirConditionPage::on_BTN_comfirm1_pressed()
     switch(m_setTempFlag)
     {
     case 0:
-        database->DiCT_Reduce2point5_B1=true;
-        break;
-    case 1 :
         database->DiCT_Reduce2_B1=true;
         break;
-    case 2:
-        database->DiCT_Reduce1point5_B1=true;
-        break;
-    case 3 :
+    case 1 :
         database->DiCT_Reduce1_B1=true;
         break;
-    case 4:
-        database->DiCT_Reduce0point5_B1=true;
-        break;
-    case 5:
+    case 2:
         database->DiCT_Add0_B1=true;
+        break;
+    case 3 :
+        database->DiCT_Add1_B1=true;
+        break;
+    case 4:
+        database->DiCT_Add2_B1=true;
+        break;
+/*
+    case 5:
+        database->DiCT_Add2_B1=true;
         break;
     case 6:
         database->DiCT_Add0point5_B1=true;
@@ -329,6 +336,7 @@ void VehicleSetAirConditionPage::on_BTN_comfirm1_pressed()
     case 10:
         database->DiCT_Add2point5_B1=true;
         break;
+*/
     default :
              ;
     }

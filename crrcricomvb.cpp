@@ -169,7 +169,7 @@ void CrrcRicoMvb::synchronizeMvbData()
                 return;
             }else
             {
-                qDebug("dugon Read OK");
+                //qDebug("dugon Read OK");
 
             }
 
@@ -184,7 +184,7 @@ void CrrcRicoMvb::synchronizeMvbData()
                 return;
             }else
             {
-                qDebug("dugon Write OK");
+                //qDebug("dugon Write OK");
 
             }
         }
@@ -296,9 +296,9 @@ unsigned short int CrrcRicoMvb::getUnsignedInt(unsigned short int port, unsigned
 
     if (this->portData.contains(port) && byteOffset < 31)
     {
-        pointer = (unsigned char *)(this->portData[port]->data);
-        value = *(unsigned short int *)(pointer + byteOffset);
-
+//        pointer = (unsigned char *)(this->portData[port]->data);
+//        value = *(unsigned short int *)(pointer + byteOffset);
+        value = this->getUnsignedChar(port,byteOffset)*256+this->getUnsignedChar(port,byteOffset+1);
         return value;
     }
     else
@@ -483,8 +483,10 @@ void CrrcRicoMvb::setUnsignedInt(unsigned short int port, unsigned short int byt
 
     if (this->portData.contains(port) && byteOffset < 31)
     {
-        pointer = (unsigned char *)(this->portData[port]->data);
-        *(unsigned short int *)(pointer + byteOffset) = signal;
+        //        pointer = (unsigned char *)(this->portData[port]->data);
+        //        *(unsigned short int *)(pointer + byteOffset) = signal;
+                setUnsignedChar(port,byteOffset+1,signal%256);
+                setUnsignedChar(port,byteOffset,signal/256);
     }
     else
     {

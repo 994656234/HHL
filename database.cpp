@@ -717,6 +717,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     RM6CT_DI1LifeSignal_U8 = crrcRicoMvb->getUnsignedChar(0x160,6);
     RM6CT_DO1LifeSignal_U8 = crrcRicoMvb->getUnsignedChar(0x160,14);
 
+
     RM1CT_MCREFSETPOINT_U16 = crrcRicoMvb->getUnsignedInt(0x110,0);
     RM1CT_ATCREF_U16 = crrcRicoMvb->getUnsignedInt(0x110,2);
     RM4CT_MCREFSETPOINT_U16 = crrcRicoMvb->getUnsignedInt(0x140,0);

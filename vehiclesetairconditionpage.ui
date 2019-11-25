@@ -268,7 +268,7 @@ border-right:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,8
 font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>自动暖</string>
+    <string>手动暖</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_mode_wind">
@@ -492,7 +492,7 @@ border-right:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,8
 font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>自动冷</string>
+    <string>手动冷</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_mode_Ventilate">
@@ -516,7 +516,7 @@ border-right:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,8
 font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>紧急通风</string>
+    <string>自动</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_allMetro">
@@ -1050,7 +1050,7 @@ color: rgb(255, 255, 255);</string>
 font:20px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>范围：-2.5-2.5</string>
+    <string>范围：-2.0~2.0</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
