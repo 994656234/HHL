@@ -19,18 +19,18 @@ public:
     explicit MaintainceAccumulatorSubsystemPage(QWidget *parent = 0);
     ~MaintainceAccumulatorSubsystemPage();
     void updatePage();
-    void updateStatus(QList<QLabel*> lbl, QList<QString> status);
+    void timerEvent(QTimerEvent *e);
+
+
 
 private:
     Ui::MaintainceAccumulatorSubsystemPage *ui;
-    QList<QLabel*> line1,line2,line3,line4,line5,line6,line7,line8;
-    QList<QString> line1Status,line2Status,line3Status,line4Status,line5Status,line6Status,line7Status,line8Status;
+    int timer2s[1];
 
 private slots:
-    void on_BTN3_pressed();
-    void on_BTN2_pressed();
     void on_BTNHome_pressed();
     void on_BTN1_pressed();
+    void on_BTNStartTest_pressed();
 };
 
 #endif // MAINTAINCEACCUMULATORSUBSYSTEMPAGE_H

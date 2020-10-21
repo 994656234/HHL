@@ -311,232 +311,11 @@ font:20px &quot;微软雅黑&quot;;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_SIV_Excision_TC1">
+  <widget class="QPushButton" name="BTN_SIV_1">
    <property name="geometry">
     <rect>
      <x>150</x>
      <y>150</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>7</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV切除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_SIV_Reset_TC1">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>520</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>7</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV复位</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_SIV_Reset_M1">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>530</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>5</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV复位</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_SIV_Excision_M1">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>150</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>5</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV切除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_SIV_Excision_M2">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>150</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>6</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV切除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_SIV_Reset_M2">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>510</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>6</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV复位</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_SIV_Excision_TC2">
-   <property name="geometry">
-    <rect>
-     <x>780</x>
-     <y>150</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>8</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV切除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_SIV_Reset_TC2">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>520</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>8</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>SIV复位</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_DCU_Reset_Mp1">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>520</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>3</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>DCU故障
-复位</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_Mp1">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>330</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>3</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>VVVF切除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_DCU_Reset_M1">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>520</y>
      <width>121</width>
      <height>61</height>
     </rect>
@@ -551,107 +330,59 @@ font:20px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>DCU故障
-复位</string>
+    <string>SIV切除</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M1">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>295</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>1</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>VVVF
-切除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_DCU_Reset_M2">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>520</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>2</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>DCU故障
-复位</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M2">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>295</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>2</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>VVVF
-切除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_DCU_Reset_Mp2">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>510</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>4</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>DCU故障
-复位</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_Mp2">
+  <widget class="QPushButton" name="BTN_SIV_2">
    <property name="geometry">
     <rect>
      <x>780</x>
-     <y>330</y>
+     <y>150</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>SIV切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_TCU_1">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>285</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF电制动
+切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_TCU_2_1">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>290</y>
      <width>121</width>
      <height>61</height>
     </rect>
@@ -666,7 +397,54 @@ font:20px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF切除</string>
+    <string>VVVF电制动
+切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_TCU_3_1">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>290</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF电制动
+切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_TCU_4">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>285</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>VVVF电制动
+切除</string>
    </property>
   </widget>
   <widget class="QLabel" name="lbl_cab1_direction">
@@ -771,11 +549,11 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M1_2">
+  <widget class="QPushButton" name="BTN_TCU_2_2">
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>365</y>
+     <y>370</y>
      <width>121</width>
      <height>61</height>
     </rect>
@@ -790,15 +568,15 @@ font:20px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF
+    <string>VVVF电制动
 切除</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_DCU_Ele_Excision_M2_2">
+  <widget class="QPushButton" name="BTN_TCU_3_2">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>365</y>
+     <y>370</y>
      <width>121</width>
      <height>61</height>
     </rect>
@@ -813,7 +591,7 @@ font:20px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF
+    <string>VVVF电制动
 切除</string>
    </property>
   </widget>
@@ -833,28 +611,18 @@ border-radius:10px;</string>
   <zorder>LBLM1</zorder>
   <zorder>LBLMP1</zorder>
   <zorder>LBLTC1</zorder>
-  <zorder>BTN_SIV_Excision_TC1</zorder>
-  <zorder>BTN_SIV_Reset_TC1</zorder>
-  <zorder>BTN_SIV_Reset_M1</zorder>
-  <zorder>BTN_SIV_Excision_M1</zorder>
-  <zorder>BTN_SIV_Excision_M2</zorder>
-  <zorder>BTN_SIV_Reset_M2</zorder>
-  <zorder>BTN_SIV_Excision_TC2</zorder>
-  <zorder>BTN_SIV_Reset_TC2</zorder>
-  <zorder>BTN_DCU_Reset_Mp1</zorder>
-  <zorder>BTN_DCU_Ele_Excision_Mp1</zorder>
-  <zorder>BTN_DCU_Reset_M1</zorder>
-  <zorder>BTN_DCU_Ele_Excision_M1</zorder>
-  <zorder>BTN_DCU_Reset_M2</zorder>
-  <zorder>BTN_DCU_Ele_Excision_M2</zorder>
-  <zorder>BTN_DCU_Reset_Mp2</zorder>
-  <zorder>BTN_DCU_Ele_Excision_Mp2</zorder>
+  <zorder>BTN_SIV_1</zorder>
+  <zorder>BTN_SIV_2</zorder>
+  <zorder>BTN_TCU_1</zorder>
+  <zorder>BTN_TCU_2_1</zorder>
+  <zorder>BTN_TCU_3_1</zorder>
+  <zorder>BTN_TCU_4</zorder>
   <zorder>lbl_cab1_direction</zorder>
   <zorder>lbl_cab1_active</zorder>
   <zorder>lbl_cab2_direction</zorder>
   <zorder>lbl_cab2_active</zorder>
-  <zorder>BTN_DCU_Ele_Excision_M1_2</zorder>
-  <zorder>BTN_DCU_Ele_Excision_M2_2</zorder>
+  <zorder>BTN_TCU_2_2</zorder>
+  <zorder>BTN_TCU_3_2</zorder>
  </widget>
  <resources/>
  <connections/>

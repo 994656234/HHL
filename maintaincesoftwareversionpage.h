@@ -53,7 +53,9 @@ private:
     MainGetDefaultPara *getParam;
 
     QString doorStatus(unsigned short status);
-    QString TCUVersion(unsigned short status1,unsigned short status2,unsigned short status3);
+    QString TCUVersion(unsigned short status3);
+
+    QString BMSVersion(unsigned short status);
 
 
 private slots:

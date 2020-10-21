@@ -19,7 +19,7 @@ public:
 
 private:
     Ui::VehicleTrainArea *ui;
-    void setDoorStatus(QLabel *label,QList<bool> &status);
+    void setDoorStatus(QLabel *label,QList<bool> status);
     QList<bool> DOORstatus;
     void setPantoStatus(QLabel* label,unsigned char status);
 };

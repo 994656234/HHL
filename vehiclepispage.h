@@ -1,6 +1,8 @@
 #ifndef VEHICLEPISPAGE_H
 #define VEHICLEPISPAGE_H
 #include "mybase.h"
+#include "qlist.h"
+#include "qlabel.h"
 
 #include <QWidget>
 
@@ -19,6 +21,9 @@ public:
 
 private:
     Ui::VehiclePISPage *ui;
+    QList<QLabel *> label;
+    QList<bool> status;
+    void PISStatus(QList<QLabel *> label,QList<bool> status);
 };
 
 #endif // VEHICLEPISPAGE_H

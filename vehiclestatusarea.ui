@@ -19,13 +19,14 @@
 	background-color: rgb(0,0,50);
 }
 
+
 </string>
   </property>
   <widget class="QLabel" name="LBLSpeed">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>150</y>
+     <y>90</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -33,7 +34,7 @@
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 0, 0);
 color:white;
-font:24px,&quot;微软雅黑&quot;;
+font:20px &quot;微软雅黑&quot;;
 border:2px  solid;
 border-color: rgb(255, 255, 255);
 </string>
@@ -49,14 +50,14 @@ border-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>820</x>
-     <y>80</y>
+     <y>100</y>
      <width>51</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
-font:24px,&quot;微软雅黑&quot;;</string>
+font:24px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>限速</string>
@@ -269,7 +270,7 @@ font:24px,&quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>80</y>
+     <y>34</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -278,13 +279,16 @@ font:24px,&quot;微软雅黑&quot;;</string>
     <string notr="true">QLabel
 {
 color:white;
-font:24px,&quot;微软雅黑&quot;;
+font:20px &quot;微软雅黑&quot;;
 border:2px  solid;
 	border-color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="LBLHVAC">
@@ -451,7 +455,7 @@ border:2px  solid;
    <property name="geometry">
     <rect>
      <x>880</x>
-     <y>80</y>
+     <y>100</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -471,14 +475,14 @@ font:24px,&quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>820</x>
-     <y>160</y>
+     <y>180</y>
      <width>51</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
-font:24px,&quot;微软雅黑&quot;;</string>
+font:24px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>速度</string>
@@ -488,7 +492,7 @@ font:24px,&quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>880</x>
-     <y>160</y>
+     <y>180</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -508,14 +512,14 @@ font:24px,&quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>80</y>
+     <y>100</y>
      <width>61</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
-font:24px,&quot;微软雅黑&quot;;</string>
+font:24px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>km/h</string>
@@ -525,14 +529,14 @@ font:24px,&quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>160</y>
+     <y>180</y>
      <width>61</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
-font:24px,&quot;微软雅黑&quot;;</string>
+font:24px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>km/h</string>
@@ -982,6 +986,7 @@ border-color: rgb(0, 0, 0);</string>
    <zorder>label_100</zorder>
    <zorder>label_101</zorder>
    <zorder>lbl_progressbar_value</zorder>
+   <zorder>lbl_qianyinfengsuo</zorder>
   </widget>
   <widget class="QLabel" name="lbl_level_name">
    <property name="geometry">
@@ -996,7 +1001,7 @@ border-color: rgb(0, 0, 0);</string>
     <string notr="true">QLabel
 {
 color:white;
-font:20px,&quot;微软雅黑&quot;;
+font:20px &quot;微软雅黑&quot;;
 }</string>
    </property>
    <property name="text">
@@ -1010,7 +1015,7 @@ font:20px,&quot;微软雅黑&quot;;
    <property name="geometry">
     <rect>
      <x>134</x>
-     <y>160</y>
+     <y>150</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -1019,7 +1024,7 @@ font:20px,&quot;微软雅黑&quot;;
     <string notr="true">QLabel
 {
 color:white;
-font:20px,&quot;微软雅黑&quot;;
+font:20px &quot;微软雅黑&quot;;
 }</string>
    </property>
    <property name="text">
@@ -1042,7 +1047,7 @@ font:20px,&quot;微软雅黑&quot;;
     <string notr="true">QLabel
 {
 color:white;
-font:20px,&quot;微软雅黑&quot;;
+font:20px &quot;微软雅黑&quot;;
 }</string>
    </property>
    <property name="text">
@@ -1050,28 +1055,6 @@ font:20px,&quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTNResetFireBEEP">
-   <property name="geometry">
-    <rect>
-     <x>890</x>
-     <y>170</y>
-     <width>91</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>2</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:14px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>火灾消音</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNReset">
@@ -1097,7 +1080,7 @@ border-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>170</y>
+     <y>140</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -1119,7 +1102,7 @@ border-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>810</x>
-     <y>70</y>
+     <y>90</y>
      <width>191</width>
      <height>51</height>
     </rect>
@@ -1136,7 +1119,7 @@ border-color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>810</x>
-     <y>150</y>
+     <y>170</y>
      <width>191</width>
      <height>51</height>
     </rect>
@@ -1147,6 +1130,96 @@ border-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNEmergencyBrocast">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>163</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:14px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>紧急广播</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNResetFireBEEP">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>190</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:14px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>火灾消音</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_fangyou">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>20</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:14px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>防油乳化</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_qianyinfengsuo">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>180</y>
+     <width>45</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+color:red;
+font:20px &quot;微软雅黑&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>牵引
+封锁</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <zorder>LBLSpeed</zorder>
@@ -1170,7 +1243,6 @@ border-color: rgb(255, 255, 255);</string>
   <zorder>LBLNetV_5</zorder>
   <zorder>LBL_metrolimitspeed</zorder>
   <zorder>lbl_metrospeed</zorder>
-  <zorder>BTNResetFireBEEP</zorder>
   <zorder>lbl_mode</zorder>
   <zorder>BTNResetFirealarm</zorder>
   <zorder>widget_2</zorder>
@@ -1187,6 +1259,10 @@ border-color: rgb(255, 255, 255);</string>
   <zorder>BTNACP</zorder>
   <zorder>BTNTolopogy</zorder>
   <zorder>BTNReset</zorder>
+  <zorder>BTNEmergencyBrocast</zorder>
+  <zorder>BTNResetFireBEEP</zorder>
+  <zorder>BTN_fangyou</zorder>
+  <zorder>lbl_qianyinfengsuo</zorder>
  </widget>
  <resources/>
  <connections/>

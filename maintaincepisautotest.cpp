@@ -15,8 +15,8 @@ MaintaincePISAutoTest::MaintaincePISAutoTest(QWidget *parent) :
     {
         connect(button,SIGNAL(pressed()),this,SLOT(NBpressEvent()));
     }
-    TestButtons<<ui->BTNStartTest<<ui->BTNStopTest;
-    //Signals<<&database->HMiCT_PISTestStart_B1<<&database->HMiCT_PISTestStop_B1;
+    TestButtons<<ui->BTNStartTest;
+    Signals<<&database->DiCT_PISTestStart_B1;
     for(int i = 0;i<TestButtons.size();i++)
     {
         connect(TestButtons.at(i),SIGNAL(pressed()),this,SLOT(TestButtonsPressEvent()));
@@ -46,10 +46,11 @@ void MaintaincePISAutoTest::NBpressEvent()
 void MaintaincePISAutoTest::TestButtonsPressEvent()
 {
     int tmp_index = ((QPushButton*)this->sender())->whatsThis().toInt()-1;
-   // *Signals[tmp_index] = true;
+    *Signals[tmp_index] = true;
     timer2s[tmp_index] = this->startTimer(2000);
     ((QPushButton*)this->sender())->setStyleSheet(BTNPRESS);
-   // database->HMiCT_SetFlagChecker_U8=0xAA;
+    ((QPushButton*)this->sender())->setEnabled(false);
+    database->DiCT_SetFlagChecker_U8=0xAA;
 
 }
 
@@ -61,8 +62,10 @@ void MaintaincePISAutoTest::timerEvent(QTimerEvent *e)
         {
             killTimer(timer2s[i]);
             TestButtons[i]->setStyleSheet(BTNRELEASE);
-           // *Signals[i] = false;
-          //  database->HMiCT_SetFlagChecker_U8=0x55;
+            TestButtons[i]->setEnabled(true);
+            *Signals[i] = false;
+            database->DiCT_SetFlagChecker_U8=0x55;
         }
     }
+
 }

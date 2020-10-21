@@ -337,7 +337,7 @@ TCN_DECL_PUBLIC MUE_RESULT c_mvbSock::MVB_Get_Data(    WORD16      port_address,
                 p_port_data,\
                 p_port_freshness\
             );
-    //qDebug("pd_get_port_address == %x",pd_get_port_address);
+    qDebug("pd_get_port_address == %x",pd_get_port_address);
     return result;
 }
 

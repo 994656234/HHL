@@ -92,10 +92,10 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_3">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>110</y>
-     <width>31</width>
-     <height>31</height>
+     <x>70</x>
+     <y>160</y>
+     <width>21</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -108,8 +108,8 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>110</y>
+     <x>210</x>
+     <y>150</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -124,7 +124,7 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_5">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>260</x>
      <y>150</y>
      <width>31</width>
      <height>31</height>
@@ -140,7 +140,7 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_6">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>260</x>
      <y>60</y>
      <width>31</width>
      <height>31</height>
@@ -156,8 +156,8 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_9">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>100</y>
+     <x>420</x>
+     <y>150</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -172,8 +172,8 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_10">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>101</y>
+     <x>310</x>
+     <y>61</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -188,10 +188,10 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_1">
    <property name="geometry">
     <rect>
-     <x>97</x>
-     <y>150</y>
-     <width>31</width>
-     <height>31</height>
+     <x>70</x>
+     <y>60</y>
+     <width>21</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -204,10 +204,10 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_2">
    <property name="geometry">
     <rect>
-     <x>97</x>
-     <y>60</y>
-     <width>31</width>
-     <height>31</height>
+     <x>50</x>
+     <y>108</y>
+     <width>21</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -220,8 +220,8 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_7">
    <property name="geometry">
     <rect>
-     <x>265</x>
-     <y>109</y>
+     <x>105</x>
+     <y>59</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -236,8 +236,8 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_8">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>100</y>
+     <x>470</x>
+     <y>150</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -252,8 +252,56 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_11">
    <property name="geometry">
     <rect>
-     <x>465</x>
-     <y>101</y>
+     <x>470</x>
+     <y>60</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_15">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>150</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_14">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>150</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_13">
+   <property name="geometry">
+    <rect>
+     <x>575</x>
+     <y>60</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -269,150 +317,6 @@ border:1px solid black;
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>100</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_13">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>100</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_14">
-   <property name="geometry">
-    <rect>
-     <x>640</x>
-     <y>100</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_15">
-   <property name="geometry">
-    <rect>
-     <x>680</x>
-     <y>100</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_16">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>100</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_19">
-   <property name="geometry">
-    <rect>
-     <x>810</x>
-     <y>101</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_20">
-   <property name="geometry">
-    <rect>
-     <x>850</x>
-     <y>101</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_17">
-   <property name="geometry">
-    <rect>
-     <x>770</x>
-     <y>150</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_18">
-   <property name="geometry">
-    <rect>
-     <x>770</x>
-     <y>60</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_21">
-   <property name="geometry">
-    <rect>
-     <x>890</x>
      <y>60</y>
      <width>31</width>
      <height>31</height>
@@ -428,10 +332,106 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_22">
    <property name="geometry">
     <rect>
-     <x>895</x>
+     <x>890</x>
      <y>150</y>
      <width>31</width>
      <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_19">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>60</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_18">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>60</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_21">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>150</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_20">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>60</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_17">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>109</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/fireunknow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_16">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>160</y>
+     <width>21</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -528,10 +528,10 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_metroNum1_2">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>62</y>
-     <width>21</width>
-     <height>31</height>
+     <x>52</x>
+     <y>90</y>
+     <width>16</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -550,10 +550,10 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_3">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>148</y>
-     <width>21</width>
-     <height>31</height>
+     <x>71</x>
+     <y>81</y>
+     <width>16</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -572,10 +572,10 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_4">
    <property name="geometry">
     <rect>
-     <x>163</x>
-     <y>79</y>
-     <width>21</width>
-     <height>31</height>
+     <x>71</x>
+     <y>140</y>
+     <width>16</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -594,8 +594,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_5">
    <property name="geometry">
     <rect>
-     <x>203</x>
-     <y>79</y>
+     <x>215</x>
+     <y>119</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -616,7 +616,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_6">
    <property name="geometry">
     <rect>
-     <x>234</x>
+     <x>264</x>
      <y>91</y>
      <width>21</width>
      <height>31</height>
@@ -638,7 +638,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_7">
    <property name="geometry">
     <rect>
-     <x>234</x>
+     <x>264</x>
      <y>119</y>
      <width>21</width>
      <height>31</height>
@@ -660,8 +660,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_8">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>140</y>
+     <x>110</x>
+     <y>90</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -682,8 +682,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_9">
    <property name="geometry">
     <rect>
-     <x>325</x>
-     <y>69</y>
+     <x>475</x>
+     <y>119</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -704,8 +704,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_10">
    <property name="geometry">
     <rect>
-     <x>365</x>
-     <y>69</y>
+     <x>425</x>
+     <y>119</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -726,8 +726,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_11">
    <property name="geometry">
     <rect>
-     <x>435</x>
-     <y>70</y>
+     <x>315</x>
+     <y>93</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -748,8 +748,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_12">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>70</y>
+     <x>475</x>
+     <y>93</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -771,7 +771,7 @@ background-color:rgb(170,170,170);</string>
    <property name="geometry">
     <rect>
      <x>525</x>
-     <y>69</y>
+     <y>119</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -792,8 +792,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_14">
    <property name="geometry">
     <rect>
-     <x>565</x>
-     <y>69</y>
+     <x>685</x>
+     <y>119</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -814,8 +814,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_15">
    <property name="geometry">
     <rect>
-     <x>645</x>
-     <y>69</y>
+     <x>580</x>
+     <y>93</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -836,8 +836,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_16">
    <property name="geometry">
     <rect>
-     <x>815</x>
-     <y>70</y>
+     <x>775</x>
+     <y>91</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -858,10 +858,10 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_17">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>70</y>
-     <width>21</width>
-     <height>31</height>
+     <x>932</x>
+     <y>81</y>
+     <width>20</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -880,8 +880,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_18">
    <property name="geometry">
     <rect>
-     <x>685</x>
-     <y>69</y>
+     <x>525</x>
+     <y>93</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -902,8 +902,8 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_19">
    <property name="geometry">
     <rect>
-     <x>735</x>
-     <y>140</y>
+     <x>895</x>
+     <y>119</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -924,7 +924,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_20">
    <property name="geometry">
     <rect>
-     <x>775</x>
+     <x>735</x>
      <y>119</y>
      <width>21</width>
      <height>31</height>
@@ -946,7 +946,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_21">
    <property name="geometry">
     <rect>
-     <x>775</x>
+     <x>735</x>
      <y>91</y>
      <width>21</width>
      <height>31</height>
@@ -968,10 +968,10 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_22">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>61</y>
+     <x>949</x>
+     <y>130</y>
      <width>21</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -990,10 +990,10 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_metroNum1_23">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>148</y>
-     <width>21</width>
-     <height>31</height>
+     <x>932</x>
+     <y>140</y>
+     <width>20</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1028,7 +1028,7 @@ background-color:rgb(170,170,170);</string>
   <widget class="QLabel" name="lbl_cab1_active">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>72</x>
      <y>110</y>
      <width>16</width>
      <height>17</height>
@@ -1045,7 +1045,7 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab2_active">
    <property name="geometry">
     <rect>
-     <x>940</x>
+     <x>931</x>
      <y>110</y>
      <width>16</width>
      <height>17</height>
@@ -1112,11 +1112,11 @@ border-bottom-right-radius:8px;</string>
    </property>
   </widget>
   <zorder>label</zorder>
-  <zorder>label_2</zorder>
+  <zorder>LBLTC1</zorder>
   <zorder>LBLMP1</zorder>
   <zorder>LBLM1</zorder>
   <zorder>LBLM2</zorder>
-  <zorder>LBLTC1</zorder>
+  <zorder>label_2</zorder>
   <zorder>lbl_3</zorder>
   <zorder>lbl_4</zorder>
   <zorder>lbl_5</zorder>
@@ -1128,17 +1128,17 @@ border-bottom-right-radius:8px;</string>
   <zorder>lbl_7</zorder>
   <zorder>lbl_8</zorder>
   <zorder>lbl_11</zorder>
-  <zorder>lbl_12</zorder>
-  <zorder>lbl_13</zorder>
-  <zorder>lbl_14</zorder>
   <zorder>lbl_15</zorder>
-  <zorder>lbl_16</zorder>
+  <zorder>lbl_14</zorder>
+  <zorder>lbl_13</zorder>
+  <zorder>lbl_12</zorder>
+  <zorder>lbl_22</zorder>
   <zorder>lbl_19</zorder>
-  <zorder>lbl_20</zorder>
-  <zorder>lbl_17</zorder>
   <zorder>lbl_18</zorder>
   <zorder>lbl_21</zorder>
-  <zorder>lbl_22</zorder>
+  <zorder>lbl_20</zorder>
+  <zorder>lbl_17</zorder>
+  <zorder>lbl_16</zorder>
   <zorder>lbl_metroNum2</zorder>
   <zorder>lbl_metroNum3</zorder>
   <zorder>lbl_metroNum4</zorder>
@@ -1166,9 +1166,9 @@ border-bottom-right-radius:8px;</string>
   <zorder>lbl_metroNum1_22</zorder>
   <zorder>lbl_metroNum1_23</zorder>
   <zorder>lbl_cab1_direction</zorder>
+  <zorder>lbl_cab2_direction</zorder>
   <zorder>lbl_cab1_active</zorder>
   <zorder>lbl_cab2_active</zorder>
-  <zorder>lbl_cab2_direction</zorder>
  </widget>
  <resources/>
  <connections/>

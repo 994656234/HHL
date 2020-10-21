@@ -22,7 +22,7 @@
 QLabel
 {
 color:black;
-font:24px,&quot;微软雅黑&quot;;
+font:24px &quot;微软雅黑&quot;;
 transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
 }</string>
   </property>

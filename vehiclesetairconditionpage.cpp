@@ -19,12 +19,16 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
     metroButtons<<ui->btn_metro1<<ui->btn_metro2<<ui->btn_metro3<<ui->btn_metro4<<ui->BTN_allMetro;
     foreach(QPushButton *button,metroButtons)
     {
-        connect(button,SIGNAL(pressed()),this,SLOT(metroBTNPressEvent()));
+        //connect(button,SIGNAL(pressed()),this,SLOT(metroBTNPressEvent()));
+        button->setStyleSheet(METROPRESS);
     }
+    ui->BTN_allMetro->hide();
 
-    modeSignal<<&database->DiCT_HVACAutoCoolMode_B1<<&database->DiCT_HVACAutoWarmMode_B1<<&database->DiCT_HVACVenti_B1
-            <<&database->DiCT_HVACEmgcyVenti_B1<<&database->DiCT_HVACStop_B1;
-    modeButtons<<ui->BTN_mode_autoCool<<ui->BTN_mode_autoWarm<<ui->BTN_mode_wind<<ui->BTN_mode_Ventilate<<ui->BTN_mode_stop;
+    modeSignal<<&database->DiCT_HVACEmgcyVenti_B1<<&database->DiCT_HVACVenti_B1<<&database->DiCT_HVACAutoCoolMode_B1
+             <<&database->DiCT_HVACAutoWarmMode_B1<<&database->DiCT_HVACStop_B1<<&database->HVACWarmStop<<&database->HVACCoolStop;
+
+    modeButtons<<ui->BTN_mode_autoCool<<ui->BTN_mode_autoWarm<<ui->BTN_mode_wind<<ui->BTN_mode_Ventilate<<ui->BTN_mode_stop
+              <<ui->BTN_warmstop<<ui->BTN_coolstop;
 
     foreach(QPushButton *button,modeButtons)
     {
@@ -45,6 +49,7 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
 
     ui->lbl_cab1_active->hide();
     ui->lbl_cab2_active->hide();
+
 
 }
 
@@ -89,7 +94,7 @@ void VehicleSetAirConditionPage::updatePage()
     //客室温度&目标温度
     if(database->CTD_ACTOLINE_B1)
     {
-        ui->lbl_tmp1->setText(QString::number(database->ACVP1CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp1->setText(QString::number(database->ACVP1CT_IusSalTemp_U8-30,'f',1));
         ui->lbl_settmp1->setText(QString::number(database->ACVP1CT_IusTargTemp_U8,'f',1));
     }
     else
@@ -100,7 +105,7 @@ void VehicleSetAirConditionPage::updatePage()
 
     if(database->CTD_AC2OLINE_B1)
     {
-        ui->lbl_tmp2->setText(QString::number(database->ACVP2CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp2->setText(QString::number(database->ACVP2CT_IusSalTemp_U8-30,'f',1));
         ui->lbl_settmp2->setText(QString::number(database->ACVP2CT_IusTargTemp_U8,'f',1));
     }
     else
@@ -111,7 +116,7 @@ void VehicleSetAirConditionPage::updatePage()
 
     if(database->CTD_AC3OLINE_B1)
     {
-        ui->lbl_tmp3->setText(QString::number(database->ACVP3CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp3->setText(QString::number(database->ACVP3CT_IusSalTemp_U8-30,'f',1));
         ui->lbl_settmp3->setText(QString::number(database->ACVP3CT_IusTargTemp_U8,'f',1));
     }
     else
@@ -122,7 +127,7 @@ void VehicleSetAirConditionPage::updatePage()
 
     if(database->CTD_AC4OLINE_B1)
     {
-        ui->lbl_tmp4->setText(QString::number(database->ACVP4CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp4->setText(QString::number(database->ACVP4CT_IusSalTemp_U8-30,'f',1));
         ui->lbl_settmp4->setText(QString::number(database->ACVP4CT_IusTargTemp_U8,'f',1));
     }
     else
@@ -131,29 +136,74 @@ void VehicleSetAirConditionPage::updatePage()
         ui->lbl_settmp4->setText("--");
     }
 
+    xinFenglbl<<ui->lbl_MC1_1_1<<ui->lbl_MC1_1_2<<ui->lbl_MC1_2_1<<ui->lbl_MC1_2_2;
+    huiFenglbl<<ui->lbl_huifeng_MC1_1<<ui->lbl_huifeng_MC1_2;
+    xinFengStatus<<database->ACVP1CT_IusFADamperSts11_U8<<database->ACVP1CT_IusFADamperSts12_U8
+                   <<database->ACVP1CT_IusFADamperSts21_U8<<database->ACVP1CT_IusFADamperSts22_U8;
+    huiFengStatus<<database->ACVP1CT_IusRADamperSts1_U8<<database->ACVP1CT_IusRADamperSts2_U8;
+    setXinFengStatus(xinFenglbl,xinFengStatus);
+    setHuiFengStatus(huiFenglbl,huiFengStatus);
+    xinFengStatus.clear();
+    huiFengStatus.clear();
+    xinFenglbl.clear();
+    huiFenglbl.clear();
+
+    xinFenglbl<<ui->lbl_MP1_1_1<<ui->lbl_MP1_1_2<<ui->lbl_MP1_2_1<<ui->lbl_MP1_2_2;
+    huiFenglbl<<ui->lbl_huifeng_MP1_1<<ui->lbl_huifeng_MP1_2;
+    xinFengStatus<<database->ACVP2CT_IusFADamperSts11_U8<<database->ACVP2CT_IusFADamperSts12_U8
+                   <<database->ACVP2CT_IusFADamperSts21_U8<<database->ACVP2CT_IusFADamperSts22_U8;
+    huiFengStatus<<database->ACVP2CT_IusRADamperSts1_U8<<database->ACVP2CT_IusRADamperSts2_U8;
+    setXinFengStatus(xinFenglbl,xinFengStatus);
+    setHuiFengStatus(huiFenglbl,huiFengStatus);
+    xinFengStatus.clear();
+    huiFengStatus.clear();
+    xinFenglbl.clear();
+    huiFenglbl.clear();
+
+    xinFenglbl<<ui->lbl_MP2_1_1<<ui->lbl_MP2_1_2<<ui->lbl_MP2_2_1<<ui->lbl_MP2_2_2;
+    huiFenglbl<<ui->lbl_huifeng_MP2_1<<ui->lbl_huifeng_MP2_2;
+    xinFengStatus<<database->ACVP3CT_IusFADamperSts11_U8<<database->ACVP3CT_IusFADamperSts12_U8
+                   <<database->ACVP3CT_IusFADamperSts21_U8<<database->ACVP3CT_IusFADamperSts22_U8;
+    huiFengStatus<<database->ACVP3CT_IusRADamperSts1_U8<<database->ACVP3CT_IusRADamperSts2_U8;
+    setXinFengStatus(xinFenglbl,xinFengStatus);
+    setHuiFengStatus(huiFenglbl,huiFengStatus);
+    xinFengStatus.clear();
+    huiFengStatus.clear();
+    xinFenglbl.clear();
+    huiFenglbl.clear();
+
+    xinFenglbl<<ui->lbl_MC2_1_1<<ui->lbl_MC2_1_2<<ui->lbl_MC2_2_1<<ui->lbl_MC2_2_2;
+    huiFenglbl<<ui->lbl_huifeng_MC2_1<<ui->lbl_huifeng_MC2_2;
+    xinFengStatus<<database->ACVP4CT_IusFADamperSts11_U8<<database->ACVP4CT_IusFADamperSts12_U8
+                   <<database->ACVP4CT_IusFADamperSts21_U8<<database->ACVP4CT_IusFADamperSts22_U8;
+    huiFengStatus<<database->ACVP4CT_IusRADamperSts1_U8<<database->ACVP4CT_IusRADamperSts2_U8;
+    setXinFengStatus(xinFenglbl,xinFengStatus);
+    setHuiFengStatus(huiFenglbl,huiFengStatus);
+    xinFengStatus.clear();
+    huiFengStatus.clear();
+    xinFenglbl.clear();
+    huiFenglbl.clear();
 }
 
 
 void VehicleSetAirConditionPage::metroBTNPressEvent()
 {
-    int metroNum= ((QPushButton*)this->sender())->whatsThis().toInt();
-    //database->HMiCT_SAVEHVACPosition_U8=metroNum;
-
-    if(metroNum==5)
-    {
-        for(int i=0;i<5;i++)
-        {
-            metroButtons.at(i)->setStyleSheet(METROPRESS);
-        }
-    }
-    else
-    {
-        for(int i=0;i<5;i++)
-        {
-            metroButtons.at(i)->setStyleSheet(METRORELEASE);
-        }
-        metroButtons.at(metroNum-1)->setStyleSheet(METROPRESS);
-    }
+//    int metroNum= ((QPushButton*)this->sender())->whatsThis().toInt();
+//    if(metroNum==5)
+//    {
+//        for(int i=0;i<5;i++)
+//        {
+//            metroButtons.at(i)->setStyleSheet(METROPRESS);
+//        }
+//    }
+//    else
+//    {
+//        for(int i=0;i<5;i++)
+//        {
+//            metroButtons.at(i)->setStyleSheet(METRORELEASE);
+//        }
+//        metroButtons.at(metroNum-1)->setStyleSheet(METROPRESS);
+//    }
 
 
 }
@@ -161,9 +211,10 @@ void VehicleSetAirConditionPage::metroBTNPressEvent()
 void VehicleSetAirConditionPage::modeBTNPressEvent()
 {
     m_modeNum=((QPushButton*)this->sender())->whatsThis().toInt()-5;
-    for(int i=0;i<5;i++)
+    for(int i=0;i<7;i++)
     {
         modeButtons.at(i)->setStyleSheet(BUTTONRELEASE);
+        *modeSignal.at(i) = false;
     }
     ((QPushButton*)this->sender())->setStyleSheet(BUTTONPRESS);
 }
@@ -184,7 +235,7 @@ void VehicleSetAirConditionPage::temBTNPressEvent()
         {
            m_setTemp+= 1;
         }
-        if(m_setTempFlag<5)
+        if(m_setTempFlag<4)
         {
             m_setTempFlag++;
         }
@@ -208,69 +259,75 @@ void VehicleSetAirConditionPage::temBTNPressEvent()
 }
 
 void VehicleSetAirConditionPage::timerEvent(QTimerEvent *e)
-{   
-
-    if(e->timerId() == timer_2s[0])
+{
+    if(e->timerId() == timerID1)
     {
-        killTimer(timer_2s[0]);
-        //modeButtons.at(m_modeNum-1)->setStyleSheet(BUTTONRELEASE);
-        //*modeSignal.at(m_modeNum-1)=false;
-        //m_modeNum = 0;
+        killTimer(timerID1);
+        if(3 == m_modeNum || 4 == m_modeNum)
+        {
+            *modeSignal.at(m_modeNum-1)=true;
+        }else
+        {
+            *modeSignal.at(m_modeNum-1)=false;
+        }
         ui->BTN_confirm->setStyleSheet(BUTTONRELEASE);
-        for(int i=0;i<5;i++)
+        for(int i=0;i<7;i++)
         {
             modeButtons.at(i)->setDisabled(false);;
         }
         database->DiCT_SetFlagChecker_U8=0x55;
-
-
+        timerID1=0;
     }
-    if(e->timerId() == timer_2s[1])
+
+    if(e->timerId() == timerID2)
     {
-        killTimer(timer_2s[1]);
+        killTimer(timerID2);
         temButtons.at(m_temNum)->setStyleSheet(BUTTONRELEASE);
-        switch(m_setTempFlag)
+        if(m_setTempFlag==0)
         {
-        case 0:
             database->DiCT_Reduce2_B1=false;
-            break;
-        case 1 :
-            database->DiCT_Reduce1_B1=false;
-            break;
-        case 2:
-            database->DiCT_Add0_B1=false;
-            break;
-        case 3 :
-            database->DiCT_Add1_B1=false;
-            break;
-        case 4:
-            database->DiCT_Add2_B1=false;
-            break;
-/*
-        case 5:
-            database->DiCT_Add0_B1=false;
-            break;
-        case 6:
-            database->DiCT_Add0point5_B1=false;
-            break;
-        case 7 :
-            database->DiCT_Add1_B1=false;
-            break;
-        case 8:
-            database->DiCT_Add1point5_B1=false;
-            break;
-        case 9 :
-            database->DiCT_Add2_B1=false;
-            break;
-        case 10:
-            database->DiCT_Add2point5_B1=false;
-            break;
-*/
-        default :
-                 ;
         }
+        else if(m_setTempFlag==1)
+        {
+            database->DiCT_Reduce1_B1=false;
+        }
+        else if(m_setTempFlag==2)
+        {
+            database->DiCT_Add0_B1=false;
+        }
+        else if(m_setTempFlag==3)
+        {
+            database->DiCT_Add1_B1=false;
+        }
+        else if(m_setTempFlag==4)
+        {
+            database->DiCT_Add2_B1=false;
+        }
+
+//        switch(m_setTempFlag)
+//        {
+
+//        case 0 :
+//            database->DiCT_Reduce2_B1=false;
+//            break;
+//        case 1 :
+//            database->DiCT_Reduce1_B1=false;
+//            break;
+//        case 2:
+//            database->DiCT_Add0_B1=false;
+//            break;
+//        case 3 :
+//            database->DiCT_Add1_B1=false;
+//            break;
+//       case 4 :
+//            database->DiCT_Add2_B1=false;
+//            break;
+//        default :
+//            ;
+//        }
         ui->BTN_comfirm1->setStyleSheet(BUTTONRELEASE);
         database->DiCT_SetFlagChecker_U8=0x55;
+        timerID2=0;
 
     }
 
@@ -282,13 +339,9 @@ void VehicleSetAirConditionPage::on_BTN_confirm_pressed()
         return ;
     ui->BTN_confirm->setStyleSheet(BUTTONPRESS);
     database->DiCT_SetFlagChecker_U8=0xAA;
-    for(int i=0;i<5;i++)
-    {
-        *modeSignal.at(i)=false;
-    }
     *modeSignal.at(m_modeNum-1)=true;
-    timer_2s[0] = this->startTimer(2000);
-    for(int i=0;i<5;i++)
+    timerID1 = this->startTimer(2000);
+    for(int i=0;i<7;i++)
     {
         modeButtons.at(i)->setDisabled(true);;
     }
@@ -298,82 +351,144 @@ void VehicleSetAirConditionPage::on_BTN_confirm_pressed()
 
 void VehicleSetAirConditionPage::on_BTN_comfirm1_pressed()
 {
+
     ui->BTN_comfirm1->setStyleSheet(BUTTONPRESS);
     database->DiCT_SetFlagChecker_U8=0XAA;
-    switch(m_setTempFlag)
+    if(m_setTempFlag==0)
     {
-    case 0:
         database->DiCT_Reduce2_B1=true;
-        break;
-    case 1 :
-        database->DiCT_Reduce1_B1=true;
-        break;
-    case 2:
-        database->DiCT_Add0_B1=true;
-        break;
-    case 3 :
-        database->DiCT_Add1_B1=true;
-        break;
-    case 4:
-        database->DiCT_Add2_B1=true;
-        break;
-/*
-    case 5:
-        database->DiCT_Add2_B1=true;
-        break;
-    case 6:
-        database->DiCT_Add0point5_B1=true;
-        break;
-    case 7 :
-        database->DiCT_Add1_B1=true;
-        break;
-    case 8:
-        database->DiCT_Add1point5_B1=true;
-        break;
-    case 9 :
-        database->DiCT_Add2_B1=true;
-        break;
-    case 10:
-        database->DiCT_Add2point5_B1=true;
-        break;
-*/
-    default :
-             ;
     }
-    timer_2s[1] = this->startTimer(2000);
+    else if(m_setTempFlag==1)
+    {
+        database->DiCT_Reduce1_B1=true;
+    }
+    else if(m_setTempFlag==2)
+    {
+        database->DiCT_Add0_B1=true;
+    }
+    else if(m_setTempFlag==3)
+    {
+        database->DiCT_Add1_B1=true;
+    }
+    else if(m_setTempFlag==4)
+    {
+        database->DiCT_Add2_B1=true;
+    }
+
+    timerID2= this->startTimer(2000);
 
 }
 
 
 void VehicleSetAirConditionPage::hideEvent(QHideEvent *)
 {
-    killTimer(timer_2s[0]);
-        m_modeNum = 0;
+        killTimer(timerID1);
         ui->BTN_confirm->setStyleSheet(BUTTONRELEASE);
         for(int i=0;i<modeButtons.size();i++)
         {
             modeButtons.at(i)->setDisabled(false);;
-            modeButtons.at(i)->setStyleSheet(BUTTONRELEASE);
             *modeSignal.at(i)=false;
         }
         database->DiCT_SetFlagChecker_U8=0x55;
 
-        killTimer(timer_2s[1]);
+        killTimer(timerID2);
         ui->BTN_comfirm1->setStyleSheet(BUTTONRELEASE);
         for(int i=0;i<temButtons.size();i++)
         {
             temButtons.at(i)->setDisabled(false);;
             temButtons.at(i)->setStyleSheet(BUTTONRELEASE);
         }
-        database->DiCT_Reduce2point5_B1=false;
         database->DiCT_Reduce2_B1=false;
-        database->DiCT_Reduce1point5_B1=false;
         database->DiCT_Reduce1_B1=false;
-        database->DiCT_Reduce0point5_B1=false;
         database->DiCT_Add0_B1=false;
-        database->DiCT_Add0point5_B1=false;
         database->DiCT_Add1_B1=false;
-        database->DiCT_Add1point5_B1=false;
         database->DiCT_Add2_B1=false;
-        database->DiCT_Add2point5_B1=false;
+}
+
+void VehicleSetAirConditionPage::on_BTN_newwind_open_pressed()
+{
+    if(ui->BTN_newwind_open->text() == "强制关闭")
+    {
+        this->ui->BTN_newwind_open->setText("取消强制");
+        database->DiCT_NADA_B1 = true;
+    }else if(ui->BTN_newwind_open->text() == "取消强制")
+    {
+        this->ui->BTN_newwind_open->setText("强制关闭");
+        database->DiCT_NADA_B1 = false;
+    }
+}
+
+
+void VehicleSetAirConditionPage::setXinFengStatus(QList<QLabel *> lbl, QList<unsigned char> status)
+{
+    if(lbl.length()!=status.length())
+    {
+        qDebug()<<"空调设置界面新风阀lbl.length！=status.length;";
+        return;
+    }
+    for(int i=0;i<lbl.length();i++)
+    {
+        if(status.at(i)==1)
+        {
+            lbl.at(i)->setText("故障");
+            lbl.at(i)->setStyleSheet("background-color:red;color:white;");
+        }
+        else if(status.at(i)==2)
+        {
+            lbl.at(i)->setText("关闭");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+        else if(status.at(i)==3)
+        {
+            lbl.at(i)->setText("全开");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+        else if(status.at(i)==4)
+        {
+            lbl.at(i)->setText("2/3");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+        else if(status.at(i)==5)
+        {
+            lbl.at(i)->setText("1/3");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+        else
+        {
+            lbl.at(i)->setText("--");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+    }
+}
+
+void VehicleSetAirConditionPage::setHuiFengStatus(QList<QLabel *> lbl, QList<unsigned char> status)
+{
+    if(lbl.length()!=status.length())
+    {
+        qDebug()<<"空调设置界面回风阀lbl.length!=status.length!";
+        return;
+    }
+    for(int i=0;i<lbl.length();i++)
+    {
+        if(status.at(i)==1)
+        {
+            lbl.at(i)->setText("故障");
+            lbl.at(i)->setStyleSheet("background-color:red;color:white;");
+        }
+        else if(status.at(i)==2)
+        {
+            lbl.at(i)->setText("关");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+        else if(status.at(i)==3)
+        {
+            lbl.at(i)->setText("开");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+        else
+        {
+            lbl.at(i)->setText("--");
+            lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
+        }
+    }
 }

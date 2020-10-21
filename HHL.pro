@@ -146,7 +146,11 @@ SOURCES += main.cpp\
     cxExtDev/blacklightthread.cpp \
     cxExtDev/externaldevicelib.cpp \
     avic_externaldevice.cpp \
-    maintainceaccumulatorsubsystempage.cpp
+    maintainceaccumulatorsubsystempage.cpp \
+    bypasspage2.cpp \
+    emdooropen.cpp \
+    vehiclesetsimlatestation.cpp \
+    stationchoicebox.cpp
 
 
 
@@ -169,6 +173,8 @@ HEADERS += mvbcx/c_mvbsock.h \
 LIBS += -L$$PWD/lib/ -lmodbus
 #LIBS += -L$$PWD/../../../lib/ -lsqlite3
 LIBS += -lsqlite3
+
+#LIBS += -lavic_imx
 
 SOURCES +=  mvb/MVB/ax99100_lb.c \
     mvb/MVB/mue_acc.c \
@@ -322,7 +328,12 @@ HEADERS  += widget.h \
     cxExtDev/blacklightthread.h \
     cxExtDev/externaldevicelib.h \
     avic_externaldevice.h \
-    maintainceaccumulatorsubsystempage.h
+    maintainceaccumulatorsubsystempage.h \
+    bypasspage2.h \
+    avic_imx.h \
+    emdooropen.h \
+    vehiclesetsimlatestation.h \
+    stationchoicebox.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -389,7 +400,11 @@ FORMS    += widget.ui \
     addsubtracttestpage.ui \
     emdialogpage.ui \
     passwordpage.ui \
-    maintainceaccumulatorsubsystempage.ui
+    maintainceaccumulatorsubsystempage.ui \
+    bypasspage2.ui \
+    emdooropen.ui \
+    vehiclesetsimlatestation.ui \
+    stationchoicebox.ui
 
 RESOURCES += \
     Resource.qrc
@@ -400,4 +415,12 @@ DISTFILES += \
     mvb/MVB/licence.txt \
     mvb/MVB/Makefile \
     mvb/MVB/licence.txt \
-    mvb/MVB/Makefile
+    mvb/MVB/Makefile \
+    libavic_imx.so
+
+
+
+#unix:!macx: LIBS += -L$$PWD/./ -lavic_imx
+
+#INCLUDEPATH += $$PWD/.
+#DEPENDPATH += $$PWD/.

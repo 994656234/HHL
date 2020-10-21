@@ -89,13 +89,13 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_pis1_1">
+  <widget class="QLabel" name="lbl_1_1">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -105,109 +105,13 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_pis1_2">
+  <widget class="QLabel" name="lbl_1_2">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_pis2_1">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_pis2_2">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_pis3_1">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_pis3_2">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_pis4_1">
-   <property name="geometry">
-    <rect>
-     <x>760</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_pis4_2">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>98</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -403,20 +307,366 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_1_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_4">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_5">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_6">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_2_1">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_2_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_2_3">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_2_4">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_2_5">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_2_6">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_3_1">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_3_2">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_3_3">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_3_4">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_3_5">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_3_6">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_4_1">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_4_2">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_4_3">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_4_4">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_4_5">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_4_6">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>70</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/pisnoactive.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>LBLM2</zorder>
   <zorder>LBLTC1</zorder>
   <zorder>LBLM1</zorder>
   <zorder>LBLMP1</zorder>
-  <zorder>lbl_pis1_1</zorder>
-  <zorder>lbl_pis1_2</zorder>
-  <zorder>lbl_pis2_1</zorder>
-  <zorder>lbl_pis2_2</zorder>
-  <zorder>lbl_pis3_1</zorder>
-  <zorder>lbl_pis3_2</zorder>
-  <zorder>lbl_pis4_1</zorder>
-  <zorder>lbl_pis4_2</zorder>
+  <zorder>lbl_1_1</zorder>
+  <zorder>lbl_1_2</zorder>
   <zorder>lbl_metroNum2</zorder>
   <zorder>lbl_metroNum1</zorder>
   <zorder>lbl_metroNum3</zorder>
@@ -425,6 +675,28 @@ border-bottom-right-radius:8px;</string>
   <zorder>lbl_cab1_active</zorder>
   <zorder>lbl_cab2_direction</zorder>
   <zorder>lbl_cab2_active</zorder>
+  <zorder>lbl_1_3</zorder>
+  <zorder>lbl_1_4</zorder>
+  <zorder>lbl_1_5</zorder>
+  <zorder>lbl_1_6</zorder>
+  <zorder>lbl_2_1</zorder>
+  <zorder>lbl_2_2</zorder>
+  <zorder>lbl_2_3</zorder>
+  <zorder>lbl_2_4</zorder>
+  <zorder>lbl_2_5</zorder>
+  <zorder>lbl_2_6</zorder>
+  <zorder>lbl_3_1</zorder>
+  <zorder>lbl_3_2</zorder>
+  <zorder>lbl_3_3</zorder>
+  <zorder>lbl_3_4</zorder>
+  <zorder>lbl_3_5</zorder>
+  <zorder>lbl_3_6</zorder>
+  <zorder>lbl_4_1</zorder>
+  <zorder>lbl_4_2</zorder>
+  <zorder>lbl_4_3</zorder>
+  <zorder>lbl_4_4</zorder>
+  <zorder>lbl_4_5</zorder>
+  <zorder>lbl_4_6</zorder>
  </widget>
  <resources/>
  <connections/>

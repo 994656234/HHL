@@ -10,6 +10,10 @@
 #define HVACCOOL "border-image: url(:/images/image/HVACCool.png);"
 #define HVACSTOP "border-image: url(:/images/image/HVACoff.png);"
 
+#define HVACyuCool "border-image: url(:/images/image/HVAyuCool.png);"
+#define HVACyuWarm "border-image: url(:/images/image/HVACyuWarm.png);"
+#define Auto   "border-image: url(:/images/image/HVACauto.png);"
+
 #define AIRCOMON "background-color: rgb(85, 255, 0);border:2px  solid;border-color:rgb(255,255,255);font:16px,\"微软雅黑\";"
 #define AIRCOMOFF "border:2px  solid;border-color:rgb(255,255,255);background-color: rgb(195, 195, 195);font:16px,\"微软雅黑\";"
 #define AIRCOMUNKNOW "border-image: url(:/images/image/doorunknow.png);"
@@ -72,39 +76,57 @@ void VehicleAirConditionerPage::updatePage()
     }
 
 
-    //HVACstatus<<
+    getAirConditionStatus(ui->lbl_airCondition1_1,database->ACVP1CT_IusUnitSts1_U8);
+    getAirConditionStatus(ui->lbl_airCondition1_2,database->ACVP1CT_IusUnitSts2_U8);
 
+    getAirConditionStatus(ui->lbl_airCondition2_1,database->ACVP2CT_IusUnitSts1_U8);
+    getAirConditionStatus(ui->lbl_airCondition2_2,database->ACVP2CT_IusUnitSts2_U8);
 
+    getAirConditionStatus(ui->lbl_airCondition3_1,database->ACVP3CT_IusUnitSts1_U8);
+    getAirConditionStatus(ui->lbl_airCondition3_2,database->ACVP3CT_IusUnitSts2_U8);
+
+    getAirConditionStatus(ui->lbl_airCondition4_1,database->ACVP4CT_IusUnitSts1_U8);
+    getAirConditionStatus(ui->lbl_airCondition4_2,database->ACVP4CT_IusUnitSts2_U8);
 
 }
 
-void VehicleAirConditionerPage::getAirConditionStatus(QLabel *label, QList<bool> status)
+
+
+void VehicleAirConditionerPage::getAirConditionStatus(QLabel *label, unsigned char  status )
 {
-    if(!status.at(0))
-    {
-        label->setStyleSheet(HVACUNKNOW);
-    }
-    else if(status.at(1))
+    if(status==1)
     {
         label->setStyleSheet(HVACFAULT);
     }
-    else if(status.at(2))
+    else if(status==2)
     {
         label->setStyleSheet(HVACEMGVEN);
     }
-    else if(status.at(3))
+    else if(status==3)
     {
-        label->setStyleSheet(HVACVEN);
+        label->setStyleSheet(HVACyuCool);
     }
-    else if(status.at(4))
+    else if(status==4)
     {
-        label->setStyleSheet(HVACWARM);
+        label->setStyleSheet(Auto);
     }
-    else if(status.at(5))
+    else if(status==5)
     {
         label->setStyleSheet(HVACCOOL);
     }
-    else if(status.at(6))
+    else if(status==6)
+    {
+        label->setStyleSheet(HVACyuWarm);
+    }
+    else if(status==7)
+    {
+        label->setStyleSheet(HVACWARM);
+    }
+    else if(status==8)
+    {
+        label->setStyleSheet(HVACVEN);
+    }
+    else if(status==9)
     {
         label->setStyleSheet(HVACSTOP);
     }
@@ -112,5 +134,6 @@ void VehicleAirConditionerPage::getAirConditionStatus(QLabel *label, QList<bool>
     {
         label->setStyleSheet(HVACUNKNOW);
     }
-
 }
+
+

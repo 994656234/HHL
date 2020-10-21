@@ -54,9 +54,10 @@ public:
     void setBrightness_Manual();
     void setBuzzerOn();
     void setBuzzeroff();
+    explicit AVIC_ExternalDevice(QObject *parent = 0);
 private:
 
-    explicit AVIC_ExternalDevice(QObject *parent = 0);
+    //explicit AVIC_ExternalDevice(QObject *parent = 0);
 
     SetInfo M_SetInfoKey;//结构体 按键
     ConSet M_ConSet;//数据对象

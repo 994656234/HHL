@@ -24,7 +24,7 @@ private:
     QList<QPushButton* > m_Numbuttons,m_Selectbuttons;
     QPushButton* m_button;
     QTimer* timer2s;
-    void hideEvent(QHideEvent *);;
+    void hideEvent(QHideEvent *);
 private slots:
     void pushButtonPressedEvent();
     void NumbuttonsPressedEvent();

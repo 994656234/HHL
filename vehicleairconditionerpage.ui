@@ -89,11 +89,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_airCondition1">
+  <widget class="QLabel" name="lbl_airCondition1_1">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>70</y>
+     <x>120</x>
+     <y>90</y>
      <width>50</width>
      <height>50</height>
     </rect>
@@ -105,11 +105,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_airCondition2">
+  <widget class="QLabel" name="lbl_airCondition2_1">
    <property name="geometry">
     <rect>
-     <x>375</x>
-     <y>70</y>
+     <x>330</x>
+     <y>90</y>
      <width>50</width>
      <height>50</height>
     </rect>
@@ -121,11 +121,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_airCondition3">
+  <widget class="QLabel" name="lbl_airCondition3_1">
    <property name="geometry">
     <rect>
-     <x>585</x>
-     <y>70</y>
+     <x>540</x>
+     <y>90</y>
      <width>50</width>
      <height>50</height>
     </rect>
@@ -137,11 +137,11 @@ border:1px solid black;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_airCondition4">
+  <widget class="QLabel" name="lbl_airCondition4_1">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>70</y>
+     <x>750</x>
+     <y>90</y>
      <width>50</width>
      <height>50</height>
     </rect>
@@ -232,174 +232,6 @@ border:0px,black</string>
    </property>
    <property name="text">
     <string>MC1车</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress1_1">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>1</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress1_2">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>2</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress2_1">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>1</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress2_2">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>2</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress3_1">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>1</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress3_2">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>2</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress4_1">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>1</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_aircompress4_2">
-   <property name="geometry">
-    <rect>
-     <x>770</x>
-     <y>135</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border:2px white solid;
-font:16px,&quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>2</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -507,32 +339,92 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_airCondition1_2">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>90</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/HVACunKnow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_airCondition2_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>90</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/HVACunKnow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_airCondition3_2">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>90</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/HVACunKnow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_airCondition4_2">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>90</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/HVACunKnow.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>LBLTC1</zorder>
   <zorder>LBLM1</zorder>
   <zorder>LBLM2</zorder>
   <zorder>LBLMP1</zorder>
-  <zorder>lbl_airCondition1</zorder>
-  <zorder>lbl_airCondition2</zorder>
-  <zorder>lbl_airCondition3</zorder>
-  <zorder>lbl_airCondition4</zorder>
+  <zorder>lbl_airCondition1_1</zorder>
+  <zorder>lbl_airCondition2_1</zorder>
+  <zorder>lbl_airCondition3_1</zorder>
+  <zorder>lbl_airCondition4_1</zorder>
   <zorder>lbl_metroNum2</zorder>
   <zorder>lbl_metroNum3</zorder>
   <zorder>lbl_metroNum4</zorder>
   <zorder>lbl_metroNum1</zorder>
-  <zorder>lbl_aircompress1_1</zorder>
-  <zorder>lbl_aircompress1_2</zorder>
-  <zorder>lbl_aircompress2_1</zorder>
-  <zorder>lbl_aircompress2_2</zorder>
-  <zorder>lbl_aircompress3_1</zorder>
-  <zorder>lbl_aircompress3_2</zorder>
-  <zorder>lbl_aircompress4_1</zorder>
-  <zorder>lbl_aircompress4_2</zorder>
   <zorder>lbl_cab1_direction</zorder>
   <zorder>lbl_cab1_active</zorder>
   <zorder>lbl_cab2_direction</zorder>
   <zorder>lbl_cab2_active</zorder>
+  <zorder>lbl_airCondition1_2</zorder>
+  <zorder>lbl_airCondition2_2</zorder>
+  <zorder>lbl_airCondition3_2</zorder>
+  <zorder>lbl_airCondition4_2</zorder>
  </widget>
  <resources/>
  <connections/>

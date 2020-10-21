@@ -41,7 +41,7 @@ void AXControl::updateAx(QList<QString> &state)
 {
     if (state.length() != (AX_LENGTH ) *2)
     {
-        qDebug() <<"the length ax"<< state.size()<< "not equal to" << (AX_LENGTH ) * 2;
+        //_LOG <<"the length ax"<< state.size()<< "not equal to" << (AX_LENGTH ) * 2;
 
         return;
     }

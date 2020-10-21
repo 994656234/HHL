@@ -22,10 +22,12 @@ public:
 private:
     Ui::MaintainceAccumulateDataPage *ui;
     QList<QPushButton*>buttons;
-    QList<unsigned char> signalTimeDatas,signalDatas;
+    QList<unsigned char> signalTimeDatas;
     void SetTime(QLabel *lbl,QList<unsigned char> status);
-    void SetStatus1(QLabel* lbl,unsigned char status);
-    void SetStatus2(QLabel* lbl,QString status);
+    void SetStatus1(QLabel* lbl,unsigned int status);
+    void SetStatus2(QLabel* lbl,unsigned int status);
+    void SetStatus3(QLabel* lbl,unsigned int status);
+    //void SetStatus2(QLabel* lbl,QString status);
 private slots:
     void NBpressEvent();
 };

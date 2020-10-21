@@ -166,7 +166,7 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_metroNum3">
    <property name="geometry">
     <rect>
-     <x>545</x>
+     <x>581</x>
      <y>25</y>
      <width>71</width>
      <height>31</height>
@@ -187,7 +187,7 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_metroNum2">
    <property name="geometry">
     <rect>
-     <x>355</x>
+     <x>370</x>
      <y>25</y>
      <width>71</width>
      <height>31</height>
@@ -307,6 +307,48 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_ACP_MC1">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>107</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:18px&quot;微软雅黑&quot;;
+background-color: rgb(170, 170, 170);
+border:0px;</string>
+   </property>
+   <property name="text">
+    <string>0Bar</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_ACP_MC2">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>105</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:18px&quot;微软雅黑&quot;;
+background-color: rgb(170, 170, 170);
+border:0px;</string>
+   </property>
+   <property name="text">
+    <string>0Bar</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>LBLM2</zorder>
@@ -323,6 +365,8 @@ border-bottom-right-radius:8px;</string>
   <zorder>lbl_cab2_active</zorder>
   <zorder>lbl_cab1_direction</zorder>
   <zorder>lbl_cab1_active</zorder>
+  <zorder>lbl_ACP_MC1</zorder>
+  <zorder>lbl_ACP_MC2</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -22,7 +22,7 @@ QLabel
 {
 color:rgb(0,0,0);
 background-color:rgb(170,170,170);
-font:22px,&quot;微软雅黑&quot;;
+font:22px &quot;微软雅黑&quot;;
 }
 </string>
   </property>

@@ -378,7 +378,7 @@ color: rgb(255, 255, 255);
 font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>0-40km/h
+    <string>0-60km/h
 加速度测试</string>
    </property>
   </widget>
@@ -397,7 +397,7 @@ color: rgb(255, 255, 255);
 font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>0-80km/h
+    <string>0-120km/h
 加速度测试</string>
    </property>
   </widget>

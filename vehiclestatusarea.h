@@ -7,6 +7,7 @@
 #include "qtimer.h"
 #include "QTime"
 #include "emdialogpage.h"
+#include "emdooropen.h"
 namespace Ui {
     class VehicleStatusArea;
 }
@@ -23,6 +24,11 @@ public:
     void updatePage();
     void refreshAllButton();
     void hideLabel();
+    void showEvent(QTimerEvent *e);
+    bool fangyouFlag;
+    int isDoorEmOpen();
+    static int emDooropenflag;
+
 
 
 
@@ -40,6 +46,9 @@ private:
     QTimer *time2s;
     bool fireflag;
     EMDialogPage* emDialogPage;
+    EmDoorOPen* emDoorOpen;
+
+
 
     void setLabelStatus(unsigned short int status,unsigned short int &t_status,QPushButton* btn,QString Faultstr,QString Warningstr,QString Normalstr);
 
@@ -49,10 +58,13 @@ private:
 private slots:
 
     void changeTrainStatus();
-    void doorPushButtonEvent();
+    void firePushButtonEvent();
 
 
 
+
+    void on_BTNEmergencyBrocast_pressed();
+    void on_BTN_fangyou_pressed();
 };
 
 #endif // VEHICLESTATUSAREA_H

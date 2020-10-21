@@ -19,15 +19,13 @@ int main(int argc, char *argv[])
     Log4Qt::PropertyConfigurator::configure(a.applicationDirPath()+ "/log4j.properties");
 
 #ifndef USE_DEBUG_MODE
-//    a.setOverrideCursor(QCursor(Qt::BlankCursor));
-//        if (QWSServer::isCursorVisible()) {
-//            QWSServer::setCursorVisible(false);
-//        } //end
+    a.setOverrideCursor(QCursor(Qt::BlankCursor));
 #endif
 
     Widget w;
     w.setWindowFlags(Qt::FramelessWindowHint);
     w.show();
+
 
 
     return a.exec();

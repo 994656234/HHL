@@ -17,7 +17,7 @@ public:
     explicit VehicleAirConditionerPage(QWidget *parent = 0);
     ~VehicleAirConditionerPage();
     void updatePage();
-    void getAirConditionStatus(QLabel *label,QList<bool> status);
+    void getAirConditionStatus(QLabel *label,unsigned char status);
 
 private:
     Ui::VehicleAirConditionerPage *ui;

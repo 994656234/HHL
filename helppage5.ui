@@ -311,76 +311,10 @@ font:16px &quot;微软雅黑&quot;;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_42">
-   <property name="geometry">
-    <rect>
-     <x>690</x>
-     <y>50</y>
-     <width>51</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/cut.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_43">
-   <property name="geometry">
-    <rect>
-     <x>760</x>
-     <y>60</y>
-     <width>131</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font:16px &quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>火或烟传感器屏蔽</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_44">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>170</y>
-     <width>131</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font:16px &quot;微软雅黑&quot;;</string>
-   </property>
-   <property name="text">
-    <string>火或烟传感器污染</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_45">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>160</y>
-     <width>51</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/image/firenbad.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_46">
    <property name="geometry">
     <rect>
-     <x>360</x>
+     <x>70</x>
      <y>160</y>
      <width>51</width>
      <height>41</height>
@@ -396,7 +330,7 @@ font:16px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="label_47">
    <property name="geometry">
     <rect>
-     <x>430</x>
+     <x>140</x>
      <y>170</y>
      <width>151</width>
      <height>21</height>
@@ -414,7 +348,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>160</y>
+     <y>50</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -430,7 +364,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>760</x>
-     <y>170</y>
+     <y>60</y>
      <width>191</width>
      <height>21</height>
     </rect>
@@ -479,7 +413,7 @@ font:16px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="label_52">
    <property name="geometry">
     <rect>
-     <x>630</x>
+     <x>610</x>
      <y>250</y>
      <width>111</width>
      <height>41</height>
@@ -495,7 +429,7 @@ font:16px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="label_53">
    <property name="geometry">
     <rect>
-     <x>760</x>
+     <x>740</x>
      <y>260</y>
      <width>181</width>
      <height>21</height>

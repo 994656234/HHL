@@ -26,7 +26,9 @@ AddSubtractTestPage::AddSubtractTestPage(QWidget *parent) :
 
     lbls<<ui->lbl_metroSpeed<<ui->lbl_level<<ui->lbl_40Speed<<ui->lbl_40Level
             <<ui->lbl_80Speed<<ui->lbl_80Level<<ui->lbl_subBrakeSpeed<<ui->lbl_brakeDistance
-            <<ui->lbl_subLevel<<ui->lbl_subSpeed<<ui->lbl_brakeMode;
+            <<ui->lbl_subLevel<<ui->lbl_subSpeed;
+
+
 }
 
 AddSubtractTestPage::~AddSubtractTestPage()
@@ -53,10 +55,10 @@ void AddSubtractTestPage::NBpressEvent()
 void AddSubtractTestPage::statusBTNPressEvent()
 {
     int tmp_index = ((QPushButton*)this->sender())->whatsThis().toInt()-1;
-    //*Signals[tmp_index]=true;
+    *Signals[tmp_index]=true;
     timer2s[tmp_index] = this->startTimer(2000);
     ((QPushButton*)this->sender())->setStyleSheet(BTNPRESS);
-    //database->HMiCT_SetFlagChecker_U8=0xAA;
+    database->DiCT_SetFlagChecker_U8=0xAA;
 }
 
 void AddSubtractTestPage::timerEvent(QTimerEvent *e)
@@ -68,8 +70,8 @@ void AddSubtractTestPage::timerEvent(QTimerEvent *e)
         {
             killTimer(timer2s[i]);
             statusButtons[i]->setStyleSheet(BTNRELEASE);
-           // *Signals[i] = false;
-            //database->HMiCT_SetFlagChecker_U8=0x55;
+            *Signals[i] = false;
+            database->DiCT_SetFlagChecker_U8=0x55;
         }
     }
 }
@@ -77,7 +79,42 @@ void AddSubtractTestPage::timerEvent(QTimerEvent *e)
 
 void AddSubtractTestPage::updatePage()
 {
+    // qDebug()<<database->DiCT_ACDETestStartFlag_B1<<"                      "<<database->DiCT_ACDETestStopFlag_B1;
+    status<<QString::number(database->CTD_TrainSpeed_U16*0.1,'f',1)+"km/h"<<QString::number(database->CTD_Grade_U8)+"%"
+                <<QString::number(database->CTD_AcceleratiOLINE40_I16*0.01,'f',2)+"m/s2"<<QString::number(database->CTD_Acc40MCLv_U8)+"%"
+                <<QString::number(database->CTD_AcceleratiOLINE80_I16*0.01,'f',2)+"m/s2"<<QString::number(database->CTD_Acc80MCLv_U8)+"%"
+                <<QString::number(database->CTD_DeStartVelocity_U16*0.01,'f',1)+"km/h"<<QString::number(database->CTD_DeDistance_U16,'f',1)+"m"
+                <<QString::number(-database->CTD_DeMCLv_U8)+"%"<<QString::number(database->CTD_DeceleratiOLINE_I16*0.01,'f',2)+"m/s2"
+                ;
+        setLabelStatus(lbls,status);
+        status.clear();
 
+        if(database->CTD_AcDeTestOLINE_B1)
+        {
+            ui->lbl_testStatus->setText("测试进行中");
+        }
+        else
+        {
+            ui->lbl_testStatus->setText("");
+        }
+
+
+        if(database->CTD_DeBrkMode_U8==1)
+        {
+            ui->lbl_brakeMode->setText("只有电制动");
+        }
+        else if(database->CTD_DeBrkMode_U8==2)
+        {
+            ui->lbl_brakeMode->setText("只有空气制动");
+        }
+        else if(database->CTD_DeBrkMode_U8==3)
+        {
+            ui->lbl_brakeMode->setText("电制动和空气制动都有");
+        }
+        else
+        {
+            ui->lbl_brakeMode->setText("");
+        }
 
 }
 

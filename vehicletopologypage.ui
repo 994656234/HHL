@@ -449,7 +449,7 @@ border-radius:3px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_TDS1">
+  <widget class="QLabel" name="lbl_BMS1">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -465,7 +465,7 @@ border-radius:3px;
 font:12px;</string>
    </property>
    <property name="text">
-    <string>走行部检测</string>
+    <string>BMS</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -850,7 +850,7 @@ border-radius:3px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_TDS_2">
+  <widget class="QLabel" name="lbl_BMS2">
    <property name="geometry">
     <rect>
      <x>400</x>
@@ -866,7 +866,7 @@ border-radius:3px;
 font:12px;</string>
    </property>
    <property name="text">
-    <string>走行部检测</string>
+    <string>BMS</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1031,7 +1031,7 @@ border-radius:3px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_TDS3">
+  <widget class="QLabel" name="lbl_BMS3">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -1047,7 +1047,7 @@ border-radius:3px;
 font:12px;</string>
    </property>
    <property name="text">
-    <string>走行部检测</string>
+    <string>BMS</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1469,7 +1469,7 @@ border-radius:3px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_TDS4">
+  <widget class="QLabel" name="lbl_BMS4">
    <property name="geometry">
     <rect>
      <x>860</x>
@@ -1485,7 +1485,7 @@ border-radius:3px;
 font:12px;</string>
    </property>
    <property name="text">
-    <string>走行部检测</string>
+    <string>BMS</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3272,7 +3272,7 @@ border-radius:3px;</string>
   <zorder>label_132</zorder>
   <zorder>label_133</zorder>
   <zorder>label_134</zorder>
-  <zorder>lbl_TDS1</zorder>
+  <zorder>lbl_BMS1</zorder>
   <zorder>lbl_RIOM10</zorder>
   <zorder>lbl_EDCU5R_1</zorder>
   <zorder>lbl_VCU1</zorder>
@@ -3291,14 +3291,14 @@ border-radius:3px;</string>
   <zorder>lbl_RIOM4</zorder>
   <zorder>label_89</zorder>
   <zorder>label_90</zorder>
-  <zorder>lbl_TDS_2</zorder>
+  <zorder>lbl_BMS2</zorder>
   <zorder>label_88</zorder>
   <zorder>lbl_EDCU6L_2</zorder>
   <zorder>lbl_EDCU5R_2</zorder>
   <zorder>lbl_ACVP3</zorder>
   <zorder>lbl_VVVF2_2</zorder>
   <zorder>lbl_VVVF1_2</zorder>
-  <zorder>lbl_TDS3</zorder>
+  <zorder>lbl_BMS3</zorder>
   <zorder>lbl_EDCU6L_3</zorder>
   <zorder>lbl_EDCU5R_3</zorder>
   <zorder>lbl_RIOM11_2</zorder>
@@ -3311,7 +3311,7 @@ border-radius:3px;</string>
   <zorder>lbl_GV2</zorder>
   <zorder>lbl_PCU2</zorder>
   <zorder>lbl_EDCU5R_4</zorder>
-  <zorder>lbl_TDS4</zorder>
+  <zorder>lbl_BMS4</zorder>
   <zorder>lbl_OBCU2</zorder>
   <zorder>lbl_RIOM10_2</zorder>
   <zorder>lbl_ERM1</zorder>

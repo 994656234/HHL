@@ -42,12 +42,12 @@ void Simulation::updatePage()
     QList<unsigned short int> sendports;
     if(this->database->HMIPosition == 1)
     {
-        sendports<<0x210<<0x211<<0x212<<0x213;
+        sendports<<0x310<<0x311;
     }else if(this->database->HMIPosition == 2)
     {
-        sendports<<0x220<<0x221<<0x222<<0x223;
+        sendports<<0x320<<0x321;
     }
-    QString sendport,port1,port2,port3,port4;
+    QString sendport,port1,port2,port3;
     for(int i = 0 ; i<32 ; i++)
     {
         QString tmp;
@@ -56,15 +56,10 @@ void Simulation::updatePage()
         port1.append(tmp+",");
         tmp.sprintf("%02x",this->crrcRicoMvb->getUnsignedChar(sendports.at(1),i));
         port2.append(tmp+",");
-        tmp.sprintf("%02x",this->crrcRicoMvb->getUnsignedChar(sendports.at(2),i));
-        port3.append(tmp+",");
-        tmp.sprintf("%02x",this->crrcRicoMvb->getUnsignedChar(sendports.at(3),i));
-        port4.append(tmp+",");
+
     }
     sendport = QString::number(sendports.at(0),16)+":"+port1+"\n"+
-               QString::number(sendports.at(1),16)+":"+port2+"\n"+
-               QString::number(sendports.at(2),16)+":"+port3+"\n"+
-               QString::number(sendports.at(3),16)+":"+port4;
+               QString::number(sendports.at(1),16)+":"+port2;
     this->ui->sendMessage->setText(sendport);
 }
 

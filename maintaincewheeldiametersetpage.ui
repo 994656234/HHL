@@ -807,8 +807,8 @@ border-radius:0px;</string>
   <widget class="QPushButton" name="BTNSelectAll">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>240</y>
+     <x>920</x>
+     <y>190</y>
      <width>91</width>
      <height>30</height>
     </rect>
@@ -855,7 +855,7 @@ font: 14pt &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>轮径设定值
-770-850mm</string>
+770-840mm</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -911,8 +911,8 @@ border-bottom-right-radius:8px;</string>
 font: 14pt &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>轮径,线路号,车号
-需分别设置</string>
+    <string>轮径,车号需分别
+设置</string>
    </property>
   </widget>
  </widget>

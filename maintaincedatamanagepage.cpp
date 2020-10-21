@@ -11,9 +11,8 @@ MaintainceDataManagePage::MaintainceDataManagePage(QWidget *parent) :
     ui(new Ui::MaintainceDataManagePage)
 {
     ui->setupUi(this);
-    ui->lbl_10->hide();
-    ui->BTNTime->hide();
-
+    ui->lbl_8->hide();
+    ui->BTNEBcomsuption->hide();
     QList<QPushButton*> buttons;
     buttons<<ui->BTN1<<ui->BTN2<<ui->BTN3<<ui->BTN4<<ui->BTN5<<ui->BTN6<<ui->BTN7<<ui->BTN8<<ui->BTN9<<ui->BTNHome;
     foreach(QPushButton* button,buttons)
@@ -29,7 +28,7 @@ MaintainceDataManagePage::MaintainceDataManagePage(QWidget *parent) :
     }
 
     m_Selectbuttons<<ui->BTNTCUcomsuption<<ui->BTNACUcomsuption<<ui->BTNBCUcomsuption<<ui->BTNEBcomsuption
-            <<ui->BTNACCMile<<ui->BTNACP1runtime<<ui->BTNACP2runtime<<ui->BTNDistance<<ui->BTNTime;
+            <<ui->BTNACCMile<<ui->BTNACP1runtime<<ui->BTNACP2runtime<<ui->BTNDistance;
     foreach(QPushButton* button,m_Selectbuttons)
     {
         connect(button,SIGNAL(pressed()),this,SLOT(SelectbuttonsPressedEvent()));
@@ -49,9 +48,9 @@ MaintainceDataManagePage::~MaintainceDataManagePage()
 void MaintainceDataManagePage::ConfirmPressEvent()
 {
     ui->BTN9->setStyleSheet(CONFIRMRELEASE);
-//    this->database->HMiCT_RunStatSetData_U32 = 0;
-//    this->database->HMiCT_RunStatSetType_U8 = 0;
-//    this->database->HMiCT_RunStatSetFlag_B1 = false;
+    this->database->DiCT_RunStatSetData_U32 = 0;
+    this->database->DiCT_RunStatSetType_U8 = 0;
+    this->database->DiCT_RunStatSetFlag_B1 = false;
     timer2s->stop();
 }
 void MaintainceDataManagePage::NumbuttonsPressedEvent()
@@ -85,9 +84,9 @@ void MaintainceDataManagePage::pushButtonPressedEvent()
         changePage(uVehicleTrainArea);
     }else if(btnName=="BTN9")
     {
-//        this->database->HMiCT_RunStatSetData_U32 = m_button->text().toUInt();
-//        this->database->HMiCT_RunStatSetType_U8 = m_button->whatsThis().toUInt();
-//        this->database->HMiCT_RunStatSetFlag_B1 = true;
+        this->database->DiCT_RunStatSetData_U32 = m_button->text().toUInt();
+        this->database->DiCT_RunStatSetType_U8 = m_button->whatsThis().toUInt();
+        this->database->DiCT_RunStatSetFlag_B1 = true;
         ui->BTN9->setStyleSheet(CONFIRMPRESS);
         timer2s->start(2000);
     }
@@ -95,8 +94,8 @@ void MaintainceDataManagePage::pushButtonPressedEvent()
 void MaintainceDataManagePage::hideEvent(QHideEvent *)
 {
     ui->BTN9->setStyleSheet(CONFIRMRELEASE);
-//    this->database->HMiCT_RunStatSetData_U32 = 0;
-//    this->database->HMiCT_RunStatSetType_U8 = 0;
-//    this->database->HMiCT_RunStatSetFlag_B1 = false;
+    this->database->DiCT_RunStatSetData_U32 = 0;
+    this->database->DiCT_RunStatSetType_U8 = 0;
+    this->database->DiCT_RunStatSetFlag_B1 = false;
     timer2s->stop();
 }

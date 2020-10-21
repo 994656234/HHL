@@ -20,9 +20,9 @@ public:
 
 private:
     Ui::VehicleBrakePage *ui;
-    QList<bool> status,statusStop;
+    QList<bool> status;
     void brakeStatus(QLabel * lable ,QList<bool> status);
-    void stopBrakeStatus(QLabel *label,QList<bool> status);
+    void stopBrakeStatus(QLabel *label,bool status);
 };
 
 #endif // VEHICLEBRAKEPAGE_H

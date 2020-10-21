@@ -65,6 +65,12 @@ void VehicleTopologyPage::updatePage()
         ui->lbl_cab2_direction->hide();
     }
 
+    //BMS
+    deviceStatus(ui->lbl_BMS1,database->CTD_BMS1OLINE_B1);
+    deviceStatus(ui->lbl_BMS2,database->CTD_BMS2OLINE_B1);
+    deviceStatus(ui->lbl_BMS3,database->CTD_BMS3OLINE_B1);
+    deviceStatus(ui->lbl_BMS4,database->CTD_BMS4OLINE_B1);
+
     //MC1
     setMainFlowDevice(ui->lbl_VCU1,database->CTD_CCU1Active_B1,database->CTD_CCU1OLINE_B1);
     deviceStatus(ui->lbl_ERM1,database->CTD_ERM1OLINE_B1);
@@ -104,7 +110,7 @@ void VehicleTopologyPage::updatePage()
     deviceStatus(ui->lbl_SIV2,database->CTD_ACU2OLINE_B1);
     deviceStatus(ui->lbl_ACVP4,database->CTD_AC4OLINE_B1);
     deviceStatus(ui->lbl_FCU2,database->CTD_FCU2OLINE_B1);
-    setMainFlowDevice(ui->lbl_PCU2,database->PIS1CT_P2_B1,database->CTD_PIS2OLINE_B1);
+    setMainFlowDevice(ui->lbl_PCU2,database->PIS2CT_P2_B1,database->CTD_PIS2OLINE_B1);
 
     setEDCUstatus(ui->lbl_EDCU5R_1,database->CTD_EDCU1OLINE_B1,database->B1CT_MstrGV_B1);
     setEDCUstatus(ui->lbl_EDCU6L_1,database->CTD_EDCU2OLINE_B1,database->B2CT_MstrGV_B1);

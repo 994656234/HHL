@@ -99,19 +99,19 @@ void MaintainceSoftwareVersionPage::updatePage()
         }
     case OTHERS:
         {
-            OtherStatus<<"SIV"<<QString::number(database->ACU1CT_IuiDSPRevision_U16)<<QString::number(database->ACU1CT_IuiPPCRevision_U16)<<QString::number(database->ACU2CT_IuiPPCRevision_U16)<<QString::number(database->ACU2CT_IuiPPCRevision_U16)
-                       <<"VVVF"<<TCUVersion(database->TCU1CT_IuiLglSWRevision_U16,database->TCU2CT_IuiInvSWRevision_U16,database->TCU3CT_IuiAdhSWRevision_U16)
-                         <<TCUVersion(database->TCU2CT_IuiLglSWRevision_U16,database->TCU2CT_IuiInvSWRevision_U16,database->TCU3CT_IuiAdhSWRevision_U16)
-                           <<TCUVersion(database->TCU3CT_IuiLglSWRevision_U16,database->TCU2CT_IuiInvSWRevision_U16,database->TCU3CT_IuiAdhSWRevision_U16)
-                             <<TCUVersion(database->TCU4CT_IuiLglSWRevision_U16,database->TCU2CT_IuiInvSWRevision_U16,database->TCU3CT_IuiAdhSWRevision_U16)
-                               <<TCUVersion(database->TCU5CT_IuiLglSWRevision_U16,database->TCU2CT_IuiInvSWRevision_U16,database->TCU3CT_IuiAdhSWRevision_U16)
-                                 <<TCUVersion(database->TCU6CT_IuiLglSWRevision_U16,database->TCU2CT_IuiInvSWRevision_U16,database->TCU3CT_IuiAdhSWRevision_U16)
+            OtherStatus<<"SIV"<<TCUVersion(database->ACU1CT_IuiDSPRevision_U16)<<TCUVersion(database->ACU1CT_IuiPPCRevision_U16)<<TCUVersion(database->ACU2CT_IuiPPCRevision_U16)<<TCUVersion(database->ACU2CT_IuiPPCRevision_U16)
+                      <<"VVVF"<<TCUVersion(database->TCU1CT_IuiLglSWRevision_U16)
+                       <<TCUVersion(database->TCU2CT_IuiLglSWRevision_U16)
+                           <<TCUVersion(database->TCU3CT_IuiLglSWRevision_U16)
+                             <<TCUVersion(database->TCU4CT_IuiLglSWRevision_U16)
+                               <<TCUVersion(database->TCU5CT_IuiLglSWRevision_U16)
+                                 <<TCUVersion(database->TCU6CT_IuiLglSWRevision_U16)
                        <<"OBCU"<<"--"<<"--"<<"--"<<"--"
-                       <<"走行部"<<"--"<<"--"<<"--"<<"--"
+                       <<"BMS"<<BMSVersion(database->BMS1CT_SWVERSION_U16)<<BMSVersion(database->BMS2CT_SWVERSION_U16)<<BMSVersion(database->BMS3CT_SWVERSION_U16)<<BMSVersion(database->BMS4CT_SWVERSION_U16)
                        <<"FCU"<<QString::number(database->FCU1CT_usSWRev_B1)<<"--"<<"--"<<QString::number(database->FCU2CT_usSWRev_B1)
                        <<"GV"<<turnNumberToQStringDoor(database->B1CT_SWVerHigh_U8,database->B1CT_SWVerLow_U8)<<"--"<<"--"<<turnNumberToQStringDoor(database->B2CT_SWVerHigh_U8,database->B2CT_SWVerLow_U8)
                        <<"PCU"<<turnNumberToQStringPIS(database->PIS1CT_P178_B1,database->PIS1CT_P179_B1,database->PIS1CT_P180_B1)<<"--"<<"--"<<turnNumberToQStringPIS(database->PIS2CT_P178_B1,database->PIS2CT_P179_B1,database->PIS2CT_P180_B1)
-                       <<"ACVP"<<QString::number(database->ACVP1CT_IuiHVACSWVersion_U16)<<QString::number(database->ACVP2CT_IuiHVACSWVersion_U16)<<QString::number(database->ACVP3CT_IuiHVACSWVersion_U16)<<QString::number(database->ACVP4CT_IuiHVACSWVersion_U16)
+                       <<"ACVP"<<doorStatus(database->ACVP1CT_IuiHVACSWVersion_U16)<<doorStatus(database->ACVP2CT_IuiHVACSWVersion_U16)<<doorStatus(database->ACVP3CT_IuiHVACSWVersion_U16)<<doorStatus(database->ACVP4CT_IuiHVACSWVersion_U16)
                        <<"受电弓"<<"--"<<"--"<<"--"<<"--";
 
             for(int i = 0; i<line.size();i++)
@@ -251,9 +251,15 @@ QString MaintainceSoftwareVersionPage::doorStatus(unsigned short status)
 }
 
 
-QString MaintainceSoftwareVersionPage::TCUVersion(unsigned short status1, unsigned short status2, unsigned short status3)
+QString MaintainceSoftwareVersionPage::TCUVersion( unsigned short status3)
 {
-    QString temp=QString::number(status1)+"."+QString::number(status2)+"."+QString::number(status3);
+    QString temp=QString::number(status3/256)+"."+QString::number((status3%256)/16)+"."+QString::number((status3%256)%16);
+    return temp;
+}
+
+QString MaintainceSoftwareVersionPage::BMSVersion(unsigned short status)
+{
+    QString temp=QString::number(status/4096)+"."+QString::number((status%4096)/16)+"."+QString::number((status%4096)%16);
     return temp;
 }
 

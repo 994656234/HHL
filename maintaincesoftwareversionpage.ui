@@ -242,7 +242,7 @@ border:1px solid black;
 font:20px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>MC1车</string>
+    <string>MC2车</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

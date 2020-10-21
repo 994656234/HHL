@@ -10,7 +10,7 @@ Database::Database()
 {
 
     DiCT_HMISWVerH_U8=1;
-    DiCT_HMISWVerL_U8=0;
+    DiCT_HMISWVerL_U8=1;
 
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
     //init HMI-CCU
@@ -26,6 +26,8 @@ Database::Database()
     DiCT_WheelDia2_U8=0;
     DiCT_WheelDia5_U8=0;
     DiCT_WheelDia6_U8=0;
+    DiCT_EmgyMsgCode_U8=0;
+
 
     DiCT_SAVETime_B1=false;
     DiCT_SAVETrainNum_B1=false;
@@ -42,6 +44,7 @@ Database::Database()
     DiCT_HVACAutoCoolMode_B1=false;
     DiCT_HVACAutoWarmMode_B1=false;
     DiCT_HVACStop_B1=false;
+    DiCT_NADA_B1 = false;
     DiCT_Reduce0point5_B1=false;
     DiCT_Reduce1_B1=false;
     DiCT_Reduce1point5_B1=false;
@@ -80,20 +83,50 @@ Database::Database()
     DiCT_BCUSelfTestReq_B1=false;
     DiCT_BCUSelfTestStop_B1=false;
     DiCT_RunStatSetFlag_B1=false;
+    DiCT_EmgyMsgStart_B1=false;
+    DiCT_EmgyMsgStop_B1=false;
 
     DiCT_RunStatSetType_U8=0;
     DiCT_RunStatSetData_U32=0;
 
     HMiCT_LifeSignal_U16=0;
 
+    HVACWarmStop=false;
+    HVACCoolStop=false;
+    fangyou=false;
+    tamianClean=false;
+    DiCT_LINENUM_U8=0;
+    DiCT_STARTLINENUM_U8=0;
+    DiCT_ENDLINENUM_U8=0;
+    DiCT_NEXTLINENUM_U8=0;
+    DiCT_NOWLINENUM_U8=0;
+    DiCT_FAULT_B1=false;
+    DiCT_HALFATOSTART_B1=false;
+    DiCT_HALFATOEND_B1=false;
+    DiCT_JUMPSET_B1=false;
+    DiCT_JUMPCANCEL_B1=false;
+    DiCT_SPEED_U16=0;
 
-
+    DiCT_JUMP1_B1=false;
+    DiCT_JUMP2_B1=false;
+    DiCT_JUMP3_B1=false;
+    DiCT_JUMP4_B1=false;
+    DiCT_JUMP5_B1=false;
+    DiCT_JUMP6_B1=false;
+    DiCT_JUMP7_B1=false;
+    DiCT_JUMP8_B1=false;
+    DiCT_JUMP9_B1=false;
+    DiCT_JUMP10_B1=false;
+    DiCT_JUMP11_B1=false;
+    DiCT_JUMP12_B1=false;
+    DiCT_JUMP13_B1=false;
+    DiCT_JUMP14_B1=false;
+    DiCT_JUMP15_B1=false;
+    DiCT_JUMP16_B1=false;
 }
 
 void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 {
-
-
 
     this->crrcRicoMvb = crrcRicoMvb;
     //0xfff null port
@@ -120,6 +153,9 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setUnsignedChar(0x310,3,DiCT_HMISWVerL_U8);
             D1CT_HMISWVerH_U8=DiCT_HMISWVerH_U8;
             D1CT_HMISWVerL_U8=DiCT_HMISWVerL_U8;
+
+            D2CT_HMISWVerH_U8=crrcRicoMvb->getUnsignedChar(0x320,2);
+            D2CT_HMISWVerL_U8=crrcRicoMvb->getUnsignedChar(0x320,3);
 
 
             crrcRicoMvb->setUnsignedInt(0x310,0,HMiCT_LifeSignal_U16);
@@ -154,6 +190,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setBool(0x311,0,2,DiCT_HVACAutoCoolMode_B1);
             crrcRicoMvb->setBool(0x311,0,3,DiCT_HVACAutoWarmMode_B1);
             crrcRicoMvb->setBool(0x311,0,4,DiCT_HVACStop_B1);
+            crrcRicoMvb->setBool(0x311,0,5,DiCT_NADA_B1);
 
             crrcRicoMvb->setBool(0x311,1,0,DiCT_Reduce0point5_B1);
             crrcRicoMvb->setBool(0x311,1,1,DiCT_Reduce1_B1);
@@ -185,29 +222,76 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setBool(0x311,6,1,DiCT_FASSlience_B1);
             crrcRicoMvb->setBool(0x311,6,2,DiCT_TCURunStatClear_B1);
             crrcRicoMvb->setBool(0x311,6,3,DiCT_ACMRunStatClear_B1);
-            crrcRicoMvb->setBool(0x311,6,3,DiCT_PISTestStart_B1);
-            crrcRicoMvb->setBool(0x311,6,3,DiCT_PISTestStop_B1);
-            crrcRicoMvb->setBool(0x311,6,3,DiCT_TC1APClear_B1);
-            crrcRicoMvb->setBool(0x311,6,3,DiCT_TC2APClear_B1);
+            crrcRicoMvb->setBool(0x311,6,4,DiCT_PISTestStart_B1);
+            crrcRicoMvb->setBool(0x311,6,5,DiCT_PISTestStop_B1);
+            crrcRicoMvb->setBool(0x311,6,6,DiCT_TC1APClear_B1);
+            crrcRicoMvb->setBool(0x311,6,7,DiCT_TC2APClear_B1);
 
 
             crrcRicoMvb->setBool(0x311,7,3,DiCT_ACDETestStopFlag_B1);
             crrcRicoMvb->setBool(0x311,7,4,DiCT_ACDETestStartFlag_B1);
             crrcRicoMvb->setBool(0x311,7,7,DiCT_BCUSelfTestReq_B1);
             crrcRicoMvb->setBool(0x311,8,0,DiCT_BCUSelfTestStop_B1);
+            crrcRicoMvb->setUnsignedChar(0x311,10,DiCT_EmgyMsgCode_U8);
+            crrcRicoMvb->setBool(0x311,11,0,DiCT_EmgyMsgStart_B1);
+            crrcRicoMvb->setBool(0x311,11,1,DiCT_EmgyMsgStop_B1);
             crrcRicoMvb->setBool(0x311,26,0,DiCT_RunStatSetFlag_B1);
 
 
             crrcRicoMvb->setUnsignedChar(0x311,27,DiCT_RunStatSetType_U8);
             crrcRicoMvb->setUnsignedInt32(0x311,28,DiCT_RunStatSetData_U32);
 
+            crrcRicoMvb->setBool(0x311,2,3,HVACWarmStop);
+            crrcRicoMvb->setBool(0x311,2,4,HVACCoolStop);
+
+            crrcRicoMvb->setBool(0x311,7,0,tamianClean);
+            crrcRicoMvb->setBool(0x311,7,1,fangyou);
+
+
+            crrcRicoMvb->setUnsignedChar(0x311,12,DiCT_LINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x311,13,DiCT_STARTLINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x311,14,DiCT_ENDLINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x311,15,DiCT_NEXTLINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x311,16,DiCT_NOWLINENUM_U8);
+
+            crrcRicoMvb->setBool(0x311,17,0,DiCT_FAULT_B1);
+            crrcRicoMvb->setBool(0x311,17,1,DiCT_HALFATOSTART_B1);
+            crrcRicoMvb->setBool(0x311,17,2,DiCT_HALFATOEND_B1);
+            crrcRicoMvb->setBool(0x311,17,4,DiCT_JUMPSET_B1);
+            crrcRicoMvb->setBool(0x311,17,5,DiCT_JUMPCANCEL_B1);
+
+            crrcRicoMvb->setUnsignedInt(0x311,18,DiCT_SPEED_U16);
+
+            crrcRicoMvb->setBool(0x311,20,0,DiCT_JUMP1_B1);
+            crrcRicoMvb->setBool(0x311,20,1,DiCT_JUMP2_B1);
+            crrcRicoMvb->setBool(0x311,20,2,DiCT_JUMP3_B1);
+            crrcRicoMvb->setBool(0x311,20,3,DiCT_JUMP4_B1);
+            crrcRicoMvb->setBool(0x311,20,4,DiCT_JUMP5_B1);
+            crrcRicoMvb->setBool(0x311,20,5,DiCT_JUMP6_B1);
+            crrcRicoMvb->setBool(0x311,20,6,DiCT_JUMP7_B1);
+            crrcRicoMvb->setBool(0x311,20,7,DiCT_JUMP8_B1);
+
+            crrcRicoMvb->setBool(0x311,21,0,DiCT_JUMP9_B1);
+            crrcRicoMvb->setBool(0x311,21,1,DiCT_JUMP10_B1);
+            crrcRicoMvb->setBool(0x311,21,2,DiCT_JUMP11_B1);
+            crrcRicoMvb->setBool(0x311,21,3,DiCT_JUMP12_B1);
+            crrcRicoMvb->setBool(0x311,21,4,DiCT_JUMP13_B1);
+            crrcRicoMvb->setBool(0x311,21,5,DiCT_JUMP14_B1);
+            crrcRicoMvb->setBool(0x311,21,6,DiCT_JUMP15_B1);
+            crrcRicoMvb->setBool(0x311,21,7,DiCT_JUMP16_B1);
+
+
+
         }
         else if(HMIPosition==2)
         {
-            crrcRicoMvb->setUnsignedChar(0x320,2,D1CT_HMISWVerH_U8);
-            crrcRicoMvb->setUnsignedChar(0x320,3,D1CT_HMISWVerL_U8);
+            crrcRicoMvb->setUnsignedChar(0x320,2,DiCT_HMISWVerH_U8);
+            crrcRicoMvb->setUnsignedChar(0x320,3,DiCT_HMISWVerL_U8);
             D2CT_HMISWVerH_U8=DiCT_HMISWVerH_U8;
             D2CT_HMISWVerL_U8=DiCT_HMISWVerL_U8;
+
+            D1CT_HMISWVerH_U8=crrcRicoMvb->getUnsignedChar(0x310,2);
+            D1CT_HMISWVerL_U8=crrcRicoMvb->getUnsignedChar(0x310,3);
 
             crrcRicoMvb->setUnsignedInt(0x320,0,HMiCT_LifeSignal_U16);
             crrcRicoMvb->setUnsignedChar(0x320,4,DiCT_Year_U8);
@@ -240,6 +324,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setBool(0x321,0,2,DiCT_HVACAutoCoolMode_B1);
             crrcRicoMvb->setBool(0x321,0,3,DiCT_HVACAutoWarmMode_B1);
             crrcRicoMvb->setBool(0x321,0,4,DiCT_HVACStop_B1);
+            crrcRicoMvb->setBool(0x321,0,5,DiCT_NADA_B1);
 
             crrcRicoMvb->setBool(0x321,1,0,DiCT_Reduce0point5_B1);
             crrcRicoMvb->setBool(0x321,1,1,DiCT_Reduce1_B1);
@@ -271,27 +356,69 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setBool(0x321,6,1,DiCT_FASSlience_B1);
             crrcRicoMvb->setBool(0x321,6,2,DiCT_TCURunStatClear_B1);
             crrcRicoMvb->setBool(0x321,6,3,DiCT_ACMRunStatClear_B1);
-            crrcRicoMvb->setBool(0x321,6,3,DiCT_PISTestStart_B1);
-            crrcRicoMvb->setBool(0x321,6,3,DiCT_PISTestStop_B1);
-            crrcRicoMvb->setBool(0x321,6,3,DiCT_TC1APClear_B1);
-            crrcRicoMvb->setBool(0x321,6,3,DiCT_TC2APClear_B1);
+            crrcRicoMvb->setBool(0x321,6,4,DiCT_PISTestStart_B1);
+            crrcRicoMvb->setBool(0x321,6,5,DiCT_PISTestStop_B1);
+            crrcRicoMvb->setBool(0x321,6,6,DiCT_TC1APClear_B1);
+            crrcRicoMvb->setBool(0x321,6,7,DiCT_TC2APClear_B1);
 
 
             crrcRicoMvb->setBool(0x321,7,3,DiCT_ACDETestStopFlag_B1);
             crrcRicoMvb->setBool(0x321,7,4,DiCT_ACDETestStartFlag_B1);
             crrcRicoMvb->setBool(0x321,7,7,DiCT_BCUSelfTestReq_B1);
             crrcRicoMvb->setBool(0x321,8,0,DiCT_BCUSelfTestStop_B1);
+            crrcRicoMvb->setUnsignedChar(0x321,10,DiCT_EmgyMsgCode_U8);
+            crrcRicoMvb->setBool(0x321,11,0,DiCT_EmgyMsgStart_B1);
+            crrcRicoMvb->setBool(0x321,11,1,DiCT_EmgyMsgStop_B1);
             crrcRicoMvb->setBool(0x321,26,0,DiCT_RunStatSetFlag_B1);
 
 
             crrcRicoMvb->setUnsignedChar(0x321,27,DiCT_RunStatSetType_U8);
             crrcRicoMvb->setUnsignedInt32(0x321,28,DiCT_RunStatSetData_U32);
+
+            crrcRicoMvb->setBool(0x321,2,3,HVACWarmStop);
+            crrcRicoMvb->setBool(0x321,2,4,HVACCoolStop);
+
+
+            crrcRicoMvb->setBool(0x321,7,0,tamianClean);
+            crrcRicoMvb->setBool(0x321,7,1,fangyou);
+
+            crrcRicoMvb->setUnsignedChar(0x321,12,DiCT_LINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x321,13,DiCT_STARTLINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x321,14,DiCT_ENDLINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x321,15,DiCT_NEXTLINENUM_U8);
+            crrcRicoMvb->setUnsignedChar(0x321,16,DiCT_NOWLINENUM_U8);
+
+            crrcRicoMvb->setBool(0x321,17,0,DiCT_FAULT_B1);
+            crrcRicoMvb->setBool(0x321,17,1,DiCT_HALFATOSTART_B1);
+            crrcRicoMvb->setBool(0x321,17,2,DiCT_HALFATOEND_B1);
+            crrcRicoMvb->setBool(0x321,17,4,DiCT_JUMPSET_B1);
+            crrcRicoMvb->setBool(0x321,17,5,DiCT_JUMPCANCEL_B1);
+
+            crrcRicoMvb->setUnsignedInt(0x321,18,DiCT_SPEED_U16);
+
+            crrcRicoMvb->setBool(0x321,20,0,DiCT_JUMP1_B1);
+            crrcRicoMvb->setBool(0x321,20,1,DiCT_JUMP2_B1);
+            crrcRicoMvb->setBool(0x321,20,2,DiCT_JUMP3_B1);
+            crrcRicoMvb->setBool(0x321,20,3,DiCT_JUMP4_B1);
+            crrcRicoMvb->setBool(0x321,20,4,DiCT_JUMP5_B1);
+            crrcRicoMvb->setBool(0x321,20,5,DiCT_JUMP6_B1);
+            crrcRicoMvb->setBool(0x321,20,6,DiCT_JUMP7_B1);
+            crrcRicoMvb->setBool(0x321,20,7,DiCT_JUMP8_B1);
+
+            crrcRicoMvb->setBool(0x321,21,0,DiCT_JUMP9_B1);
+            crrcRicoMvb->setBool(0x321,21,1,DiCT_JUMP10_B1);
+            crrcRicoMvb->setBool(0x321,21,2,DiCT_JUMP11_B1);
+            crrcRicoMvb->setBool(0x321,21,3,DiCT_JUMP12_B1);
+            crrcRicoMvb->setBool(0x321,21,4,DiCT_JUMP13_B1);
+            crrcRicoMvb->setBool(0x321,21,5,DiCT_JUMP14_B1);
+            crrcRicoMvb->setBool(0x321,21,6,DiCT_JUMP15_B1);
+            crrcRicoMvb->setBool(0x321,21,7,DiCT_JUMP16_B1);
         }
-
-
 
     }
 
+
+    CTD_TRCBLOCK_U8=crrcRicoMvb->getUnsignedChar(0x30A,14);
 
     //PIS
     PIS1CT_P2_B1=crrcRicoMvb->getBool(0x910,2,0);
@@ -316,6 +443,8 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 
     //*********************************RIOM-CCU**************************************//
 
+    RM3CT_CBBIV_B1=crrcRicoMvb->getBool(0x131,20,0);
+    RM6CT_CBBIV_B1=crrcRicoMvb->getBool(0x161,20,0);
     RM1CT_DI1NOANSWER_B1 = crrcRicoMvb->getBool(0x110,24,0);
     RM1CT_DI2NOANSWER_B1 = crrcRicoMvb->getBool(0x110,24,1);
     RM1CT_DI3NOANSWER_B1 = crrcRicoMvb->getBool(0x110,24,2);
@@ -717,11 +846,10 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     RM6CT_DI1LifeSignal_U8 = crrcRicoMvb->getUnsignedChar(0x160,6);
     RM6CT_DO1LifeSignal_U8 = crrcRicoMvb->getUnsignedChar(0x160,14);
 
-
-    RM1CT_MCREFSETPOINT_U16 = crrcRicoMvb->getUnsignedInt(0x110,0);
-    RM1CT_ATCREF_U16 = crrcRicoMvb->getUnsignedInt(0x110,2);
-    RM4CT_MCREFSETPOINT_U16 = crrcRicoMvb->getUnsignedInt(0x140,0);
-    RM4CT_ATCREF_U16 = crrcRicoMvb->getUnsignedInt(0x140,2);
+    RM1CT_MCREFSETPOINT_U16 = crrcRicoMvb->getUnsignedInt(0x111,0);
+    RM1CT_ATCREF_U16 = crrcRicoMvb->getUnsignedInt(0x111,2);
+    RM4CT_MCREFSETPOINT_U16 = crrcRicoMvb->getUnsignedInt(0x141,0);
+    RM4CT_ATCREF_U16 = crrcRicoMvb->getUnsignedInt(0x141,2);
 
 
     //CCU-RIOM
@@ -779,7 +907,8 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     E1CT_ERMVxWorksVer_U8 = crrcRicoMvb->getUnsignedChar(0x210,9);
     E1CT_ERMMVBSWVer_U8 = crrcRicoMvb->getUnsignedChar(0x210,10);
     E1CT_ERMSDBVer_U8 = crrcRicoMvb->getUnsignedChar(0x210,11);
-    E1CT_ERMSWVer_U8 = crrcRicoMvb->getUnsignedChar(0x210,14);
+
+    E1CT_ERMSWVer_U8 = crrcRicoMvb->getUnsignedChar(0x210,2);
     E1CT_AcTestStatus_U8 = crrcRicoMvb->getUnsignedChar(0x210,21);
     E1CT_AcTestV0_U8 = crrcRicoMvb->getUnsignedChar(0x210,24);
     E1CT_AcTestVt_U8 = crrcRicoMvb->getUnsignedChar(0x210,25);
@@ -789,35 +918,47 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     E1CT_RidingRate2_U8 = crrcRicoMvb->getUnsignedChar(0x210,29);
     E1CT_RidingRate3_U8 = crrcRicoMvb->getUnsignedChar(0x210,30);
     E1CT_RidingRate_U8 = crrcRicoMvb->getUnsignedChar(0x210,31);
-    E1CT_TotalDistanceYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,0);
-    E1CT_TotalDistanceMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,1);
-    E1CT_TotalDistanceDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,2);
-    E1CT_TractionECYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,3);
-    E1CT_TractionECMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,4);
-    E1CT_TractionECDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,5);
-    E1CT_AxPowerECYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,6);
-    E1CT_AxPowerECMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,7);
-    E1CT_AxPowerECDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,8);
+
+    E1CT_TotalDistanceYear_U8 = crrcRicoMvb->getUnsignedChar(0x211,7);
+    E1CT_TotalDistanceMonth_U8 = crrcRicoMvb->getUnsignedChar(0x211,8);
+    E1CT_TotalDistanceDay_U8 = crrcRicoMvb->getUnsignedChar(0x211,9);
+
+    E1CT_TractionECYear_U8 = crrcRicoMvb->getUnsignedChar(0x211,16);
+    E1CT_TractionECMonth_U8 = crrcRicoMvb->getUnsignedChar(0x211,17);
+    E1CT_TractionECDay_U8 = crrcRicoMvb->getUnsignedChar(0x211,18);
+
+    E1CT_AxPowerECYear_U8 = crrcRicoMvb->getUnsignedChar(0x211,19);
+    E1CT_AxPowerECMonth_U8 = crrcRicoMvb->getUnsignedChar(0x211,20);
+    E1CT_AxPowerECDay_U8 = crrcRicoMvb->getUnsignedChar(0x211,21);
+
     E1CT_ReEngyYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,9);
     E1CT_ReEngyMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,10);
     E1CT_ReEngyDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,11);
+
     E1CT_ServiceDistanceYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,12);
     E1CT_ServiceDistanceMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,13);
     E1CT_ServiceDistanceDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,14);
+
     E1CT_AP1ECYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,15);
     E1CT_AP1ECMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,16);
     E1CT_AP1ECDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,17);
+
     E1CT_AP2ECYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,18);
     E1CT_AP2ECMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,19);
     E1CT_AP2ECDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,20);
+
     E1CT_TCMSTotalTimeYear_U8 = crrcRicoMvb->getUnsignedChar(0x212,21);
     E1CT_TCMSTotalTimeMonth_U8 = crrcRicoMvb->getUnsignedChar(0x212,22);
     E1CT_TCMSTotalTimeDay_U8 = crrcRicoMvb->getUnsignedChar(0x212,23);
+
+
+
     E2CT_ERMPLCVer_U8 = crrcRicoMvb->getUnsignedChar(0x210,8);
     E2CT_ERMVxWorksVer_U8 = crrcRicoMvb->getUnsignedChar(0x220,9);
     E2CT_ERMMVBSWVer_U8 = crrcRicoMvb->getUnsignedChar(0x220,10);
     E2CT_ERMSDBVer_U8 = crrcRicoMvb->getUnsignedChar(0x220,11);
-    E2CT_ERMSWVer_U8 = crrcRicoMvb->getUnsignedChar(0x220,14);
+
+    E2CT_ERMSWVer_U8 = crrcRicoMvb->getUnsignedChar(0x220,2);
     E2CT_AcTestStatus_U8 = crrcRicoMvb->getUnsignedChar(0x220,21);
     E2CT_AcTestV0_U8 = crrcRicoMvb->getUnsignedChar(0x220,24);
     E2CT_AcTestVt_U8 = crrcRicoMvb->getUnsignedChar(0x220,25);
@@ -886,7 +1027,6 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     B6CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x761,18);
     B7CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x771,18);
     B8CT_MstrGV_B1=crrcRicoMvb->getUnsignedInt(0x781,18);
-
 
     CTD_CCU1OLINE_B1 = crrcRicoMvb->getBool(0x308,0,0);
     CTD_CCU2OLINE_B1 = crrcRicoMvb->getBool(0x308,0,1);
@@ -1037,6 +1177,10 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     CTD_NextStatiOLINEID_U32 = crrcRicoMvb->getUnsignedInt32(0x30A,0);
     CTD_LastStatiOLINEID_U32 = crrcRicoMvb->getUnsignedInt32(0x30A,4);
 
+    CTD_BMS1OLINE_B1=crrcRicoMvb->getBool(0x308,9,3);
+    CTD_BMS2OLINE_B1=crrcRicoMvb->getBool(0x308,9,4);
+    CTD_BMS3OLINE_B1=crrcRicoMvb->getBool(0x308,9,5);
+    CTD_BMS4OLINE_B1=crrcRicoMvb->getBool(0x308,9,6);
 
     /**************************************************BCU-CCU*****************************************/
     QList<unsigned short int> temp_virtualports,temp_realports;
@@ -1047,6 +1191,17 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     temp_virtualports<<0xf410<<0xf411<<0xf412<<0xf413<<0xf414<<0xf415<<0xf416;
 
     createBCUList(temp_virtualports,temp_realports);
+
+
+    B1_1CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,7,0);
+    B1_2CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,8,5);
+    B2_1CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,11,0);
+    B2_2CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,12,5);
+    B3_1CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,15,0);
+    B3_2CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,16,5);
+    B4_1CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,19,0);
+    B4_2CT_MajorFltMC1Bg1_B1=crrcRicoMvb->getBool(0xf410,20,5);
+
 
     BiCT_STRdy_B1 = crrcRicoMvb->getBool(0xf411,1,0);
     BiCT_STBrOff_B1 = crrcRicoMvb->getBool(0xf411,1,1);
@@ -1644,7 +1799,18 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU5CT_IiMiddleCurrent_I16 = crrcRicoMvb->getSignedInt(0x550,18);
     TCU6CT_IiPowerGrdVoltage_I16 = crrcRicoMvb->getSignedInt(0x550,14);
     TCU6CT_IiMiddleVoltage_I16 = crrcRicoMvb->getSignedInt(0x550,16);
-    TCU6CT_IiMiddleCurrent_I16 = crrcRicoMvb->getSignedInt(0x550,18);
+    TCU6CT_IiMiddleCurrent_I16 = crrcRicoMvb->getSignedInt(0x550,18);\
+
+
+
+    TCU1CT_IxMotoISO=crrcRicoMvb->getBool(0x511,11,6);
+    TCU2CT_IxMotoISO=crrcRicoMvb->getBool(0x521,11,6);
+    TCU3CT_IxMotoISO=crrcRicoMvb->getBool(0x531,11,6);
+    TCU4CT_IxMotoISO=crrcRicoMvb->getBool(0x541,11,6);
+    TCU5CT_IxMotoISO=crrcRicoMvb->getBool(0x551,11,6);
+    TCU6CT_IxMotoISO=crrcRicoMvb->getBool(0x561,11,6);
+
+
 
     ACU1CT_IxBBOC_B1 = crrcRicoMvb->getBool(0x610,14,1);
     ACU1CT_IxKM1S_B1 = crrcRicoMvb->getBool(0x610,14,2);
@@ -2202,95 +2368,98 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     EDCU7_8CT_DOOR280_U16 = crrcRicoMvb->getUnsignedInt(0xf772,8);
     EDCU7_8CT_DOOR281_U16 = crrcRicoMvb->getUnsignedInt(0xf772,10);
 
-    FCU1CT_SHD1Alarm1_B1 = crrcRicoMvb->getBool(0x810,5,0);
-    FCU1CT_SHD1Flt1_B1 = crrcRicoMvb->getBool(0x810,5,1);
-    FCU1CT_SHD2Alarm1_B1 = crrcRicoMvb->getBool(0x810,5,2);
-    FCU1CT_SHD2Flt1_B1 = crrcRicoMvb->getBool(0x810,5,3);
-    FCU1CT_SHD3Alarm1_B1 = crrcRicoMvb->getBool(0x810,5,4);
-    FCU1CT_SHD3Flt1_B1 = crrcRicoMvb->getBool(0x810,5,5);
-    FCU1CT_SHD4Alarm1_B1 = crrcRicoMvb->getBool(0x810,5,6);
-    FCU1CT_SHD4Flt1_B1 = crrcRicoMvb->getBool(0x810,5,7);
-    FCU1CT_SHD5Alarm1_B1 = crrcRicoMvb->getBool(0x810,6,0);
-    FCU1CT_SHD5Flt1_B1 = crrcRicoMvb->getBool(0x810,6,1);
-    FCU1CT_SHD6Alarm1_B1 = crrcRicoMvb->getBool(0x810,6,2);
-    FCU1CT_SHD6Flt1_B1 = crrcRicoMvb->getBool(0x810,6,3);
-    FCU1CT_SHD7Alarm1_B1 = crrcRicoMvb->getBool(0x810,6,4);
-    FCU1CT_SHD7Flt1_B1 = crrcRicoMvb->getBool(0x810,6,5);
-    FCU1CT_SHD1Alarm2_B1 = crrcRicoMvb->getBool(0x810,6,6);
-    FCU1CT_SHD1Flt2_B1 = crrcRicoMvb->getBool(0x810,6,7);
-    FCU1CT_SHD2Alarm2_B1 = crrcRicoMvb->getBool(0x810,7,0);
-    FCU1CT_SHD2Flt2_B1 = crrcRicoMvb->getBool(0x810,7,1);
-    FCU1CT_SHD3Alarm2_B1 = crrcRicoMvb->getBool(0x810,7,2);
-    FCU1CT_SHD3Flt2_B1 = crrcRicoMvb->getBool(0x810,7,3);
-    FCU1CT_SHD4Alarm2_B1 = crrcRicoMvb->getBool(0x810,7,4);
-    FCU1CT_SHD4Flt2_B1 = crrcRicoMvb->getBool(0x810,7,5);
-    FCU1CT_SHD1Alarm3_B1 = crrcRicoMvb->getBool(0x810,7,6);
-    FCU1CT_SHD1Flt3_B1 = crrcRicoMvb->getBool(0x810,7,7);
-    FCU1CT_SHD2Alarm3_B1 = crrcRicoMvb->getBool(0x810,8,0);
-    FCU1CT_SHD2Flt3_B1 = crrcRicoMvb->getBool(0x810,8,1);
-    FCU1CT_SHD3Alarm3_B1 = crrcRicoMvb->getBool(0x810,8,2);
-    FCU1CT_SHD3Flt3_B1 = crrcRicoMvb->getBool(0x810,8,3);
-    FCU1CT_SHD4Alarm3_B1 = crrcRicoMvb->getBool(0x810,8,4);
-    FCU1CT_SHD4Flt3_B1 = crrcRicoMvb->getBool(0x810,8,5);
-    FCU1CT_SHD1Alarm4_B1 = crrcRicoMvb->getBool(0x810,8,6);
-    FCU1CT_SHD1Flt4_B1 = crrcRicoMvb->getBool(0x810,8,7);
-    FCU1CT_SHD2Alarm4_B1 = crrcRicoMvb->getBool(0x810,9,0);
-    FCU1CT_SHD2Flt4_B1 = crrcRicoMvb->getBool(0x810,9,1);
-    FCU1CT_SHD3Alarm4_B1 = crrcRicoMvb->getBool(0x810,9,2);
-    FCU1CT_SHD3Flt4_B1 = crrcRicoMvb->getBool(0x810,9,3);
-    FCU1CT_SHD4Alarm4_B1 = crrcRicoMvb->getBool(0x810,9,4);
-    FCU1CT_SHD4Flt4_B1 = crrcRicoMvb->getBool(0x810,9,5);
-    FCU1CT_SHD5Alarm4_B1 = crrcRicoMvb->getBool(0x810,9,6);
-    FCU1CT_SHD5Flt4_B1 = crrcRicoMvb->getBool(0x810,9,7);
-    FCU1CT_SHD6Alarm4_B1 = crrcRicoMvb->getBool(0x810,10,0);
-    FCU1CT_SHD6Flt4_B1 = crrcRicoMvb->getBool(0x810,10,1);
-    FCU1CT_SHD7Alarm4_B1 = crrcRicoMvb->getBool(0x810,10,2);
-    FCU1CT_SHD7Flt4_B1 = crrcRicoMvb->getBool(0x810,10,3);
+    //*******************************************FCU-CCU***********************************//
+    createFCUList();
 
-    FCU2CT_SHD1Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,0);
-    FCU2CT_SHD1Flt1_B1 = crrcRicoMvb->getBool(0x820,5,1);
-    FCU2CT_SHD2Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,2);
-    FCU2CT_SHD2Flt1_B1 = crrcRicoMvb->getBool(0x820,5,3);
-    FCU2CT_SHD3Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,4);
-    FCU2CT_SHD3Flt1_B1 = crrcRicoMvb->getBool(0x820,5,5);
-    FCU2CT_SHD4Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,6);
-    FCU2CT_SHD4Flt1_B1 = crrcRicoMvb->getBool(0x820,5,7);
-    FCU2CT_SHD5Alarm1_B1 = crrcRicoMvb->getBool(0x820,6,0);
-    FCU2CT_SHD5Flt1_B1 = crrcRicoMvb->getBool(0x820,6,1);
-    FCU2CT_SHD6Alarm1_B1 = crrcRicoMvb->getBool(0x820,6,2);
-    FCU2CT_SHD6Flt1_B1 = crrcRicoMvb->getBool(0x820,6,3);
-    FCU2CT_SHD7Alarm1_B1 = crrcRicoMvb->getBool(0x820,6,4);
-    FCU2CT_SHD7Flt1_B1 = crrcRicoMvb->getBool(0x820,6,5);
-    FCU2CT_SHD1Alarm2_B1 = crrcRicoMvb->getBool(0x820,6,6);
-    FCU2CT_SHD1Flt2_B1 = crrcRicoMvb->getBool(0x820,6,7);
-    FCU2CT_SHD2Alarm2_B1 = crrcRicoMvb->getBool(0x820,7,0);
-    FCU2CT_SHD2Flt2_B1 = crrcRicoMvb->getBool(0x820,7,1);
-    FCU2CT_SHD3Alarm2_B1 = crrcRicoMvb->getBool(0x820,7,2);
-    FCU2CT_SHD3Flt2_B1 = crrcRicoMvb->getBool(0x820,7,3);
-    FCU2CT_SHD4Alarm2_B1 = crrcRicoMvb->getBool(0x820,7,4);
-    FCU2CT_SHD4Flt2_B1 = crrcRicoMvb->getBool(0x820,7,5);
-    FCU2CT_SHD1Alarm3_B1 = crrcRicoMvb->getBool(0x820,7,6);
-    FCU2CT_SHD1Flt3_B1 = crrcRicoMvb->getBool(0x820,7,7);
-    FCU2CT_SHD2Alarm3_B1 = crrcRicoMvb->getBool(0x820,8,0);
-    FCU2CT_SHD2Flt3_B1 = crrcRicoMvb->getBool(0x820,8,1);
-    FCU2CT_SHD3Alarm3_B1 = crrcRicoMvb->getBool(0x820,8,2);
-    FCU2CT_SHD3Flt3_B1 = crrcRicoMvb->getBool(0x820,8,3);
-    FCU2CT_SHD4Alarm3_B1 = crrcRicoMvb->getBool(0x820,8,4);
-    FCU2CT_SHD4Flt3_B1 = crrcRicoMvb->getBool(0x820,8,5);
-    FCU2CT_SHD1Alarm4_B1 = crrcRicoMvb->getBool(0x820,8,6);
-    FCU2CT_SHD1Flt4_B1 = crrcRicoMvb->getBool(0x820,8,7);
-    FCU2CT_SHD2Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,0);
-    FCU2CT_SHD2Flt4_B1 = crrcRicoMvb->getBool(0x820,9,1);
-    FCU2CT_SHD3Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,2);
-    FCU2CT_SHD3Flt4_B1 = crrcRicoMvb->getBool(0x820,9,3);
-    FCU2CT_SHD4Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,4);
-    FCU2CT_SHD4Flt4_B1 = crrcRicoMvb->getBool(0x820,9,5);
-    FCU2CT_SHD5Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,6);
-    FCU2CT_SHD5Flt4_B1 = crrcRicoMvb->getBool(0x820,9,7);
-    FCU2CT_SHD6Alarm4_B1 = crrcRicoMvb->getBool(0x820,10,0);
-    FCU2CT_SHD6Flt4_B1 = crrcRicoMvb->getBool(0x820,10,1);
-    FCU2CT_SHD7Alarm4_B1 = crrcRicoMvb->getBool(0x820,10,2);
-    FCU2CT_SHD7Flt4_B1 = crrcRicoMvb->getBool(0x820,10,3);
+    FCU1CT_SHD1Alarm1_B1 = crrcRicoMvb->getBool(0xf810,5,0);
+    FCU1CT_SHD1Flt1_B1 = crrcRicoMvb->getBool(0xf810,5,1);
+    FCU1CT_SHD2Alarm1_B1 = crrcRicoMvb->getBool(0xf810,5,2);
+    FCU1CT_SHD2Flt1_B1 = crrcRicoMvb->getBool(0xf810,5,3);
+    FCU1CT_SHD3Alarm1_B1 = crrcRicoMvb->getBool(0xf810,5,4);
+    FCU1CT_SHD3Flt1_B1 = crrcRicoMvb->getBool(0xf810,5,5);
+    FCU1CT_SHD4Alarm1_B1 = crrcRicoMvb->getBool(0xf810,5,6);
+    FCU1CT_SHD4Flt1_B1 = crrcRicoMvb->getBool(0xf810,5,7);
+    FCU1CT_SHD5Alarm1_B1 = crrcRicoMvb->getBool(0xf810,6,0);
+    FCU1CT_SHD5Flt1_B1 = crrcRicoMvb->getBool(0xf810,6,1);
+    FCU1CT_SHD6Alarm1_B1 = crrcRicoMvb->getBool(0xf810,6,2);
+    FCU1CT_SHD6Flt1_B1 = crrcRicoMvb->getBool(0xf810,6,3);
+    FCU1CT_SHD7Alarm1_B1 = crrcRicoMvb->getBool(0xf810,6,4);
+    FCU1CT_SHD7Flt1_B1 = crrcRicoMvb->getBool(0xf810,6,5);
+    FCU1CT_SHD1Alarm2_B1 = crrcRicoMvb->getBool(0xf810,6,6);
+    FCU1CT_SHD1Flt2_B1 = crrcRicoMvb->getBool(0xf810,6,7);
+    FCU1CT_SHD2Alarm2_B1 = crrcRicoMvb->getBool(0xf810,7,0);
+    FCU1CT_SHD2Flt2_B1 = crrcRicoMvb->getBool(0xf810,7,1);
+    FCU1CT_SHD3Alarm2_B1 = crrcRicoMvb->getBool(0xf810,7,2);
+    FCU1CT_SHD3Flt2_B1 = crrcRicoMvb->getBool(0xf810,7,3);
+    FCU1CT_SHD4Alarm2_B1 = crrcRicoMvb->getBool(0xf810,7,4);
+    FCU1CT_SHD4Flt2_B1 = crrcRicoMvb->getBool(0xf810,7,5);
+    FCU1CT_SHD1Alarm3_B1 = crrcRicoMvb->getBool(0xf810,7,6);
+    FCU1CT_SHD1Flt3_B1 = crrcRicoMvb->getBool(0xf810,7,7);
+    FCU1CT_SHD2Alarm3_B1 = crrcRicoMvb->getBool(0xf810,8,0);
+    FCU1CT_SHD2Flt3_B1 = crrcRicoMvb->getBool(0xf810,8,1);
+    FCU1CT_SHD3Alarm3_B1 = crrcRicoMvb->getBool(0xf810,8,2);
+    FCU1CT_SHD3Flt3_B1 = crrcRicoMvb->getBool(0xf810,8,3);
+    FCU1CT_SHD4Alarm3_B1 = crrcRicoMvb->getBool(0xf810,8,4);
+    FCU1CT_SHD4Flt3_B1 = crrcRicoMvb->getBool(0xf810,8,5);
+    FCU1CT_SHD1Alarm4_B1 = crrcRicoMvb->getBool(0xf810,8,6);
+    FCU1CT_SHD1Flt4_B1 = crrcRicoMvb->getBool(0xf810,8,7);
+    FCU1CT_SHD2Alarm4_B1 = crrcRicoMvb->getBool(0xf810,9,0);
+    FCU1CT_SHD2Flt4_B1 = crrcRicoMvb->getBool(0xf810,9,1);
+    FCU1CT_SHD3Alarm4_B1 = crrcRicoMvb->getBool(0xf810,9,2);
+    FCU1CT_SHD3Flt4_B1 = crrcRicoMvb->getBool(0xf810,9,3);
+    FCU1CT_SHD4Alarm4_B1 = crrcRicoMvb->getBool(0xf810,9,4);
+    FCU1CT_SHD4Flt4_B1 = crrcRicoMvb->getBool(0xf810,9,5);
+    FCU1CT_SHD5Alarm4_B1 = crrcRicoMvb->getBool(0xf810,9,6);
+    FCU1CT_SHD5Flt4_B1 = crrcRicoMvb->getBool(0xf810,9,7);
+    FCU1CT_SHD6Alarm4_B1 = crrcRicoMvb->getBool(0xf810,10,0);
+    FCU1CT_SHD6Flt4_B1 = crrcRicoMvb->getBool(0xf810,10,1);
+    FCU1CT_SHD7Alarm4_B1 = crrcRicoMvb->getBool(0xf810,10,2);
+    FCU1CT_SHD7Flt4_B1 = crrcRicoMvb->getBool(0xf810,10,3);
+
+//    FCU2CT_SHD1Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,0);
+//    FCU2CT_SHD1Flt1_B1 = crrcRicoMvb->getBool(0x820,5,1);
+//    FCU2CT_SHD2Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,2);
+//    FCU2CT_SHD2Flt1_B1 = crrcRicoMvb->getBool(0x820,5,3);
+//    FCU2CT_SHD3Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,4);
+//    FCU2CT_SHD3Flt1_B1 = crrcRicoMvb->getBool(0x820,5,5);
+//    FCU2CT_SHD4Alarm1_B1 = crrcRicoMvb->getBool(0x820,5,6);
+//    FCU2CT_SHD4Flt1_B1 = crrcRicoMvb->getBool(0x820,5,7);
+//    FCU2CT_SHD5Alarm1_B1 = crrcRicoMvb->getBool(0x820,6,0);
+//    FCU2CT_SHD5Flt1_B1 = crrcRicoMvb->getBool(0x820,6,1);
+//    FCU2CT_SHD6Alarm1_B1 = crrcRicoMvb->getBool(0x820,6,2);
+//    FCU2CT_SHD6Flt1_B1 = crrcRicoMvb->getBool(0x820,6,3);
+//    FCU2CT_SHD7Alarm1_B1 = crrcRicoMvb->getBool(0x820,6,4);
+//    FCU2CT_SHD7Flt1_B1 = crrcRicoMvb->getBool(0x820,6,5);
+//    FCU2CT_SHD1Alarm2_B1 = crrcRicoMvb->getBool(0x820,6,6);
+//    FCU2CT_SHD1Flt2_B1 = crrcRicoMvb->getBool(0x820,6,7);
+//    FCU2CT_SHD2Alarm2_B1 = crrcRicoMvb->getBool(0x820,7,0);
+//    FCU2CT_SHD2Flt2_B1 = crrcRicoMvb->getBool(0x820,7,1);
+//    FCU2CT_SHD3Alarm2_B1 = crrcRicoMvb->getBool(0x820,7,2);
+//    FCU2CT_SHD3Flt2_B1 = crrcRicoMvb->getBool(0x820,7,3);
+//    FCU2CT_SHD4Alarm2_B1 = crrcRicoMvb->getBool(0x820,7,4);
+//    FCU2CT_SHD4Flt2_B1 = crrcRicoMvb->getBool(0x820,7,5);
+//    FCU2CT_SHD1Alarm3_B1 = crrcRicoMvb->getBool(0x820,7,6);
+//    FCU2CT_SHD1Flt3_B1 = crrcRicoMvb->getBool(0x820,7,7);
+//    FCU2CT_SHD2Alarm3_B1 = crrcRicoMvb->getBool(0x820,8,0);
+//    FCU2CT_SHD2Flt3_B1 = crrcRicoMvb->getBool(0x820,8,1);
+//    FCU2CT_SHD3Alarm3_B1 = crrcRicoMvb->getBool(0x820,8,2);
+//    FCU2CT_SHD3Flt3_B1 = crrcRicoMvb->getBool(0x820,8,3);
+//    FCU2CT_SHD4Alarm3_B1 = crrcRicoMvb->getBool(0x820,8,4);
+//    FCU2CT_SHD4Flt3_B1 = crrcRicoMvb->getBool(0x820,8,5);
+//    FCU2CT_SHD1Alarm4_B1 = crrcRicoMvb->getBool(0x820,8,6);
+//    FCU2CT_SHD1Flt4_B1 = crrcRicoMvb->getBool(0x820,8,7);
+//    FCU2CT_SHD2Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,0);
+//    FCU2CT_SHD2Flt4_B1 = crrcRicoMvb->getBool(0x820,9,1);
+//    FCU2CT_SHD3Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,2);
+//    FCU2CT_SHD3Flt4_B1 = crrcRicoMvb->getBool(0x820,9,3);
+//    FCU2CT_SHD4Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,4);
+//    FCU2CT_SHD4Flt4_B1 = crrcRicoMvb->getBool(0x820,9,5);
+//    FCU2CT_SHD5Alarm4_B1 = crrcRicoMvb->getBool(0x820,9,6);
+//    FCU2CT_SHD5Flt4_B1 = crrcRicoMvb->getBool(0x820,9,7);
+//    FCU2CT_SHD6Alarm4_B1 = crrcRicoMvb->getBool(0x820,10,0);
+//    FCU2CT_SHD6Flt4_B1 = crrcRicoMvb->getBool(0x820,10,1);
+//    FCU2CT_SHD7Alarm4_B1 = crrcRicoMvb->getBool(0x820,10,2);
+//    FCU2CT_SHD7Flt4_B1 = crrcRicoMvb->getBool(0x820,10,3);
 
 
     //********************************************************PIS-CCU*******************************************//
@@ -2643,6 +2812,12 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     ACVP3CT_IudHVACCns_U32 = crrcRicoMvb->getUnsignedInt32(0xA30,26);
     ACVP4CT_IudHVACCns_U32 = crrcRicoMvb->getUnsignedInt32(0xA40,26);
 
+    //***********************************BMS-CCU*********************************************//
+    BMS1CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD10,15);
+    BMS2CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD20,15);
+    BMS3CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD30,15);
+    BMS4CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD40,15);
+
 
     //***********************************PAN--CCU*******************************************//
     PANCT_PGHA_B1 = crrcRicoMvb->getBool(0xC10,2,7);
@@ -2664,6 +2839,55 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     PANCT_PCMUisAlive_U16 = crrcRicoMvb->getUnsignedInt(0xC10,0);
 
 
+    updateSystemStatus();
+
+    createERMList(this->CTD_ERM1OLINE_B1,this->CTD_ERM2OLINE_B1);
+
+    EiCT_RunningKilometers_U32=crrcRicoMvb->getUnsignedInt32(0xf212,4);
+    EiCT_TractionEngyConsumption_U32=crrcRicoMvb->getUnsignedInt32(0xf212,8);
+    EiCT_AxPowerEngyConsumption_U32=crrcRicoMvb->getUnsignedInt32(0xf212,12);
+    EiCT_ReEngy_U32=crrcRicoMvb->getUnsignedInt32(0xf212,20);
+    //
+    EiCT_ServiceDistance_U32=crrcRicoMvb->getUnsignedInt32(0xf211,16);
+
+    EiCT_AP1RunningTime_U32=crrcRicoMvb->getUnsignedInt32(0xf212,24);
+    EiCT_AP2RunningTime_U32=crrcRicoMvb->getUnsignedInt32(0xf212,28);
+
+    EiCT_TCMSTotalTime_U32=crrcRicoMvb->getUnsignedInt32(0xf211,28);
+
+    EiCT_TotalDistanceYear_U8=crrcRicoMvb->getUnsignedChar(0xf211,7);
+    EiCT_TotalDistanceMonth_U8=crrcRicoMvb->getUnsignedChar(0xf211,8);
+    EiCT_TotalDistanceDay_U8=crrcRicoMvb->getUnsignedChar(0xf211,9);
+
+    EiCT_TractionECYear_U8=crrcRicoMvb->getUnsignedChar(0xf211,16);
+    EiCT_TractionECMonth_U8=crrcRicoMvb->getUnsignedChar(0xf211,17);
+    EiCT_TractionECDay_U8=crrcRicoMvb->getUnsignedChar(0xf211,18);
+
+    EiCT_AxPowerECYear_U8=crrcRicoMvb->getUnsignedChar(0xf211,19);
+    EiCT_AxPowerECMonth_U8=crrcRicoMvb->getUnsignedChar(0xf211,20);
+    EiCT_AxPowerECDay_U8=crrcRicoMvb->getUnsignedChar(0xf211,21);
+
+    EiCT_ReEngyYear_U8=crrcRicoMvb->getUnsignedChar(0xf211,22);
+    EiCT_ReEngyMonth_U8=crrcRicoMvb->getUnsignedChar(0xf211,23);
+    EiCT_ReEngyDay_U8=crrcRicoMvb->getUnsignedChar(0xf211,24);
+
+    //
+    EiCT_ServiceDistanceYear_U8=crrcRicoMvb->getUnsignedChar(0xf212,12);
+    EiCT_ServiceDistanceMonth_U8=crrcRicoMvb->getUnsignedChar(0xf212,13);
+    EiCT_ServiceDistanceDay_U8=crrcRicoMvb->getUnsignedChar(0xf212,14);
+
+    EiCT_AP1ECYear_U8=crrcRicoMvb->getUnsignedChar(0xf211,10);
+    EiCT_AP1ECMonth_U8=crrcRicoMvb->getUnsignedChar(0xf211,11);
+    EiCT_AP1ECDay_U8=crrcRicoMvb->getUnsignedChar(0xf211,12);
+
+    EiCT_AP2ECYear_U8=crrcRicoMvb->getUnsignedChar(0xf211,13);
+    EiCT_AP2ECMonth_U8=crrcRicoMvb->getUnsignedChar(0xf211,14);
+    EiCT_AP2ECDay_U8=crrcRicoMvb->getUnsignedChar(0xf211,15);
+
+    //
+    EiCT_TCMSTotalTimeYear_U8=crrcRicoMvb->getUnsignedChar(0xf211,4);
+    EiCT_TCMSTotalTimeMonth_U8=crrcRicoMvb->getUnsignedChar(0xf211,5);
+    EiCT_TCMSTotalTimeDay_U8=crrcRicoMvb->getUnsignedChar(0xf211,6);
 
 }
 
@@ -2924,10 +3148,25 @@ void Database::createBCUList( QList<unsigned short> virtualports, QList<unsigned
 
 void Database::updateSystemStatus()
 {
+
+    long HAVCFaultFlag=0;
+    long SIVFaultFlag=0;
+    long VVVFFaultFlag=0;
+    long PISAllFaultFlag=0;
+    long EDCUFaultFlag=0;
+    long BCUFaultFlag=0;
+
+    HAVCFaultFlag=getAllHVACFault();
+    SIVFaultFlag=getAllSIVFault();
+    VVVFFaultFlag=getAllVVVFFault();
+    PISAllFaultFlag=getAllPISFault();
+    EDCUFaultFlag=getAllEDCUFault();
+    BCUFaultFlag=getAllBCUFault();
+
   //HVAC
   if(
      !this->CTD_ACTOLINE_B1 ||!this->CTD_AC2OLINE_B1 ||!this->CTD_AC3OLINE_B1 ||
-     !this->CTD_AC4OLINE_B1||(CrrcFault::getCrrcFault()->getFaultCntOfEachSystem("HVAC")>0))
+     !this->CTD_AC4OLINE_B1||(HAVCFaultFlag!=0))
   {
       Status_HVAC = 2;
   }else if(0)
@@ -2941,7 +3180,7 @@ void Database::updateSystemStatus()
   //SIV
   if(!this->CTD_ACU1OLINE_B1 ||!this->CTD_ACU2OLINE_B1
      ||this->ACU1CT_IxSIVMajorF_B1||this->ACU2CT_IxSIVMajorF_B1
-     ||(CrrcFault::getCrrcFault()->getFaultCntOfEachSystem("ACM")>0)
+     ||(SIVFaultFlag!=0)
      )
   {
       Status_SIV = 2;
@@ -2957,7 +3196,7 @@ void Database::updateSystemStatus()
   if(!this->CTD_EDCU1OLINE_B1 ||!this->CTD_EDCU2OLINE_B1 ||!this->CTD_EDCU3OLINE_B1 ||
           !this->CTD_EDCU4OLINE_B1 ||!this->CTD_EDCU5OLINE_B1 ||!this->CTD_EDCU6OLINE_B1 ||
           !this->CTD_EDCU7OLINE_B1 ||!this->CTD_EDCU8OLINE_B1
-          ||(CrrcFault::getCrrcFault()->getFaultCntOfEachSystem("EDCU")>0))
+          ||(EDCUFaultFlag!=0))
   {
       Status_EDCU = 2;
   }else if(0)
@@ -2967,19 +3206,21 @@ void Database::updateSystemStatus()
   {
       Status_EDCU = 0;
   }
-  //PIS
+  //PIS]
 
-  if(!this->CTD_PIS1OLINE_B1 || !this->CTD_PIS2OLINE_B1||(crrcRicoMvb->getUnsignedChar(0x910,12))||(crrcRicoMvb->getUnsignedChar(0x920,12))
-     ||(crrcRicoMvb->getUnsignedChar(0x910,13))||(crrcRicoMvb->getUnsignedChar(0x920,13))
-     ||(crrcRicoMvb->getUnsignedChar(0x910,14))||(crrcRicoMvb->getUnsignedChar(0x920,14))
-     ||(crrcRicoMvb->getUnsignedChar(0x910,15))||(crrcRicoMvb->getUnsignedChar(0x920,15))
+  long PISFaultFlag=0;
+  PISFaultFlag=crrcRicoMvb->getUnsignedInt(0x910,16)+crrcRicoMvb->getUnsignedInt(0x910,17)+
+          crrcRicoMvb->getUnsignedInt(0x910,18)+crrcRicoMvb->getUnsignedInt(0x910,19)+
+
+          crrcRicoMvb->getUnsignedInt(0x920,16)+crrcRicoMvb->getUnsignedInt(0x920,17)+
+          crrcRicoMvb->getUnsignedInt(0x920,18)+crrcRicoMvb->getUnsignedInt(0x920,19);
+
+  if(!this->CTD_PIS1OLINE_B1 || !this->CTD_PIS2OLINE_B1||(PISAllFaultFlag!=0)
      )
   {
       Status_PIS = 2;
-  }else if((crrcRicoMvb->getUnsignedChar(0x910,16))||(crrcRicoMvb->getUnsignedChar(0x920,16))
-           ||(crrcRicoMvb->getUnsignedChar(0x910,17))||(crrcRicoMvb->getUnsignedChar(0x920,17))
-           ||(crrcRicoMvb->getUnsignedChar(0x910,18))||(crrcRicoMvb->getUnsignedChar(0x920,18))
-           ||(crrcRicoMvb->getUnsignedChar(0x910,19))||(crrcRicoMvb->getUnsignedChar(0x920,19))
+  }else if(
+           PISFaultFlag
            )
   {
       Status_PIS = 1;
@@ -2990,7 +3231,7 @@ void Database::updateSystemStatus()
 
   //BCU
   if(!this->CTD_BCU1OLINE_B1||!this->CTD_BCU2OLINE_B1
-     ||(CrrcFault::getCrrcFault()->getFaultCntOfEachSystem("BCU")>0)
+     ||(BCUFaultFlag!=0)
      )
   {
       Status_BCU = 2;
@@ -3009,9 +3250,10 @@ void Database::updateSystemStatus()
 
   //TCU
   if(!this->CTD_TCU1OLINE_B1||!this->CTD_TCU2OLINE_B1||!this->CTD_TCU3OLINE_B1||!this->CTD_TCU4OLINE_B1||!this->CTD_TCU5OLINE_B1||!this->CTD_TCU6OLINE_B1
-     ||(CrrcFault::getCrrcFault()->getFaultCntOfEachSystem("MCM")>0)||(this->TCU1CT_IxDCUMajorFlt_B1)
+     ||(this->TCU1CT_IxDCUMajorFlt_B1)
      ||(this->TCU2CT_IxDCUMajorFlt_B1)||(this->TCU3CT_IxDCUMajorFlt_B1)||(this->TCU4CT_IxDCUMajorFlt_B1)||(this->TCU5CT_IxDCUMajorFlt_B1)||(this->TCU6CT_IxDCUMajorFlt_B1)
-     )
+     ||(VVVFFaultFlag!=0)
+          )
   {
       Status_TCU = 2;
   }else if(0)
@@ -3024,24 +3266,18 @@ void Database::updateSystemStatus()
 
 
   //fire
-  bool FCUFaultFlag=false;
-  bool FCUAlamFlag=false;
-  for(int i=0;i<6;i++)
-  {
-      for(int j=0;j<4;j++)
-      {
-          if(crrcRicoMvb->getBool(0x810,5+i,0+j*2)||crrcRicoMvb->getBool(0x820,5+i,0+j*2))
-              FCUFaultFlag=true;
-          if(crrcRicoMvb->getBool(0x810,5+i,0+j*2+1)&&crrcRicoMvb->getBool(0x820,5+i,0+j*2+1))
-              FCUAlamFlag=true;
-      }
+  long FCUFaultFlag=0;
 
-  }
+  FCUFaultFlag=!this->CTD_FCU1OLINE_B1+!this->CTD_FCU2OLINE_B1+crrcRicoMvb->getUnsignedInt(0x810,5)+crrcRicoMvb->getUnsignedInt32(0x810,6)+
+          crrcRicoMvb->getUnsignedInt32(0x810,8)+crrcRicoMvb->getUnsignedInt(0x810,10)+
+
+          crrcRicoMvb->getUnsignedInt(0x820,5)+crrcRicoMvb->getUnsignedInt32(0x820,6)+
+          crrcRicoMvb->getUnsignedInt32(0x820,8)+crrcRicoMvb->getUnsignedInt(0x820,10);
 
 
-  if(!this->CTD_FCU1OLINE_B1||!this->CTD_FCU2OLINE_B1||
-     FCUFaultFlag||FCUAlamFlag
-     )
+
+
+  if(FCUFaultFlag)
   {
       Status_FIRE = 2;
   }else if(0)//fire warn  污染/屏蔽
@@ -3052,11 +3288,9 @@ void Database::updateSystemStatus()
       Status_FIRE = 0;
   }
 
-  //ACP
-  //qDebug()<<airpressfault1<<airpressfault2;
-
-  //if(!this->airpressfault1||!this->airpressfault2)
-  if(0)
+  if((!this->CTD_RIOM2GWOLINE_B1&&!this->RM2CT_CMK_B1)||
+         (!this->CTD_RIOM5GWOLINE_B1&&!this->RM5CT_CMK_B1)
+          )
   {
       Status_ACP = 2;
 
@@ -3159,32 +3393,45 @@ void Database::createPISList()
        this->copyPort(0xf910,0xfff);
        this->copyPort(0xf911,0xfff);
    }
+}
 
+void Database::createFCUList()
+{
+    if(this->CTD_FASTrusFCU1_B1&&this->CTD_FCU1OLINE_B1)
+    {
+        this->copyPort(0xf810,0x810);
+    }
+    else if(this->CTD_FASTrusFCU2_B1&&this->CTD_FCU2OLINE_B1)
+    {
+        this->copyPort(0xf810,0x820);
+    }
+    else
+    {
+        this->copyPort(0xf810,0xfff);
+    }
 }
 
 void Database::createERMList(bool erm1trust,bool erm2trust)
 {
     if(erm1trust)
     {
-        copyPort(0xf310,0x310);
-        copyPort(0xf311,0x311);
-        copyPort(0xf312,0x312);
-        copyPort(0xf313,0x313);
+        copyPort(0xf210,0x210);
+        copyPort(0xf211,0x211);
+        copyPort(0xf212,0x212);
+        copyPort(0xf213,0x213);
 
     }else if(erm2trust)
     {
-        copyPort(0xf310,0x320);
-        copyPort(0xf311,0x321);
-        copyPort(0xf312,0x322);
-        copyPort(0xf313,0x323);
+        copyPort(0xf210,0x220);
+        copyPort(0xf211,0x221);
+        copyPort(0xf212,0x222);
+        copyPort(0xf213,0x223);
     }else
     {
-#ifdef TRUSTINVALID_CLEANDATA
-        copyPort(0xf310,0xfff);
-        copyPort(0xf311,0xfff);
-        copyPort(0xf312,0xfff);
-        copyPort(0xf313,0xfff);
-#endif
+        copyPort(0xf210,0xfff);
+        copyPort(0xf211,0xfff);
+        copyPort(0xf212,0xfff);
+        copyPort(0xf213,0xfff);
     }
 
 
@@ -3222,4 +3469,185 @@ bool Database::checkCcu1Online(unsigned char lifeSignal)
     {
         return true;
     }
+}
+
+long Database::getAllHVACFault()
+{
+    long sum=0;
+    sum=crrcRicoMvb->getUnsignedChar(0xA10,16)+crrcRicoMvb->getUnsignedChar(0xA10,18)+
+            crrcRicoMvb->getUnsignedChar(0xA10,19)+crrcRicoMvb->getUnsignedChar(0xA10,20)+
+            crrcRicoMvb->getUnsignedChar(0xA10,22)+crrcRicoMvb->getUnsignedChar(0xA10,23)+
+            crrcRicoMvb->getUnsignedChar(0xA10,25)+
+            crrcRicoMvb->getUnsignedChar(0xA20,16)+crrcRicoMvb->getUnsignedChar(0xA20,18)+
+                        crrcRicoMvb->getUnsignedChar(0xA20,19)+crrcRicoMvb->getUnsignedChar(0xA20,20)+
+                        crrcRicoMvb->getUnsignedChar(0xA20,22)+crrcRicoMvb->getUnsignedChar(0xA20,23)+
+                        crrcRicoMvb->getUnsignedChar(0xA20,25)+
+            crrcRicoMvb->getUnsignedChar(0xA30,16)+crrcRicoMvb->getUnsignedChar(0xA30,18)+
+                        crrcRicoMvb->getUnsignedChar(0xA30,19)+crrcRicoMvb->getUnsignedChar(0xA30,20)+
+                        crrcRicoMvb->getUnsignedChar(0xA30,22)+crrcRicoMvb->getUnsignedChar(0xA30,23)+
+                        crrcRicoMvb->getUnsignedChar(0xA30,25)+
+            crrcRicoMvb->getUnsignedChar(0xA40,16)+crrcRicoMvb->getUnsignedChar(0xA40,18)+
+                        crrcRicoMvb->getUnsignedChar(0xA40,19)+crrcRicoMvb->getUnsignedChar(0xA40,20)+
+                        crrcRicoMvb->getUnsignedChar(0xA40,22)+crrcRicoMvb->getUnsignedChar(0xA40,23)+
+                        crrcRicoMvb->getUnsignedChar(0xA40,25);
+            return sum;
+}
+
+long Database::getAllSIVFault()
+{
+    long sum=0;
+    sum=crrcRicoMvb->getUnsignedChar(0x610,10)+crrcRicoMvb->getUnsignedChar(0x610,11)+
+            crrcRicoMvb->getUnsignedChar(0x610,12)+crrcRicoMvb->getUnsignedChar(0x610,13)+
+            crrcRicoMvb->getBool(0x610,14,0)+crrcRicoMvb->getBool(0x610,14,1)+
+            crrcRicoMvb->getUnsignedChar(0x610,15)+
+            crrcRicoMvb->getBool(0x610,16,0)+crrcRicoMvb->getBool(0x610,16,1)+
+            crrcRicoMvb->getBool(0x610,16,2)+crrcRicoMvb->getBool(0x610,16,3)+
+            crrcRicoMvb->getBool(0x610,16,4)+crrcRicoMvb->getBool(0x610,16,5)+
+            crrcRicoMvb->getBool(0x610,18,4)+
+            crrcRicoMvb->getBool(0x610,18,5)+crrcRicoMvb->getBool(0x610,18,6)+
+            crrcRicoMvb->getBool(0x610,18,7)+
+
+            crrcRicoMvb->getUnsignedChar(0x620,10)+crrcRicoMvb->getUnsignedChar(0x620,11)+
+                        crrcRicoMvb->getUnsignedChar(0x620,12)+crrcRicoMvb->getUnsignedChar(0x620,13)+
+                        crrcRicoMvb->getBool(0x620,14,0)+crrcRicoMvb->getBool(0x620,14,1)+
+                        crrcRicoMvb->getUnsignedChar(0x620,15)+
+                        crrcRicoMvb->getBool(0x620,16,0)+crrcRicoMvb->getBool(0x620,16,1)+
+                        crrcRicoMvb->getBool(0x620,16,2)+crrcRicoMvb->getBool(0x620,16,3)+
+                        crrcRicoMvb->getBool(0x620,16,4)+crrcRicoMvb->getBool(0x620,16,5)+
+                        crrcRicoMvb->getBool(0x620,18,4)+
+                        crrcRicoMvb->getBool(0x620,18,5)+crrcRicoMvb->getBool(0x620,18,6)+
+                        crrcRicoMvb->getBool(0x620,18,7);
+
+    return sum;
+
+}
+
+long Database::getAllVVVFFault()
+{
+    long sum=0;
+    sum=crrcRicoMvb->getUnsignedChar(0x511,0)+crrcRicoMvb->getUnsignedChar(0x511,1)+
+            crrcRicoMvb->getUnsignedChar(0x511,2)+crrcRicoMvb->getUnsignedChar(0x511,3)+
+            crrcRicoMvb->getBool(0x511,4,0)+crrcRicoMvb->getUnsignedChar(0x511,5)+
+            crrcRicoMvb->getUnsignedChar(0x511,6)+crrcRicoMvb->getUnsignedChar(0x511,7)+
+            crrcRicoMvb->getUnsignedChar(0x511,8)+crrcRicoMvb->getUnsignedChar(0x511,9)+
+            crrcRicoMvb->getUnsignedChar(0x511,10)+crrcRicoMvb->getUnsignedChar(0x511,11)+
+
+            crrcRicoMvb->getUnsignedChar(0x521,0)+crrcRicoMvb->getUnsignedChar(0x521,1)+
+                        crrcRicoMvb->getUnsignedChar(0x521,2)+crrcRicoMvb->getUnsignedChar(0x521,3)+
+                        crrcRicoMvb->getBool(0x521,4,0)+crrcRicoMvb->getUnsignedChar(0x521,5)+
+                        crrcRicoMvb->getUnsignedChar(0x521,6)+crrcRicoMvb->getUnsignedChar(0x521,7)+
+                        crrcRicoMvb->getUnsignedChar(0x521,8)+crrcRicoMvb->getUnsignedChar(0x521,9)+
+                        crrcRicoMvb->getUnsignedChar(0x521,10)+crrcRicoMvb->getUnsignedChar(0x521,11)+
+
+            crrcRicoMvb->getUnsignedChar(0x531,0)+crrcRicoMvb->getUnsignedChar(0x531,1)+
+                        crrcRicoMvb->getUnsignedChar(0x531,2)+crrcRicoMvb->getUnsignedChar(0x531,3)+
+                        crrcRicoMvb->getBool(0x531,4,0)+crrcRicoMvb->getUnsignedChar(0x531,5)+
+                        crrcRicoMvb->getUnsignedChar(0x531,6)+crrcRicoMvb->getUnsignedChar(0x531,7)+
+                        crrcRicoMvb->getUnsignedChar(0x531,8)+crrcRicoMvb->getUnsignedChar(0x531,9)+
+                        crrcRicoMvb->getUnsignedChar(0x531,10)+crrcRicoMvb->getUnsignedChar(0x531,11)+
+
+            crrcRicoMvb->getUnsignedChar(0x541,0)+crrcRicoMvb->getUnsignedChar(0x541,1)+
+                        crrcRicoMvb->getUnsignedChar(0x541,2)+crrcRicoMvb->getUnsignedChar(0x541,3)+
+                        crrcRicoMvb->getBool(0x541,4,0)+crrcRicoMvb->getUnsignedChar(0x541,5)+
+                        crrcRicoMvb->getUnsignedChar(0x541,6)+crrcRicoMvb->getUnsignedChar(0x541,7)+
+                        crrcRicoMvb->getUnsignedChar(0x541,8)+crrcRicoMvb->getUnsignedChar(0x541,9)+
+                        crrcRicoMvb->getUnsignedChar(0x541,10)+crrcRicoMvb->getUnsignedChar(0x541,11)+
+
+            crrcRicoMvb->getUnsignedChar(0x551,0)+crrcRicoMvb->getUnsignedChar(0x551,1)+
+                        crrcRicoMvb->getUnsignedChar(0x551,2)+crrcRicoMvb->getUnsignedChar(0x551,3)+
+                        crrcRicoMvb->getBool(0x551,4,0)+crrcRicoMvb->getUnsignedChar(0x551,5)+
+                        crrcRicoMvb->getUnsignedChar(0x551,6)+crrcRicoMvb->getUnsignedChar(0x551,7)+
+                        crrcRicoMvb->getUnsignedChar(0x551,8)+crrcRicoMvb->getUnsignedChar(0x551,9)+
+                        crrcRicoMvb->getUnsignedChar(0x551,10)+crrcRicoMvb->getUnsignedChar(0x551,11)+
+
+            crrcRicoMvb->getUnsignedChar(0x561,0)+crrcRicoMvb->getUnsignedChar(0x561,1)+
+                        crrcRicoMvb->getUnsignedChar(0x561,2)+crrcRicoMvb->getUnsignedChar(0x561,3)+
+                        crrcRicoMvb->getBool(0x561,4,0)+crrcRicoMvb->getUnsignedChar(0x561,5)+
+                        crrcRicoMvb->getUnsignedChar(0x561,6)+crrcRicoMvb->getUnsignedChar(0x561,7)+
+                        crrcRicoMvb->getUnsignedChar(0x561,8)+crrcRicoMvb->getUnsignedChar(0x561,9)+
+                        crrcRicoMvb->getUnsignedChar(0x561,10)+crrcRicoMvb->getUnsignedChar(0x561,11);
+    return sum;
+
+}
+
+long Database::getAllPISFault()
+{
+    long sum=0;
+    sum=crrcRicoMvb->getBool(0x910,2,4)+crrcRicoMvb->getBool(0x910,2,5)+
+            crrcRicoMvb->getBool(0x910,2,6)+crrcRicoMvb->getBool(0x910,2,7)+
+            crrcRicoMvb->getUnsignedChar(0x910,3)+crrcRicoMvb->getUnsignedChar(0x910,4)+
+            crrcRicoMvb->getUnsignedChar(0x910,5)+crrcRicoMvb->getUnsignedChar(0x910,6)+
+            crrcRicoMvb->getUnsignedChar(0x910,7)+crrcRicoMvb->getUnsignedChar(0x910,8)+
+            crrcRicoMvb->getUnsignedChar(0x910,9)+crrcRicoMvb->getUnsignedChar(0x910,10)+
+            crrcRicoMvb->getUnsignedChar(0x910,11)+crrcRicoMvb->getUnsignedChar(0x910,12)+
+            crrcRicoMvb->getUnsignedChar(0x910,13)+crrcRicoMvb->getUnsignedChar(0x910,14)+
+            crrcRicoMvb->getUnsignedChar(0x910,15)+
+
+            crrcRicoMvb->getBool(0x920,2,4)+crrcRicoMvb->getBool(0x920,2,5)+
+                        crrcRicoMvb->getBool(0x920,2,6)+crrcRicoMvb->getBool(0x920,2,7)+
+                        crrcRicoMvb->getUnsignedChar(0x920,3)+crrcRicoMvb->getUnsignedChar(0x920,4)+
+                        crrcRicoMvb->getUnsignedChar(0x920,5)+crrcRicoMvb->getUnsignedChar(0x920,6)+
+                        crrcRicoMvb->getUnsignedChar(0x920,7)+crrcRicoMvb->getUnsignedChar(0x920,8)+
+                        crrcRicoMvb->getUnsignedChar(0x920,9)+crrcRicoMvb->getUnsignedChar(0x920,10)+
+                        crrcRicoMvb->getUnsignedChar(0x920,11)+crrcRicoMvb->getUnsignedChar(0x920,12)+
+                        crrcRicoMvb->getUnsignedChar(0x920,13)+crrcRicoMvb->getUnsignedChar(0x920,14)+
+                        crrcRicoMvb->getUnsignedChar(0x920,15);
+    return sum;
+
+}
+
+
+long Database::getAllEDCUFault()
+{
+    long sum=0;
+    sum=crrcRicoMvb->getUnsignedInt32(0x710,0)+crrcRicoMvb->getUnsignedInt32(0x710,4)+
+            crrcRicoMvb->getUnsignedInt32(0x710,8)+crrcRicoMvb->getUnsignedInt32(0x710,12)+
+            crrcRicoMvb->getUnsignedInt32(0x710,16)+crrcRicoMvb->getUnsignedInt32(0x710,20)+
+
+            crrcRicoMvb->getUnsignedInt32(0x720,0)+crrcRicoMvb->getUnsignedInt32(0x720,4)+
+                        crrcRicoMvb->getUnsignedInt32(0x720,8)+crrcRicoMvb->getUnsignedInt32(0x720,12)+
+                        crrcRicoMvb->getUnsignedInt32(0x720,16)+crrcRicoMvb->getUnsignedInt32(0x720,20)+
+
+            crrcRicoMvb->getUnsignedInt32(0x730,0)+crrcRicoMvb->getUnsignedInt32(0x730,4)+
+                        crrcRicoMvb->getUnsignedInt32(0x730,8)+crrcRicoMvb->getUnsignedInt32(0x730,12)+
+                        crrcRicoMvb->getUnsignedInt32(0x730,16)+crrcRicoMvb->getUnsignedInt32(0x730,20)+
+
+            crrcRicoMvb->getUnsignedInt32(0x740,0)+crrcRicoMvb->getUnsignedInt32(0x740,4)+
+                        crrcRicoMvb->getUnsignedInt32(0x740,8)+crrcRicoMvb->getUnsignedInt32(0x740,12)+
+                        crrcRicoMvb->getUnsignedInt32(0x740,16)+crrcRicoMvb->getUnsignedInt32(0x740,20)+
+
+            crrcRicoMvb->getUnsignedInt32(0x750,0)+crrcRicoMvb->getUnsignedInt32(0x750,4)+
+                        crrcRicoMvb->getUnsignedInt32(0x750,8)+crrcRicoMvb->getUnsignedInt32(0x750,12)+
+                        crrcRicoMvb->getUnsignedInt32(0x750,16)+crrcRicoMvb->getUnsignedInt32(0x750,20)+
+
+            crrcRicoMvb->getUnsignedInt32(0x760,0)+crrcRicoMvb->getUnsignedInt32(0x760,4)+
+                        crrcRicoMvb->getUnsignedInt32(0x760,8)+crrcRicoMvb->getUnsignedInt32(0x760,12)+
+                        crrcRicoMvb->getUnsignedInt32(0x760,16)+crrcRicoMvb->getUnsignedInt32(0x760,20)+
+
+            crrcRicoMvb->getUnsignedInt32(0x770,0)+crrcRicoMvb->getUnsignedInt32(0x770,4)+
+                        crrcRicoMvb->getUnsignedInt32(0x770,8)+crrcRicoMvb->getUnsignedInt32(0x770,12)+
+                        crrcRicoMvb->getUnsignedInt32(0x770,16)+crrcRicoMvb->getUnsignedInt32(0x770,20)+
+
+            crrcRicoMvb->getUnsignedInt32(0x780,0)+crrcRicoMvb->getUnsignedInt32(0x780,4)+
+                        crrcRicoMvb->getUnsignedInt32(0x780,8)+crrcRicoMvb->getUnsignedInt32(0x780,12)+
+                        crrcRicoMvb->getUnsignedInt32(0x780,16)+crrcRicoMvb->getUnsignedInt32(0x780,20);
+
+    return sum;
+}
+
+long Database::getAllBCUFault()
+{
+    long sum=0;
+    sum=crrcRicoMvb->getUnsignedInt32(0x410,4)+crrcRicoMvb->getUnsignedInt32(0x410,8)+
+            crrcRicoMvb->getUnsignedInt32(0x410,12)+crrcRicoMvb->getUnsignedInt32(0x410,16)+
+            +crrcRicoMvb->getUnsignedChar(0x410,20)+crrcRicoMvb->getBool(0x410,21,0)+
+            crrcRicoMvb->getBool(0x410,21,1)+crrcRicoMvb->getBool(0x411,1,1)+
+
+            crrcRicoMvb->getUnsignedInt32(0x420,4)+crrcRicoMvb->getUnsignedInt32(0x420,8)+
+                        crrcRicoMvb->getUnsignedInt32(0x420,12)+crrcRicoMvb->getUnsignedInt32(0x410,16)+
+                        +crrcRicoMvb->getUnsignedChar(0x420,20)+crrcRicoMvb->getBool(0x420,21,0)+
+                        crrcRicoMvb->getBool(0x420,21,1)+crrcRicoMvb->getBool(0x421,1,1);
+
+    return sum;
+
 }

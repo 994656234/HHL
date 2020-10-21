@@ -142,37 +142,37 @@ void VehicleTrainArea::updatePage()
     //车门
     //MC1
     DOORstatus.clear();
-    DOORstatus<<this->database->EDCU1_2CT_DOOR174_B1<<this->database->EDCU1_2CT_DOOR167_B1<<this->database->EDCU1_2CT_DOOR168_B1
+    DOORstatus<<this->database->EDCU1_2CT_DOOR167_B1<<this->database->EDCU1_2CT_DOOR174_B1<<this->database->EDCU1_2CT_DOOR168_B1
              <<this->database->EDCU1_2CT_DOOR171_B1<<this->database->EDCU1_2CT_DOOR169_B1<<this->database->EDCU1_2CT_DOOR166_B1
             <<this->database->EDCU1_2CT_DOOR165_B1;
     setDoorStatus(ui->lbl_door1_1,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU1_2CT_DOOR190_B1<<this->database->EDCU1_2CT_DOOR183_B1<<this->database->EDCU1_2CT_DOOR184_B1
+    DOORstatus<<this->database->EDCU1_2CT_DOOR183_B1<<this->database->EDCU1_2CT_DOOR190_B1<<this->database->EDCU1_2CT_DOOR184_B1
             <<this->database->EDCU1_2CT_DOOR187_B1<<this->database->EDCU1_2CT_DOOR185_B1
             <<this->database->EDCU1_2CT_DOOR182_B1<<this->database->EDCU1_2CT_DOOR181_B1;
     setDoorStatus(ui->lbl_door1_2,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU1_2CT_DOOR206_B1<<this->database->EDCU1_2CT_DOOR199_B1<<this->database->EDCU1_2CT_DOOR200_B1
+    DOORstatus<<this->database->EDCU1_2CT_DOOR199_B1<<this->database->EDCU1_2CT_DOOR206_B1<<this->database->EDCU1_2CT_DOOR200_B1
             <<this->database->EDCU1_2CT_DOOR203_B1<<this->database->EDCU1_2CT_DOOR201_B1
             <<this->database->EDCU1_2CT_DOOR198_B1<<this->database->EDCU1_2CT_DOOR197_B1;
     setDoorStatus(ui->lbl_door1_3,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU1_2CT_DOOR222_B1<<this->database->EDCU1_2CT_DOOR215_B1<<this->database->EDCU1_2CT_DOOR216_B1
+    DOORstatus<<this->database->EDCU1_2CT_DOOR215_B1<<this->database->EDCU1_2CT_DOOR222_B1<<this->database->EDCU1_2CT_DOOR216_B1
             <<this->database->EDCU1_2CT_DOOR219_B1<<this->database->EDCU1_2CT_DOOR217_B1
             <<this->database->EDCU1_2CT_DOOR214_B1<<this->database->EDCU1_2CT_DOOR213_B1;
     setDoorStatus(ui->lbl_door1_4,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU1_2CT_DOOR238_B1<<this->database->EDCU1_2CT_DOOR231_B1<<this->database->EDCU1_2CT_DOOR232_B1
+    DOORstatus<<this->database->EDCU1_2CT_DOOR231_B1<<this->database->EDCU1_2CT_DOOR238_B1<<this->database->EDCU1_2CT_DOOR232_B1
             <<this->database->EDCU1_2CT_DOOR235_B1<<this->database->EDCU1_2CT_DOOR233_B1
             <<this->database->EDCU1_2CT_DOOR230_B1<<this->database->EDCU1_2CT_DOOR229_B1;
     setDoorStatus(ui->lbl_door1_5,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU1_2CT_DOOR254_B1<<this->database->EDCU1_2CT_DOOR247_B1<<this->database->EDCU1_2CT_DOOR248_B1
+    DOORstatus<<this->database->EDCU1_2CT_DOOR247_B1<<this->database->EDCU1_2CT_DOOR254_B1<<this->database->EDCU1_2CT_DOOR248_B1
             <<this->database->EDCU1_2CT_DOOR251_B1<<this->database->EDCU1_2CT_DOOR249_B1
             <<this->database->EDCU1_2CT_DOOR246_B1<<this->database->EDCU1_2CT_DOOR245_B1;
     setDoorStatus(ui->lbl_door1_6,DOORstatus);
@@ -181,37 +181,37 @@ void VehicleTrainArea::updatePage()
 
     //Mp1
     DOORstatus.clear();
-    DOORstatus<<this->database->EDCU3_4CT_DOOR174_B1<<this->database->EDCU3_4CT_DOOR167_B1<<this->database->EDCU3_4CT_DOOR168_B1
+    DOORstatus<<this->database->EDCU3_4CT_DOOR167_B1<<this->database->EDCU3_4CT_DOOR174_B1<<this->database->EDCU3_4CT_DOOR168_B1
              <<this->database->EDCU3_4CT_DOOR171_B1<<this->database->EDCU3_4CT_DOOR169_B1<<this->database->EDCU3_4CT_DOOR166_B1
             <<this->database->EDCU3_4CT_DOOR165_B1;
     setDoorStatus(ui->lbl_door2_1,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU3_4CT_DOOR190_B1<<this->database->EDCU3_4CT_DOOR183_B1<<this->database->EDCU3_4CT_DOOR184_B1
+    DOORstatus<<this->database->EDCU3_4CT_DOOR183_B1<<this->database->EDCU3_4CT_DOOR190_B1<<this->database->EDCU3_4CT_DOOR184_B1
             <<this->database->EDCU3_4CT_DOOR187_B1<<this->database->EDCU3_4CT_DOOR185_B1
             <<this->database->EDCU3_4CT_DOOR182_B1<<this->database->EDCU3_4CT_DOOR181_B1;
     setDoorStatus(ui->lbl_door2_2,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU3_4CT_DOOR206_B1<<this->database->EDCU3_4CT_DOOR199_B1<<this->database->EDCU3_4CT_DOOR200_B1
+    DOORstatus<<this->database->EDCU3_4CT_DOOR199_B1<<this->database->EDCU3_4CT_DOOR206_B1<<this->database->EDCU3_4CT_DOOR200_B1
             <<this->database->EDCU3_4CT_DOOR203_B1<<this->database->EDCU3_4CT_DOOR201_B1
             <<this->database->EDCU3_4CT_DOOR198_B1<<this->database->EDCU3_4CT_DOOR197_B1;
     setDoorStatus(ui->lbl_door2_3,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU3_4CT_DOOR222_B1<<this->database->EDCU3_4CT_DOOR215_B1<<this->database->EDCU3_4CT_DOOR216_B1
+    DOORstatus<<this->database->EDCU3_4CT_DOOR215_B1<<this->database->EDCU3_4CT_DOOR222_B1<<this->database->EDCU3_4CT_DOOR216_B1
             <<this->database->EDCU3_4CT_DOOR219_B1<<this->database->EDCU3_4CT_DOOR217_B1
             <<this->database->EDCU3_4CT_DOOR214_B1<<this->database->EDCU3_4CT_DOOR213_B1;
     setDoorStatus(ui->lbl_door2_4,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU3_4CT_DOOR238_B1<<this->database->EDCU3_4CT_DOOR231_B1<<this->database->EDCU3_4CT_DOOR232_B1
+    DOORstatus<<this->database->EDCU3_4CT_DOOR231_B1<<this->database->EDCU3_4CT_DOOR238_B1<<this->database->EDCU3_4CT_DOOR232_B1
             <<this->database->EDCU3_4CT_DOOR235_B1<<this->database->EDCU3_4CT_DOOR233_B1
             <<this->database->EDCU3_4CT_DOOR230_B1<<this->database->EDCU3_4CT_DOOR229_B1;
     setDoorStatus(ui->lbl_door2_5,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU3_4CT_DOOR254_B1<<this->database->EDCU3_4CT_DOOR247_B1<<this->database->EDCU3_4CT_DOOR248_B1
+    DOORstatus<<this->database->EDCU3_4CT_DOOR247_B1<<this->database->EDCU3_4CT_DOOR254_B1<<this->database->EDCU3_4CT_DOOR248_B1
             <<this->database->EDCU3_4CT_DOOR251_B1<<this->database->EDCU3_4CT_DOOR249_B1
             <<this->database->EDCU3_4CT_DOOR246_B1<<this->database->EDCU3_4CT_DOOR245_B1;
     setDoorStatus(ui->lbl_door2_6,DOORstatus);
@@ -220,86 +220,103 @@ void VehicleTrainArea::updatePage()
 
     //MP2
     DOORstatus.clear();
-    DOORstatus<<this->database->EDCU5_6CT_DOOR174_B1<<this->database->EDCU5_6CT_DOOR167_B1<<this->database->EDCU5_6CT_DOOR168_B1
+    DOORstatus<<this->database->EDCU5_6CT_DOOR167_B1<<this->database->EDCU5_6CT_DOOR174_B1<<this->database->EDCU5_6CT_DOOR168_B1
              <<this->database->EDCU5_6CT_DOOR171_B1<<this->database->EDCU5_6CT_DOOR169_B1<<this->database->EDCU5_6CT_DOOR166_B1
             <<this->database->EDCU5_6CT_DOOR165_B1;
     setDoorStatus(ui->lbl_door3_1,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU5_6CT_DOOR190_B1<<this->database->EDCU5_6CT_DOOR183_B1<<this->database->EDCU5_6CT_DOOR184_B1
+    DOORstatus<<this->database->EDCU5_6CT_DOOR183_B1<<this->database->EDCU5_6CT_DOOR190_B1<<this->database->EDCU5_6CT_DOOR184_B1
             <<this->database->EDCU5_6CT_DOOR187_B1<<this->database->EDCU5_6CT_DOOR185_B1
             <<this->database->EDCU5_6CT_DOOR182_B1<<this->database->EDCU5_6CT_DOOR181_B1;
     setDoorStatus(ui->lbl_door3_2,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU5_6CT_DOOR206_B1<<this->database->EDCU5_6CT_DOOR199_B1<<this->database->EDCU5_6CT_DOOR200_B1
+    DOORstatus<<this->database->EDCU5_6CT_DOOR199_B1<<this->database->EDCU5_6CT_DOOR206_B1<<this->database->EDCU5_6CT_DOOR200_B1
             <<this->database->EDCU5_6CT_DOOR203_B1<<this->database->EDCU5_6CT_DOOR201_B1
             <<this->database->EDCU5_6CT_DOOR198_B1<<this->database->EDCU5_6CT_DOOR197_B1;
     setDoorStatus(ui->lbl_door3_3,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU5_6CT_DOOR222_B1<<this->database->EDCU5_6CT_DOOR215_B1<<this->database->EDCU5_6CT_DOOR216_B1
+    DOORstatus<<this->database->EDCU5_6CT_DOOR215_B1<<this->database->EDCU5_6CT_DOOR222_B1<<this->database->EDCU5_6CT_DOOR216_B1
             <<this->database->EDCU5_6CT_DOOR219_B1<<this->database->EDCU5_6CT_DOOR217_B1
             <<this->database->EDCU5_6CT_DOOR214_B1<<this->database->EDCU5_6CT_DOOR213_B1;
     setDoorStatus(ui->lbl_door3_4,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU5_6CT_DOOR238_B1<<this->database->EDCU5_6CT_DOOR231_B1<<this->database->EDCU5_6CT_DOOR232_B1
+    DOORstatus<<this->database->EDCU5_6CT_DOOR231_B1<<this->database->EDCU5_6CT_DOOR238_B1<<this->database->EDCU5_6CT_DOOR232_B1
             <<this->database->EDCU5_6CT_DOOR235_B1<<this->database->EDCU5_6CT_DOOR233_B1
             <<this->database->EDCU5_6CT_DOOR230_B1<<this->database->EDCU5_6CT_DOOR229_B1;
     setDoorStatus(ui->lbl_door3_5,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU5_6CT_DOOR254_B1<<this->database->EDCU5_6CT_DOOR247_B1<<this->database->EDCU5_6CT_DOOR248_B1
+    DOORstatus<<this->database->EDCU5_6CT_DOOR247_B1<<this->database->EDCU5_6CT_DOOR254_B1<<this->database->EDCU5_6CT_DOOR248_B1
             <<this->database->EDCU5_6CT_DOOR251_B1<<this->database->EDCU5_6CT_DOOR249_B1
             <<this->database->EDCU5_6CT_DOOR246_B1<<this->database->EDCU5_6CT_DOOR245_B1;
     setDoorStatus(ui->lbl_door3_6,DOORstatus);
     DOORstatus.clear();
     //MC2
     DOORstatus.clear();
-    DOORstatus<<this->database->EDCU7_8CT_DOOR174_B1<<this->database->EDCU7_8CT_DOOR167_B1<<this->database->EDCU7_8CT_DOOR168_B1
+    DOORstatus<<this->database->EDCU7_8CT_DOOR167_B1<<this->database->EDCU7_8CT_DOOR174_B1<<this->database->EDCU7_8CT_DOOR168_B1
              <<this->database->EDCU7_8CT_DOOR171_B1<<this->database->EDCU7_8CT_DOOR169_B1<<this->database->EDCU7_8CT_DOOR166_B1
             <<this->database->EDCU7_8CT_DOOR165_B1;
     setDoorStatus(ui->lbl_door4_1,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU7_8CT_DOOR190_B1<<this->database->EDCU7_8CT_DOOR183_B1<<this->database->EDCU7_8CT_DOOR184_B1
+    DOORstatus<<this->database->EDCU7_8CT_DOOR183_B1<<this->database->EDCU7_8CT_DOOR190_B1<<this->database->EDCU7_8CT_DOOR184_B1
             <<this->database->EDCU7_8CT_DOOR187_B1<<this->database->EDCU7_8CT_DOOR185_B1
             <<this->database->EDCU7_8CT_DOOR182_B1<<this->database->EDCU7_8CT_DOOR181_B1;
     setDoorStatus(ui->lbl_door4_2,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU7_8CT_DOOR206_B1<<this->database->EDCU7_8CT_DOOR199_B1<<this->database->EDCU7_8CT_DOOR200_B1
+    DOORstatus<<this->database->EDCU7_8CT_DOOR199_B1<<this->database->EDCU7_8CT_DOOR206_B1<<this->database->EDCU7_8CT_DOOR200_B1
             <<this->database->EDCU7_8CT_DOOR203_B1<<this->database->EDCU7_8CT_DOOR201_B1
             <<this->database->EDCU7_8CT_DOOR198_B1<<this->database->EDCU7_8CT_DOOR197_B1;
     setDoorStatus(ui->lbl_door4_3,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU7_8CT_DOOR222_B1<<this->database->EDCU7_8CT_DOOR215_B1<<this->database->EDCU7_8CT_DOOR216_B1
+    DOORstatus<<this->database->EDCU7_8CT_DOOR215_B1<<this->database->EDCU7_8CT_DOOR222_B1<<this->database->EDCU7_8CT_DOOR216_B1
             <<this->database->EDCU7_8CT_DOOR219_B1<<this->database->EDCU7_8CT_DOOR217_B1
             <<this->database->EDCU7_8CT_DOOR214_B1<<this->database->EDCU7_8CT_DOOR213_B1;
     setDoorStatus(ui->lbl_door4_4,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU7_8CT_DOOR238_B1<<this->database->EDCU7_8CT_DOOR231_B1<<this->database->EDCU7_8CT_DOOR232_B1
+    DOORstatus<<this->database->EDCU7_8CT_DOOR231_B1<<this->database->EDCU7_8CT_DOOR238_B1<<this->database->EDCU7_8CT_DOOR232_B1
             <<this->database->EDCU7_8CT_DOOR235_B1<<this->database->EDCU7_8CT_DOOR233_B1
             <<this->database->EDCU7_8CT_DOOR230_B1<<this->database->EDCU7_8CT_DOOR229_B1;
     setDoorStatus(ui->lbl_door4_5,DOORstatus);
     DOORstatus.clear();
 
-    DOORstatus<<this->database->EDCU7_8CT_DOOR254_B1<<this->database->EDCU7_8CT_DOOR247_B1<<this->database->EDCU7_8CT_DOOR248_B1
+    DOORstatus<<this->database->EDCU7_8CT_DOOR247_B1<<this->database->EDCU7_8CT_DOOR254_B1<<this->database->EDCU7_8CT_DOOR248_B1
             <<this->database->EDCU7_8CT_DOOR251_B1<<this->database->EDCU7_8CT_DOOR249_B1
             <<this->database->EDCU7_8CT_DOOR246_B1<<this->database->EDCU7_8CT_DOOR245_B1;
     setDoorStatus(ui->lbl_door4_6,DOORstatus);
     DOORstatus.clear();
 
 
+    if(database->RM1CT_PDCS_B1)
+    {
+        ui->lbl_door_driver1->setStyleSheet(DOORCLOSE);
+    }else
+    {
+        ui->lbl_door_driver1->setStyleSheet(DOOROPEN);
+    }
+
+    if(database->RM4CT_PDCS_B1)
+    {
+        ui->lbl_door_driver2->setStyleSheet(DOORCLOSE);
+    }
+    else
+    {
+        ui->lbl_door_driver2->setStyleSheet(DOOROPEN);
+    }
+
 
 
     //客室温度
     if(database->CTD_ACTOLINE_B1)
     {
-        ui->lbl_tmp1->setText(QString::number(database->ACVP1CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp1->setText(QString::number(database->ACVP1CT_IusSalTemp_U8-30,'f',1));
     }
     else
     {
@@ -308,7 +325,7 @@ void VehicleTrainArea::updatePage()
 
     if(database->CTD_AC2OLINE_B1)
     {
-        ui->lbl_tmp2->setText(QString::number(database->ACVP2CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp2->setText(QString::number(database->ACVP2CT_IusSalTemp_U8-30,'f',1));
     }
     else
     {
@@ -317,7 +334,7 @@ void VehicleTrainArea::updatePage()
 
     if(database->CTD_AC3OLINE_B1)
     {
-        ui->lbl_tmp3->setText(QString::number(database->ACVP3CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp3->setText(QString::number(database->ACVP3CT_IusSalTemp_U8-30,'f',1));
     }
     else
     {
@@ -326,7 +343,7 @@ void VehicleTrainArea::updatePage()
 
     if(database->CTD_AC4OLINE_B1)
     {
-        ui->lbl_tmp4->setText(QString::number(database->ACVP4CT_IusSalTemp_U8,'f',1));
+        ui->lbl_tmp4->setText(QString::number(database->ACVP4CT_IusSalTemp_U8-30,'f',1));
     }
     else
     {
@@ -334,21 +351,86 @@ void VehicleTrainArea::updatePage()
     }
 
 
+//    //quickBreak
+//    if(database->CTD_RIOM1GWOLINE_B1)
+//    {
+
+//        if(database->RM1CT_HSCBON_B1&&!database->RM1CT_HSCBOFF_B1)
+//        {
+//            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKON);
+//        }
+//        else
+//        {
+//            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKOFF);
+//        }
+//    }
+//    else
+//    {
+//         ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKUNKNOW);
+//    }
+
+//    if(database->CTD_RIOM3GWOLINE_B1)
+//    {
+
+//        if(database->RM3CT_HSCB1STATE_B1&&database->RM3CT_HSCB2STATE_B1)
+//        {
+//            ui->lbl_quickBreak2->setStyleSheet(QUICKBREAKON);
+//        }
+//        else
+//        {
+//            ui->lbl_quickBreak2->setStyleSheet(QUICKBREAKOFF);
+//        }
+//    }
+//    else
+//    {
+//         ui->lbl_quickBreak2->setStyleSheet(QUICKBREAKUNKNOW);
+//    }
+
+//    if(database->CTD_RIOM6GWOLINE_B1)
+//    {
+
+//        if(database->RM6CT_HSCB1STATE_B1&&database->RM6CT_HSCB2STATE_B1)
+//        {
+//            ui->lbl_quickBreak3->setStyleSheet(QUICKBREAKON);
+//        }
+//        else
+//        {
+//            ui->lbl_quickBreak3->setStyleSheet(QUICKBREAKOFF);
+//        }
+//    }
+//    else
+//    {
+//         ui->lbl_quickBreak3->setStyleSheet(QUICKBREAKUNKNOW);
+//    }
+
+//    if(database->CTD_RIOM4GWOLINE_B1)
+//    {
+
+//        if(database->RM4CT_HSCBON_B1&&!database->RM4CT_HSCBOFF_B1)
+//        {
+//            ui->lbl_quickBreak4->setStyleSheet(QUICKBREAKON);
+//        }
+//        else
+//        {
+//            ui->lbl_quickBreak4->setStyleSheet(QUICKBREAKOFF);
+//        }
+//    }
+//    else
+//    {
+//         ui->lbl_quickBreak4->setStyleSheet(QUICKBREAKUNKNOW);
+//    }
+
     //quickBreak
-    if(database->CTD_RIOM1GWOLINE_B1)
+    if(database->CTD_RIOM3GWOLINE_B1)
     {
 
-        if(database->RM1CT_HSCBON_B1)
+        if(database->RM3CT_HSCB1STATE_B1)
         {
             ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKON);
         }
-        else if(database->RM4CT_HSCBOFF_B1)
-        {
-            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKOFF);
-        }
         else
         {
-            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKUNKNOW);
+            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKOFF);
         }
     }
     else
@@ -356,41 +438,68 @@ void VehicleTrainArea::updatePage()
          ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKUNKNOW);
     }
 
-
-    if(database->CTD_RIOM4GWOLINE_B1)
+    if(database->CTD_RIOM3GWOLINE_B1)
     {
 
-        if(database->RM4CT_HSCBON_B1)
+        if(database->RM3CT_HSCB2STATE_B1)
         {
-            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKON);
-        }
-        else if(database->RM4CT_HSCBOFF_B1)
-        {
-            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKOFF);
+            ui->lbl_quickBreak2->setStyleSheet(QUICKBREAKON);
         }
         else
         {
-            ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKUNKNOW);
+            ui->lbl_quickBreak2->setStyleSheet(QUICKBREAKOFF);
         }
     }
     else
     {
-         ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKUNKNOW);
+         ui->lbl_quickBreak2->setStyleSheet(QUICKBREAKUNKNOW);
     }
 
+    if(database->CTD_RIOM6GWOLINE_B1)
+    {
 
+        if(database->RM6CT_HSCB1STATE_B1)
+        {
+            ui->lbl_quickBreak3->setStyleSheet(QUICKBREAKON);
+        }
+        else
+        {
+            ui->lbl_quickBreak3->setStyleSheet(QUICKBREAKOFF);
+        }
+    }
+    else
+    {
+         ui->lbl_quickBreak3->setStyleSheet(QUICKBREAKUNKNOW);
+    }
+
+    if(database->CTD_RIOM6GWOLINE_B1)
+    {
+
+        if(database->RM6CT_HSCB2STATE_B1)
+        {
+            ui->lbl_quickBreak4->setStyleSheet(QUICKBREAKON);
+        }
+        else
+        {
+            ui->lbl_quickBreak4->setStyleSheet(QUICKBREAKOFF);
+        }
+    }
+    else
+    {
+         ui->lbl_quickBreak4->setStyleSheet(QUICKBREAKUNKNOW);
+    }
 
 }
 
-void VehicleTrainArea::setDoorStatus(QLabel *label, QList<bool> &status)
+void VehicleTrainArea::setDoorStatus(QLabel *label, QList<bool> status)
 {
     if(status.at(0))
     {
-        label->setStyleSheet(DOOREMOPENP);
+        label->setStyleSheet(DOOREMGUNLOCK);
     }
     else if(status.at(1))
     {
-        label->setStyleSheet(DOOREMGUNLOCK);
+        label->setStyleSheet(DOOREMOPENP);
     }
     else if(status.at(2))
     {
@@ -455,4 +564,5 @@ void VehicleTrainArea::setPantoStatus(QLabel *label, unsigned char status)
     }
 
 }
+
 

@@ -80,6 +80,7 @@ enum pageIndex
     uVehicleMaintainceRunningGearSubsystemPage,
     uVehicleFaultEventPage,
     uVehicleByPassPage,
+    uVehicleByPassPage2,
     uMaintainceCurrentFaultPage,
     uMaintainceHistoryFaultPage,
     uMaintainceQueryFaultPage,
@@ -94,6 +95,7 @@ enum pageIndex
     uMaintainceAddSubtractTestPage,
     uMaintaincePasswordPage,
     uMaintainceAccumulatorSubsystemPage,
+    uVehicleSetSimlateStation,
 };
 
 #define _LOG qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") << __FILE__ << __LINE__

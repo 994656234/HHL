@@ -165,8 +165,8 @@ void CrrcRicoMvb::synchronizeMvbData()
             //检测读取是否成功
             if(result != MUE_RESULT_OK)
             {
-                qDebug("dugon Read Error");
-                return;
+                //qDebug("dugon Read Error");
+                //return;
             }else
             {
                 //qDebug("dugon Read OK");
@@ -180,8 +180,8 @@ void CrrcRicoMvb::synchronizeMvbData()
             //检测写取是否成功
             if(result != MUE_RESULT_OK)
             {
-                qDebug("dugon Write Error");
-                return;
+                //qDebug("dugon Write Error");
+                //return;
             }else
             {
                 //qDebug("dugon Write OK");
@@ -275,7 +275,6 @@ signed char CrrcRicoMvb::getSignedChar(unsigned short int port, unsigned short i
 
             pointer = (unsigned char *)(this->portData[port]->data);
             value = *(signed char *)(pointer + byteOffset);
-
 
         return value;
     }
@@ -373,8 +372,9 @@ signed short int CrrcRicoMvb::getSignedInt(unsigned short int port, unsigned sho
 
     if (this->portData.contains(port) && byteOffset < 31)
     {
-        pointer = (unsigned char *)(this->portData[port]->data);
-        value = *(signed short int *)(pointer + byteOffset);
+//        pointer = (unsigned char *)(this->portData[port]->data);
+//        value = *(signed short int *)(pointer + byteOffset);
+          value=this->getUnsignedChar(port,byteOffset)*256+this->getUnsignedChar(port,byteOffset+1);
 
         return value;
     }
@@ -460,8 +460,6 @@ void CrrcRicoMvb::setSignedChar(unsigned short int port, unsigned short int byte
     if (this->portData.contains(port) && byteOffset < 32)
     {
         // pixy is a little endian device
-
-
             pointer = (signed char *)(this->portData[port]->data);
             *(pointer + byteOffset) = signal;
 
@@ -483,10 +481,11 @@ void CrrcRicoMvb::setUnsignedInt(unsigned short int port, unsigned short int byt
 
     if (this->portData.contains(port) && byteOffset < 31)
     {
-        //        pointer = (unsigned char *)(this->portData[port]->data);
-        //        *(unsigned short int *)(pointer + byteOffset) = signal;
-                setUnsignedChar(port,byteOffset+1,signal%256);
-                setUnsignedChar(port,byteOffset,signal/256);
+//        pointer = (unsigned char *)(this->portData[port]->data);
+//        *(unsigned short int *)(pointer + byteOffset) = signal;
+        setUnsignedChar(port,byteOffset+1,signal%256);
+        setUnsignedChar(port,byteOffset,signal/256);
+
     }
     else
     {
@@ -505,8 +504,11 @@ void CrrcRicoMvb::setSignedInt(unsigned short int port, unsigned short int byteO
 
     if (this->portData.contains(port) && byteOffset < 31)
     {
-        pointer = (unsigned char *)(this->portData[port]->data);
-        *(signed short int *)(pointer + byteOffset) = signal;
+//        pointer = (unsigned char *)(this->portData[port]->data);
+//        *(signed short int *)(pointer + byteOffset) = signal;
+        setSignedChar(port,byteOffset+1,signal%256);
+        setSignedChar(port,byteOffset,signal/256);
+
     }
     else
     {

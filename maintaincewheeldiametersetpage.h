@@ -53,6 +53,7 @@ private:
     QList<unsigned char *> m_wheelvalue;
     QList<int> m_wheelTextValue;
     QList<bool* > m_wheelsaveflag;
+    void hideEvent(QHideEvent*);
 
 public slots:
    void myKeyPressEvent(QString key);

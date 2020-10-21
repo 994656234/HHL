@@ -6,8 +6,6 @@ VehicleSetPage::VehicleSetPage(QWidget *parent) :
     ui(new Ui::VehicleSetPage)
 {
     ui->setupUi(this);
-    ui->BTN_queryStation->hide();
-    ui->BTN_queryStation->setEnabled(false);
     ui->BTN_setBrakeParam->hide();
     ui->BTN_setBrakeParam->setEnabled(false);
 }
@@ -55,4 +53,9 @@ void VehicleSetPage::on_BTN_setTime_pressed()
 void VehicleSetPage::on_BTN_setCut_pressed()
 {
     changePage(uVehicleMaintainceResetExcisionPage);
+}
+
+void VehicleSetPage::on_BTN_simulateStation_pressed()
+{
+    changePage(uVehicleSetSimlateStation);
 }

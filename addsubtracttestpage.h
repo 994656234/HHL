@@ -24,7 +24,7 @@ private:
     Ui::AddSubtractTestPage *ui;
     QList<QPushButton*>buttons;
     QList<QPushButton*> statusButtons;
-    QList<bool* > Signals;
+    QList<bool *> Signals;
     int timer2s[2];
     void setLabelStatus(QList<QLabel*>lbls,QList<QString> status);
     QList<QLabel*> lbls;

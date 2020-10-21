@@ -16,6 +16,21 @@ VehicleMaintainPage::VehicleMaintainPage(QWidget *parent) :
     {
         connect(button,SIGNAL(pressed()),this,SLOT(NBpressEvent()));
     }
+
+    ui->lbl2_2->hide();
+    ui->BTN_TractSubsystem->hide();
+    ui->BTN_TractSubsystem->setEnabled(false);
+    ui->BTN_BrakeSubsystem->hide();
+    ui->BTN_BrakeSubsystem->setEnabled(false);
+    ui->BTN_AuxiliarySubsystem->hide();
+    ui->BTN_AuxiliarySubsystem->setEnabled(false);
+    ui->BTN_BogieLampSubsystem->hide();
+    ui->BTN_BogieLampSubsystem->setEnabled(false);
+    ui->BTN_Accumulate->hide();
+    ui->BTN_Accumulate->setEnabled(false);
+    ui->BTN_CommunicationStatus->hide();
+    ui->BTN_CommunicationStatus->setEnabled(false);
+    ui->lbl1_2->hide();
 }
 
 VehicleMaintainPage::~VehicleMaintainPage()
@@ -100,7 +115,7 @@ void VehicleMaintainPage::NBpressEvent()
     }
     else if(BTNName=="BTN_Cut")
     {
-        changePage(uVehicleMaintainceResetExcisionPage);
+        changePage(uMaintainceAccumulatorSubsystemPage);
     }
     else
     {

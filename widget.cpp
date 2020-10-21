@@ -10,6 +10,7 @@
 #include "crrcfault.h"
 #include "simulation.h"
 #include "qdesktopwidget.h"
+#include "avic_imx.h"
 
 #include "vehiclestationbar.h"
 #include "vehicletrainarea.h"
@@ -50,6 +51,7 @@
 #include "maintaincerunninggearsubsystempage.h"
 #include "faulteventpage.h"
 #include "bypasspage.h"
+#include "bypasspage2.h"
 
 
 #include "maintaincecurrentfaultpage.h"
@@ -73,14 +75,17 @@
 
 #include "passwordpage.h"
 #include "maintainceaccumulatorsubsystempage.h"
+#include "vehiclesetsimlatestation.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-
+    //avic_imx_init(1);
     QDesktopWidget *desktop = QApplication::desktop();
+
+    ExternalDevice = new AVIC_ExternalDevice(this);
 
     if (desktop->width() == 800 && desktop->height() == 600)
     {
@@ -97,7 +102,7 @@ Widget::Widget(QWidget *parent) :
     this->timer = new QTimer;
     connect(timer, SIGNAL(timeout()), this, SLOT(updatePage()));
 
-    if(CrrcFault::initCrrcFault("fault_type_HHHT.db","fault_DB_HHHT.db"))
+    if(CrrcFault::initCrrcFault("fault_type_HHL.db","fault_DB_HHL.db"))
     {
         crrcFault = CrrcFault::getCrrcFault();
     }else
@@ -186,7 +191,7 @@ Widget::Widget(QWidget *parent) :
     this->vehicleSetPage->hide();
 
     this->vehicleSetStationPage=new VehicleSetStationPage(this);
-    this->vehicleSetStationPage->setMyBase(uMiddle,QString("站点设置界面"));
+    this->vehicleSetStationPage->setMyBase(uTolopogy,QString("紧急广播"));
     this->vehicleSetStationPage->hide();
 
     this->vehicleSetAirConditionPage=new VehicleSetAirConditionPage(this);
@@ -268,7 +273,7 @@ Widget::Widget(QWidget *parent) :
     this->vehicleMaintainceRunningGearSubsystemPage->hide();
 
     this->maintainceAccumulatorSubsystemPage=new MaintainceAccumulatorSubsystemPage(this);
-    this->maintainceAccumulatorSubsystemPage->setMyBase(uMiddle,QString("蓄电池监控界面"));
+    this->maintainceAccumulatorSubsystemPage->setMyBase(uMiddle,QString("踏面清扫测试界面"));
     this->maintainceAccumulatorSubsystemPage->hide();
 
 
@@ -277,8 +282,12 @@ Widget::Widget(QWidget *parent) :
     this->vehicleFaultEventPage->hide();
 
     this->vehicleByPassPage=new ByPassPage(this);
-    this->vehicleByPassPage->setMyBase(uMiddle,QString("旁路界面"));
+    this->vehicleByPassPage->setMyBase(uMiddle,QString("旁路界面1"));
     this->vehicleByPassPage->hide();
+
+    this->vehicleByPassPage2 = new ByPassPage2(this);
+    this->vehicleByPassPage2->setMyBase(uMiddle,QString("旁路界面2"));
+    this->vehicleByPassPage2->hide();
 
     this->maintainceCurrentFaultPage= new MaintainceCurrentFaultPage(this);
     this->maintainceCurrentFaultPage->setMyBase(uMiddle,QString("当前故障"));
@@ -332,6 +341,10 @@ Widget::Widget(QWidget *parent) :
     this->passwordPage->setMyBase(uMiddle,QString("密码页面"));
     this->passwordPage->hide();
 
+    this->vehicleSetSimlateStation=new VehicleSetSimlateStation(this);
+    this->vehicleSetSimlateStation->setMyBase(uMiddle,QString("半自动报站"));
+    this->vehicleSetSimlateStation->hide();
+
     //init H8 config
     H8::initH8("/dev/ttyUSB_SC");
     H8::getH8()->setBrightness(0);
@@ -375,6 +388,7 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uVehicleMaintainceRunningGearSubsystemPage,this->vehicleMaintainceRunningGearSubsystemPage);
     this->widgets.insert(uVehicleFaultEventPage,this->vehicleFaultEventPage);
     this->widgets.insert(uVehicleByPassPage,this->vehicleByPassPage);
+    this->widgets.insert(uVehicleByPassPage2,this->vehicleByPassPage2);
 
     this->widgets.insert(uMaintainceCurrentFaultPage ,this->maintainceCurrentFaultPage);
     this->widgets.insert(uMaintainceHistoryFaultPage,this->maintainceHistoryFaultPage);
@@ -394,15 +408,18 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uMaintainceAddSubtractTestPage,this->addSubtractTestPage);
     this->widgets.insert(uMaintaincePasswordPage,this->passwordPage);
     this->widgets.insert(uMaintainceAccumulatorSubsystemPage,this->maintainceAccumulatorSubsystemPage);
+    this->widgets.insert(uVehicleSetSimlateStation,this->vehicleSetSimlateStation);
 
 }
 
 Widget::~Widget()
 {
+    //avic_imx_destory();
     delete ui;
 }
 void Widget::updatePage()
 {
+
     static QTime timeStart(QTime::currentTime());
 
     static int counter = 1;
@@ -469,6 +486,23 @@ void Widget::updatePage()
 
     timeStart = QTime::currentTime();
 
+//    if(database->CTR1_DOBSOI_B1 || database->CTR4_DOBSOI_B1)
+//    {
+//        //avic_beep(1);
+//    }else
+//    {
+//        //avic_beep(0);
+//    }
+
+    if((database->CTD_TrainSpeed_U16*0.1)>=125)
+    {
+        AVIC_ExternalDevice::getAVIC_ExternalDevice()->setBuzzerOn();
+    }
+    else
+    {
+        AVIC_ExternalDevice::getAVIC_ExternalDevice()->setBuzzeroff();
+    }
+
 }
 void Widget::changePage(int page)
 {
@@ -515,13 +549,21 @@ void Widget::changePage(int page)
                 //this->vehicleTrainArea->hide();
             } else if(this->widgets[key]->Position==uTolopogy)
             {
-
-                //拓扑界面单独设置了一种模式
-                this->header->show(); 
-                this->navigator->show();
-                this->vehicleStationBar->show();
-                this->vehicleTopologyPage->show();
-                this->vehicleInformationArea->show();
+                if(uVehicleSetStationPage == key)
+                {
+                    this->header->show();
+                    this->navigator->show();
+                    this->vehicleStationBar->show();
+                    this->vehicleInformationArea->show();
+                }else
+                {
+                    //拓扑界面单独设置了一种模式
+                    this->header->show();
+                    this->navigator->show();
+                    this->vehicleStationBar->show();
+                    this->vehicleTopologyPage->show();
+                    this->vehicleInformationArea->show();
+                }
             }
             else if(this->widgets[key]->Position==uMainRunstatus)
             {
@@ -556,7 +598,6 @@ void Widget::showEvent(QShowEvent *)
             {
                 logger()->error("MVB板卡初始化失败");
             }
-
             //HMI-CCU
             crrcRicoMvb->addSourcePort(0x310,MVB_FCode4,64);
             crrcRicoMvb->addSourcePort(0x311,MVB_FCode4,64);
@@ -729,25 +770,12 @@ void Widget::showEvent(QShowEvent *)
             crrcRicoMvb->addVirtualPort(0xf415,MVB_FCode4);
             crrcRicoMvb->addVirtualPort(0xf416,MVB_FCode4);
 
-            //virtual edcu ports
-//            crrcRicoMvb->addVirtualPort(0xf710,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf711,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf712,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf730,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf731,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf732,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf750,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf751,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf752,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf770,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf771,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf772,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf790,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf791,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf792,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf7B0,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf7B1,MVB_FCode4);
-//            crrcRicoMvb->addVirtualPort(0xf7B2,MVB_FCode4);
+            crrcRicoMvb->addVirtualPort(0xf810,MVB_FCode4);
+
+            crrcRicoMvb->addVirtualPort(0xf210,MVB_FCode4);
+            crrcRicoMvb->addVirtualPort(0xf211,MVB_FCode4);
+            crrcRicoMvb->addVirtualPort(0xf212,MVB_FCode4);
+            crrcRicoMvb->addVirtualPort(0xf213,MVB_FCode4);
 
 
             //HVAC-CCU
@@ -822,7 +850,7 @@ void Widget::showEvent(QShowEvent *)
             crrcRicoMvb->addSinkPort(0xB18,MVB_FCode3,512);
 
             //CCU-PIS
-            crrcRicoMvb->addSinkPort(0x918,MVB_FCode2,512);
+            crrcRicoMvb->addSinkPort(0x918,MVB_FCode4,256);
 
             //CCU-TDS
             crrcRicoMvb->addSinkPort(0xC08,MVB_FCode4,1024);
@@ -832,6 +860,17 @@ void Widget::showEvent(QShowEvent *)
             crrcRicoMvb->addSinkPort(0x818,MVB_FCode1,512);
             //CCU-PCU
             crrcRicoMvb->addSinkPort(0xC18,MVB_FCode4,64);
+
+            //CCU-PIS
+            crrcRicoMvb->addSinkPort(0xC28,MVB_FCode4,64);
+            //CCU-BMS
+            crrcRicoMvb->addSinkPort(0xD18,MVB_FCode4,64);
+
+            //BMS-CCU
+            crrcRicoMvb->addSinkPort(0xD10,MVB_FCode4,64);
+            crrcRicoMvb->addSinkPort(0xD20,MVB_FCode4,64);
+            crrcRicoMvb->addSinkPort(0xD30,MVB_FCode4,64);
+            crrcRicoMvb->addSinkPort(0xD40,MVB_FCode4,64);
 
 
         }

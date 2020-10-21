@@ -25,13 +25,16 @@ VehicleAirCompressorPage::~VehicleAirCompressorPage()
 
 void VehicleAirCompressorPage::updatePage()
 {
-    ACPstatus<<database->CTD_RIOM2GWOLINE_B1<<database->RM2CT_CMK_B1;
+    ACPstatus<<database->CTD_RIOM1GWOLINE_B1<<database->CTR1_DOLOASMON_B1;
     setACPStatus(ui->lbl_airCompressor1,ACPstatus);
     ACPstatus.clear();
 
-    ACPstatus<<database->CTD_RIOM5GWOLINE_B1<<database->RM5CT_CMK_B1;
+    ACPstatus<<database->CTD_RIOM4GWOLINE_B1<<database->CTR4_DOLOASMON_B1;
     setACPStatus(ui->lbl_airCompressor2,ACPstatus);
     ACPstatus.clear();
+
+    ui->lbl_ACP_MC1->setText(QString::number(database->BiCT_MRPMP1_I16/20)+"kpa");
+    ui->lbl_ACP_MC2->setText(QString::number(database->BiCT_MRPMP2_I16/20)+"kpa");
 
 
 }

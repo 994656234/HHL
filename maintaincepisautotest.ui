@@ -230,8 +230,8 @@
   <widget class="QPushButton" name="BTNStartTest">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>220</y>
+     <x>390</x>
+     <y>260</y>
      <width>251</width>
      <height>61</height>
     </rect>
@@ -247,28 +247,6 @@ font:20px &quot;微软雅黑&quot;;
    </property>
    <property name="text">
     <string>开始自动报站测试</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BTNStopTest">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>220</y>
-     <width>251</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="whatsThis">
-    <string>2</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
-</string>
-   </property>
-   <property name="text">
-    <string>停止自动报站测试</string>
    </property>
   </widget>
  </widget>

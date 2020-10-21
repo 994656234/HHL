@@ -20,7 +20,7 @@ public:
 
 private:
     Ui::VehicleTractPage *ui;
-    void setTractStatus(QLabel *label,bool guohaha,bool status);
+    void setTractStatus(QLabel *label,bool cut,bool guohaha, bool status);
 };
 
 #endif // VEHICLETRACTPAGE_H

@@ -134,8 +134,14 @@
         <file>image/sivwarn.bmp</file>
         <file>image/pantoDowning.png</file>
         <file>image/pantoUping.png</file>
+        <file>image/emergencyopen.png</file>
+        <file>image/HVACyuWarm.png</file>
+        <file>image/HVAyuCool.png</file>
+        <file>image/HVACauto.png</file>
     </qresource>
     <qresource prefix="/">
         <file>image/emergencyopen.png</file>
+        <file>image/HVACyuWarm.png</file>
+        <file>image/HVAyuCool.png</file>
     </qresource>
 </RCC>

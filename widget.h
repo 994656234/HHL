@@ -6,6 +6,7 @@
 #include <QMap>
 #include "log4qt/logger.h"
 #include "global.h"
+#include "avic_externaldevice.h"
 
 namespace Ui {
     class Widget;
@@ -59,6 +60,7 @@ class MaintainceAuxiliarySubsystemPage;
 class MaintainceRunningGearSubsystemPage;
 class FaultEventPage;
 class ByPassPage;
+class ByPassPage2;
 class MaintainceAccumulatorSubsystemPage;
 
 
@@ -78,6 +80,7 @@ class MaintainceAccumulateDataPage;
 class AddSubtractTestPage;
 
 class PasswordPage;
+class VehicleSetSimlateStation;
 
 
 class Widget : public QWidget
@@ -93,7 +96,6 @@ public:
     QMap<int, MyBase *> widgets;
     bool systimeset(unsigned short int year,unsigned short int month,unsigned short int day,
                      unsigned short int hour,unsigned short int min,unsigned short int sec);
-
 
     ~Widget();
 
@@ -150,7 +152,7 @@ private:
     MaintainceRunningGearSubsystemPage* vehicleMaintainceRunningGearSubsystemPage;
     FaultEventPage* vehicleFaultEventPage;
     ByPassPage* vehicleByPassPage;
-
+    ByPassPage2* vehicleByPassPage2;
 
     MaintainceCurrentFaultPage* maintainceCurrentFaultPage;
     MaintainceHistoryFaultPage* maintainceHistoryFaultPage;
@@ -172,6 +174,8 @@ private:
     PasswordPage *passwordPage;
 
     MaintainceAccumulatorSubsystemPage *maintainceAccumulatorSubsystemPage;
+    AVIC_ExternalDevice *ExternalDevice;
+    VehicleSetSimlateStation *vehicleSetSimlateStation;
 
 
 };

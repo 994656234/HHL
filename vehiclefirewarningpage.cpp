@@ -39,32 +39,16 @@ void VehicleFireWarningPage::updatePage()
        <<database->FCU1CT_SHD2Alarm4_B1<<database->FCU1CT_SHD3Alarm4_B1<<database->FCU1CT_SHD4Alarm4_B1<<database->FCU1CT_SHD5Alarm4_B1
       <<database->FCU1CT_SHD6Alarm4_B1<<database->FCU1CT_SHD7Alarm4_B1;
 
-    status2<<database->FCU2CT_SHD1Alarm1_B1<<database->FCU2CT_SHD2Alarm1_B1<<database->FCU2CT_SHD3Alarm1_B1<<database->FCU2CT_SHD4Alarm1_B1
-          <<database->FCU2CT_SHD5Alarm1_B1<<database->FCU2CT_SHD6Alarm1_B1<<database->FCU2CT_SHD7Alarm1_B1<<database->FCU2CT_SHD1Alarm2_B1
-         <<database->FCU2CT_SHD2Alarm2_B1<<database->FCU2CT_SHD3Alarm2_B1<<database->FCU2CT_SHD4Alarm2_B1<<database->FCU2CT_SHD1Alarm3_B1
-        <<database->FCU2CT_SHD2Alarm3_B1<<database->FCU2CT_SHD3Alarm3_B1<<database->FCU2CT_SHD4Alarm3_B1<<database->FCU2CT_SHD1Alarm4_B1
-       <<database->FCU2CT_SHD2Alarm4_B1<<database->FCU2CT_SHD3Alarm4_B1<<database->FCU2CT_SHD4Alarm4_B1<<database->FCU2CT_SHD5Alarm4_B1
-      <<database->FCU2CT_SHD6Alarm4_B1<<database->FCU2CT_SHD7Alarm4_B1;
-
-    status3<<database->FCU1CT_SHD1Flt1_B1<<database->FCU1CT_SHD2Flt1_B1<<database->FCU1CT_SHD3Flt1_B1<<database->FCU1CT_SHD4Flt1_B1
+    status2<<database->FCU1CT_SHD1Flt1_B1<<database->FCU1CT_SHD2Flt1_B1<<database->FCU1CT_SHD3Flt1_B1<<database->FCU1CT_SHD4Flt1_B1
           <<database->FCU1CT_SHD5Flt1_B1<<database->FCU1CT_SHD6Flt1_B1<<database->FCU1CT_SHD7Flt1_B1<<database->FCU1CT_SHD1Flt2_B1
          <<database->FCU1CT_SHD2Flt2_B1<<database->FCU1CT_SHD3Flt2_B1<<database->FCU1CT_SHD4Flt2_B1<<database->FCU1CT_SHD1Flt3_B1
         <<database->FCU1CT_SHD2Flt3_B1<<database->FCU1CT_SHD3Flt3_B1<<database->FCU1CT_SHD4Flt3_B1<<database->FCU1CT_SHD1Flt4_B1
        <<database->FCU1CT_SHD2Flt4_B1<<database->FCU1CT_SHD3Flt4_B1<<database->FCU1CT_SHD4Flt4_B1<<database->FCU1CT_SHD5Flt4_B1
       <<database->FCU1CT_SHD6Flt4_B1<<database->FCU1CT_SHD7Flt4_B1;
-
-    status4<<database->FCU2CT_SHD1Flt1_B1<<database->FCU2CT_SHD2Flt1_B1<<database->FCU2CT_SHD3Flt1_B1<<database->FCU2CT_SHD4Flt1_B1
-          <<database->FCU2CT_SHD5Flt1_B1<<database->FCU2CT_SHD6Flt1_B1<<database->FCU2CT_SHD7Flt1_B1<<database->FCU2CT_SHD1Flt2_B1
-         <<database->FCU2CT_SHD2Flt2_B1<<database->FCU2CT_SHD3Flt2_B1<<database->FCU2CT_SHD4Flt2_B1<<database->FCU2CT_SHD1Flt3_B1
-        <<database->FCU2CT_SHD2Flt3_B1<<database->FCU2CT_SHD3Flt3_B1<<database->FCU2CT_SHD4Flt3_B1<<database->FCU2CT_SHD1Flt4_B1
-       <<database->FCU2CT_SHD2Flt4_B1<<database->FCU2CT_SHD3Flt4_B1<<database->FCU2CT_SHD4Flt4_B1<<database->FCU2CT_SHD5Flt4_B1
-      <<database->FCU2CT_SHD6Flt4_B1<<database->FCU2CT_SHD7Flt4_B1;
-    setFireWarnstatus(label,status1,status2,status3,status4);
+    setFireWarnstatus(label,status1,status2);
 
     status1.clear();
     status2.clear();
-    status3.clear();
-    status4.clear();
 }
 
 void VehicleFireWarningPage::setFireStatus(QLabel *label, QList<bool> status)
@@ -96,21 +80,21 @@ void VehicleFireWarningPage::setFireStatus(QLabel *label, QList<bool> status)
 
 }
 
-void VehicleFireWarningPage::setFireWarnstatus(QList<QLabel*> label, QList<bool> status1, QList<bool> status2,QList<bool> status3,QList<bool> status4)
+void VehicleFireWarningPage::setFireWarnstatus(QList<QLabel*> label, QList<bool> status1, QList<bool> status2)
 {
-    if((status1.length()!=22)||(status2.length()!=22)||(status3.length()!=22)||(status4.length()!=22)||(label.length()!=22))
+    if((status1.length()!=22)||(status2.length()!=22)||(label.length()!=22))
     {
-        qDebug()<<"fire warnning status1.length!=status2.length || status3.length!=status4.length";
+        qDebug()<<"fire warnning status1.length!=status2.length || label.length!=22";
         return;
     }
     for(int i=0;i<status1.length();i++)
     {
 
-        if(status1.at(i)||status2.at(i))
+        if(status1.at(i))
         {
             label.at(i)->setStyleSheet(FIREALARM);
         }
-        else if(status3.at(i)&&status4.at(i))
+        else if(status2.at(i))
         {
             label.at(i)->setStyleSheet(FIREFAULT);
         }

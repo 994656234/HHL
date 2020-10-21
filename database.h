@@ -16,6 +16,12 @@ public:
     Database();
     int HMIPosition;
     void updateDatabse(CrrcRicoMvb* crrcRicoMvb);
+    long getAllHVACFault();
+    long getAllSIVFault();
+    long getAllVVVFFault();
+    long getAllPISFault();
+    long getAllEDCUFault();
+    long getAllBCUFault();
 
     QDateTime HMI_DateTime_foruse;
 
@@ -39,17 +45,17 @@ public:
     //HMI-CCU
     unsigned char DiCT_Year_U8, DiCT_Month_U8,DiCT_Day_U8, DiCT_Hour_U8,
     DiCT_Minute_U8, DiCT_Second_U8, DiCT_TrainNum_U8,DiCT_LineNum_U8,
-    DiCT_WheelDia1_U8,DiCT_WheelDia2_U8,DiCT_WheelDia5_U8,DiCT_WheelDia6_U8;
+    DiCT_WheelDia1_U8,DiCT_WheelDia2_U8,DiCT_WheelDia5_U8,DiCT_WheelDia6_U8,DiCT_EmgyMsgCode_U8;
 
     bool
     DiCT_SAVETime_B1,DiCT_SAVETrainNum_B1,DiCT_SAVELineNum_B1, DiCT_SAVEWheelDig1_B1,
-    DiCT_SAVEWheelDig2_B1,DiCT_SAVEWheelDig3_B1, DiCT_SAVEWheelDig4_B1;
+    DiCT_SAVEWheelDig2_B1,DiCT_SAVEWheelDig3_B1, DiCT_SAVEWheelDig4_B1,DiCT_EmgyMsgStart_B1,DiCT_EmgyMsgStop_B1;
 
     unsigned char DiCT_SetFlagChecker_U8;
 
     bool
     DiCT_HVACEmgcyVenti_B1,DiCT_HVACVenti_B1,DiCT_HVACAutoCoolMode_B1, DiCT_HVACAutoWarmMode_B1,
-    DiCT_HVACStop_B1, DiCT_Reduce0point5_B1,DiCT_Reduce1_B1,DiCT_Reduce1point5_B1,
+    DiCT_HVACStop_B1,DiCT_NADA_B1, DiCT_Reduce0point5_B1,DiCT_Reduce1_B1,DiCT_Reduce1point5_B1,
     DiCT_Reduce2_B1,DiCT_Reduce2point5_B1, DiCT_Add0point5_B1, DiCT_Add1_B1,
     DiCT_Add1point5_B1, DiCT_Add2_B1, DiCT_Add2point5_B1,DiCT_Add0_B1,
     DiCT_Mp11TCUFaultReset_B1,DiCT_MC1TCUFaultReset_B1,DiCT_MC2TCUFaultReset_B1, DiCT_Mp21TCUFaultReset_B1,
@@ -60,13 +66,35 @@ public:
     DiCT_TC1APClear_B1, DiCT_TC2APClear_B1, DiCT_ACDETestStopFlag_B1,DiCT_ACDETestStartFlag_B1,
     DiCT_BCUSelfTestReq_B1,DiCT_BCUSelfTestStop_B1,DiCT_RunStatSetFlag_B1;
 
+    bool HVACWarmStop,HVACCoolStop;
+
+    bool fangyou,tamianClean;
+
+    unsigned  char CTD_TRCBLOCK_U8;
+
     unsigned char DiCT_RunStatSetType_U8;
     unsigned int DiCT_RunStatSetData_U32;
 
+    bool CTD_BMS1OLINE_B1,CTD_BMS2OLINE_B1,CTD_BMS3OLINE_B1,CTD_BMS4OLINE_B1;
+
+
+    //PIS 半自动报站
+    unsigned char DiCT_LINENUM_U8,DiCT_STARTLINENUM_U8,DiCT_ENDLINENUM_U8, DiCT_NEXTLINENUM_U8, DiCT_NOWLINENUM_U8;
+    bool DiCT_FAULT_B1, DiCT_HALFATOSTART_B1, DiCT_HALFATOEND_B1, DiCT_JUMPSET_B1,DiCT_JUMPCANCEL_B1;
+    unsigned short DiCT_SPEED_U16;
+    bool DiCT_JUMP1_B1, DiCT_JUMP2_B1, DiCT_JUMP3_B1,DiCT_JUMP4_B1, DiCT_JUMP5_B1,
+    DiCT_JUMP6_B1, DiCT_JUMP7_B1, DiCT_JUMP8_B1, DiCT_JUMP9_B1, DiCT_JUMP10_B1,
+    DiCT_JUMP11_B1, DiCT_JUMP12_B1, DiCT_JUMP13_B1, DiCT_JUMP14_B1,DiCT_JUMP15_B1,
+    DiCT_JUMP16_B1;
 
     ///zaixian zhuangtai
     unsigned short B1CT_MstrGV_B1,B2CT_MstrGV_B1,B3CT_MstrGV_B1,B4CT_MstrGV_B1,
     B5CT_MstrGV_B1,B6CT_MstrGV_B1,B7CT_MstrGV_B1,B8CT_MstrGV_B1;
+
+    //BCU
+
+    bool B1_1CT_MajorFltMC1Bg1_B1,B1_2CT_MajorFltMC1Bg1_B1,B2_1CT_MajorFltMC1Bg1_B1,B2_2CT_MajorFltMC1Bg1_B1,
+    B3_1CT_MajorFltMC1Bg1_B1,B3_2CT_MajorFltMC1Bg1_B1,B4_1CT_MajorFltMC1Bg1_B1,B4_2CT_MajorFltMC1Bg1_B1;
 
     //PIS
     bool  PIS1CT_P2_B1,PIS2CT_P2_B1;
@@ -82,6 +110,7 @@ public:
 
 
     //RIOM-CCU
+    bool RM3CT_CBBIV_B1,RM6CT_CBBIV_B1;
     bool RM1CT_DI1NOANSWER_B1,RM1CT_DI2NOANSWER_B1,RM1CT_DI3NOANSWER_B1,RM1CT_DI4NOANSWER_B1,
     RM1CT_DO1NOANSWER_B1,RM1CT_AX1NOANSWER_B1,RM1CT_LAT_B1,RM1CT_RLD_B1,
     RM1CT_1i0CHECK1_B1, RM1CT_1i0CHECK0_B1, RM1CT_PBK_B1,RM1CT_APBRCB_B1,
@@ -289,6 +318,15 @@ public:
     CTD_CurrentStatiOLINE_U32,CTD_NextStatiOLINEID_U32, CTD_LastStatiOLINEID_U32;
 
 
+    unsigned int EiCT_RunningKilometers_U32,EiCT_TractionEngyConsumption_U32,EiCT_AxPowerEngyConsumption_U32,EiCT_ReEngy_U32,
+    EiCT_ServiceDistance_U32,EiCT_AP1RunningTime_U32,EiCT_AP2RunningTime_U32,EiCT_TCMSTotalTime_U32;
+
+    unsigned char EiCT_TotalDistanceYear_U8,EiCT_TotalDistanceMonth_U8,EiCT_TotalDistanceDay_U8,EiCT_TractionECYear_U8,
+    EiCT_TractionECMonth_U8,EiCT_TractionECDay_U8, EiCT_AxPowerECYear_U8,EiCT_AxPowerECMonth_U8,
+    EiCT_AxPowerECDay_U8, EiCT_ReEngyYear_U8, EiCT_ReEngyMonth_U8,EiCT_ReEngyDay_U8,
+    EiCT_ServiceDistanceYear_U8, EiCT_ServiceDistanceMonth_U8, EiCT_ServiceDistanceDay_U8,EiCT_AP1ECYear_U8,
+    EiCT_AP1ECMonth_U8,EiCT_AP1ECDay_U8, EiCT_AP2ECYear_U8, EiCT_AP2ECMonth_U8,
+    EiCT_AP2ECDay_U8,EiCT_TCMSTotalTimeYear_U8, EiCT_TCMSTotalTimeMonth_U8,EiCT_TCMSTotalTimeDay_U8;
 
     //BCU-CCU
     bool
@@ -456,6 +494,8 @@ public:
     TCU6CT_IiMiddleVoltage_I16,TCU6CT_IiMiddleCurrent_I16;
 
 
+
+    bool TCU1CT_IxMotoISO,TCU2CT_IxMotoISO,TCU3CT_IxMotoISO,TCU4CT_IxMotoISO,TCU5CT_IxMotoISO,TCU6CT_IxMotoISO;
 
     //*******************************SIV-CCU******************************************//
     bool
@@ -758,6 +798,9 @@ public:
     unsigned short
     PANCT_PCMUisAlive_U16;
 
+    //**************************************BMS-CCU****************************************************//
+    unsigned short BMS1CT_SWVERSION_U16,BMS2CT_SWVERSION_U16,BMS3CT_SWVERSION_U16,BMS4CT_SWVERSION_U16;
+
 
 
 
@@ -778,6 +821,7 @@ private:
      void createRIOMList(bool riom1trust,bool riom7trust,bool riom6trust,bool riom8trust);
      void createPISList();
      void createERMList(bool erm1trust,bool erm2trust);
+     void createFCUList();
      void updateSystemStatus();
      void copyPort(unsigned short int sink, unsigned short int source);
 

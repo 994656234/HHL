@@ -327,11 +327,11 @@ font:20px &quot;微软雅黑&quot;;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_queryStation">
+  <widget class="QPushButton" name="BTN_simulateStation">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>290</y>
+     <x>580</x>
+     <y>395</y>
      <width>100</width>
      <height>80</height>
     </rect>
@@ -342,8 +342,8 @@ color: rgb(255, 255, 255);
 font:20px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>站点
-选择</string>
+    <string>半自动
+报站</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_setAirCondition">
@@ -512,6 +512,7 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
+  <zorder>lbl2</zorder>
   <zorder>label_7</zorder>
   <zorder>BTN1</zorder>
   <zorder>BTNHome</zorder>
@@ -528,10 +529,9 @@ border-bottom-right-radius:8px;</string>
   <zorder>LBLMP1</zorder>
   <zorder>LBLM1</zorder>
   <zorder>lbl1</zorder>
-  <zorder>BTN_queryStation</zorder>
+  <zorder>BTN_simulateStation</zorder>
   <zorder>BTN_setAirCondition</zorder>
   <zorder>BTN_setBrakeParam</zorder>
-  <zorder>lbl2</zorder>
   <zorder>BTN_setLight</zorder>
   <zorder>BTN_setBrakeTest</zorder>
   <zorder>BTN_setTime</zorder>

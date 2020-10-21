@@ -14,28 +14,35 @@ VehicleSetStationPage::VehicleSetStationPage(QWidget *parent) :
     ui->setupUi(this);    
     buttons<<ui->BTNStation1<<ui->BTNStation2<<ui->BTNStation3<<ui->BTNStation4<<ui->BTNStation5<<ui->BTNStation6
             <<ui->BTNStation7<<ui->BTNStation8<<ui->BTNStation9<<ui->BTNStation10<<ui->BTNStation11<<ui->BTNStation12
-            <<ui->BTNStation13<<ui->BTNStation14<<ui->BTNStation15<<ui->BTNStation16<<ui->BTNStation17<<ui->BTNStation18
-            <<ui->BTNStation19;
+             <<ui->BTNEmgyStart<<ui->BTNEmgyStop;
     foreach(QPushButton* button , buttons)
     {
         connect(button,SIGNAL(clicked()),this,SLOT(buttonPushEvent()));
     }
-
-    station.insert("二环西路",1);
-    station.insert("孔家营",2);
-    station.insert("呼钢东路",3);
-    station.insert("西龙王庙",4);
-    station.insert("马兰夫纪念管",5);
-    station.insert("附属医院",6);
-   // station.insert("",)
-
-
-
+    setStationNumber=0;
 }
-QString VehicleSetStationPage::flag="";
+
 VehicleSetStationPage::~VehicleSetStationPage()
 {
     delete ui;
+}
+
+void VehicleSetStationPage::showEvent(QShowEvent *)
+{
+    this->database->DiCT_SetFlagChecker_U8 = 0xAA;
+}
+void VehicleSetStationPage::hideEvent(QHideEvent *)
+{
+    this->database->DiCT_SetFlagChecker_U8 = 0x55;
+    killTimer(timerstart);
+    this->database->DiCT_EmgyMsgStart_B1 = false;
+    this->database->DiCT_EmgyMsgStop_B1 = false;
+    this->database->DiCT_EmgyMsgCode_U8 =  0;
+
+    for(int i = 0;i<buttons.size();i++)
+    {
+        buttons.at(i)->setStyleSheet(BTNRELEASE);
+    }
 }
 
 void VehicleSetStationPage::on_BTN1_pressed()
@@ -55,39 +62,47 @@ void VehicleSetStationPage::on_BTN9_pressed()
 
 void VehicleSetStationPage::buttonPushEvent()
 {
-    QString key=((QPushButton*)this->sender())->text();
-    if("ORIGIN"==flag)
+
+    int number=((QPushButton*)sender())->whatsThis().toInt();
+    if(number==13)
     {
-        ui->lbl_OriginStation->setText(key);
+        this->database->DiCT_EmgyMsgStart_B1 = true;
+        timerstart = startTimer(1000);
+        ((QPushButton*)sender())->setStyleSheet(BTNPRESS);
     }
-    else if ("TERMINAL"==flag)
+    else if(number==14)
     {
-        ui->lbl_Terminal->setText(key);
+        timerstart = startTimer(1000);
+        this->database->DiCT_EmgyMsgStop_B1 = true;
+        ((QPushButton*)sender())->setStyleSheet(BTNPRESS);
     }
     else
     {
-        qDebug()<<key;
+        setStationNumber=number;
+        for(int i = 0;i<buttons.size();i++)
+        {
+            buttons.at(i)->setStyleSheet(BTNRELEASE);
+        }
+        ((QPushButton*)sender())->setStyleSheet(BTNPRESS);
     }
 
 }
-void VehicleSetStationPage::on_BTNOriginStation_pressed()
+
+void VehicleSetStationPage::updatePage()
 {
-    ui->lbl_OriginStation->setStyleSheet(ONFOCUS);
-    ui->lbl_Terminal->setStyleSheet(OUTFOCUS);
-    flag="ORIGIN";
+    this->database->DiCT_EmgyMsgCode_U8=setStationNumber;
+    //qDebug()<< this->database->DiCT_EmgyMsgStart_B1<<"++++++++++"<<this->database->DiCT_EmgyMsgStop_B1<<"+++++++++++++++"<<this->database->DiCT_EmgyMsgCode_U8;
 }
 
-void VehicleSetStationPage::on_BTNTerminal_pressed()
+void VehicleSetStationPage::timerEvent(QTimerEvent *e)
 {
-    ui->lbl_Terminal->setStyleSheet(ONFOCUS);
-    ui->lbl_OriginStation->setStyleSheet(OUTFOCUS);
-    flag="TERMINAL";
-}
-
-void VehicleSetStationPage::on_BTNChangeOrigin_Terminal_pressed()
-{
-    QString change;
-    change=ui->lbl_OriginStation->text();
-    ui->lbl_OriginStation->setText(ui->lbl_Terminal->text());
-    ui->lbl_Terminal->setText(change);
+        killTimer(timerstart);
+        this->database->DiCT_EmgyMsgStop_B1 = false;
+        this->database->DiCT_EmgyMsgStart_B1 = false;
+      //  this->database->DiCT_EmgyMsgCode_U8 =  0;
+        timerstart=0;
+        for(int i = 0;i<buttons.size();i++)
+        {
+            buttons.at(i)->setStyleSheet(BTNRELEASE);
+        }
 }

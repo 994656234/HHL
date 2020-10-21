@@ -4,6 +4,7 @@
 #include "qpushbutton.h"
 #include "qdebug.h"
 #include "QTimer"
+#include "qlabel.h"
 
 #include <QWidget>
 
@@ -25,10 +26,13 @@ public:
 private:
     Ui::VehicleSetAirConditionPage *ui;
     QList<QPushButton*> metroButtons,modeButtons,temButtons;
-    int timer_2s[2];
+    int timerID1,timerID2;
     QList<bool *> modeSignal,temSignal;
-    float m_setTemp;
-    int flag,m_modeNum,m_temNum,m_setTempFlag;
+    int flag,m_modeNum,m_temNum,m_setTemp,m_setTempFlag;
+    QList<QLabel*> xinFenglbl,huiFenglbl;
+    QList<unsigned char> xinFengStatus,huiFengStatus;
+    void setXinFengStatus(QList<QLabel*> lbl,QList<unsigned char> status);
+    void setHuiFengStatus(QList<QLabel*> lbl,QList<unsigned char> status);
 
 private slots:
     void on_BTN_comfirm1_pressed();
@@ -39,6 +43,7 @@ private slots:
     void modeBTNPressEvent();
     void temBTNPressEvent();
 
+    void on_BTN_newwind_open_pressed();
 };
 
 #endif // VEHICLESETAIRCONDITIONPAGE_H

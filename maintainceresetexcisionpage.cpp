@@ -12,6 +12,9 @@ MaintainceResetExcisionPage::MaintainceResetExcisionPage(QWidget *parent) :
 {
     ui->setupUi(this); 
 
+    ui->BTN_TCU_2_2->hide();
+    ui->BTN_TCU_3_2->hide();
+
     QList<QPushButton*> buttons;
     buttons<<ui->BTN1<<ui->BTN2<<ui->BTN3<<ui->BTN4<<ui->BTN5<<ui->BTN6<<ui->BTN7<<ui->BTN8<<ui->BTN9<<ui->BTNHome;
     foreach(QPushButton* button,buttons)
@@ -19,18 +22,12 @@ MaintainceResetExcisionPage::MaintainceResetExcisionPage(QWidget *parent) :
         connect(button,SIGNAL(pressed()),this,SLOT(pushButtonPressedEvent()));
     }
 
-    CutButtons<<ui->BTN_DCU_Ele_Excision_M1<<ui->BTN_DCU_Ele_Excision_M2<<ui->BTN_DCU_Ele_Excision_Mp1<<ui->BTN_DCU_Ele_Excision_Mp2
-            <<ui->BTN_SIV_Excision_M1<<ui->BTN_SIV_Excision_M2<<ui->BTN_SIV_Excision_TC1<<ui->BTN_SIV_Excision_TC2;
+    CutButtons<<ui->BTN_SIV_1<<ui->BTN_SIV_2<<ui->BTN_TCU_1<<ui->BTN_TCU_2_1
+             <<ui->BTN_TCU_3_1<<ui->BTN_TCU_4;
 
-    ResetButtons<<ui->BTN_DCU_Reset_M1<<ui->BTN_DCU_Reset_M2<<ui->BTN_DCU_Reset_Mp1<<ui->BTN_DCU_Reset_Mp2
-            <<ui->BTN_SIV_Reset_M1<<ui->BTN_SIV_Reset_M2<<ui->BTN_SIV_Reset_TC1<<ui->BTN_SIV_Reset_TC2;
+    CutSignals<<&database->DiCT_ACU1Cutoff_B1<<&database->DiCT_ACU2Cutoff_B1<<&database->DiCT_MC1DynamicBrkCut_B1
+             <<&database->DiCT_Mp1DynamicBrkCut_B1<<&database->DiCT_Mp2DynamicBrkCut_B1<<&database->DiCT_MC2DynamicBrkCut_B1;
 
-
-   // CutSignals<<&database->HMiCT_M1DynamicBrkCut_B1<<&database->HMiCT_M2DynamicBrkCut_B1<<&database->HMiCT_Mp1DynamicBrkCut_B1<<&database->HMiCT_Mp2DynamicBrkCut_B1
-    //        <<&database->HMiCT_ACU2Cutoff_B1<<&database->HMiCT_ACU3Cutoff_B1<<&database->HMiCT_ACU1Cutoff_B1<<&database->HMiCT_ACU4Cutoff_B1;
-
-   // ResetSignals<<&database->HMiCT_M1DCUFaultReset_B1<<&database->HMiCT_M2DCUFaultReset_B1<<&database->HMiCT_Mp1DCUFaultReset_B1<<&database->HMiCT_Mp2DCUFaultReset_B1
-   //         <<&database->HMiCT_ACU2Reset_B1<<&database->HMiCT_ACU3Reset_B1<<&database->HMiCT_ACU1Reset_B1<<&database->HMiCT_ACU4Reset_B1;
 
 
 
@@ -38,12 +35,6 @@ MaintainceResetExcisionPage::MaintainceResetExcisionPage(QWidget *parent) :
     {
         connect(CutButtons.at(i),SIGNAL(pressed()),this,SLOT(CutButtonsPressEvent()));
     }
-    for(int i = 0;i<ResetButtons.size();i++)
-    {
-        ResetButtons.at(i)->hide();
-        connect(ResetButtons.at(i),SIGNAL(pressed()),this,SLOT(RstButtonsPressEvent()));
-    }
-
 
     ui->lbl_cab1_active->hide();
     ui->lbl_cab2_active->hide();
@@ -72,49 +63,19 @@ void MaintainceResetExcisionPage::pushButtonPressedEvent()
 
 
 void MaintainceResetExcisionPage::CutButtonsPressEvent()
-{
-
+{    
     int tmp_index = ((QPushButton*)this->sender())->whatsThis().toInt()-1;
     if(*CutSignals[tmp_index]==true)
     {
-
-        //*CutSignals[tmp_index] = false;
+        *CutSignals.at(tmp_index) = false;
         ((QPushButton*)this->sender())->setStyleSheet(BTNRELEASE);
-        ResetButtons[tmp_index]->setStyleSheet(BTNRELEASE);
-        ResetButtons[tmp_index]->setDisabled(false);
     }else
     {
-
-        //*CutSignals[tmp_index] = true;
-        ResetButtons[tmp_index]->setStyleSheet(BTNOUTABLE);
-        ResetButtons[tmp_index]->setDisabled(true);
+        *CutSignals.at(tmp_index)= true;
         ((QPushButton*)this->sender())->setStyleSheet(BTNPRESS);
     }
 
 }
-
-void MaintainceResetExcisionPage::RstButtonsPressEvent()
-{
-    int tmp_index = ((QPushButton*)this->sender())->whatsThis().toInt()-1;
-    //*ResetSignals[tmp_index] = true;
-    timer2s[tmp_index] = this->startTimer(2000);
-    ((QPushButton*)this->sender())->setStyleSheet(BTNPRESS);
-
-}
-
-void MaintainceResetExcisionPage::timerEvent(QTimerEvent *e)
-{
-    for(int i = 0; i < 8;i++)
-    {
-        if(e->timerId() == timer2s[i])
-        {
-            killTimer(timer2s[i]);
-            ResetButtons[i]->setStyleSheet(BTNRELEASE);
-            //*ResetSignals[i] = false;
-        }
-    }
-}
-
 
 void MaintainceResetExcisionPage::updatePage()
 {

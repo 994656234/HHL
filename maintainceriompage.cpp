@@ -1,8 +1,8 @@
 #include "maintainceriompage.h"
 #include "ui_maintainceriompage.h"
 
-#define BUTTONPRESS "border-top:0px solid rgb(19,20,87);color: rgb(255, 255, 255);background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));font:16px \"微软雅黑\";"
-#define BUTTONRELEASE "border-top:3px solid rgb(19,20,87);color: rgb(255, 255, 255);border-bottom:3px solid rgb(187,188,247);border-left:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));border-right:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));font:16px \"微软雅黑\";"
+#define BUTTONPRESS "border-top:0px solid rgb(19,20,87);color: rgb(255, 255, 255);background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));font:12px \"微软雅黑\";"
+#define BUTTONRELEASE "border-top:3px solid rgb(19,20,87);color: rgb(255, 255, 255);border-bottom:3px solid rgb(187,188,247);border-left:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));border-right:3px solid qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 rgb(19,20,87), stop:1 rgb(187,188,247));font:12px \"微软雅黑\";"
 #define DI_LENGTH 24
 #define SPACE 0
 
@@ -187,14 +187,14 @@ void MaintainceRIOMPage::updatePage()
                 <<database->RM3CT_HVBCB2_B1<<database->RM3CT_PANEBR_B1<<database->RM3CT_FUSE_B1<<database->RM3CT_HSCB1STATE_B1
                 <<database->RM3CT_HSCB2STATE_B1<<database->RM3CT_BBIV1_B1<<database->RM3CT_BBIV2_B1<<database->RM3CT_PBIV_B1
                 <<database->RM3CT_ExtendPower_B1<<database->RM3CT_ACUPowerCover_B1<<database->RM3CT_PANIV_B1<<database->RM3CT_VVVF1TEMPARLM_B1
-                <<database->RM3CT_VVVF2TEMPARLM_B1<<database->RM3CT_WOSEBR_B1<<database->RM3CT_BMSCB_B1<<SPACE
+                <<database->RM3CT_VVVF2TEMPARLM_B1<<database->RM3CT_WOSEBR_B1<<database->RM3CT_BMSCB_B1<<database->RM3CT_CBBIV_B1
 
            <<database->RM6CT_BRR1_B1<<database->RM6CT_BRR2_B1<<database->RM6CT_MPlightfault_B1<<database->RM6CT_DOWNPAN_B1
            <<database->RM6CT_UPPAN_B1<<database->RM6CT_UPRPAN_B1<<database->RM6CT_PTCB_B1<<database->RM6CT_HVBCB1_B1
            <<database->RM6CT_HVBCB2_B1<<database->RM6CT_PANEBR_B1<<database->RM6CT_FUSE_B1<<database->RM6CT_HSCB1STATE_B1
            <<database->RM6CT_HSCB2STATE_B1<<database->RM6CT_BBIV1_B1<<database->RM6CT_BBIV2_B1<<database->RM6CT_PBIV_B1
            <<database->RM6CT_ExtendPower_B1<<database->RM6CT_ACUPowerCover_B1<<database->RM6CT_PANIV_B1<<database->RM6CT_VVVF1TEMPARLM_B1
-           <<database->RM6CT_VVVF2TEMPARLM_B1<<database->RM6CT_WOSEBR_B1<<database->RM6CT_BMSCB_B1<<SPACE;
+           <<database->RM6CT_VVVF2TEMPARLM_B1<<database->RM6CT_WOSEBR_B1<<database->RM6CT_BMSCB_B1<<database->RM6CT_CBBIV_B1;
 
         MPDI2Data<<database->CTR3_MP1EXRBATTERY_B1<<database->CTR3_MP1LOYR_B1<<SPACE<<SPACE
                    <<SPACE<<SPACE<<SPACE<<SPACE
@@ -335,7 +335,7 @@ void MaintainceRIOMPage::buttonsPressEvent()
          Di5Name<<"制动缓解继电器1"<<"制动缓解继电器2"<<"右侧门释放列车线"<<"右侧开门列车线"<<"右侧关门列车线"<<"近端零速列车线右侧"<<"远端零速列车线右侧"<<"左侧门释放列车线"
                  <<"左侧开门列车线"<<"左侧关门列车线"<<"近端零速列车线左侧"<<"远端零速列车线左侧"<<"客室照明驱动器故障"<<"保留"<<"牵引指令列车线"<<"制动指令列车线"
                  <<"向前列车线"<<"向后列车线"<<"走行部检测系统断路器"<<"保留"<<"保留"<<"保留"<<"保留"<<"保留";
-         this->tcdi1->initialName(Di5Name,"DI5","MC");
+         this->tcdi1->initialName(Di5Name,"DI1","MC");
          this->tcdi1->show();
          this->tcdo1->hide();
          this->tcdo2->hide();
@@ -354,7 +354,7 @@ void MaintainceRIOMPage::buttonsPressEvent()
          Di6Name<<"列车供电接触器"<<"空压机电机启动断路器"<<"蓄电池断路器"<<"列车准备电压主熔断器"<<"低压检测继电器状态"<<"蓄电池接地断路器状态"<<"中压接地断路器状态"<<"蓄电池隔离开关"
                  <<"主风缸欠压压力开关"<<"SIV正常状态"<<"干燥塔1压力状态"<<"干燥塔2压力状态"<<"转向架1隔离状态"<<"转向架2隔离状态"<<"停放制动隔离阀状态"<<"蓄电池主熔断器1&2并联"
                  <<"空压机启动接触器"<<"制动隔离阀B04状态"<<"外界风源状态"<<"VVVF3感温电缆的状态"<<"SIV感温电缆的状态"<<"保留"<<"保留"<<"保留";
-         this->tcdi1->initialName(Di6Name,"DI6","MC");
+         this->tcdi1->initialName(Di6Name,"DI2","MC");
          this->tcdi1->show();
          this->tcdo1->hide();
          this->tcdo2->hide();
@@ -372,7 +372,7 @@ void MaintainceRIOMPage::buttonsPressEvent()
          QList<QString> MPDi1Name;
          MPDi1Name<<"制动缓解继电器1"<<"制动缓解继电器2"<<"客室照明驱动器故障"<<"受电弓降弓到位信号"<<"受电弓升弓信号"<<"升弓继电器状态"<<"受电弓回路断路器"<<"Mp高压箱断路器1"
                  <<"Mp高压箱断路器2 "<<"受电弓使能继电器"<<"熔断器箱熔断器状态"<<"高速断路器1状态"<<"高速断路器2状态"<<"转向架1隔离状态"<<"转向架2隔离状态"<<"停放制动隔离阀状态"
-                 <<"扩展供电状态"<<"辅助高压箱车间电源端盖的状态"<<"受电弓二位三通阀"<<"VVVF1感温电缆的状态"<<"VVVF2感温电缆的状态"<<"车间电源使能继电器"<<"走行部检测系统断路器"<<"保留";
+                 <<"扩展供电状态"<<"辅助高压箱车间电源端盖的状态"<<"受电弓二位三通阀"<<"VVVF1感温电缆的状态"<<"VVVF2感温电缆的状态"<<"车间电源使能继电器"<<"走行部检测系统断路器"<<"制动隔离阀B04状态";
          this->di1->initialName(MPDi1Name,"DI1","MP");
          this->tcdi1->hide();
          this->tcdo1->hide();

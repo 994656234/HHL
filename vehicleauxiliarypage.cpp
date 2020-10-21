@@ -88,8 +88,8 @@ void VehicleAuxiliaryPage::updatePage()
         ui->lbl_metroPower2->setStyleSheet(METROPOWEROFF);
     }
 
-    setSIVStatus(ui->lbl_AC1,database->CTD_ACU1OLINE_B1,database->ACU1CT_IxSIVMediumF_B1);
-    setSIVStatus(ui->lbl_AC2,database->CTD_ACU2OLINE_B1,database->ACU2CT_IxSIVMediumF_B1);
+    setSIVStatus(ui->lbl_AC1,database->ACU1CT_IxSIVOK_B1,database->ACU1CT_IxChgMajorF_B1);
+    setSIVStatus(ui->lbl_AC2,database->ACU2CT_IxSIVOK_B1,database->ACU2CT_IxChgMajorF_B1);
 
     BCMStatus<<database->CTD_ACU1OLINE_B1<<database->ACU1CT_IxChgMajorF_B1<<database->ACU1CT_IxDCOK_B1;
     setBCMStatus(ui->lbl_DC1,BCMStatus);
@@ -102,20 +102,20 @@ void VehicleAuxiliaryPage::updatePage()
 
 }
 
-void VehicleAuxiliaryPage::setSIVStatus(QLabel *label, bool unknow, bool status)
+void VehicleAuxiliaryPage::setSIVStatus(QLabel *label, bool know, bool status)
 {
 
-    if(!unknow)
-    {
-        label->setStyleSheet(SIVUNKNOW);
-    }
-    else if(status)
+    if(status)
     {
         label->setStyleSheet(SIVFAULT);
     }
-    else
+    else if(know)
     {
         label->setStyleSheet(SIVNORMAL);
+    }
+    else
+    {
+        label->setStyleSheet(SIVUNKNOW);
     }
 
 }

@@ -29,7 +29,10 @@
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+    <string notr="true">	font: 20px &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
    </property>
    <property name="text">
     <string>上一页</string>
@@ -111,7 +114,10 @@
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 20px, &quot;微软雅黑&quot;;color: black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));</string>
+    <string notr="true">	font: 20px &quot;微软雅黑&quot;;
+    color: black;
+	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
+</string>
    </property>
    <property name="text">
     <string>返回</string>
@@ -196,7 +202,7 @@
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">	font: 20px, &quot;微软雅黑&quot;;
+    <string notr="true">	font: 20px &quot;微软雅黑&quot;;
     color: black;
 	transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));
 </string>

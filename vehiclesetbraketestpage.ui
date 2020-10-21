@@ -437,7 +437,7 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="BTN_start">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>440</x>
      <y>420</y>
      <width>131</width>
      <height>71</height>
@@ -464,7 +464,7 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="BTN_stop">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>690</x>
      <y>420</y>
      <width>131</width>
      <height>71</height>

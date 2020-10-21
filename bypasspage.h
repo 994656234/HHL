@@ -21,9 +21,10 @@ public:
 
 private:
     Ui::ByPassPage *ui;
+    void setStatus(QLabel* lbl,bool status);
+
 private slots:
     void pushButtonPressedEvent();
-    void setStatus(QLabel* lbl,bool status);
 };
 
 #endif // BYPASSPAGE_H

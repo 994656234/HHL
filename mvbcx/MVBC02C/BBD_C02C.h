@@ -32,6 +32,7 @@
         unsigned char   bUsed[PORT_NUMBER_MAX];             /* 0: free; !0: used */
         E_MVB_PORTSIZE  u16PortSize[PORT_NUMBER_MAX];       /* 端口大小：add by Wurst */
         E_MVB_PORTDIR   bPortDir[PORT_NUMBER_MAX];          /* 端口方向：0：Sink；1：Source */
+        unsigned short  u16Freshness[PORT_NUMBER_MAX];
     }T_BBD_PIT_INFO;
     
     #if defined(__cplusplus)
@@ -53,7 +54,7 @@
         
         MUE_RESULT BBDC02C_PutData(unsigned short u16PortAddr , unsigned char *pData);
         MUE_RESULT BBDC02C_Uninit(void);
-        MUE_RESULT BBDC02C_GetData(unsigned short u16PortAddr, unsigned char *p_port_status, unsigned char *pData, unsigned short  *pu8Freshness);
+        MUE_RESULT BBDC02C_GetData(unsigned short u16PortAddr, unsigned char *p_port_status, unsigned char *pData, unsigned short  *pu16Freshness);
         MUE_RESULT BBDC02C_RegPort( E_MVB_PORTDIR portdir,unsigned short portaddr,unsigned short portsize);
         MUE_RESULT BBDC02C_UnRegPort(unsigned short portaddr);
         MUE_RESULT BBDC02C_Init(void);

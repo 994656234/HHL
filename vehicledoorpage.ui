@@ -140,7 +140,7 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_door3_3">
    <property name="geometry">
     <rect>
-     <x>610</x>
+     <x>608</x>
      <y>150</y>
      <width>21</width>
      <height>25</height>
@@ -172,7 +172,7 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_door2_4">
    <property name="geometry">
     <rect>
-     <x>392</x>
+     <x>395</x>
      <y>150</y>
      <width>21</width>
      <height>25</height>
@@ -220,7 +220,7 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_door2_3">
    <property name="geometry">
     <rect>
-     <x>392</x>
+     <x>395</x>
      <y>70</y>
      <width>21</width>
      <height>25</height>
@@ -268,7 +268,7 @@ border:1px solid black;
   <widget class="QLabel" name="lbl_door3_4">
    <property name="geometry">
     <rect>
-     <x>608</x>
+     <x>606</x>
      <y>70</y>
      <width>21</width>
      <height>25</height>
@@ -640,7 +640,7 @@ border:0px solid black;</string>
   <widget class="QLabel" name="lbl_3_4">
    <property name="geometry">
     <rect>
-     <x>608</x>
+     <x>606</x>
      <y>128</y>
      <width>21</width>
      <height>20</height>
@@ -700,7 +700,7 @@ border:0px solid black;</string>
   <widget class="QLabel" name="lbl_2_4">
    <property name="geometry">
     <rect>
-     <x>392</x>
+     <x>395</x>
      <y>128</y>
      <width>21</width>
      <height>20</height>
@@ -880,7 +880,7 @@ border:0px solid black;</string>
   <widget class="QLabel" name="lbl_2_3">
    <property name="geometry">
     <rect>
-     <x>392</x>
+     <x>395</x>
      <y>98</y>
      <width>21</width>
      <height>20</height>
@@ -940,7 +940,7 @@ border:0px solid black;</string>
   <widget class="QLabel" name="lbl_3_3">
    <property name="geometry">
     <rect>
-     <x>608</x>
+     <x>606</x>
      <y>98</y>
      <width>21</width>
      <height>20</height>
@@ -1139,6 +1139,38 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_door_driver1">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>21</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_door_driver2">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>70</y>
+     <width>21</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>LBLM2</zorder>
@@ -1201,6 +1233,8 @@ border-bottom-right-radius:8px;</string>
   <zorder>lbl_cab1_direction</zorder>
   <zorder>lbl_cab2_direction</zorder>
   <zorder>lbl_cab2_active</zorder>
+  <zorder>lbl_door_driver1</zorder>
+  <zorder>lbl_door_driver2</zorder>
  </widget>
  <resources/>
  <connections/>

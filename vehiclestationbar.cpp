@@ -107,8 +107,8 @@ void VehicleStationBar::updatePage()
 //    }
 
     //网压
-    ui->lbl_networkVoltageValue->setText(QString::number((int)(database->CTD_CatenaryVoltage_U16/10)));
-
+    ui->lbl_networkVoltageValue->setText(QString::number((int)(database->CTD_CatenaryVoltage_U16)));
+    ui->lbl_batteryVoltageValue->setText(QString::number(qMax(database->ACU1CT_IuiBtyVltg_U16,database->ACU2CT_IuiBtyVltg_U16)));
 
 
 }
