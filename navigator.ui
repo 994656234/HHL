@@ -116,7 +116,7 @@ transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgb
     <string>帮助</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTNLeaveB">
+  <widget class="QPushButton" name="BTNBogieLampSubsystem">
    <property name="geometry">
     <rect>
      <x>520</x>
@@ -132,7 +132,8 @@ transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgb
     <string notr="true"/>
    </property>
    <property name="text">
-    <string/>
+    <string>走行部
+系统</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNSkipback">

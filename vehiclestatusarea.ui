@@ -986,7 +986,6 @@ border-color: rgb(0, 0, 0);</string>
    <zorder>label_100</zorder>
    <zorder>label_101</zorder>
    <zorder>lbl_progressbar_value</zorder>
-   <zorder>lbl_qianyinfengsuo</zorder>
   </widget>
   <widget class="QLabel" name="lbl_level_name">
    <property name="geometry">
@@ -1184,6 +1183,9 @@ border-radius:10px;</string>
      <width>141</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>2</string>

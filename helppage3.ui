@@ -593,6 +593,45 @@ font:16px &quot;微软雅黑&quot;;</string>
     <string>乘客紧急通信单元离线</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_31">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>180</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:14px &quot;微软雅黑&quot;;
+background-color: rgb(255, 0, 0);
+color: rgb(0, 0, 0);
+border:2px solid black;</string>
+   </property>
+   <property name="text">
+    <string>PH</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_32">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>190</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>车间盖闭合</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

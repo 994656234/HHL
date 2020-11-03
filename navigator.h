@@ -18,6 +18,7 @@ public:
     explicit Navigator(QWidget *parent = 0);
     ~Navigator();
     void refreshAllButtons();
+    void updatePage();
 
 private:
     Ui::Navigator *ui;

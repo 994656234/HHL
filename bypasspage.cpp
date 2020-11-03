@@ -101,8 +101,8 @@ void ByPassPage::updatePage()
     setStatus(ui->lbl7_2,database->RM4CT_PEBS_B1);
     setStatus(ui->lbl8_1,database->RM1CT_DBPS_B1);
     setStatus(ui->lbl8_2,database->RM4CT_DBPS_B1);
-    setStatus(ui->lbl9_1,database->RM1CT_ATPFS_B1);
-    setStatus(ui->lbl9_2,database->RM4CT_ATPFS_B1);
+    //setStatus(ui->lbl9_1,database->RM1CT_ATPFS_B1);
+    //setStatus(ui->lbl9_2,database->RM4CT_ATPFS_B1);
     setStatus(ui->lbl10_1,database->RM1CT_ZVBS_B1);
     setStatus(ui->lbl10_2,database->RM4CT_ZVBS_B1);
 

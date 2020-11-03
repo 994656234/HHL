@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     Log4Qt::PropertyConfigurator::configure(a.applicationDirPath()+ "/log4j.properties");
 
-#ifndef USE_DEBUG_MODE
+#ifndef USER_DEBUG_MODE
     a.setOverrideCursor(QCursor(Qt::BlankCursor));
 #endif
 

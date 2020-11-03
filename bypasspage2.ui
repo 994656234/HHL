@@ -41,7 +41,7 @@
   <widget class="QLabel" name="lbl5_2">
    <property name="geometry">
     <rect>
-     <x>800</x>
+     <x>808</x>
      <y>311</y>
      <width>101</width>
      <height>41</height>
@@ -55,7 +55,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -64,9 +64,9 @@ border-radius:8px;</string>
   <widget class="QLabel" name="LBL1_5">
    <property name="geometry">
     <rect>
-     <x>412</x>
+     <x>432</x>
      <y>310</y>
-     <width>221</width>
+     <width>176</width>
      <height>41</height>
     </rect>
    </property>
@@ -85,9 +85,9 @@ color: white;
   <widget class="QLabel" name="LBL1_2">
    <property name="geometry">
     <rect>
-     <x>412</x>
+     <x>432</x>
      <y>160</y>
-     <width>221</width>
+     <width>176</width>
      <height>41</height>
     </rect>
    </property>
@@ -97,7 +97,7 @@ color: white;
 </string>
    </property>
    <property name="text">
-    <string>车门释放隔离</string>
+    <string>开门使能旁路</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -202,7 +202,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -234,9 +234,9 @@ border-radius:8px;</string>
   <widget class="QLabel" name="LBL1_3">
    <property name="geometry">
     <rect>
-     <x>412</x>
+     <x>432</x>
      <y>210</y>
-     <width>221</width>
+     <width>176</width>
      <height>41</height>
     </rect>
    </property>
@@ -310,7 +310,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -440,27 +440,6 @@ font:20px &quot;微软雅黑&quot;;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="LBL1_10">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>460</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
-color: white;
-</string>
-   </property>
-   <property name="text">
-    <string>转向架1隔离</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="LBLMP1">
    <property name="geometry">
     <rect>
@@ -477,26 +456,6 @@ font:20px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
     <string>MP1车</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="linelbl1_8">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>480</y>
-     <width>191</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 2px solid white;
-</string>
-   </property>
-   <property name="text">
-    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -542,9 +501,9 @@ font:20px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="linelbl1_6">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>250</x>
      <y>380</y>
-     <width>515</width>
+     <width>35</width>
      <height>2</height>
     </rect>
    </property>
@@ -562,8 +521,8 @@ font:20px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="lbl8_2">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>461</y>
+     <x>637</x>
+     <y>311</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -576,7 +535,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -585,9 +544,9 @@ border-radius:8px;</string>
   <widget class="QLabel" name="LBL1_6">
    <property name="geometry">
     <rect>
-     <x>413</x>
+     <x>433</x>
      <y>360</y>
-     <width>221</width>
+     <width>176</width>
      <height>41</height>
     </rect>
    </property>
@@ -598,27 +557,6 @@ color: white;
    </property>
    <property name="text">
     <string>转向架2隔离</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL1_7">
-   <property name="geometry">
-    <rect>
-     <x>454</x>
-     <y>410</y>
-     <width>141</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
-color: white;
-</string>
-   </property>
-   <property name="text">
-    <string>停放制动隔离阀</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -644,7 +582,7 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl1_2">
    <property name="geometry">
     <rect>
-     <x>802</x>
+     <x>810</x>
      <y>110</y>
      <width>101</width>
      <height>41</height>
@@ -667,8 +605,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl7_2">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>411</y>
+     <x>637</x>
+     <y>261</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -681,7 +619,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -704,7 +642,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -713,7 +651,7 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl6_2">
    <property name="geometry">
     <rect>
-     <x>800</x>
+     <x>808</x>
      <y>361</y>
      <width>101</width>
      <height>41</height>
@@ -727,7 +665,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -797,26 +735,6 @@ color: white;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="linelbl1_5">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>330</y>
-     <width>515</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 2px solid white;
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -875,8 +793,8 @@ border-bottom-right-radius:8px;</string>
   <widget class="QLabel" name="lbl8_1">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>460</y>
+     <x>302</x>
+     <y>310</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -889,7 +807,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -898,9 +816,9 @@ border-radius:8px;</string>
   <widget class="QLabel" name="LBL1">
    <property name="geometry">
     <rect>
-     <x>411</x>
+     <x>431</x>
      <y>110</y>
-     <width>221</width>
+     <width>176</width>
      <height>41</height>
     </rect>
    </property>
@@ -910,7 +828,7 @@ color: white;
 </string>
    </property>
    <property name="text">
-    <string>车门紧急解锁请求隔离</string>
+    <string>紧急解锁请求旁路</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -919,7 +837,7 @@ color: white;
   <widget class="QLabel" name="lbl4_2">
    <property name="geometry">
     <rect>
-     <x>802</x>
+     <x>810</x>
      <y>261</y>
      <width>101</width>
      <height>41</height>
@@ -933,7 +851,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -982,7 +900,7 @@ font:20px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="lbl3_2">
    <property name="geometry">
     <rect>
-     <x>802</x>
+     <x>810</x>
      <y>211</y>
      <width>101</width>
      <height>41</height>
@@ -996,7 +914,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1027,7 +945,7 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl2_2">
    <property name="geometry">
     <rect>
-     <x>802</x>
+     <x>810</x>
      <y>161</y>
      <width>101</width>
      <height>41</height>
@@ -1064,27 +982,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="linelbl1_7">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>430</y>
-     <width>191</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 2px solid white;
-</string>
-   </property>
-   <property name="text">
-    <string/>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1093,8 +991,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl7_1">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>410</y>
+     <x>302</x>
+     <y>260</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -1107,27 +1005,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="linelbl1_4">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>280</y>
-     <width>515</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 2px solid white;
-</string>
-   </property>
-   <property name="text">
-    <string/>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1159,9 +1037,9 @@ border-radius:8px;</string>
   <widget class="QLabel" name="LBL1_4">
    <property name="geometry">
     <rect>
-     <x>412</x>
+     <x>432</x>
      <y>260</y>
-     <width>221</width>
+     <width>176</width>
      <height>41</height>
     </rect>
    </property>
@@ -1201,28 +1079,8 @@ color: white;
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>580</y>
+     <y>430</y>
      <width>515</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 2px solid white;
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="linelbl1_9">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>530</y>
-     <width>191</width>
      <height>2</height>
     </rect>
    </property>
@@ -1241,7 +1099,7 @@ color: white;
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>560</y>
+     <y>410</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -1254,7 +1112,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1263,8 +1121,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl9_2">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>511</y>
+     <x>637</x>
+     <y>361</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -1277,7 +1135,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1286,8 +1144,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl10_2">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>561</y>
+     <x>807</x>
+     <y>411</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -1300,7 +1158,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1309,8 +1167,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl9_1">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>510</y>
+     <x>302</x>
+     <y>360</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -1323,28 +1181,7 @@ border:2px  solid black;
 border-radius:8px;</string>
    </property>
    <property name="text">
-    <string>未旁路</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL1_11">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>510</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
-color: white;
-</string>
-   </property>
-   <property name="text">
-    <string>转向架2隔离</string>
+    <string>未隔离</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -1353,9 +1190,9 @@ color: white;
   <widget class="QLabel" name="LBL1_12">
    <property name="geometry">
     <rect>
-     <x>413</x>
-     <y>560</y>
-     <width>221</width>
+     <x>433</x>
+     <y>410</y>
+     <width>176</width>
      <height>41</height>
     </rect>
    </property>
@@ -1371,6 +1208,257 @@ color: white;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QLabel" name="linelbl1_11">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>380</y>
+     <width>220</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="linelbl1_12">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>330</y>
+     <width>35</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="linelbl1_13">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>330</y>
+     <width>221</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="linelbl1_14">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>280</y>
+     <width>35</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="linelbl1_15">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>280</y>
+     <width>223</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="linelbl1_16">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>280</y>
+     <width>35</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="linelbl1_17">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>330</y>
+     <width>35</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="linelbl1_18">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>380</y>
+     <width>35</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ZeroSpeedTC2lbl_5">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>450</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
+color: white;
+background-color: green;
+border:2px  solid black;
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string>未隔离</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ZeroSpeedTC2lbl_7">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>530</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
+color: black;
+background-color: yellow;
+border:2px  solid black;
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string>隔离</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL1_10">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>500</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>未隔离</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL1_11">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>580</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>隔离</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>linelbl1_11</zorder>
+  <zorder>linelbl1_13</zorder>
+  <zorder>linelbl1_15</zorder>
   <zorder>BTN7</zorder>
   <zorder>lbl5_2</zorder>
   <zorder>lbl1_1</zorder>
@@ -1389,7 +1477,6 @@ color: white;
   <zorder>BTN8</zorder>
   <zorder>LBLM1</zorder>
   <zorder>LBLMP1</zorder>
-  <zorder>linelbl1_8</zorder>
   <zorder>LBLTC1</zorder>
   <zorder>lbl_cab2_direction</zorder>
   <zorder>linelbl1_6</zorder>
@@ -1403,11 +1490,9 @@ color: white;
   <zorder>BTN5</zorder>
   <zorder>LBL1_8</zorder>
   <zorder>LBL1_9</zorder>
-  <zorder>linelbl1_5</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>BTN1</zorder>
-  <zorder>lbl8_1</zorder>
   <zorder>LBL1</zorder>
   <zorder>lbl4_2</zorder>
   <zorder>LBLM2</zorder>
@@ -1416,25 +1501,29 @@ color: white;
   <zorder>BTN3</zorder>
   <zorder>lbl2_2</zorder>
   <zorder>lbl6_1</zorder>
-  <zorder>linelbl1_7</zorder>
-  <zorder>lbl7_1</zorder>
-  <zorder>linelbl1_4</zorder>
   <zorder>ZeroSpeedTC2lbl_6</zorder>
   <zorder>LBL1_4</zorder>
   <zorder>linelbl1_3</zorder>
   <zorder>LBL1_2</zorder>
   <zorder>LBL1_3</zorder>
   <zorder>LBL1_5</zorder>
-  <zorder>LBL1_7</zorder>
-  <zorder>LBL1_10</zorder>
   <zorder>linelbl1_10</zorder>
-  <zorder>linelbl1_9</zorder>
   <zorder>lbl10_1</zorder>
   <zorder>lbl9_2</zorder>
   <zorder>lbl10_2</zorder>
-  <zorder>lbl9_1</zorder>
-  <zorder>LBL1_11</zorder>
   <zorder>LBL1_12</zorder>
+  <zorder>lbl7_1</zorder>
+  <zorder>lbl9_1</zorder>
+  <zorder>lbl8_1</zorder>
+  <zorder>linelbl1_12</zorder>
+  <zorder>linelbl1_14</zorder>
+  <zorder>linelbl1_16</zorder>
+  <zorder>linelbl1_17</zorder>
+  <zorder>linelbl1_18</zorder>
+  <zorder>ZeroSpeedTC2lbl_5</zorder>
+  <zorder>ZeroSpeedTC2lbl_7</zorder>
+  <zorder>LBL1_10</zorder>
+  <zorder>LBL1_11</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -205,7 +205,7 @@ border:1px solid black;
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>108</y>
+     <y>105</y>
      <width>21</width>
      <height>21</height>
     </rect>
@@ -413,7 +413,7 @@ border:1px solid black;
    <property name="geometry">
     <rect>
      <x>950</x>
-     <y>109</y>
+     <y>106</y>
      <width>21</width>
      <height>21</height>
     </rect>
@@ -529,7 +529,7 @@ border:0px,black</string>
    <property name="geometry">
     <rect>
      <x>52</x>
-     <y>90</y>
+     <y>88</y>
      <width>16</width>
      <height>16</height>
     </rect>
@@ -969,7 +969,7 @@ background-color:rgb(170,170,170);</string>
    <property name="geometry">
     <rect>
      <x>949</x>
-     <y>130</y>
+     <y>127</y>
      <width>21</width>
      <height>21</height>
     </rect>
@@ -1013,9 +1013,9 @@ background-color:rgb(170,170,170);</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>104</y>
-     <width>50</width>
-     <height>30</height>
+     <y>105</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1029,7 +1029,7 @@ background-color:rgb(170,170,170);</string>
    <property name="geometry">
     <rect>
      <x>72</x>
-     <y>110</y>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -1046,7 +1046,7 @@ border-radius:8px;</string>
    <property name="geometry">
     <rect>
      <x>931</x>
-     <y>110</y>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -1062,10 +1062,10 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab2_direction">
    <property name="geometry">
     <rect>
-     <x>970</x>
-     <y>104</y>
-     <width>50</width>
-     <height>30</height>
+     <x>990</x>
+     <y>105</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">

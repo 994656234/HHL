@@ -19,7 +19,7 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
     metroButtons<<ui->btn_metro1<<ui->btn_metro2<<ui->btn_metro3<<ui->btn_metro4<<ui->BTN_allMetro;
     foreach(QPushButton *button,metroButtons)
     {
-        //connect(button,SIGNAL(pressed()),this,SLOT(metroBTNPressEvent()));
+        connect(button,SIGNAL(pressed()),this,SLOT(metroBTNPressEvent()));
         button->setStyleSheet(METROPRESS);
     }
     ui->BTN_allMetro->hide();
@@ -89,7 +89,6 @@ void VehicleSetAirConditionPage::updatePage()
     {
         ui->lbl_cab2_active->hide();
     }
-
 
     //客室温度&目标温度
     if(database->CTD_ACTOLINE_B1)
@@ -188,22 +187,22 @@ void VehicleSetAirConditionPage::updatePage()
 
 void VehicleSetAirConditionPage::metroBTNPressEvent()
 {
-//    int metroNum= ((QPushButton*)this->sender())->whatsThis().toInt();
-//    if(metroNum==5)
-//    {
-//        for(int i=0;i<5;i++)
-//        {
-//            metroButtons.at(i)->setStyleSheet(METROPRESS);
-//        }
-//    }
-//    else
-//    {
-//        for(int i=0;i<5;i++)
-//        {
-//            metroButtons.at(i)->setStyleSheet(METRORELEASE);
-//        }
-//        metroButtons.at(metroNum-1)->setStyleSheet(METROPRESS);
-//    }
+    int metroNum= ((QPushButton*)this->sender())->whatsThis().toInt();
+    if(metroNum==5)
+    {
+        for(int i=0;i<5;i++)
+        {
+            metroButtons.at(i)->setStyleSheet(METROPRESS);
+        }
+    }
+    else
+    {
+        for(int i=0;i<5;i++)
+        {
+            metroButtons.at(i)->setStyleSheet(METRORELEASE);
+        }
+        metroButtons.at(metroNum-1)->setStyleSheet(METROPRESS);
+    }
 
 
 }

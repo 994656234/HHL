@@ -246,7 +246,7 @@ font:20px &quot;微软雅黑&quot;;
 </string>
    </property>
    <property name="text">
-    <string>开始踏面清扫测试</string>
+    <string>开始踏面清扫</string>
    </property>
   </widget>
  </widget>

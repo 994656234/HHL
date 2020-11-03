@@ -25,11 +25,48 @@ VehicleAirCompressorPage::~VehicleAirCompressorPage()
 
 void VehicleAirCompressorPage::updatePage()
 {
-    ACPstatus<<database->CTD_RIOM1GWOLINE_B1<<database->CTR1_DOLOASMON_B1;
+    //司机室激活
+    if(database->CTD_MCTActive_B1)
+    {
+        ui->lbl_cab1_active->show();
+    }
+    else
+    {
+        ui->lbl_cab1_active->hide();
+    }
+
+    if(database->CTD_MC2Active_B1)
+    {
+        ui->lbl_cab2_active->show();
+    }
+    else
+    {
+        ui->lbl_cab2_active->hide();
+    }
+    //列车运行方向
+    if(database->CTD_Forward_B1)
+    {
+        ui->lbl_cab1_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab1_direction->hide();
+    }
+
+    if(database->CTD_Backward_B1)
+    {
+        ui->lbl_cab2_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab2_direction->hide();
+    }
+
+    ACPstatus<<database->CTD_RIOM2GWOLINE_B1<<database->RM2CT_CMK_B1;
     setACPStatus(ui->lbl_airCompressor1,ACPstatus);
     ACPstatus.clear();
 
-    ACPstatus<<database->CTD_RIOM4GWOLINE_B1<<database->CTR4_DOLOASMON_B1;
+    ACPstatus<<database->CTD_RIOM5GWOLINE_B1<<database->RM5CT_CMK_B1;
     setACPStatus(ui->lbl_airCompressor2,ACPstatus);
     ACPstatus.clear();
 

@@ -21,9 +21,12 @@ public:
 private:
     Ui::VehicleMaintainPage *ui;
     QList<QPushButton*>buttons;
+    bool fangyouFlag,qiangqiflag;
 
 private slots:
     void NBpressEvent();
+    void on_BTN_fangyou_pressed();
+    void on_BTN_qiangqi_pressed();
 };
 
 #endif // VEHICLEMAINTAINPAGE_H

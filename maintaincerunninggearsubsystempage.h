@@ -17,13 +17,13 @@ public:
     explicit MaintainceRunningGearSubsystemPage(QWidget *parent = 0);
     ~MaintainceRunningGearSubsystemPage();
     void updatePage();
-    void updateStatus(QList<QLabel*> lbl, QList<QString> status);
+    void updateStatus(QList<QLabel*> lbl, unsigned char value, unsigned char flag);
 
 private:
     Ui::MaintainceRunningGearSubsystemPage *ui;
-    QList<QLabel*> line1,line2,line3,line4,line5,line6,lbl_lifeSignal,lbl_signalValid;
-    QList<QString> line1Status,line2Status,line3Status,line4Status,line5Status,line6Status,
-            lifeSignalStatus,signalValidStatus;
+    QList<QLabel*> column1,column2,column3,column4;
+    unsigned char column1Value,column2Value,column3Value,column4Value,
+                         column1Flag,column2Flag,column3Flag,column4Flag;
 
 private slots:
     void on_BTNHome_pressed();

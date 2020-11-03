@@ -29,6 +29,43 @@ VehicleBrakePage::~VehicleBrakePage()
 
 void VehicleBrakePage::updatePage()
 {
+    //司机室激活
+    if(database->CTD_MCTActive_B1)
+    {
+        ui->lbl_cab1_active->show();
+    }
+    else
+    {
+        ui->lbl_cab1_active->hide();
+    }
+
+    if(database->CTD_MC2Active_B1)
+    {
+        ui->lbl_cab2_active->show();
+    }
+    else
+    {
+        ui->lbl_cab2_active->hide();
+    }
+    //列车运行方向
+    if(database->CTD_Forward_B1)
+    {
+        ui->lbl_cab1_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab1_direction->hide();
+    }
+
+    if(database->CTD_Backward_B1)
+    {
+        ui->lbl_cab2_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab2_direction->hide();
+    }
+
     status<<database->RM2CT_BBIV1_B1<<database->B1_1CT_MajorFltMC1Bg1_B1<<database->BiCT_BrkApplyMC1Bg1_B1<<database->BiCT_BrkRelMC1Bg1_B1;
     brakeStatus(ui->lbl_brake1_1,status);
     status.clear();
@@ -62,11 +99,6 @@ void VehicleBrakePage::updatePage()
     brakeStatus(ui->lbl_brake4_2,status);
     status.clear();
 
-
-
-
-
-
     stopBrakeStatus(ui->lbl_stopbrake1,database->BiCT_PBrtRelMC1Bg1_B1);
     stopBrakeStatus(ui->lbl_stopbrake2,database->BiCT_PBrtRelMp1Bg1_B1);
     stopBrakeStatus(ui->lbl_stopbrake3,database->BiCT_PBrtRelMP2Bg1_B1);
@@ -81,6 +113,8 @@ void VehicleBrakePage::updatePage()
     ui->lbl_break4_1_pressure->setText(QString::number((int)database->BiCT_BCPMC2Bg1_I16/20)+"kpa");
     ui->lbl_break4_2_pressure->setText(QString::number((int)database->BiCT_BCPMC2Bg2_I16/20)+"kpa");
 
+    ui->lbl_break_MRPMP1->setText(QString::number((int)database->BiCT_MRPMP1_I16/20)+"kpa");
+    ui->lbl_break_MRPMP1->setText(QString::number((int)database->BiCT_MRPMP2_I16/20)+"kpa");
 
 
 

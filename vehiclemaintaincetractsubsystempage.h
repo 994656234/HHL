@@ -19,14 +19,14 @@ public:
     explicit VehicleMaintainceTractSubsystemPage(QWidget *parent = 0);
     ~VehicleMaintainceTractSubsystemPage();
     void updatePage();
-    void updateStatus(QList<QLabel*> lbl, QList<QString> status);
-
+    void updateStatus(QList<QLabel*> lbl, QList<short> status, QString str);
+    void updateStatus(QList<QLabel*> lbl, QList<unsigned short> status, QString str);
 private:
     Ui::VehicleMaintainceTractSubsystemPage *ui;
-    QList<QLabel*> line1,line2,line3,line4,line5,line6,line7,line8,line9;
-    QList<QString> line1Status,line2Status,line3Status,line4Status,line5Status,line6Status,line7Status,line8Status;
+    QList<QLabel*> line1,line2,line3,line4,line5;
+    QList<short>line3Status,line4Status;
     QString isVelid(bool haha,QString status);
-
+    QList<unsigned short>line1Status,line2Status,line5Status;
 private slots:
     void on_BTN3_pressed();
     void on_BTN2_pressed();

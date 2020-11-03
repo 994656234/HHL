@@ -95,6 +95,7 @@ enum pageIndex
     uMaintainceAddSubtractTestPage,
     uMaintaincePasswordPage,
     uMaintainceAccumulatorSubsystemPage,
+    uMaintainceBatterySubsystemPage,
     uVehicleSetSimlateStation,
 };
 

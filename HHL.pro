@@ -5,7 +5,7 @@
 #-------------------------------------------------
 TRANSLATIONS += lang_Portuguese.ts
 
-#DEFINES += USER_DEBUG_MODE
+DEFINES += USER_DEBUG_MODE
 #DEFINES += MVB_CX
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -150,7 +150,8 @@ SOURCES += main.cpp\
     bypasspage2.cpp \
     emdooropen.cpp \
     vehiclesetsimlatestation.cpp \
-    stationchoicebox.cpp
+    stationchoicebox.cpp \
+    maintaincebatterysubsystempage.cpp
 
 
 
@@ -333,7 +334,8 @@ HEADERS  += widget.h \
     avic_imx.h \
     emdooropen.h \
     vehiclesetsimlatestation.h \
-    stationchoicebox.h
+    stationchoicebox.h \
+    maintaincebatterysubsystempage.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -404,7 +406,8 @@ FORMS    += widget.ui \
     bypasspage2.ui \
     emdooropen.ui \
     vehiclesetsimlatestation.ui \
-    stationchoicebox.ui
+    stationchoicebox.ui \
+    maintaincebatterysubsystempage.ui
 
 RESOURCES += \
     Resource.qrc

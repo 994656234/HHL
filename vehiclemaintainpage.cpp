@@ -2,6 +2,10 @@
 #include "ui_vehiclemaintainpage.h"
 #include "qdebug.h"
 
+#define  BTNPRESS "background:rgb(187,188,247);border:0px solid;color: rgb(255, 255, 255);font:20px \"微软雅黑\";"
+#define  BTNRELEASE  "background:rgb(0,0,50);border:0px solid;color: rgb(255, 255, 255);font:20px \"微软雅黑\";"
+
+
 VehicleMaintainPage::VehicleMaintainPage(QWidget *parent) :
     MyBase(parent),
     ui(new Ui::VehicleMaintainPage)
@@ -11,26 +15,28 @@ VehicleMaintainPage::VehicleMaintainPage(QWidget *parent) :
             <<ui->BTN_AuxiliarySubsystem<<ui->BTN_BogieLampSubsystem<<ui->BTN_BrakeSubsystem
             <<ui->BTN_CommunicationStatus<<ui->BTN_DataManage<<ui->BTN_DataMonitor<<ui->BTN_HistoryFault<<ui->BTN_MetroSet
             <<ui->BTN_RIOMTest<<ui->BTN_SoftwareVersion<<ui->BTN_TractSubsystem<<ui->BTN_HMIInitSet
-            <<ui->BTN_autoStationTest<<ui->BTN_cumulateData<<ui->BTN_speedTest<<ui->BTN_Cut<<ui->BTN_Accumulate;
+            <<ui->BTN_autoStationTest<<ui->BTN_cumulateData<<ui->BTN_speedTest<<ui->BTN_Cut<<ui->BTN_Battery;
     foreach(QPushButton* button,buttons)
     {
         connect(button,SIGNAL(pressed()),this,SLOT(NBpressEvent()));
     }
 
-    ui->lbl2_2->hide();
-    ui->BTN_TractSubsystem->hide();
-    ui->BTN_TractSubsystem->setEnabled(false);
+    //ui->BTN_TractSubsystem->hide();
+    //ui->BTN_TractSubsystem->setEnabled(false);
     ui->BTN_BrakeSubsystem->hide();
     ui->BTN_BrakeSubsystem->setEnabled(false);
     ui->BTN_AuxiliarySubsystem->hide();
     ui->BTN_AuxiliarySubsystem->setEnabled(false);
     ui->BTN_BogieLampSubsystem->hide();
     ui->BTN_BogieLampSubsystem->setEnabled(false);
-    ui->BTN_Accumulate->hide();
-    ui->BTN_Accumulate->setEnabled(false);
+    //ui->BTN_Accumulate->hide();
+    //ui->BTN_Accumulate->setEnabled(false);
     ui->BTN_CommunicationStatus->hide();
     ui->BTN_CommunicationStatus->setEnabled(false);
-    ui->lbl1_2->hide();
+
+    this->fangyouFlag=true;
+    this->qiangqiflag = true;
+
 }
 
 VehicleMaintainPage::~VehicleMaintainPage()
@@ -109,9 +115,9 @@ void VehicleMaintainPage::NBpressEvent()
     {
         changePage(uMaintainceAddSubtractTestPage);
     }
-    else if(BTNName=="BTN_Accumulate")
+    else if(BTNName=="BTN_Battery")
     {
-        changePage(uMaintainceAccumulatorSubsystemPage);
+        changePage(uMaintainceBatterySubsystemPage);
     }
     else if(BTNName=="BTN_Cut")
     {
@@ -122,4 +128,39 @@ void VehicleMaintainPage::NBpressEvent()
 
     }
 
+}
+
+void VehicleMaintainPage::on_BTN_fangyou_pressed()
+{
+    if(fangyouFlag)
+    {
+        ui->BTN_fangyou->setStyleSheet(BTNPRESS);
+        fangyouFlag=false;
+        database->fangyou=true;
+    }
+    else
+    {
+        ui->BTN_fangyou->setStyleSheet(BTNRELEASE);
+        fangyouFlag=true;
+        database->fangyou=false;
+    }
+}
+
+
+void VehicleMaintainPage::on_BTN_qiangqi_pressed()
+{
+
+
+        if(qiangqiflag)
+        {
+            ui->BTN_qiangqi->setStyleSheet(BTNPRESS);
+            qiangqiflag=false;
+            database->DiCT_BrkRfanForceStart_B1=true;
+        }
+        else
+        {
+            ui->BTN_qiangqi->setStyleSheet(BTNRELEASE);
+            qiangqiflag=true;
+            database->DiCT_BrkRfanForceStart_B1=false;
+        }
 }

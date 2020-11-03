@@ -75,6 +75,7 @@
 
 #include "passwordpage.h"
 #include "maintainceaccumulatorsubsystempage.h"
+#include "maintaincebatterysubsystempage.h"
 #include "vehiclesetsimlatestation.h"
 
 Widget::Widget(QWidget *parent) :
@@ -276,6 +277,9 @@ Widget::Widget(QWidget *parent) :
     this->maintainceAccumulatorSubsystemPage->setMyBase(uMiddle,QString("踏面清扫测试界面"));
     this->maintainceAccumulatorSubsystemPage->hide();
 
+    this->maintainceBatterySubsystemPage=new MaintainceBatterySubsystemPage(this);
+    this->maintainceBatterySubsystemPage->setMyBase(uMiddle,QString("蓄电池子系统界面"));
+    this->maintainceBatterySubsystemPage->hide();
 
     this->vehicleFaultEventPage=new FaultEventPage(this);
     this->vehicleFaultEventPage->setMyBase(uMiddle,QString("当前故障页面"));
@@ -408,6 +412,7 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uMaintainceAddSubtractTestPage,this->addSubtractTestPage);
     this->widgets.insert(uMaintaincePasswordPage,this->passwordPage);
     this->widgets.insert(uMaintainceAccumulatorSubsystemPage,this->maintainceAccumulatorSubsystemPage);
+    this->widgets.insert(uMaintainceBatterySubsystemPage,this->maintainceBatterySubsystemPage);
     this->widgets.insert(uVehicleSetSimlateStation,this->vehicleSetSimlateStation);
 
 }
@@ -424,6 +429,7 @@ void Widget::updatePage()
 
     static int counter = 1;
     this->header->updatePage();
+    this->navigator->updatePage();
     if(this->widgets[MyBase::currentPage]->Position == uTrain || this->widgets[MyBase::currentPage]->Position == uMainRunstatus||this->widgets[MyBase::currentPage]->Position == uTolopogy)
     {
         this->vehicleStationBar->updatePage();

@@ -88,6 +88,18 @@ void VehicleAirConditionerPage::updatePage()
     getAirConditionStatus(ui->lbl_airCondition4_1,database->ACVP4CT_IusUnitSts1_U8);
     getAirConditionStatus(ui->lbl_airCondition4_2,database->ACVP4CT_IusUnitSts2_U8);
 
+    //减载
+    getAirConditionDeload(ui->lbl_deload1,database->ACVP1CT_IxDeloadFshU1_B1);
+    getAirConditionDeload(ui->lbl_deload2,database->ACVP1CT_IxDeloadFshU2_B1);
+
+    getAirConditionDeload(ui->lbl_deload3,database->ACVP2CT_IxDeloadFshU1_B1);
+    getAirConditionDeload(ui->lbl_deload4,database->ACVP2CT_IxDeloadFshU2_B1);
+
+    getAirConditionDeload(ui->lbl_deload5,database->ACVP3CT_IxDeloadFshU1_B1);
+    getAirConditionDeload(ui->lbl_deload6,database->ACVP3CT_IxDeloadFshU2_B1);
+
+    getAirConditionDeload(ui->lbl_deload7,database->ACVP4CT_IxDeloadFshU1_B1);
+    getAirConditionDeload(ui->lbl_deload8,database->ACVP4CT_IxDeloadFshU2_B1);
 }
 
 
@@ -133,6 +145,18 @@ void VehicleAirConditionerPage::getAirConditionStatus(QLabel *label, unsigned ch
     else
     {
         label->setStyleSheet(HVACUNKNOW);
+    }
+}
+
+void VehicleAirConditionerPage::getAirConditionDeload(QLabel *label, bool status)
+{
+    if (status)
+    {
+        label->show();
+    }
+    else
+    {
+        label->hide();
     }
 }
 

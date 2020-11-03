@@ -177,10 +177,10 @@ border:1px solid black;</string>
   <widget class="QLabel" name="lbl_cab1_direction">
    <property name="geometry">
     <rect>
-     <x>15</x>
+     <x>28</x>
      <y>20</y>
-     <width>50</width>
-     <height>30</height>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -193,7 +193,7 @@ border:1px solid black;</string>
   <widget class="QLabel" name="lbl_cab1_active">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>78</x>
      <y>25</y>
      <width>16</width>
      <height>17</height>
@@ -201,7 +201,9 @@ border:1px solid black;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 176, 80);
-border-radius:8px;</string>
+border-radius:8px;
+font:24px,&quot;微软雅黑&quot;;
+border:1px solid black;</string>
    </property>
    <property name="text">
     <string/>
@@ -210,10 +212,10 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab2_direction">
    <property name="geometry">
     <rect>
-     <x>972</x>
+     <x>980</x>
      <y>20</y>
-     <width>50</width>
-     <height>30</height>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -226,7 +228,7 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab2_active">
    <property name="geometry">
     <rect>
-     <x>942</x>
+     <x>946</x>
      <y>25</y>
      <width>16</width>
      <height>17</height>
@@ -234,7 +236,9 @@ border-radius:8px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 176, 80);
-border-radius:8px;</string>
+border-radius:8px;
+font:24px,&quot;微软雅黑&quot;;
+border:1px solid black;</string>
    </property>
    <property name="text">
     <string/>

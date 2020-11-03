@@ -84,22 +84,22 @@ void ByPassPage2::updatePage()
     setStatus(ui->lbl1_2,database->RM4CT_DRBYS_B1);
     setStatus(ui->lbl2_1,database->RM1CT_DBYS_B1);
     setStatus(ui->lbl2_2,database->RM4CT_DBYS_B1);
-    setStatus(ui->lbl3_1,database->RM2CT_BIS_B1);
-    setStatus(ui->lbl3_2,database->RM5CT_BIS_B1);
-    setStatus(ui->lbl4_1,database->RM2CT_PBIV_B1);
-    setStatus(ui->lbl4_2,database->RM5CT_PBIV_B1);
-    setStatus(ui->lbl5_1,!database->RM2CT_BBIV1_B1);
-    setStatus(ui->lbl5_2,!database->RM5CT_BBIV1_B1);
-    setStatus(ui->lbl6_1,!database->RM2CT_BBIV2_B1);
-    setStatus(ui->lbl6_2,!database->RM5CT_BBIV2_B1);
-    setStatus(ui->lbl7_1,database->RM3CT_PBIV_B1);
-    setStatus(ui->lbl7_2,database->RM6CT_PBIV_B1);
-    setStatus(ui->lbl8_1,!database->RM3CT_BBIV1_B1);
-    setStatus(ui->lbl8_2,!database->RM6CT_BBIV1_B1);
-    setStatus(ui->lbl9_1,!database->RM3CT_BBIV2_B1);
-    setStatus(ui->lbl9_2,!database->RM6CT_BBIV2_B1);
-    setStatus(ui->lbl10_1,database->RM2CT_CBBIV_B1);
-    setStatus(ui->lbl10_2,database->RM5CT_CBBIV_B1);
+    setGeLiStatus(ui->lbl3_1,database->RM2CT_BIS_B1);
+    setGeLiStatus(ui->lbl3_2,database->RM5CT_BIS_B1);
+    setGeLiStatus(ui->lbl4_1,database->RM2CT_PBIV_B1);
+    setGeLiStatus(ui->lbl4_2,database->RM5CT_PBIV_B1);
+    setGeLiStatus(ui->lbl5_1,!database->RM2CT_BBIV1_B1);
+    setGeLiStatus(ui->lbl5_2,!database->RM5CT_BBIV1_B1);
+    setGeLiStatus(ui->lbl6_1,!database->RM2CT_BBIV2_B1);
+    setGeLiStatus(ui->lbl6_2,!database->RM5CT_BBIV2_B1);
+    setGeLiStatus(ui->lbl7_1,database->RM3CT_PBIV_B1);
+    setGeLiStatus(ui->lbl7_2,database->RM6CT_PBIV_B1);
+    setGeLiStatus(ui->lbl8_1,!database->RM3CT_BBIV1_B1);
+    setGeLiStatus(ui->lbl8_2,!database->RM6CT_BBIV1_B1);
+    setGeLiStatus(ui->lbl9_1,!database->RM3CT_BBIV2_B1);
+    setGeLiStatus(ui->lbl9_2,!database->RM6CT_BBIV2_B1);
+    setGeLiStatus(ui->lbl10_1,database->RM2CT_CBBIV_B1);
+    setGeLiStatus(ui->lbl10_2,database->RM5CT_CBBIV_B1);
 
 }
 
@@ -115,5 +115,19 @@ void ByPassPage2::setStatus(QLabel *lbl, bool status)
     {
         lbl->setStyleSheet(BYPASSOFF);
         lbl->setText("未旁路");
+    }
+}
+
+void ByPassPage2::setGeLiStatus(QLabel *lbl, bool status)
+{
+    if(status)
+    {
+        lbl->setStyleSheet(BYPASSON);
+        lbl->setText("隔离");
+    }
+    else
+    {
+        lbl->setStyleSheet(BYPASSOFF);
+        lbl->setText("未隔离");
     }
 }

@@ -18,6 +18,7 @@ public:
     ~VehicleAirConditionerPage();
     void updatePage();
     void getAirConditionStatus(QLabel *label,unsigned char status);
+    void getAirConditionDeload(QLabel *label,bool status);
 
 private:
     Ui::VehicleAirConditionerPage *ui;

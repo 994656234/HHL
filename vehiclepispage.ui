@@ -209,9 +209,9 @@ border:0px,black</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>104</y>
-     <width>50</width>
-     <height>30</height>
+     <y>105</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -224,8 +224,8 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_cab1_active">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>110</y>
+     <x>66</x>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -241,10 +241,10 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab2_direction">
    <property name="geometry">
     <rect>
-     <x>970</x>
-     <y>100</y>
-     <width>50</width>
-     <height>30</height>
+     <x>990</x>
+     <y>108</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -257,8 +257,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab2_active">
    <property name="geometry">
     <rect>
-     <x>940</x>
-     <y>106</y>
+     <x>941</x>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -659,6 +659,534 @@ border-bottom-right-radius:8px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_1_11">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_14">
+   <property name="geometry">
+    <rect>
+     <x>607</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_7">
+   <property name="geometry">
+    <rect>
+     <x>177</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_8">
+   <property name="geometry">
+    <rect>
+     <x>177</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_9">
+   <property name="geometry">
+    <rect>
+     <x>317</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_20">
+   <property name="geometry">
+    <rect>
+     <x>817</x>
+     <y>103</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_23">
+   <property name="geometry">
+    <rect>
+     <x>736</x>
+     <y>103</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_10">
+   <property name="geometry">
+    <rect>
+     <x>106</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_15">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:16px;
+</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_21">
+   <property name="geometry">
+    <rect>
+     <x>897</x>
+     <y>103</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:16px;
+</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_12">
+   <property name="geometry">
+    <rect>
+     <x>397</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_18">
+   <property name="geometry">
+    <rect>
+     <x>527</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_13">
+   <property name="geometry">
+    <rect>
+     <x>477</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_16">
+   <property name="geometry">
+    <rect>
+     <x>527</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_17">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_19">
+   <property name="geometry">
+    <rect>
+     <x>106</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_22">
+   <property name="geometry">
+    <rect>
+     <x>897</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_24">
+   <property name="geometry">
+    <rect>
+     <x>817</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_25">
+   <property name="geometry">
+    <rect>
+     <x>397</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_26">
+   <property name="geometry">
+    <rect>
+     <x>477</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:16px;
+</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_27">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_28">
+   <property name="geometry">
+    <rect>
+     <x>607</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_29">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>101</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:16px;
+</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_1_30">
+   <property name="geometry">
+    <rect>
+     <x>737</x>
+     <y>123</y>
+     <width>18</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 170, 170);
+border:0px solid black;
+font:18px;
+</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>LBLM2</zorder>
@@ -697,6 +1225,30 @@ border-bottom-right-radius:8px;</string>
   <zorder>lbl_4_4</zorder>
   <zorder>lbl_4_5</zorder>
   <zorder>lbl_4_6</zorder>
+  <zorder>lbl_1_11</zorder>
+  <zorder>lbl_1_14</zorder>
+  <zorder>lbl_1_7</zorder>
+  <zorder>lbl_1_8</zorder>
+  <zorder>lbl_1_9</zorder>
+  <zorder>lbl_1_20</zorder>
+  <zorder>lbl_1_23</zorder>
+  <zorder>lbl_1_10</zorder>
+  <zorder>lbl_1_15</zorder>
+  <zorder>lbl_1_21</zorder>
+  <zorder>lbl_1_12</zorder>
+  <zorder>lbl_1_18</zorder>
+  <zorder>lbl_1_13</zorder>
+  <zorder>lbl_1_16</zorder>
+  <zorder>lbl_1_17</zorder>
+  <zorder>lbl_1_19</zorder>
+  <zorder>lbl_1_22</zorder>
+  <zorder>lbl_1_24</zorder>
+  <zorder>lbl_1_25</zorder>
+  <zorder>lbl_1_26</zorder>
+  <zorder>lbl_1_27</zorder>
+  <zorder>lbl_1_28</zorder>
+  <zorder>lbl_1_29</zorder>
+  <zorder>lbl_1_30</zorder>
  </widget>
  <resources/>
  <connections/>

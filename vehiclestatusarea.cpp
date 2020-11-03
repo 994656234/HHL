@@ -88,6 +88,7 @@ VehicleStatusArea::VehicleStatusArea(QWidget *parent) :
     ui->BTNResetFirealarm->hide();
     ui->BTNResetFireBEEP->hide();
     ui->BTNEmergencyBrocast->hide();
+    ui->BTN_fangyou->hide();
 
 
     this->fireflag=true;
@@ -451,8 +452,7 @@ void VehicleStatusArea::refreshAllButton()
 
 void VehicleStatusArea::setProgressBar(bool tract,bool brake,unsigned short value,bool quickBrake)
 {
-
-    if(tract&&!brake&&value)
+    if(tract&&!brake)
     {
         ui->lbl_progressbar_value->setGeometry(30,139-value,45,5);
         ui->lbl_progressbar_bg_value->setGeometry(41,141-value,9,100+value);
@@ -463,7 +463,7 @@ void VehicleStatusArea::setProgressBar(bool tract,bool brake,unsigned short valu
         ui->lbl_level_value->setText(QString::number(value)+"%");
 
     }
-    else if(!tract&&brake&&value)
+    else if(!tract&&brake)
     {
         ui->lbl_progressbar_value->setGeometry(30,139+value,45,5);
         ui->lbl_progressbar_bg_value->setGeometry(41,141+value,9,100-value);

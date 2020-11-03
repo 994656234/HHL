@@ -220,9 +220,9 @@ border-radius:10px;</string>
   <widget class="QPushButton" name="BTN_VVVF5">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>616</x>
      <y>130</y>
-     <width>91</width>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -236,16 +236,16 @@ font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF故障
+    <string>1.VVVF故障
 复位</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_VVVF3">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>406</x>
      <y>130</y>
-     <width>91</width>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -259,16 +259,16 @@ font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF故障
+    <string>2.VVVF故障
 复位</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_VVVF2">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>306</x>
      <y>130</y>
-     <width>91</width>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -282,16 +282,16 @@ font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF故障
+    <string>1.VVVF故障
 复位</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_VVVF6">
    <property name="geometry">
     <rect>
-     <x>775</x>
+     <x>769</x>
      <y>130</y>
-     <width>101</width>
+     <width>111</width>
      <height>41</height>
     </rect>
    </property>
@@ -305,16 +305,16 @@ font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF故障
+    <string>1.VVVF故障
 复位</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_VVVF1">
    <property name="geometry">
     <rect>
-     <x>145</x>
+     <x>141</x>
      <y>130</y>
-     <width>101</width>
+     <width>111</width>
      <height>41</height>
     </rect>
    </property>
@@ -328,16 +328,16 @@ font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF故障
+    <string>1.VVVF故障
 复位</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_VVVF4">
    <property name="geometry">
     <rect>
-     <x>520</x>
+     <x>516</x>
      <y>130</y>
-     <width>91</width>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -351,15 +351,15 @@ font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>VVVF故障
+    <string>2.VVVF故障
 复位</string>
    </property>
   </widget>
   <widget class="QLabel" name="lbl_cab2_active">
    <property name="geometry">
     <rect>
-     <x>940</x>
-     <y>106</y>
+     <x>941</x>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -375,10 +375,10 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab2_direction">
    <property name="geometry">
     <rect>
-     <x>970</x>
-     <y>100</y>
-     <width>50</width>
-     <height>30</height>
+     <x>990</x>
+     <y>105</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -392,9 +392,9 @@ border-radius:8px;</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>104</y>
-     <width>50</width>
-     <height>30</height>
+     <y>105</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -407,8 +407,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab1_active">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>110</y>
+     <x>66</x>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>

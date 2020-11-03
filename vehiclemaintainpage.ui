@@ -479,8 +479,8 @@ font:20px &quot;微软雅黑&quot;;</string>
   <widget class="QPushButton" name="BTN_TractSubsystem">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>240</y>
+     <x>240</x>
+     <y>450</y>
      <width>100</width>
      <height>80</height>
     </rect>
@@ -682,7 +682,7 @@ border-bottom-right-radius:8px;</string>
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>460</y>
+     <y>440</y>
      <width>561</width>
      <height>101</height>
     </rect>
@@ -709,15 +709,14 @@ color: rgb(255, 255, 255);
 font:20px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>踏面清扫
-测试</string>
+    <string>踏面清扫</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_Accumulate">
+  <widget class="QPushButton" name="BTN_Battery">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>410</y>
+     <x>350</x>
+     <y>450</y>
      <width>100</width>
      <height>80</height>
     </rect>
@@ -732,6 +731,50 @@ font:20px &quot;微软雅黑&quot;;</string>
 监测</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="BTN_fangyou">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>450</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 50);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>防油乳化</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_qiangqi">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>450</y>
+     <width>100</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 50);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>制动电阻
+风机强起</string>
+   </property>
+  </widget>
+  <zorder>lbl2_2</zorder>
   <zorder>lbl1_2</zorder>
   <zorder>lbl2</zorder>
   <zorder>lbl1</zorder>
@@ -766,9 +809,10 @@ font:20px &quot;微软雅黑&quot;;</string>
   <zorder>BTN_speedTest</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
-  <zorder>lbl2_2</zorder>
   <zorder>BTN_Cut</zorder>
-  <zorder>BTN_Accumulate</zorder>
+  <zorder>BTN_Battery</zorder>
+  <zorder>BTN_fangyou</zorder>
+  <zorder>BTN_qiangqi</zorder>
  </widget>
  <resources/>
  <connections/>

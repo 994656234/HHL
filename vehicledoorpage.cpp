@@ -6,7 +6,7 @@
 #define  DOORCUTOFF "border-image: url(:/images/image/doorcutoff.png);"
 #define  DOORFAULT "border-image: url(:/images/image/doorfault.png);"
 #define  DOOROBS "border-image: url(:/images/image/doorobs.png);"
-#define  DOOROPEN "background-color: rgb(255, 255, 127);"
+#define  DOOROPEN "background-color: black;"
 #define  DOORCLOSE "background-color: rgb(34, 177, 76);"
 #define  DOORUNKNOW "border-image: url(:/images/image/doorunknow.png);"
 #define  DOOREMOPENP "border-image: url(:/images/image/emergencyopen.png);"
@@ -29,6 +29,42 @@ VehicleDoorPage::~VehicleDoorPage()
 
 void VehicleDoorPage::updatePage()
 {
+    //司机室激活
+    if(database->CTD_MCTActive_B1)
+    {
+        ui->lbl_cab1_active->show();
+    }
+    else
+    {
+        ui->lbl_cab1_active->hide();
+    }
+
+    if(database->CTD_MC2Active_B1)
+    {
+        ui->lbl_cab2_active->show();
+    }
+    else
+    {
+        ui->lbl_cab2_active->hide();
+    }
+    //列车运行方向
+    if(database->CTD_Forward_B1)
+    {
+        ui->lbl_cab1_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab1_direction->hide();
+    }
+
+    if(database->CTD_Backward_B1)
+    {
+        ui->lbl_cab2_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab2_direction->hide();
+    }
 
     //车门
     //MC1

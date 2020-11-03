@@ -37,6 +37,13 @@ Database::Database()
     DiCT_SAVEWheelDig3_B1=false;
     DiCT_SAVEWheelDig4_B1=false;
 
+    DiCT_5barBPSelect_B1 =false;
+    DiCT_6barBPSelect_B1 =false;
+    DiCT_TowingMode_B1 =false;
+    DiCT_BrkRfanForceStart_B1 =false;
+    DiCT_BCUStartSelfTest_B1 =false;
+
+
     DiCT_SetFlagChecker_U8=0;
 
     DiCT_HVACEmgcyVenti_B1=false;
@@ -182,6 +189,11 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setBool(0x310,20,5,DiCT_SAVEWheelDig3_B1);
             crrcRicoMvb->setBool(0x310,20,6,DiCT_SAVEWheelDig4_B1);
 
+            crrcRicoMvb->setBool(0x310,21,1,DiCT_5barBPSelect_B1);
+            crrcRicoMvb->setBool(0x310,21,2,DiCT_6barBPSelect_B1);
+            crrcRicoMvb->setBool(0x310,21,3,DiCT_TowingMode_B1);
+            crrcRicoMvb->setBool(0x310,21,4,DiCT_BrkRfanForceStart_B1);
+            crrcRicoMvb->setBool(0x310,21,5,DiCT_BCUStartSelfTest_B1);
 
             crrcRicoMvb->setUnsignedChar(0x310,31,DiCT_SetFlagChecker_U8);
 
@@ -851,7 +863,13 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     RM4CT_MCREFSETPOINT_U16 = crrcRicoMvb->getUnsignedInt(0x141,0);
     RM4CT_ATCREF_U16 = crrcRicoMvb->getUnsignedInt(0x141,2);
 
-
+    RMICT_ByPass = RM1CT_DMBPS_B1 | RM4CT_DMBPS_B1 | RM1CT_LMRGBS_B1
+                    | RM4CT_LMRGBS_B1 |RM1CT_EBBS_B1 | RM4CT_EBBS_B1
+                    | RM1CT_ABRBS_B1 | RM4CT_ABRBS_B1 | RM1CT_RVBPS_B1
+                    | RM4CT_RVBPS_B1 | RM1CT_PBRBPS_B1 | RM4CT_PBRBPS_B1
+                    | RM1CT_PEBS_B1 | RM4CT_PEBS_B1 | RM1CT_DBPS_B1
+                    | RM4CT_DBPS_B1 | RM1CT_ATPFS_B1 | RM4CT_ATPFS_B1
+                    | RM1CT_ZVBS_B1| RM4CT_ZVBS_B1;
     //CCU-RIOM
     CTR1_DOPANI_B1 = crrcRicoMvb->getBool(0x118,19,7);
     CTR1_DOHSCBC_B1 = crrcRicoMvb->getBool(0x118,19,6);
@@ -1678,6 +1696,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU1CT_CHOPTIME_U16 = crrcRicoMvb->getUnsignedInt(0x510,28);
     TCU1CT_WHEELDIAM_U16 = crrcRicoMvb->getUnsignedInt(0x510,30);
     TCU1CT_IuiCalTBEffort_U16 = crrcRicoMvb->getUnsignedInt(0x511,12);
+    TCU1CT_BRCV_U16 = crrcRicoMvb->getUnsignedInt(0x511,14);
     TCU1CT_IuiMtr1Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x512,0);
     TCU1CT_IuiMtr2Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x512,2);
     TCU1CT_IuiLglSWRevision_U16 = crrcRicoMvb->getUnsignedInt(0x512,8);
@@ -1697,6 +1716,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU2CT_CHOPTIME_U16 = crrcRicoMvb->getUnsignedInt(0x520,28);
     TCU2CT_WHEELDIAM_U16 = crrcRicoMvb->getUnsignedInt(0x520,30);
     TCU2CT_IuiCalTBEffort_U16 = crrcRicoMvb->getUnsignedInt(0x521,12);
+    TCU2CT_BRCV_U16 = crrcRicoMvb->getUnsignedInt(0x511,14);
     TCU2CT_IuiMtr1Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x522,0);
     TCU2CT_IuiMtr2Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x522,2);
     TCU2CT_IuiLglSWRevision_U16 = crrcRicoMvb->getUnsignedInt(0x522,8);
@@ -1716,6 +1736,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU3CT_CHOPTIME_U16 = crrcRicoMvb->getUnsignedInt(0x530,28);
     TCU3CT_WHEELDIAM_U16 = crrcRicoMvb->getUnsignedInt(0x530,30);
     TCU3CT_IuiCalTBEffort_U16 = crrcRicoMvb->getUnsignedInt(0x531,12);
+    TCU1CT_BRCV_U16 = crrcRicoMvb->getUnsignedInt(0x511,14);
     TCU3CT_IuiMtr1Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x532,0);
     TCU3CT_IuiMtr2Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x532,2);
     TCU3CT_IuiLglSWRevision_U16 = crrcRicoMvb->getUnsignedInt(0x532,8);
@@ -1735,6 +1756,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU4CT_CHOPTIME_U16 = crrcRicoMvb->getUnsignedInt(0x540,28);
     TCU4CT_WHEELDIAM_U16 = crrcRicoMvb->getUnsignedInt(0x540,30);
     TCU4CT_IuiCalTBEffort_U16 = crrcRicoMvb->getUnsignedInt(0x541,12);
+    TCU4CT_BRCV_U16 = crrcRicoMvb->getUnsignedInt(0x511,14);
     TCU4CT_IuiMtr1Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x542,0);
     TCU4CT_IuiMtr2Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x542,2);
     TCU4CT_IuiLglSWRevision_U16 = crrcRicoMvb->getUnsignedInt(0x542,8);
@@ -1754,6 +1776,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU5CT_CHOPTIME_U16 = crrcRicoMvb->getUnsignedInt(0x550,28);
     TCU5CT_WHEELDIAM_U16 = crrcRicoMvb->getUnsignedInt(0x550,30);
     TCU5CT_IuiCalTBEffort_U16 = crrcRicoMvb->getUnsignedInt(0x551,12);
+    TCU5CT_BRCV_U16 = crrcRicoMvb->getUnsignedInt(0x511,14);
     TCU5CT_IuiMtr1Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x552,0);
     TCU5CT_IuiMtr2Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x552,2);
     TCU5CT_IuiLglSWRevision_U16 = crrcRicoMvb->getUnsignedInt(0x552,8);
@@ -1773,6 +1796,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU6CT_CHOPTIME_U16 = crrcRicoMvb->getUnsignedInt(0x560,28);
     TCU6CT_WHEELDIAM_U16 = crrcRicoMvb->getUnsignedInt(0x560,30);
     TCU6CT_IuiCalTBEffort_U16 = crrcRicoMvb->getUnsignedInt(0x561,12);
+    TCU6CT_BRCV_U16 = crrcRicoMvb->getUnsignedInt(0x511,14);
     TCU6CT_IuiMtr1Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x562,0);
     TCU6CT_IuiMtr2Tmp_U16 = crrcRicoMvb->getUnsignedInt(0x562,2);
     TCU6CT_IuiLglSWRevision_U16 = crrcRicoMvb->getUnsignedInt(0x562,8);
@@ -1907,6 +1931,8 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     ACU1CT_IuiLInptVltg_U16 = crrcRicoMvb->getUnsignedInt(0x610,20);
     ACU1CT_IuiInvOptVltg_U16 = crrcRicoMvb->getUnsignedInt(0x610,22);
     ACU1CT_IuiInvInptCurrent_U16 = crrcRicoMvb->getUnsignedInt(0x610,26);
+    ACU1CT_UWCurrent_U16 = crrcRicoMvb->getUnsignedInt(0x610,28);
+
     ACU2CT_IuiACEAlive_U16 = crrcRicoMvb->getUnsignedInt(0x620,0);
     ACU2CT_IuiDSPRevision_U16 = crrcRicoMvb->getUnsignedInt(0x620,2);
     ACU2CT_IuiPPCRevision_U16 = crrcRicoMvb->getUnsignedInt(0x620,4);
@@ -1915,7 +1941,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     ACU2CT_IuiLInptVltg_U16 = crrcRicoMvb->getUnsignedInt(0x620,20);
     ACU2CT_IuiInvOptVltg_U16 = crrcRicoMvb->getUnsignedInt(0x620,22);
     ACU2CT_IuiInvInptCurrent_U16 = crrcRicoMvb->getUnsignedInt(0x620,26);
-
+    ACU2CT_UWCurrent_U16 = crrcRicoMvb->getUnsignedInt(0x620,28);
     ACU1CT_IiBtyChgCurrent_I16 = crrcRicoMvb->getSignedInt(0x610,24);
     ACU2CT_IiBtyChgCurrent_I16 = crrcRicoMvb->getSignedInt(0x620,24);
 
@@ -2818,6 +2844,14 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     BMS3CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD30,15);
     BMS4CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD40,15);
 
+    BMS1CT_FLAG_U8 = crrcRicoMvb->getUnsignedChar(0xD10,12);
+    BMS2CT_FLAG_U8 = crrcRicoMvb->getUnsignedChar(0xD20,12);
+    BMS3CT_FLAG_U8 = crrcRicoMvb->getUnsignedChar(0xD30,12);
+    BMS4CT_FLAG_U8 = crrcRicoMvb->getUnsignedChar(0xD40,12);
+    BMS1CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD10,13);
+    BMS2CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD20,13);
+    BMS3CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD30,13);
+    BMS4CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD40,13);
 
     //***********************************PAN--CCU*******************************************//
     PANCT_PGHA_B1 = crrcRicoMvb->getBool(0xC10,2,7);

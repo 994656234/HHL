@@ -368,10 +368,10 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_cab2_direction">
    <property name="geometry">
     <rect>
-     <x>970</x>
-     <y>104</y>
-     <width>50</width>
-     <height>30</height>
+     <x>990</x>
+     <y>108</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -384,8 +384,8 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_cab2_active">
    <property name="geometry">
     <rect>
-     <x>940</x>
-     <y>110</y>
+     <x>941</x>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -402,9 +402,9 @@ border-radius:8px;</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>104</y>
-     <width>50</width>
-     <height>30</height>
+     <y>105</y>
+     <width>31</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -417,8 +417,8 @@ border-radius:8px;</string>
   <widget class="QLabel" name="lbl_cab1_active">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>110</y>
+     <x>66</x>
+     <y>108</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -635,6 +635,48 @@ border:0px;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_break_MRPMP2">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>73</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:18px&quot;微软雅黑&quot;;
+background-color: rgb(170, 170, 170);
+border:0px;</string>
+   </property>
+   <property name="text">
+    <string>1000Bar</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_break_MRPMP1">
+   <property name="geometry">
+    <rect>
+     <x>368</x>
+     <y>73</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:18px&quot;微软雅黑&quot;;
+background-color: rgb(170, 170, 170);
+border:0px;</string>
+   </property>
+   <property name="text">
+    <string>1000Bar</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>LBLM2</zorder>
@@ -669,6 +711,8 @@ border:0px;</string>
   <zorder>lbl_break3_1_pressure</zorder>
   <zorder>lbl_break4_2_pressure</zorder>
   <zorder>lbl_break4_1_pressure</zorder>
+  <zorder>lbl_break_MRPMP2</zorder>
+  <zorder>lbl_break_MRPMP1</zorder>
  </widget>
  <resources/>
  <connections/>

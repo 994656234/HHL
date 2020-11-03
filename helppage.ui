@@ -422,7 +422,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>140</y>
+     <y>110</y>
      <width>66</width>
      <height>51</height>
     </rect>
@@ -438,7 +438,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>450</x>
-     <y>160</y>
+     <y>122</y>
      <width>151</width>
      <height>21</height>
     </rect>
@@ -587,7 +587,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>440</x>
-     <y>270</y>
+     <y>220</y>
      <width>151</width>
      <height>21</height>
     </rect>
@@ -597,21 +597,20 @@ font:16px &quot;微软雅黑&quot;;</string>
 font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>司机室激活</string>
+    <string>联挂</string>
    </property>
   </widget>
   <widget class="QLabel" name="lbl_cab1_active">
    <property name="geometry">
     <rect>
-     <x>375</x>
-     <y>270</y>
+     <x>380</x>
+     <y>220</y>
      <width>16</width>
      <height>17</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 176, 80);
-border-radius:8px;</string>
+    <string notr="true">background-color: rgb(0, 176, 80);</string>
    </property>
    <property name="text">
     <string/>
@@ -660,7 +659,7 @@ font:16px &quot;微软雅黑&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 127);</string>
+    <string notr="true">background-color: black;</string>
    </property>
    <property name="text">
     <string/>
@@ -883,6 +882,40 @@ font:16px &quot;微软雅黑&quot;;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_cab1_active_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>300</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 176, 80);
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_44">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>293</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>司机室激活</string>
+   </property>
+  </widget>
   <zorder>label_53</zorder>
   <zorder>BTN2</zorder>
   <zorder>BTNHome</zorder>
@@ -932,6 +965,8 @@ font:16px &quot;微软雅黑&quot;;</string>
   <zorder>label_30</zorder>
   <zorder>label_42</zorder>
   <zorder>label_43</zorder>
+  <zorder>lbl_cab1_active_2</zorder>
+  <zorder>label_44</zorder>
  </widget>
  <resources/>
  <connections/>

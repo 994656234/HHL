@@ -1197,98 +1197,11 @@ border-radius:8px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="LBL1_11">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>510</y>
-     <width>221</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
-color: white;
-</string>
-   </property>
-   <property name="text">
-    <string>ATP切除旁路</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl9_2">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>511</y>
-     <width>101</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
-color: white;
-background-color: green;
-border:2px  solid black;
-border-radius:8px;</string>
-   </property>
-   <property name="text">
-    <string>未旁路</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="linelbl1_9">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>530</y>
-     <width>515</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 2px solid white;
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl9_1">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>510</y>
-     <width>101</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20px  &quot;微软雅黑&quot;;
-color: white;
-background-color: green;
-border:2px  solid black;
-border-radius:8px;</string>
-   </property>
-   <property name="text">
-    <string>未旁路</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="LBL1_12">
    <property name="geometry">
     <rect>
      <x>410</x>
-     <y>560</y>
+     <y>509</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -1309,7 +1222,7 @@ color: white;
    <property name="geometry">
     <rect>
      <x>800</x>
-     <y>561</y>
+     <y>510</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -1332,7 +1245,7 @@ border-radius:8px;</string>
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>580</y>
+     <y>529</y>
      <width>515</width>
      <height>2</height>
     </rect>
@@ -1352,7 +1265,7 @@ border-radius:8px;</string>
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>560</y>
+     <y>509</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -1427,13 +1340,9 @@ border-radius:8px;</string>
   <zorder>lbl_cab1_direction</zorder>
   <zorder>lbl_cab2_direction</zorder>
   <zorder>lbl_cab2_active</zorder>
-  <zorder>linelbl1_9</zorder>
-  <zorder>lbl9_1</zorder>
   <zorder>linelbl1_10</zorder>
   <zorder>lbl10_1</zorder>
-  <zorder>LBL1_11</zorder>
   <zorder>LBL1_12</zorder>
-  <zorder>lbl9_2</zorder>
   <zorder>lbl10_2</zorder>
  </widget>
  <resources/>

@@ -62,7 +62,7 @@ class FaultEventPage;
 class ByPassPage;
 class ByPassPage2;
 class MaintainceAccumulatorSubsystemPage;
-
+class MaintainceBatterySubsystemPage;
 
 class MaintainceCurrentFaultPage;
 class MaintainceHistoryFaultPage;
@@ -174,6 +174,7 @@ private:
     PasswordPage *passwordPage;
 
     MaintainceAccumulatorSubsystemPage *maintainceAccumulatorSubsystemPage;
+    MaintainceBatterySubsystemPage *maintainceBatterySubsystemPage;
     AVIC_ExternalDevice *ExternalDevice;
     VehicleSetSimlateStation *vehicleSetSimlateStation;
 

@@ -27,7 +27,7 @@ private:
     Ui::VehicleSetAirConditionPage *ui;
     QList<QPushButton*> metroButtons,modeButtons,temButtons;
     int timerID1,timerID2;
-    QList<bool *> modeSignal,temSignal;
+    QList<bool *> modeSignal,temSignal,deloadSignal;
     int flag,m_modeNum,m_temNum,m_setTemp,m_setTempFlag;
     QList<QLabel*> xinFenglbl,huiFenglbl;
     QList<unsigned char> xinFengStatus,huiFengStatus;

@@ -1,16 +1,16 @@
 #include "navigator.h"
 #include "ui_navigator.h"
 #include "qdebug.h"
-
+#define NButtonYELLOW  "font: 20px, \"微软雅黑\";color: black;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(255, 255, 127,255),stop:1 rgba(100,100,100,255));"
+#define NButton "font: 20px \"微软雅黑\";color:black;transparent;background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 rgba(170,170,170,255),stop:1 rgba(150,150,150,255));"
 Navigator::Navigator(QWidget *parent) :
     MyBase(parent),
     ui(new Ui::Navigator)
 {
     ui->setupUi(this);
 
-
     buttons<<this->ui->BTNEvent<<this->ui->BTNSetting<<this->ui->BTNMaintaince<<this->ui->BTNByPass<<this->ui->BTNHelp
-            <<this->ui->BTNLeaveB<<this->ui->BTNSkipback<<this->ui->BTNSkipforward<<this->ui->BTNSpare2<<this->ui->BTNHome;
+            <<this->ui->BTNBogieLampSubsystem<<this->ui->BTNSkipback<<this->ui->BTNSkipforward<<this->ui->BTNSpare2<<this->ui->BTNHome;
 
     foreach (QPushButton *button, buttons)
     {
@@ -43,6 +43,9 @@ void Navigator::NBpressEvent()
     }else if(BTNname == "BTNHelp")
     {
         changePage(uVehicleHelpPage);
+    }else if (BTNname == "BTNBogieLampSubsystem")
+    {
+        changePage(uVehicleMaintainceRunningGearSubsystemPage);
     }else if(BTNname == "BTNSkipback")
     {
 
@@ -66,4 +69,17 @@ void Navigator::refreshAllButtons()
     {
         button->setStyleSheet(NButtonUP);
     }
+}
+
+void Navigator::updatePage()
+{
+    if (database->RMICT_ByPass)
+    {
+        ui->BTNByPass->setStyleSheet(NButtonYELLOW);
+    }
+    else
+    {
+        ui->BTNByPass->setStyleSheet(NButton);
+    }
+
 }

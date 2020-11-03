@@ -25,6 +25,7 @@ private slots:
 private:
     Ui::ByPassPage2 *ui;
     void setStatus(QLabel* lbl,bool status);
+    void setGeLiStatus(QLabel* lbl,bool status);
 };
 
 #endif // BYPASSPAGE2_H

@@ -24,7 +24,8 @@
 #define PANNOUNKNOW "border-image: url(:/images/image/doorunknow.png);"
 #define PANTOUPING  "border-image: url(:/images/image/pantoUping.png);"
 #define PANTODOWNING "border-image: url(:/images/image/pantoDowning.png);"
-
+#define WORKSHOP "border-image: url(:/images/image/workshoponsupply.png);"
+#define POWERCOVER "font:14px \"微软雅黑\";background-color: rgb(255, 0, 0);color: rgb(0, 0, 0);border:2px solid black;"
 
 
 VehicleTrainArea::VehicleTrainArea(QWidget *parent) :
@@ -97,25 +98,46 @@ void VehicleTrainArea::updatePage()
     }
 
     //车间电源
-    if(!database->RM3CT_ACUPowerCover_B1)
+    if(database->CTD_MP1WorkShop_B1)
     {
+        ui->lbl_metroPower1->setStyleSheet(WORKSHOP);
+        ui->lbl_metroPower1->setText("");
         ui->lbl_metroPower1->show();
     }
     else
     {
-        ui->lbl_metroPower1->hide();
+        //车间电源盖
+        if(!database->RM3CT_ACUPowerCover_B1)
+        {
+            ui->lbl_metroPower1->setStyleSheet(POWERCOVER);
+            ui->lbl_metroPower1->setText("PH");
+            ui->lbl_metroPower1->show();
+        }
+        else
+        {
+            ui->lbl_metroPower1->hide();
+        }
     }
-
-    if(!database->RM6CT_ACUPowerCover_B1)
+    if(database->CTD_MP2WorkShop_B1)
     {
+        ui->lbl_metroPower2->setStyleSheet(WORKSHOP);
+        ui->lbl_metroPower2->setText("");
         ui->lbl_metroPower2->show();
+
     }
     else
     {
-        ui->lbl_metroPower2->hide();
+        if(!database->RM6CT_ACUPowerCover_B1)
+        {
+            ui->lbl_metroPower2->setStyleSheet(POWERCOVER);
+            ui->lbl_metroPower2->setText("PH");
+            ui->lbl_metroPower2->show();
+        }
+        else
+        {
+            ui->lbl_metroPower2->hide();
+        }
     }
-
-
     // chegou
     if(database->CTD_RIOM1GWOLINE_B1&&database->RM1CT_CTR_B1)
     {

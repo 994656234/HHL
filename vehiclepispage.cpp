@@ -25,6 +25,43 @@ VehiclePISPage::~VehiclePISPage()
 
 void VehiclePISPage::updatePage()
 {
+    //司机室激活
+    if(database->CTD_MCTActive_B1)
+    {
+        ui->lbl_cab1_active->show();
+    }
+    else
+    {
+        ui->lbl_cab1_active->hide();
+    }
+
+    if(database->CTD_MC2Active_B1)
+    {
+        ui->lbl_cab2_active->show();
+    }
+    else
+    {
+        ui->lbl_cab2_active->hide();
+    }
+    //列车运行方向
+    if(database->CTD_Forward_B1)
+    {
+        ui->lbl_cab1_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab1_direction->hide();
+    }
+
+    if(database->CTD_Backward_B1)
+    {
+        ui->lbl_cab2_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab2_direction->hide();
+    }
+
     label<<ui->lbl_1_1<<ui->lbl_1_2<<ui->lbl_1_3<<ui->lbl_1_4<<ui->lbl_1_5<<ui->lbl_1_6;
     status<<database->PISiCT_P81_B1<<database->PISiCT_P113_B1<<database->PISiCT_P145_B1
          <<database->PISiCT_P82_B1<<database->PISiCT_P114_B1<<database->PISiCT_P146_B1

@@ -32,6 +32,43 @@ VehicleFireWarningPage::~VehicleFireWarningPage()
 
 void VehicleFireWarningPage::updatePage()
 {
+    //司机室激活
+    if(database->CTD_MCTActive_B1)
+    {
+        ui->lbl_cab1_active->show();
+    }
+    else
+    {
+        ui->lbl_cab1_active->hide();
+    }
+
+    if(database->CTD_MC2Active_B1)
+    {
+        ui->lbl_cab2_active->show();
+    }
+    else
+    {
+        ui->lbl_cab2_active->hide();
+    }
+    //列车运行方向
+    if(database->CTD_Forward_B1)
+    {
+        ui->lbl_cab1_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab1_direction->hide();
+    }
+
+    if(database->CTD_Backward_B1)
+    {
+        ui->lbl_cab2_direction->show();
+    }
+    else
+    {
+        ui->lbl_cab2_direction->hide();
+    }
+
     status1<<database->FCU1CT_SHD1Alarm1_B1<<database->FCU1CT_SHD2Alarm1_B1<<database->FCU1CT_SHD3Alarm1_B1<<database->FCU1CT_SHD4Alarm1_B1
           <<database->FCU1CT_SHD5Alarm1_B1<<database->FCU1CT_SHD6Alarm1_B1<<database->FCU1CT_SHD7Alarm1_B1<<database->FCU1CT_SHD1Alarm2_B1
          <<database->FCU1CT_SHD2Alarm2_B1<<database->FCU1CT_SHD3Alarm2_B1<<database->FCU1CT_SHD4Alarm2_B1<<database->FCU1CT_SHD1Alarm3_B1
