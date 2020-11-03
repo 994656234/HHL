@@ -406,28 +406,7 @@ border-bottom-right-radius:8px;</string>
   <widget class="QLabel" name="lbl_deload1">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>65</y>
-     <width>50</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(170,170,170);
-font:18px,&quot;微软雅黑&quot;;
-border:0px,black</string>
-   </property>
-   <property name="text">
-    <string>减载</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_deload2">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
+     <x>169</x>
      <y>65</y>
      <width>50</width>
      <height>19</height>
@@ -448,28 +427,7 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_deload3">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>65</y>
-     <width>50</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(170,170,170);
-font:18px,&quot;微软雅黑&quot;;
-border:0px,black</string>
-   </property>
-   <property name="text">
-    <string>减载</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_deload4">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
+     <x>379</x>
      <y>65</y>
      <width>50</width>
      <height>19</height>
@@ -490,49 +448,7 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_deload5">
    <property name="geometry">
     <rect>
-     <x>541</x>
-     <y>65</y>
-     <width>50</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(170,170,170);
-font:18px,&quot;微软雅黑&quot;;
-border:0px,black</string>
-   </property>
-   <property name="text">
-    <string>减载</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_deload6">
-   <property name="geometry">
-    <rect>
-     <x>641</x>
-     <y>65</y>
-     <width>50</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(170,170,170);
-font:18px,&quot;微软雅黑&quot;;
-border:0px,black</string>
-   </property>
-   <property name="text">
-    <string>减载</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_deload8">
-   <property name="geometry">
-    <rect>
-     <x>851</x>
+     <x>590</x>
      <y>65</y>
      <width>50</width>
      <height>19</height>
@@ -553,7 +469,7 @@ border:0px,black</string>
   <widget class="QLabel" name="lbl_deload7">
    <property name="geometry">
     <rect>
-     <x>751</x>
+     <x>800</x>
      <y>65</y>
      <width>50</width>
      <height>19</height>
@@ -594,12 +510,8 @@ border:0px,black</string>
   <zorder>lbl_airCondition3_2</zorder>
   <zorder>lbl_airCondition4_2</zorder>
   <zorder>lbl_deload1</zorder>
-  <zorder>lbl_deload2</zorder>
   <zorder>lbl_deload3</zorder>
-  <zorder>lbl_deload4</zorder>
   <zorder>lbl_deload5</zorder>
-  <zorder>lbl_deload6</zorder>
-  <zorder>lbl_deload8</zorder>
   <zorder>lbl_deload7</zorder>
  </widget>
  <resources/>

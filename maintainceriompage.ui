@@ -236,6 +236,9 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>8</string>
    </property>
@@ -259,6 +262,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <width>81</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>8</string>
@@ -284,6 +290,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>8</string>
    </property>
@@ -307,6 +316,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <width>81</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>8</string>
@@ -332,6 +344,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>8</string>
    </property>
@@ -355,6 +370,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <width>81</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>8</string>
@@ -380,6 +398,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>8</string>
    </property>
@@ -403,6 +424,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <width>81</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>8</string>
@@ -428,6 +452,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>8</string>
    </property>
@@ -451,6 +478,9 @@ font:12px &quot;微软雅黑&quot;;</string>
      <width>81</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>8</string>

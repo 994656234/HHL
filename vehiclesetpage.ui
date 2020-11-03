@@ -336,6 +336,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <height>80</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);
 color: rgb(255, 255, 255);
@@ -355,6 +358,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <height>80</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);
 color: rgb(255, 255, 255);
@@ -373,6 +379,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <width>100</width>
      <height>80</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);
@@ -409,6 +418,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <height>80</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);
 color: rgb(255, 255, 255);
@@ -427,6 +439,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <width>100</width>
      <height>80</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);
@@ -447,6 +462,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <height>80</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);
 color: rgb(255, 255, 255);
@@ -465,6 +483,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <width>100</width>
      <height>80</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);

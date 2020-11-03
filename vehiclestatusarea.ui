@@ -1084,6 +1084,9 @@ font:20px &quot;微软雅黑&quot;;
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>1</string>
    </property>
@@ -1140,6 +1143,9 @@ border-color: rgb(255, 255, 255);</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>1</string>
    </property>
@@ -1161,6 +1167,9 @@ border-radius:10px;</string>
      <width>91</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>2</string>

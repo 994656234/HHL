@@ -320,6 +320,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>1</string>
    </property>
@@ -342,6 +345,9 @@ border-radius:10px;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>2</string>
    </property>
@@ -363,6 +369,9 @@ border-radius:10px;</string>
      <width>121</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>3</string>
@@ -387,6 +396,9 @@ border-radius:10px;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>4</string>
    </property>
@@ -410,6 +422,9 @@ border-radius:10px;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>5</string>
    </property>
@@ -432,6 +447,9 @@ border-radius:10px;</string>
      <width>121</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>6</string>
@@ -474,7 +492,9 @@ border-radius:10px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 176, 80);
-border-radius:8px;</string>
+border-radius:8px;
+font:24px,&quot;微软雅黑&quot;;
+border:1px solid black;</string>
    </property>
    <property name="text">
     <string/>
@@ -507,7 +527,9 @@ border-radius:8px;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 176, 80);
-border-radius:8px;</string>
+border-radius:8px;
+font:24px,&quot;微软雅黑&quot;;
+border:1px solid black;</string>
    </property>
    <property name="text">
     <string/>
@@ -558,6 +580,9 @@ border-bottom-right-radius:8px;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>1</string>
    </property>
@@ -580,6 +605,9 @@ border-radius:10px;</string>
      <width>121</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
     <string>2</string>

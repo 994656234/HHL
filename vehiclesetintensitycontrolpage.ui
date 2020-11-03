@@ -256,6 +256,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-top:3px solid rgb(19,20,87);
 color: rgb(255, 255, 255);
@@ -276,6 +279,9 @@ font:16px &quot;微软雅黑&quot;;</string>
      <width>161</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border-top:3px solid rgb(19,20,87);
@@ -338,6 +344,9 @@ font:20px &quot;微软雅黑&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-top:3px solid rgb(19,20,87);
 color: rgb(255, 255, 255);
@@ -358,6 +367,9 @@ font:16px &quot;微软雅黑&quot;;</string>
      <width>161</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border-top:3px solid rgb(19,20,87);
