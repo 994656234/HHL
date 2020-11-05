@@ -94,6 +94,7 @@ Database::Database()
     DiCT_EmgyMsgStop_B1=false;
 
     DiCT_RunStatSetType_U8=0;
+    DiCT_ACVPALL_U8=0;
     DiCT_RunStatSetData_U32=0;
 
     HMiCT_LifeSignal_U16=0;
@@ -244,6 +245,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setBool(0x311,7,4,DiCT_ACDETestStartFlag_B1);
             crrcRicoMvb->setBool(0x311,7,7,DiCT_BCUSelfTestReq_B1);
             crrcRicoMvb->setBool(0x311,8,0,DiCT_BCUSelfTestStop_B1);
+            crrcRicoMvb->setUnsignedChar(0x311,27,DiCT_ACVPALL_U8);
             crrcRicoMvb->setUnsignedChar(0x311,10,DiCT_EmgyMsgCode_U8);
             crrcRicoMvb->setBool(0x311,11,0,DiCT_EmgyMsgStart_B1);
             crrcRicoMvb->setBool(0x311,11,1,DiCT_EmgyMsgStop_B1);
@@ -378,6 +380,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
             crrcRicoMvb->setBool(0x321,7,4,DiCT_ACDETestStartFlag_B1);
             crrcRicoMvb->setBool(0x321,7,7,DiCT_BCUSelfTestReq_B1);
             crrcRicoMvb->setBool(0x321,8,0,DiCT_BCUSelfTestStop_B1);
+            crrcRicoMvb->setUnsignedChar(0x311,27,DiCT_ACVPALL_U8);
             crrcRicoMvb->setUnsignedChar(0x321,10,DiCT_EmgyMsgCode_U8);
             crrcRicoMvb->setBool(0x321,11,0,DiCT_EmgyMsgStart_B1);
             crrcRicoMvb->setBool(0x321,11,1,DiCT_EmgyMsgStop_B1);

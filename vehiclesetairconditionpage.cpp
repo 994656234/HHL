@@ -22,7 +22,6 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
         connect(button,SIGNAL(pressed()),this,SLOT(metroBTNPressEvent()));
         button->setStyleSheet(METROPRESS);
     }
-    ui->BTN_allMetro->hide();
 
     modeSignal<<&database->DiCT_HVACEmgcyVenti_B1<<&database->DiCT_HVACVenti_B1<<&database->DiCT_HVACAutoCoolMode_B1
              <<&database->DiCT_HVACAutoWarmMode_B1<<&database->DiCT_HVACStop_B1<<&database->HVACWarmStop<<&database->HVACCoolStop;

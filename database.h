@@ -74,7 +74,7 @@ public:
 
     unsigned  char CTD_TRCBLOCK_U8;
 
-    unsigned char DiCT_RunStatSetType_U8;
+    unsigned char DiCT_RunStatSetType_U8,DiCT_ACVPALL_U8;
     unsigned int DiCT_RunStatSetData_U32;
 
     bool CTD_BMS1OLINE_B1,CTD_BMS2OLINE_B1,CTD_BMS3OLINE_B1,CTD_BMS4OLINE_B1;

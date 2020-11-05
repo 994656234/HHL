@@ -2,6 +2,7 @@
 #define MAINTAINCERUNNINGGEARSUBSYSTEMPAGE_H
 #include "mybase.h"
 #include "qlabel.h"
+#include "qpushbutton.h"
 
 #include <QWidget>
 
@@ -21,13 +22,16 @@ public:
 
 private:
     Ui::MaintainceRunningGearSubsystemPage *ui;
-    QList<QLabel*> column1,column2,column3,column4;
-    unsigned char column1Value,column2Value,column3Value,column4Value,
-                         column1Flag,column2Flag,column3Flag,column4Flag;
-
+    QList<QLabel*> line;
+    unsigned char line1Value,line2Value,line3Value,line4Value,
+                         line1Flag,line2Flag,line3Flag,line4Flag;
+    QList<QPushButton*> metroButtons;
+    int metroNum;
 private slots:
     void on_BTNHome_pressed();
     void on_BTN1_pressed();
+    void metroBTNPressEvent();
+
 };
 
 #endif // MAINTAINCERUNNINGGEARSUBSYSTEMPAGE_H
