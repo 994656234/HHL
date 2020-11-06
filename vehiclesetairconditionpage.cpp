@@ -22,6 +22,8 @@ VehicleSetAirConditionPage::VehicleSetAirConditionPage(QWidget *parent) :
         connect(button,SIGNAL(pressed()),this,SLOT(metroBTNPressEvent()));
         button->setStyleSheet(METROPRESS);
     }
+    metroNum = 5;
+    database->DiCT_ACVPALL_U8 = metroNum;
 
     modeSignal<<&database->DiCT_HVACEmgcyVenti_B1<<&database->DiCT_HVACVenti_B1<<&database->DiCT_HVACAutoCoolMode_B1
              <<&database->DiCT_HVACAutoWarmMode_B1<<&database->DiCT_HVACStop_B1<<&database->HVACWarmStop<<&database->HVACCoolStop;
@@ -186,7 +188,8 @@ void VehicleSetAirConditionPage::updatePage()
 
 void VehicleSetAirConditionPage::metroBTNPressEvent()
 {
-    int metroNum= ((QPushButton*)this->sender())->whatsThis().toInt();
+    metroNum= ((QPushButton*)this->sender())->whatsThis().toInt();
+    database->DiCT_ACVPALL_U8 = metroNum;
     if(metroNum==5)
     {
         for(int i=0;i<5;i++)

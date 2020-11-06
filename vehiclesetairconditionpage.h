@@ -33,6 +33,7 @@ private:
     QList<unsigned char> xinFengStatus,huiFengStatus;
     void setXinFengStatus(QList<QLabel*> lbl,QList<unsigned char> status);
     void setHuiFengStatus(QList<QLabel*> lbl,QList<unsigned char> status);
+    int metroNum;
 
 private slots:
     void on_BTN_comfirm1_pressed();
