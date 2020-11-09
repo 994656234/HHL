@@ -7,7 +7,7 @@
 #define  DOORCUTOFF "border-image: url(:/images/image/doorcutoff.png);"
 #define  DOORFAULT "border-image: url(:/images/image/doorfault.png);"
 #define  DOOROBS "border-image: url(:/images/image/doorobs.png);"
-#define  DOOROPEN "background-color: rgb(255, 255, 127);"
+#define  DOOROPEN "background-color: black;"
 #define  DOORCLOSE "background-color: rgb(34, 177, 76);"
 #define  DOORUNKNOW "border-image: url(:/images/image/doorunknow.png);"
 #define  DOOREMOPENP "border-image: url(:/images/image/emergencyopen.png);"
