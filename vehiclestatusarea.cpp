@@ -283,7 +283,7 @@ void VehicleStatusArea::updatePage()
     }
     else if(database->CTD_DriveMode_U8==3)
     {
-        ui->lbl_mode->setText("ATP切除");
+        ui->lbl_mode->setText("EUM");
     }
     else if(database->CTD_DriveMode_U8==4)
     {

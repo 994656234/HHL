@@ -422,7 +422,8 @@ DISTFILES += \
     libavic_imx.so
 
 
-
+QMAKE_CXXFLAGS += -Wno-unused-parameter
+QMAKE_CXXFLAGS += -Wno-unused-variable
 #unix:!macx: LIBS += -L$$PWD/./ -lavic_imx
 
 #INCLUDEPATH += $$PWD/.

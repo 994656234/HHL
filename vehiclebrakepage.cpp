@@ -9,6 +9,7 @@
 
 #define  STOPBRAKEON "border-image: url(:/images/image/bcupbapp.png);"
 #define  STOPBRAKEOFF "border-image: url(:/images/image/bcupbaoff.png);"
+#define  STOPBRAKEGELI "border-image: url(:/images/image/bcupbgeli.png);"
 
 VehicleBrakePage::VehicleBrakePage(QWidget *parent) :
     MyBase(parent),
@@ -99,10 +100,20 @@ void VehicleBrakePage::updatePage()
     brakeStatus(ui->lbl_brake4_2,status);
     status.clear();
 
-    stopBrakeStatus(ui->lbl_stopbrake1,database->BiCT_PBrtRelMC1Bg1_B1);
-    stopBrakeStatus(ui->lbl_stopbrake2,database->BiCT_PBrtRelMp1Bg1_B1);
-    stopBrakeStatus(ui->lbl_stopbrake3,database->BiCT_PBrtRelMP2Bg1_B1);
-    stopBrakeStatus(ui->lbl_stopbrake4,database->BiCT_PBrtRelMC2Bg1_B1);
+    status<<database->RM2CT_PBIV_B1<<database->BiCT_PBrtRelMC1Bg1_B1;
+    stopBrakeStatus(ui->lbl_stopbrake1,status);
+    status.clear();
+
+    status<<database->RM3CT_PBIV_B1<<database->BiCT_PBrtRelMp1Bg1_B1;
+    stopBrakeStatus(ui->lbl_stopbrake2,status);
+    status.clear();
+
+    status<<database->RM6CT_PBIV_B1<<database->BiCT_PBrtRelMP2Bg1_B1;
+    stopBrakeStatus(ui->lbl_stopbrake3,status);
+    status.clear();
+
+    status<<database->RM5CT_PBIV_B1<<database->BiCT_PBrtRelMC2Bg1_B1;
+    stopBrakeStatus(ui->lbl_stopbrake4,status);
 
     ui->lbl_break1_1_pressure->setText(QString::number((int)database->BiCT_BCPMC1Bg1_I16/20)+"kpa");
     ui->lbl_break1_2_pressure->setText(QString::number((int)database->BiCT_BCPMC1Bg2_I16/20)+"kpa");
@@ -114,7 +125,7 @@ void VehicleBrakePage::updatePage()
     ui->lbl_break4_2_pressure->setText(QString::number((int)database->BiCT_BCPMC2Bg2_I16/20)+"kpa");
 
     ui->lbl_break_MRPMP1->setText(QString::number((int)database->BiCT_MRPMP1_I16/20)+"kpa");
-    ui->lbl_break_MRPMP1->setText(QString::number((int)database->BiCT_MRPMP2_I16/20)+"kpa");
+    ui->lbl_break_MRPMP2->setText(QString::number((int)database->BiCT_MRPMP2_I16/20)+"kpa");
 
 
 
@@ -147,15 +158,22 @@ void VehicleBrakePage::brakeStatus(QLabel * label ,QList<bool> status)
 }
 
 
-void VehicleBrakePage::stopBrakeStatus(QLabel *label,bool status)
+void VehicleBrakePage::stopBrakeStatus(QLabel *label, QList<bool> status)
 {
-    if(!status)
+    if (status.at(0))
     {
-        label->setStyleSheet(STOPBRAKEON);
+        label->setStyleSheet(STOPBRAKEGELI);
     }
     else
     {
-        label->setStyleSheet(STOPBRAKEOFF);
+        if(!status.at(1))
+        {
+            label->setStyleSheet(STOPBRAKEON);
+        }
+        else
+        {
+            label->setStyleSheet(STOPBRAKEOFF);
+        }
     }
 
 }

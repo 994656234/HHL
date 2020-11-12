@@ -470,7 +470,7 @@ font:16px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="label_32">
    <property name="geometry">
     <rect>
-     <x>430</x>
+     <x>438</x>
      <y>560</y>
      <width>151</width>
      <height>21</height>
@@ -521,7 +521,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>360</y>
+     <y>280</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -537,7 +537,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>760</x>
-     <y>370</y>
+     <y>290</y>
      <width>151</width>
      <height>21</height>
     </rect>
@@ -554,7 +554,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>150</y>
+     <y>103</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -570,7 +570,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>160</y>
+     <y>113</y>
      <width>151</width>
      <height>21</height>
     </rect>
@@ -620,7 +620,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>260</y>
+     <y>192</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -636,7 +636,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>270</y>
+     <y>202</y>
      <width>151</width>
      <height>21</height>
     </rect>
@@ -653,7 +653,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>460</y>
+     <y>380</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -669,7 +669,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>470</y>
+     <y>390</y>
      <width>151</width>
      <height>21</height>
     </rect>
@@ -686,7 +686,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>690</x>
-     <y>550</y>
+     <y>470</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -702,7 +702,7 @@ font:16px &quot;微软雅黑&quot;;</string>
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>560</y>
+     <y>480</y>
      <width>151</width>
      <height>21</height>
     </rect>
@@ -916,6 +916,39 @@ font:16px &quot;微软雅黑&quot;;</string>
     <string>司机室激活</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_45">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>550</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_46">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>560</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>通道门限位开关</string>
+   </property>
+  </widget>
   <zorder>label_53</zorder>
   <zorder>BTN2</zorder>
   <zorder>BTNHome</zorder>
@@ -967,6 +1000,8 @@ font:16px &quot;微软雅黑&quot;;</string>
   <zorder>label_43</zorder>
   <zorder>lbl_cab1_active_2</zorder>
   <zorder>label_44</zorder>
+  <zorder>label_45</zorder>
+  <zorder>label_46</zorder>
  </widget>
  <resources/>
  <connections/>

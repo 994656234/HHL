@@ -138,6 +138,7 @@
         <file>image/HVACyuWarm.png</file>
         <file>image/HVAyuCool.png</file>
         <file>image/HVACauto.png</file>
+        <file>image/bcupbgeli.png</file>
     </qresource>
     <qresource prefix="/">
         <file>image/emergencyopen.png</file>
