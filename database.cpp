@@ -434,6 +434,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 
 
     CTD_TRCBLOCK_U8=crrcRicoMvb->getUnsignedChar(0x30A,14);
+    CTD_QYFSXX_U8 = crrcRicoMvb->getUnsignedChar(0x30A,20);
 
     //PIS
     PIS1CT_P2_B1=crrcRicoMvb->getBool(0x910,2,0);

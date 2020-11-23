@@ -58,3 +58,12 @@ void MaintainceAccumulatorSubsystemPage::timerEvent(QTimerEvent *e)
 
     }
 }
+
+void MaintainceAccumulatorSubsystemPage::hideEvent(QHideEvent *)
+{
+    killTimer(timer2s[0]);
+    ui->BTNStartTest->setStyleSheet(BTNRELEASE);
+    database->tamianClean=false;
+    database->DiCT_SetFlagChecker_U8=0x55;
+    ui->BTNStartTest->setEnabled(true);
+}

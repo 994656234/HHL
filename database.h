@@ -307,7 +307,7 @@ public:
     CTD_CCU1SWVer_U8, CTD_CCU1MVBVer_U8, CTD_CCU1SDBVer_U8, CTD_CCU1VxWorksVer_U8,
     CTD_CCU1FPGAVer_U8,  CTD_CCU2SWVer_U8, CTD_CCU2MVBVer_U8, CTD_CCU2SDBVer_U8,
     CTD_CCU2VxWorksVer_U8,CTD_CCU2FPGAVer_U8, CTD_Acc40MCLv_U8,CTD_Acc80MCLv_U8,
-    CTD_DeMCLv_U8, CTD_DeBrkMode_U8,CTD_MP1PanStatus_U8, CTD_MP2PanStatus_U8;
+    CTD_DeMCLv_U8, CTD_DeBrkMode_U8,CTD_MP1PanStatus_U8, CTD_MP2PanStatus_U8,CTD_QYFSXX_U8;
 
     unsigned short
     CTD_TrainLimitSpeed_U16, CTD_TrainSpeed_U16,CTD_CatenaryVoltage_U16, CTD_CatenaryCurrent_U16,

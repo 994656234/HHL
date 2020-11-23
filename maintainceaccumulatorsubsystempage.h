@@ -26,6 +26,7 @@ public:
 private:
     Ui::MaintainceAccumulatorSubsystemPage *ui;
     int timer2s[1];
+    void hideEvent(QHideEvent *);
 
 private slots:
     void on_BTNHome_pressed();

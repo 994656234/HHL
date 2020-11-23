@@ -545,7 +545,7 @@ font:24px &quot;微软雅黑&quot;;</string>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>196</x>
      <y>-10</y>
      <width>121</width>
      <height>250</height>
@@ -990,7 +990,7 @@ border-color: rgb(0, 0, 0);</string>
   <widget class="QLabel" name="lbl_level_name">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>166</x>
      <y>50</y>
      <width>45</width>
      <height>51</height>
@@ -1013,10 +1013,10 @@ font:20px &quot;微软雅黑&quot;;
   <widget class="QLabel" name="lbl_level_value">
    <property name="geometry">
     <rect>
-     <x>134</x>
-     <y>150</y>
+     <x>150</x>
+     <y>148</y>
      <width>71</width>
-     <height>31</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1036,10 +1036,10 @@ font:20px &quot;微软雅黑&quot;;
   <widget class="QLabel" name="lbl_notract_nobrake">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>117</y>
+     <x>166</x>
+     <y>119</y>
      <width>45</width>
-     <height>31</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1212,25 +1212,49 @@ border-radius:10px;</string>
   <widget class="QLabel" name="lbl_qianyinfengsuo">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>180</y>
-     <width>45</width>
-     <height>61</height>
+     <x>7</x>
+     <y>176</y>
+     <width>207</width>
+     <height>65</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel
 {
-color:red;
+color:rgb(239, 149, 11);
+font:16px &quot;微软雅黑&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>列车发出牵引指令后,5s内列
+车仍然不能缓解所有制动,则
+触发牵引封锁.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_qianyinfengsuo_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>154</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+color:rgb(239, 149, 11);
 font:20px &quot;微软雅黑&quot;;
 }</string>
    </property>
    <property name="text">
-    <string>牵引
-封锁</string>
+    <string>牵引封锁:</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
   <zorder>LBLSpeed</zorder>
@@ -1274,6 +1298,7 @@ font:20px &quot;微软雅黑&quot;;
   <zorder>BTNResetFireBEEP</zorder>
   <zorder>BTN_fangyou</zorder>
   <zorder>lbl_qianyinfengsuo</zorder>
+  <zorder>lbl_qianyinfengsuo_2</zorder>
  </widget>
  <resources/>
  <connections/>

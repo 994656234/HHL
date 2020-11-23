@@ -446,7 +446,7 @@ void VehicleTrainArea::updatePage()
     if(database->CTD_RIOM3GWOLINE_B1)
     {
 
-        if(database->RM3CT_HSCB1STATE_B1)
+        if(database->RM3CT_HSCB2STATE_B1)
         {
             ui->lbl_quickBreak1->setStyleSheet(QUICKBREAKON);
         }
@@ -463,7 +463,7 @@ void VehicleTrainArea::updatePage()
     if(database->CTD_RIOM3GWOLINE_B1)
     {
 
-        if(database->RM3CT_HSCB2STATE_B1)
+        if(database->RM3CT_HSCB1STATE_B1)
         {
             ui->lbl_quickBreak2->setStyleSheet(QUICKBREAKON);
         }

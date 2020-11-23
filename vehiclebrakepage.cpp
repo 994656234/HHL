@@ -114,6 +114,7 @@ void VehicleBrakePage::updatePage()
 
     status<<database->RM5CT_PBIV_B1<<database->BiCT_PBrtRelMC2Bg1_B1;
     stopBrakeStatus(ui->lbl_stopbrake4,status);
+    status.clear();
 
     ui->lbl_break1_1_pressure->setText(QString::number((int)database->BiCT_BCPMC1Bg1_I16/20)+"kpa");
     ui->lbl_break1_2_pressure->setText(QString::number((int)database->BiCT_BCPMC1Bg2_I16/20)+"kpa");

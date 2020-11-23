@@ -44,11 +44,13 @@ void MaintainceRunningGearSubsystemPage::on_BTN1_pressed()
 void MaintainceRunningGearSubsystemPage::metroBTNPressEvent()
 {
     metroNum= ((QPushButton*)this->sender())->whatsThis().toInt();
-    for(int i=0;i<5;i++)
+
+    for(int i=0;i<4;i++)
     {
         metroButtons.at(i)->setStyleSheet(METRORELEASE);
     }
     metroButtons.at(metroNum-1)->setStyleSheet(METROPRESS);
+
 }
 
 void MaintainceRunningGearSubsystemPage::on_BTNHome_pressed()
@@ -105,7 +107,7 @@ void MaintainceRunningGearSubsystemPage::updateStatus(QList<QLabel *> lbl, unsig
 
     if(flag > 0 && flag < 21 )
     {
-        lbl.at(flag)->setText(QString::number(value - 55));
+        lbl.at(flag - 1)->setText(QString::number(value - 55));
     }
 }
 

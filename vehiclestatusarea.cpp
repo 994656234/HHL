@@ -104,7 +104,7 @@ VehicleStatusArea::VehicleStatusArea(QWidget *parent) :
 
     emDialogPage->hide();
     ui->lbl_qianyinfengsuo->hide();
-
+    ui->lbl_qianyinfengsuo_2->hide();
     emDooropenflag=0;
 
 }
@@ -283,7 +283,7 @@ void VehicleStatusArea::updatePage()
     }
     else if(database->CTD_DriveMode_U8==3)
     {
-        ui->lbl_mode->setText("EUM");
+        ui->lbl_mode->setText("EUM模式");
     }
     else if(database->CTD_DriveMode_U8==4)
     {
@@ -301,14 +301,36 @@ void VehicleStatusArea::updatePage()
     {
         ui->lbl_mode->setText("--");
     }
-
     if(database->CTD_TRCBLOCK_U8)
     {
         ui->lbl_qianyinfengsuo->show();
+        ui->lbl_qianyinfengsuo_2->show();
+        switch(database->CTD_QYFSXX_U8)
+        {
+        case 1:
+            ui->lbl_qianyinfengsuo->setText("ATO、CM、自动折返模式下,\n速度大于125km/h.");
+            break;
+        case 2:
+            ui->lbl_qianyinfengsuo->setText("非轮盘清洁模式下,四个以上\n牵引控制单元的牵引和电制\n动切除.");
+            break;
+        case 3:
+            ui->lbl_qianyinfengsuo->setText("四个以上转向架的气制动丢\n失.");
+            break;
+        case 4:
+            ui->lbl_qianyinfengsuo->setText("所有停放制动不缓解,若此没\n有“停放制动缓解旁路”信\n号,则网络将会牵引封锁.");
+            break;
+        case 5:
+            ui->lbl_qianyinfengsuo->setText("列车发出牵引指令后,5s内列\n车仍然不能缓解所有制动,则\n触发牵引封锁.");
+            break;
+        default:
+            ui->lbl_qianyinfengsuo->setText("");
+            break;
+        }
     }
     else
     {
         ui->lbl_qianyinfengsuo->hide();
+        ui->lbl_qianyinfengsuo_2->hide();
     }
 
 

@@ -561,6 +561,9 @@ font:16px &quot;微软雅黑&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="whatsThis">
     <string>5</string>
    </property>
