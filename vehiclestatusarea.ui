@@ -1212,9 +1212,9 @@ border-radius:10px;</string>
   <widget class="QLabel" name="lbl_qianyinfengsuo">
    <property name="geometry">
     <rect>
-     <x>7</x>
+     <x>5</x>
      <y>176</y>
-     <width>207</width>
+     <width>212</width>
      <height>65</height>
     </rect>
    </property>
@@ -1226,9 +1226,9 @@ font:16px &quot;微软雅黑&quot;;
 }</string>
    </property>
    <property name="text">
-    <string>列车发出牵引指令后,5s内列
-车仍然不能缓解所有制动,则
-触发牵引封锁.</string>
+    <string>   列车发出牵引指令后,5s内列
+车仍然不能缓解所有制动,则触
+发牵引封锁。</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1237,7 +1237,7 @@ font:16px &quot;微软雅黑&quot;;
   <widget class="QLabel" name="lbl_qianyinfengsuo_2">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>5</x>
      <y>154</y>
      <width>91</width>
      <height>21</height>

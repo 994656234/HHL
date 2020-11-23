@@ -308,19 +308,19 @@ void VehicleStatusArea::updatePage()
         switch(database->CTD_QYFSXX_U8)
         {
         case 1:
-            ui->lbl_qianyinfengsuo->setText("ATO、CM、自动折返模式下,\n速度大于125km/h.");
+            ui->lbl_qianyinfengsuo->setText("   ATO、CM、自动折返模式\n下,速度大于125km/h。");
             break;
         case 2:
-            ui->lbl_qianyinfengsuo->setText("非轮盘清洁模式下,四个以上\n牵引控制单元的牵引和电制\n动切除.");
+            ui->lbl_qianyinfengsuo->setText("   非轮盘清洁模式下,四个以上\n牵引控制单元的牵引和电制动\n切除。");
             break;
         case 3:
-            ui->lbl_qianyinfengsuo->setText("四个以上转向架的气制动丢\n失.");
+            ui->lbl_qianyinfengsuo->setText("   四个以上转向架的气制动丢\n失。");
             break;
         case 4:
-            ui->lbl_qianyinfengsuo->setText("所有停放制动不缓解,若此没\n有“停放制动缓解旁路”信\n号,则网络将会牵引封锁.");
+            ui->lbl_qianyinfengsuo->setText("   所有停放制动不缓解,若此没\n有“停放制动缓解旁路”信号,\n则网络将会牵引封锁。");
             break;
         case 5:
-            ui->lbl_qianyinfengsuo->setText("列车发出牵引指令后,5s内列\n车仍然不能缓解所有制动,则\n触发牵引封锁.");
+            ui->lbl_qianyinfengsuo->setText("   列车发出牵引指令后,5s内列\n车仍然不能缓解所有制动,则触\n发牵引封锁。");
             break;
         default:
             ui->lbl_qianyinfengsuo->setText("");
