@@ -102,6 +102,8 @@ public:
     bool  PIS1CT_P2_B1,PIS2CT_P2_B1;
     //BCU
     unsigned char B1CT_SWVerHigh_U8,B1CT_SWVerLow_U8,B2CT_SWVerHigh_U8,B2CT_SWVerLow_U8;
+    //CCU-BCU
+    bool CTB_WheelCleaning_B1;
     //FCU
     unsigned char FCU1CT_usSWRev_B1,FCU2CT_usSWRev_B1;
     //PIS

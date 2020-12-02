@@ -99,7 +99,8 @@ void MaintainceSoftwareVersionPage::updatePage()
         }
     case OTHERS:
         {
-            OtherStatus<<"SIV"<<TCUVersion(database->ACU1CT_IuiDSPRevision_U16)<<TCUVersion(database->ACU1CT_IuiPPCRevision_U16)<<TCUVersion(database->ACU2CT_IuiPPCRevision_U16)<<TCUVersion(database->ACU2CT_IuiPPCRevision_U16)
+            OtherStatus<<"SIV"<<"DSP:"+ TCUVersion(database->ACU1CT_IuiDSPRevision_U16)+ "\n" + "PPC:" + TCUVersion(database->ACU1CT_IuiPPCRevision_U16)<< "--"<< "--"
+                              <<"DSP:"+ TCUVersion(database->ACU2CT_IuiDSPRevision_U16)+ "\n" + "PPC:" + TCUVersion(database->ACU2CT_IuiPPCRevision_U16)
                       <<"VVVF"<<TCUVersion(database->TCU1CT_IuiLglSWRevision_U16)
                        <<TCUVersion(database->TCU2CT_IuiLglSWRevision_U16)
                            <<TCUVersion(database->TCU3CT_IuiLglSWRevision_U16)

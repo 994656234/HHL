@@ -88,8 +88,7 @@ VehicleStatusArea::VehicleStatusArea(QWidget *parent) :
     ui->BTNResetFirealarm->hide();
     ui->BTNResetFireBEEP->hide();
     ui->BTNEmergencyBrocast->hide();
-    ui->BTN_fangyou->hide();
-
+    ui->label_wheelclean->hide();
 
     this->fireflag=true;
     this->fangyouFlag=true;
@@ -308,19 +307,19 @@ void VehicleStatusArea::updatePage()
         switch(database->CTD_QYFSXX_U8)
         {
         case 1:
-            ui->lbl_qianyinfengsuo->setText("   ATO、CM、自动折返模式\n下,速度大于125km/h。");
+            ui->lbl_qianyinfengsuo->setText("ATO、CM、自动折返模式\n下,速度大于125km/h。");
             break;
         case 2:
-            ui->lbl_qianyinfengsuo->setText("   非轮盘清洁模式下,四个以上\n牵引控制单元的牵引和电制动\n切除。");
+            ui->lbl_qianyinfengsuo->setText("非轮盘清洁模式下,四个以上\n牵引控制单元的牵引和电制动\n切除。");
             break;
         case 3:
-            ui->lbl_qianyinfengsuo->setText("   四个以上转向架的气制动丢\n失。");
+            ui->lbl_qianyinfengsuo->setText("四个以上转向架的气制动丢\n失。");
             break;
         case 4:
-            ui->lbl_qianyinfengsuo->setText("   所有停放制动不缓解,若此没\n有“停放制动缓解旁路”信号,\n则网络将会牵引封锁。");
+            ui->lbl_qianyinfengsuo->setText("所有停放制动不缓解,若此没\n有“停放制动缓解旁路”信号,\n则网络将会牵引封锁。");
             break;
         case 5:
-            ui->lbl_qianyinfengsuo->setText("   列车发出牵引指令后,5s内列\n车仍然不能缓解所有制动,则触\n发牵引封锁。");
+            ui->lbl_qianyinfengsuo->setText("列车发出牵引指令后,5s内列\n车仍然不能缓解所有制动,则触\n发牵引封锁。");
             break;
         default:
             ui->lbl_qianyinfengsuo->setText("");
@@ -333,7 +332,15 @@ void VehicleStatusArea::updatePage()
         ui->lbl_qianyinfengsuo_2->hide();
     }
 
-
+    //轮盘清洁激活
+    if (database->CTB_WheelCleaning_B1)
+    {
+        ui->label_wheelclean->show();
+    }
+    else
+    {
+        ui->label_wheelclean->hide();
+    }
     //开关门
 //    if(database->CTHM_TCMSOpenEnable_B1)
 //    {
@@ -562,13 +569,13 @@ void VehicleStatusArea::on_BTN_fangyou_pressed()
 
     if(fangyouFlag)
     {
-        ui->BTN_fangyou->setStyleSheet(BTNPRESS);
+        //ui->BTN_fangyou->setStyleSheet(BTNPRESS);
         fangyouFlag=false;
         database->fangyou=true;
     }
     else
     {
-        ui->BTN_fangyou->setStyleSheet(BTNRELEASE);
+        //ui->BTN_fangyou->setStyleSheet(BTNRELEASE);
         fangyouFlag=true;
         database->fangyou=false;
     }

@@ -696,7 +696,7 @@ font:16px &quot;微软雅黑&quot;;</string>
 font:16px &quot;微软雅黑&quot;;</string>
    </property>
    <property name="text">
-    <string>司机界面中按键按下</string>
+    <string>司机界面中按键抬起</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">

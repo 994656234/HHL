@@ -1184,31 +1184,6 @@ border-radius:10px;</string>
     <string>火灾消音</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_fangyou">
-   <property name="geometry">
-    <rect>
-     <x>830</x>
-     <y>20</y>
-     <width>141</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
-   </property>
-   <property name="whatsThis">
-    <string>2</string>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:2px solid rgb(187,188,247);
-color: rgb(255, 255, 255);
-font:14px &quot;微软雅黑&quot;;
-border-radius:10px;</string>
-   </property>
-   <property name="text">
-    <string>防油乳化</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="lbl_qianyinfengsuo">
    <property name="geometry">
     <rect>
@@ -1257,6 +1232,31 @@ font:20px &quot;微软雅黑&quot;;
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
+  <widget class="QLabel" name="label_wheelclean">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>30</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+color:lightgreen;
+font:20px &quot;微软雅黑&quot;;
+border:2px  solid;
+	border-color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>轮盘清洁已激活</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
   <zorder>LBLSpeed</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
@@ -1296,9 +1296,9 @@ font:20px &quot;微软雅黑&quot;;
   <zorder>BTNReset</zorder>
   <zorder>BTNEmergencyBrocast</zorder>
   <zorder>BTNResetFireBEEP</zorder>
-  <zorder>BTN_fangyou</zorder>
   <zorder>lbl_qianyinfengsuo</zorder>
   <zorder>lbl_qianyinfengsuo_2</zorder>
+  <zorder>label_wheelclean</zorder>
  </widget>
  <resources/>
  <connections/>

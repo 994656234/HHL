@@ -444,6 +444,8 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     B1CT_SWVerLow_U8=crrcRicoMvb->getUnsignedChar(0x410,1);
     B2CT_SWVerHigh_U8=crrcRicoMvb->getUnsignedChar(0x420,0);
     B2CT_SWVerLow_U8=crrcRicoMvb->getUnsignedChar(0x420,1);
+    //CCU-BCU
+    CTB_WheelCleaning_B1=crrcRicoMvb->getBool(0x418,15,2);
     //FCU
     FCU1CT_usSWRev_B1=crrcRicoMvb->getUnsignedChar(0x810,3);
     FCU2CT_usSWRev_B1=crrcRicoMvb->getUnsignedChar(0x820,3);
