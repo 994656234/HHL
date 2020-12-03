@@ -24,7 +24,7 @@ void MaintainceBatterySubsystemPage::updatePage()
     updateStatus(line1,line1Status,"V");
 
     line2Status.clear();
-    line2Status<<database->ACU1CT_IiBtyTmp_I16<<database->ACU1CT_IiBtyTmp_I16;
+    line2Status<<database->ACU1CT_IiBtyTmp_I16<<database->ACU2CT_IiBtyTmp_I16;
     updateStatus(line2,line2Status,"℃");
 
     line3Status.clear();
