@@ -23,7 +23,7 @@ private:
     Ui::VehiclePISPage *ui;
     QList<QLabel *> label;
     QList<bool> status;
-    void PISStatus(QList<QLabel *> label,QList<bool> status);
+    void PISStatus(QList<QLabel *> label, QList<bool> status, bool online);
 };
 
 #endif // VEHICLEPISPAGE_H

@@ -69,7 +69,7 @@ void VehiclePISPage::updatePage()
        <<database->PISiCT_P84_B1<<database->PISiCT_P116_B1<<database->PISiCT_P148_B1
       <<database->PISiCT_P85_B1<<database->PISiCT_P117_B1<<database->PISiCT_P149_B1
      <<database->PISiCT_P86_B1<<database->PISiCT_P118_B1<<database->PISiCT_P150_B1;
-  PISStatus(label,status);
+  PISStatus(label,status,database->PISiCT_PIS1OLINE_B1);
   label.clear();
   status.clear();
 
@@ -80,7 +80,7 @@ void VehiclePISPage::updatePage()
      <<database->PISiCT_P92_B1<<database->PISiCT_P124_B1<<database->PISiCT_P156_B1
     <<database->PISiCT_P93_B1<<database->PISiCT_P125_B1<<database->PISiCT_P157_B1
    <<database->PISiCT_P94_B1<<database->PISiCT_P126_B1<<database->PISiCT_P158_B1;
-  PISStatus(label,status);
+  PISStatus(label,status,database->PISiCT_PIS1OLINE_B1);
   label.clear();
   status.clear();
 
@@ -92,7 +92,7 @@ void VehiclePISPage::updatePage()
      <<database->PISiCT_P100_B1<<database->PISiCT_P132_B1<<database->PISiCT_P164_B1
     <<database->PISiCT_P101_B1<<database->PISiCT_P133_B1<<database->PISiCT_P165_B1
    <<database->PISiCT_P102_B1<<database->PISiCT_P134_B1<<database->PISiCT_P166_B1;
-  PISStatus(label,status);
+  PISStatus(label,status,database->PISiCT_PIS1OLINE_B1);
   label.clear();
   status.clear();
 
@@ -103,16 +103,24 @@ void VehiclePISPage::updatePage()
      <<database->PISiCT_P108_B1<<database->PISiCT_P140_B1<<database->PISiCT_P172_B1
     <<database->PISiCT_P109_B1<<database->PISiCT_P141_B1<<database->PISiCT_P173_B1
    <<database->PISiCT_P110_B1<<database->PISiCT_P142_B1<<database->PISiCT_P174_B1;
-  PISStatus(label,status);
+  PISStatus(label,status,database->PISiCT_PIS1OLINE_B1);
   label.clear();
   status.clear();
 }
 
-void VehiclePISPage::PISStatus(QList<QLabel *> label, QList<bool> status)
+void VehiclePISPage::PISStatus(QList<QLabel *> label, QList<bool> status,bool online)
 {
     if(label.length()!=6&&status.length()!=18)
     {
         qDebug()<<"length is not right";
+        return;
+    }
+    if (false == online)
+    {
+        for (int i = 0; i < label.length(); i++)
+        {
+            label.at(i)->setStyleSheet(PISUNKNOW);
+        }
         return;
     }
 

@@ -449,7 +449,7 @@ void Widget::updatePage()
 
 
     QDateTime dateTimeLocal;
-    if(this->database->CTALL_LfSign_U16)
+    if(this->database->CTALL_CCUOnline_B1)
     {
         VCUtime2HMI10s();
 

@@ -10,7 +10,7 @@ Database::Database()
 {
 
     DiCT_HMISWVerH_U8=1;
-    DiCT_HMISWVerL_U8=2;
+    DiCT_HMISWVerL_U8=4;
 
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
     //init HMI-CCU
@@ -151,6 +151,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     CTALL_SysTimeSecond_U8=crrcRicoMvb->getUnsignedChar(0xF,6);
     CTALL_SysTimeMinute_U8=crrcRicoMvb->getUnsignedChar(0xF,7);
     CTALL_TrainSerialNumber_U16=crrcRicoMvb->getUnsignedInt(0xF,9);
+    CTALL_CCUOnline_B1 = this->checkCcu1Online(this->CTALL_LfSign_U16);
 
     /**************************************HMI-CCU***********************************/
     {
@@ -389,7 +390,6 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 
             crrcRicoMvb->setUnsignedChar(0x321,27,DiCT_RunStatSetType_U8);
             crrcRicoMvb->setUnsignedInt32(0x321,28,DiCT_RunStatSetData_U32);
-
             crrcRicoMvb->setBool(0x321,2,3,HVACWarmStop);
             crrcRicoMvb->setBool(0x321,2,4,HVACCoolStop);
 
@@ -431,7 +431,6 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
         }
 
     }
-
 
     CTD_TRCBLOCK_U8=crrcRicoMvb->getUnsignedChar(0x30A,14);
     CTD_QYFSXX_U8 = crrcRicoMvb->getUnsignedChar(0x30A,20);
@@ -3420,16 +3419,19 @@ void Database::createPISList()
 
    if(this->crrcRicoMvb->getBool(0x910,2,0)&&this->CTD_PIS1OLINE_B1)
    {
+       this->PISiCT_PIS1OLINE_B1 = true;
        this->copyPort(0xf910,0x910);
        this->copyPort(0xf911,0x911);
    }
    else if(this->crrcRicoMvb->getBool(0x920,2,0)&&this->CTD_PIS2OLINE_B1)
    {
+       this->PISiCT_PIS1OLINE_B1 = true;
        this->copyPort(0xf910,0x920);
        this->copyPort(0xf911,0x921);
    }
    else
    {
+       this->PISiCT_PIS1OLINE_B1 = false;
        this->copyPort(0xf910,0xfff);
        this->copyPort(0xf911,0xfff);
    }
@@ -3477,37 +3479,37 @@ void Database::createERMList(bool erm1trust,bool erm2trust)
 
 }
 
-bool Database::checkCcu1Online(unsigned char lifeSignal)
+bool Database::checkCcu1Online(unsigned short lifeSignal)
 {
-    static unsigned char oldLifeSignal = 0;
-    static unsigned short int counter = 5;
+    static unsigned short int temp = 0;
+    static int counter = 0;
 
-    //qDebug()<< "old: " << QString::number(oldLifeSignal) << " lifeSignal:" << QString::number(lifeSignal);
-
-    if (oldLifeSignal == lifeSignal)
+    if (temp == lifeSignal)
+    {
+        counter --;
+    }
+    else if (temp != lifeSignal)
     {
         counter ++;
     }
-    else
+
+    temp = lifeSignal;
+
+    if (counter >= 10)
+    {
+        counter = 10;
+
+        return true;
+    }
+    else if (counter <= 0)
     {
         counter = 0;
-    }
-   //qDebug()<<"counter = " << counter;
 
-    oldLifeSignal = lifeSignal;
-
-    if (counter > 1000)
-    {
-        counter = 100;
-    }
-
-    if (counter > 10)
-    {
         return false;
     }
     else
     {
-        return true;
+        return false;
     }
 }
 

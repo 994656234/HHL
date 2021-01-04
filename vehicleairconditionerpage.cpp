@@ -76,29 +76,34 @@ void VehicleAirConditionerPage::updatePage()
     }
 
 
-    getAirConditionStatus(ui->lbl_airCondition1_1,database->ACVP1CT_IusUnitSts1_U8);
-    getAirConditionStatus(ui->lbl_airCondition1_2,database->ACVP1CT_IusUnitSts2_U8);
+    getAirConditionStatus(ui->lbl_airCondition1_1,database->ACVP1CT_IusUnitSts1_U8,database->CTD_ACTOLINE_B1);
+    getAirConditionStatus(ui->lbl_airCondition1_2,database->ACVP1CT_IusUnitSts2_U8,database->CTD_ACTOLINE_B1);
 
-    getAirConditionStatus(ui->lbl_airCondition2_1,database->ACVP2CT_IusUnitSts1_U8);
-    getAirConditionStatus(ui->lbl_airCondition2_2,database->ACVP2CT_IusUnitSts2_U8);
+    getAirConditionStatus(ui->lbl_airCondition2_1,database->ACVP2CT_IusUnitSts1_U8,database->CTD_AC2OLINE_B1);
+    getAirConditionStatus(ui->lbl_airCondition2_2,database->ACVP2CT_IusUnitSts2_U8,database->CTD_AC2OLINE_B1);
 
-    getAirConditionStatus(ui->lbl_airCondition3_1,database->ACVP3CT_IusUnitSts1_U8);
-    getAirConditionStatus(ui->lbl_airCondition3_2,database->ACVP3CT_IusUnitSts2_U8);
+    getAirConditionStatus(ui->lbl_airCondition3_1,database->ACVP3CT_IusUnitSts1_U8,database->CTD_AC3OLINE_B1);
+    getAirConditionStatus(ui->lbl_airCondition3_2,database->ACVP3CT_IusUnitSts2_U8,database->CTD_AC3OLINE_B1);
 
-    getAirConditionStatus(ui->lbl_airCondition4_1,database->ACVP4CT_IusUnitSts1_U8);
-    getAirConditionStatus(ui->lbl_airCondition4_2,database->ACVP4CT_IusUnitSts2_U8);
+    getAirConditionStatus(ui->lbl_airCondition4_1,database->ACVP4CT_IusUnitSts1_U8,database->CTD_AC4OLINE_B1);
+    getAirConditionStatus(ui->lbl_airCondition4_2,database->ACVP4CT_IusUnitSts2_U8,database->CTD_AC4OLINE_B1);
 
     //减载
-    getAirConditionDeload(ui->lbl_deload1,database->ACVP1CT_IxDeloadFshU1_B1 | database->ACVP1CT_IxDeloadFshU2_B1);
-    getAirConditionDeload(ui->lbl_deload3,database->ACVP2CT_IxDeloadFshU1_B1 | database->ACVP2CT_IxDeloadFshU2_B1);
-    getAirConditionDeload(ui->lbl_deload5,database->ACVP3CT_IxDeloadFshU1_B1 | database->ACVP3CT_IxDeloadFshU2_B1);
-    getAirConditionDeload(ui->lbl_deload7,database->ACVP4CT_IxDeloadFshU1_B1 | database->ACVP4CT_IxDeloadFshU2_B1);
+    getAirConditionDeload(ui->lbl_deload1,database->ACVP1CT_IxDeloadFshU1_B1 | database->ACVP1CT_IxDeloadFshU2_B1,database->CTD_ACTOLINE_B1);
+    getAirConditionDeload(ui->lbl_deload3,database->ACVP2CT_IxDeloadFshU1_B1 | database->ACVP2CT_IxDeloadFshU2_B1,database->CTD_AC2OLINE_B1);
+    getAirConditionDeload(ui->lbl_deload5,database->ACVP3CT_IxDeloadFshU1_B1 | database->ACVP3CT_IxDeloadFshU2_B1,database->CTD_AC3OLINE_B1);
+    getAirConditionDeload(ui->lbl_deload7,database->ACVP4CT_IxDeloadFshU1_B1 | database->ACVP4CT_IxDeloadFshU2_B1,database->CTD_AC4OLINE_B1);
 }
 
 
 
-void VehicleAirConditionerPage::getAirConditionStatus(QLabel *label, unsigned char  status )
+void VehicleAirConditionerPage::getAirConditionStatus(QLabel *label, unsigned char  status , bool online)
 {
+    if (false == online)
+    {
+        label->setStyleSheet(HVACUNKNOW);
+        return;
+    }
     if(status==1)
     {
         label->setStyleSheet(HVACFAULT);
@@ -141,8 +146,13 @@ void VehicleAirConditionerPage::getAirConditionStatus(QLabel *label, unsigned ch
     }
 }
 
-void VehicleAirConditionerPage::getAirConditionDeload(QLabel *label, bool status)
+void VehicleAirConditionerPage::getAirConditionDeload(QLabel *label, bool status,bool online)
 {
+    if (false == online)
+    {
+        label->hide();
+        return;
+    }
     if (status)
     {
         label->show();

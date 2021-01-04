@@ -20,8 +20,8 @@ public:
 
 private:
     Ui::VehicleAuxiliaryPage *ui;
-    QList<bool> BCMStatus;
-    void setSIVStatus(QLabel *label,bool unknow,bool status);
+    QList<bool> BCMStatus,SIVStatus;
+    void setSIVStatus(QLabel *label,QList<bool> status);
     void setBCMStatus(QLabel *label,QList<bool> status);
 };
 

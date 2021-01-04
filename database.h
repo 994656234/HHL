@@ -38,6 +38,7 @@ public:
     unsigned short CTALL_LfSign_U16;
     unsigned char CTALL_SysTimeMonth_U8,CTALL_SysTimeYear_U8, CTALL_SysTimeHour_U8,CTALL_SysTimeDay_U8,CTALL_SysTimeSecond_U8,CTALL_SysTimeMinute_U8;
     unsigned short  CTALL_TrainSerialNumber_U16;
+    bool CTALL_CCUOnline_B1;
 
     //ERM-CCU
 
@@ -716,7 +717,8 @@ public:
     PISiCT_P155_B1, PISiCT_P156_B1,PISiCT_P157_B1,PISiCT_P158_B1,
     PISiCT_P161_B1,PISiCT_P162_B1,PISiCT_P163_B1,PISiCT_P164_B1,
     PISiCT_P165_B1,PISiCT_P166_B1, PISiCT_P169_B1, PISiCT_P170_B1,
-    PISiCT_P171_B1,PISiCT_P172_B1, PISiCT_P173_B1, PISiCT_P174_B1;
+    PISiCT_P171_B1,PISiCT_P172_B1, PISiCT_P173_B1, PISiCT_P174_B1,
+    PISiCT_PIS1OLINE_B1;
 
     //******************************HVAC-CCU***************************************//
     bool
@@ -819,7 +821,7 @@ public:
 
 
 public:
-    bool checkCcu1Online(unsigned char lifeSignal);
+    bool checkCcu1Online(unsigned short lifeSignal);
 
 private:
      CrrcRicoMvb* crrcRicoMvb;
