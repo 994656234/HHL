@@ -22,7 +22,7 @@ MaintainceRunningGearSubsystemPage::MaintainceRunningGearSubsystemPage(QWidget *
     line<< ui->line1_1<< ui->line1_2<< ui->line1_4<< ui->line1_7
         << ui->line2_1<< ui->line2_2<< ui->line2_4<< ui->line2_7
         << ui->line3_1<< ui->line3_2<< ui->line3_4<< ui->line3_7
-        << ui->line4_1<< ui->line4_2<< ui->line3_4<< ui->line4_7
+        << ui->line4_1<< ui->line4_2<< ui->line4_4<< ui->line4_7
         << ui->line5_1<< ui->line5_2<< ui->line5_4<< ui->line5_7;
 
     ui->lbl_cab1_direction->hide();

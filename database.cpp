@@ -10,7 +10,7 @@ Database::Database()
 {
 
     DiCT_HMISWVerH_U8=1;
-    DiCT_HMISWVerL_U8=4;
+    DiCT_HMISWVerL_U8=5;
 
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
     //init HMI-CCU
