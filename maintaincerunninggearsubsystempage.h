@@ -18,7 +18,7 @@ public:
     explicit MaintainceRunningGearSubsystemPage(QWidget *parent = 0);
     ~MaintainceRunningGearSubsystemPage();
     void updatePage();
-    void updateStatus(QList<QLabel*> lbl, unsigned char value, unsigned char flag);
+    void updateStatus(QList<QLabel*> lbl, unsigned char value[4][20], int index);
 
 private:
     Ui::MaintainceRunningGearSubsystemPage *ui;

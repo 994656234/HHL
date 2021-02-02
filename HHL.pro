@@ -5,8 +5,8 @@
 #-------------------------------------------------
 TRANSLATIONS += lang_Portuguese.ts
 
-#DEFINES += USER_DEBUG_MODE
-DEFINES += MVB_CX
+DEFINES += USER_DEBUG_MODE
+#DEFINES += MVB_CX
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

@@ -10,7 +10,7 @@ Database::Database()
 {
 
     DiCT_HMISWVerH_U8=1;
-    DiCT_HMISWVerL_U8=5;
+    DiCT_HMISWVerL_U8=6;
 
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
     //init HMI-CCU
@@ -131,6 +131,14 @@ Database::Database()
     DiCT_JUMP14_B1=false;
     DiCT_JUMP15_B1=false;
     DiCT_JUMP16_B1=false;
+
+    for(int i = 0; i < 4;i++)
+    {
+        for(int j = 0; j< 20; j++)
+        {
+            BMSiCT_TMPE_U8[i][j] = 0;
+        }
+    }
 }
 
 void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
@@ -1839,7 +1847,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     TCU5CT_IxMotoISO=crrcRicoMvb->getBool(0x551,11,6);
     TCU6CT_IxMotoISO=crrcRicoMvb->getBool(0x561,11,6);
 
-
+    TCU1CT_AcceleratiSpeed_U16=crrcRicoMvb->getUnsignedInt(0x512,4);
 
     ACU1CT_IxBBOC_B1 = crrcRicoMvb->getBool(0x610,14,1);
     ACU1CT_IxKM1S_B1 = crrcRicoMvb->getBool(0x610,14,2);
@@ -2853,10 +2861,33 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     BMS2CT_FLAG_U8 = crrcRicoMvb->getUnsignedChar(0xD20,12);
     BMS3CT_FLAG_U8 = crrcRicoMvb->getUnsignedChar(0xD30,12);
     BMS4CT_FLAG_U8 = crrcRicoMvb->getUnsignedChar(0xD40,12);
-    BMS1CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD10,13);
-    BMS2CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD20,13);
-    BMS3CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD30,13);
-    BMS4CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD40,13);
+//    BMS1CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD10,13);
+//    BMS2CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD20,13);
+//    BMS3CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD30,13);
+//    BMS4CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD40,13);
+    if (BMS1CT_FLAG_U8 > 0 && BMS1CT_FLAG_U8 <=20)
+    {
+        BMSiCT_TMPE_U8[0][BMS1CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD10,13);
+    }
+
+    if (BMS2CT_FLAG_U8 > 0 && BMS2CT_FLAG_U8 <=20)
+    {
+        BMSiCT_TMPE_U8[1][BMS2CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD20,13);
+    }
+
+    if (BMS3CT_FLAG_U8 > 0 && BMS3CT_FLAG_U8 <=20)
+    {
+        BMSiCT_TMPE_U8[2][BMS3CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD30,13);
+    }
+
+
+    if (BMS4CT_FLAG_U8 > 0 && BMS4CT_FLAG_U8 <=20)
+    {
+        BMSiCT_TMPE_U8[3][BMS4CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD40,13);
+    }
+//    qDebug()<<"@@@@@"<<BMS1CT_FLAG_U8<<"@@@@@"<<BMS2CT_FLAG_U8<<"@@@@@"<<BMS3CT_FLAG_U8<<"@@@@@"<<BMS4CT_FLAG_U8;
+//    qDebug()<<"#####"<<crrcRicoMvb->getUnsignedChar(0xD10,13)<<"#####"<<crrcRicoMvb->getUnsignedChar(0xD20,13)
+//              <<"#####"<<crrcRicoMvb->getUnsignedChar(0xD30,13)<<"#####"<<crrcRicoMvb->getUnsignedChar(0xD40,13);
 
     //***********************************PAN--CCU*******************************************//
     PANCT_PGHA_B1 = crrcRicoMvb->getBool(0xC10,2,7);

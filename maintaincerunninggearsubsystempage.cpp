@@ -79,35 +79,15 @@ void MaintainceRunningGearSubsystemPage::updatePage()
         ui->lbl_cab2_active->hide();
     }
 
-    switch(metroNum)
-    {
-    case 1:
-        updateStatus(line,database->BMS1CT_TMPE_U8,database->BMS1CT_FLAG_U8);
-        break;
-    case 2:
-        updateStatus(line,database->BMS2CT_TMPE_U8,database->BMS2CT_FLAG_U8);
-        break;
-    case 3:
-        updateStatus(line,database->BMS3CT_TMPE_U8,database->BMS3CT_FLAG_U8);
-        break;
-    case 4:
-        updateStatus(line,database->BMS4CT_TMPE_U8,database->BMS4CT_FLAG_U8);
-        break;
-    default:
-        break;
-    }
+    updateStatus(line,database->BMSiCT_TMPE_U8,metroNum -1);
 }
 
-void MaintainceRunningGearSubsystemPage::updateStatus(QList<QLabel *> lbl, unsigned char value, unsigned char flag)
+void MaintainceRunningGearSubsystemPage::updateStatus(QList<QLabel *> lbl, unsigned char value[4][20], int index)
 {
-    for(int i =0; i< lbl.size(); i++)
+    for (int i =0; i < 20; i++)
     {
-        lbl.at(i)->setText("--");
-    }
-
-    if(flag > 0 && flag < 21 )
-    {
-        lbl.at(flag - 1)->setText(QString::number(value - 55));
+//        qDebug()<<"$$$$"<<value[index][i];
+        lbl.at(i)->setText(QString::number(value[index][i] - 55));
     }
 }
 

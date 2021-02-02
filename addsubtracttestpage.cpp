@@ -80,9 +80,27 @@ void AddSubtractTestPage::timerEvent(QTimerEvent *e)
 void AddSubtractTestPage::updatePage()
 {
     // qDebug()<<database->DiCT_ACDETestStartFlag_B1<<"                      "<<database->DiCT_ACDETestStopFlag_B1;
+    unsigned short speed,speed1;
+    //unsigned char acc40MCLv,acc120MCLv;
+    if (database->CTD_TrainSpeed_U16 > 700)
+    {
+        speed1 = database->TCU1CT_AcceleratiSpeed_U16;
+        //acc120MCLv = database->CTD_Acc80MCLv_U8;
+
+        //acc40MCLv = 0;
+        speed = 0;
+    }
+    else
+    {
+        speed = database->TCU1CT_AcceleratiSpeed_U16;
+        //acc40MCLv = database->CTD_Acc40MCLv_U8;
+
+        speed1 = 0;
+        //acc120MCLv = 0;
+    }
     status<<QString::number(database->CTD_TrainSpeed_U16*0.1,'f',1)+"km/h"<<QString::number(database->CTD_Grade_U8)+"%"
-                <<QString::number(database->CTD_AcceleratiOLINE40_I16*0.01,'f',2)+"m/s2"<<QString::number(database->CTD_Acc40MCLv_U8)+"%"
-                <<QString::number(database->CTD_AcceleratiOLINE80_I16*0.01,'f',2)+"m/s2"<<QString::number(database->CTD_Acc80MCLv_U8)+"%"
+                <<QString::number(speed*0.01,'f',2)+"m/s2"<<QString::number(database->CTD_Acc40MCLv_U8)+"%"
+                <<QString::number(speed1*0.01,'f',2)+"m/s2"<<QString::number(database->CTD_Acc80MCLv_U8)+"%"
                 <<QString::number(database->CTD_DeStartVelocity_U16*0.01,'f',1)+"km/h"<<QString::number(database->CTD_DeDistance_U16,'f',1)+"m"
                 <<QString::number(-database->CTD_DeMCLv_U8)+"%"<<QString::number(database->CTD_DeceleratiOLINE_I16*0.01,'f',2)+"m/s2"
                 ;
