@@ -90,6 +90,34 @@ void VehicleSetAirConditionPage::updatePage()
     {
         ui->lbl_cab2_active->hide();
     }
+    //设定温度
+    QList<bool > status;
+    QList<unsigned char > value;
+
+    status.clear();
+    value.clear();
+    status<<database->CTACVP1_CxManualC_B1<<database->CTACVP1_CxManualW_B1;
+    value<<database->CTACVP1_CusCTargTemp_U8<<database->CTACVP1_CusHTargTemp_U8;
+    setTmpValue(ui->lbl_usertmp1,status,value);
+
+    status.clear();
+    value.clear();
+    status<<database->CTACVP2_CxManualC_B1<<database->CTACVP2_CxManualW_B1;
+    value<<database->CTACVP2_CusCTargTemp_U8<<database->CTACVP2_CusHTargTemp_U8;
+    setTmpValue(ui->lbl_usertmp2,status,value);
+
+
+    status.clear();
+    value.clear();
+    status<<database->CTACVP3_CxManualC_B1<<database->CTACVP3_CxManualW_B1;
+    value<<database->CTACVP3_CusCTargTemp_U8<<database->CTACVP3_CusHTargTemp_U8;
+    setTmpValue(ui->lbl_usertmp3,status,value);
+
+    status.clear();
+    value.clear();
+    status<<database->CTACVP4_CxManualC_B1<<database->CTACVP4_CxManualW_B1;
+    value<<database->CTACVP4_CusCTargTemp_U8<<database->CTACVP4_CusHTargTemp_U8;
+    setTmpValue(ui->lbl_usertmp4,status,value);
 
     //客室温度&目标温度
     if(database->CTD_ACTOLINE_B1)
@@ -491,5 +519,24 @@ void VehicleSetAirConditionPage::setHuiFengStatus(QList<QLabel *> lbl, QList<uns
             lbl.at(i)->setText("--");
             lbl.at(i)->setStyleSheet("background-color:rgb(0,0,50);color:white;");
         }
+    }
+}
+
+void VehicleSetAirConditionPage::setTmpValue(QLabel *lbl, QList<bool> status, QList<unsigned char> value)
+{
+    if (status.size() != value.size())
+        return;
+
+    if (status.at(0))
+    {
+        lbl->setText(QString::number(value.at(0)));
+    }
+    else if (status.at(1))
+    {
+        lbl->setText(QString::number(value.at(1)));
+    }
+    else
+    {
+        lbl->setText("--");
     }
 }

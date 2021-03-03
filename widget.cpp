@@ -789,10 +789,15 @@ void Widget::showEvent(QShowEvent *)
             crrcRicoMvb->addSinkPort(0xA20,MVB_FCode4,512);
             crrcRicoMvb->addSinkPort(0xA30,MVB_FCode4,512);
             crrcRicoMvb->addSinkPort(0xA40,MVB_FCode4,512);
+            //CCU-HVAC
+            //crrcRicoMvb->addSinkPort(0xA18,MVB_FCode4,512);
+            //crrcRicoMvb->addSinkPort(0xA28,MVB_FCode4,512);
+            //crrcRicoMvb->addSinkPort(0xA38,MVB_FCode4,512);
+            //crrcRicoMvb->addSinkPort(0xA48,MVB_FCode4,512);
 
             //ATC-CCU
-            crrcRicoMvb->addSinkPort(0xB10,MVB_FCode3,512);
-            crrcRicoMvb->addSinkPort(0xB20,MVB_FCode3,512);
+            crrcRicoMvb->addSinkPort(0xB10,MVB_FCode4,512);
+            crrcRicoMvb->addSinkPort(0xB20,MVB_FCode4,512);
 
             //PIS-CCU
             crrcRicoMvb->addSinkPort(0x910,MVB_FCode4,256);

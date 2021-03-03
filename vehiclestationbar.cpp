@@ -79,32 +79,32 @@ VehicleStationBar::~VehicleStationBar()
 void VehicleStationBar::updatePage()
 {
     //站点信息
-//    if(1)
-//    {
-//        ui->lbl_currentStationValue->setText(m_StationIDHash[database->CTHM_CurrentStation_U32]);
-//    }
-//    else
-//    {
-//        ui->lbl_currentStationValue->setText("--");
-//    }
+    if(database->CTD_CurrentStatiOLINE_U32 > 0 && database->CTD_CurrentStatiOLINE_U32 < 62)
+    {
+        ui->lbl_currentStationValue->setText(m_StationIDHash[database->CTD_CurrentStatiOLINE_U32]);
+    }
+    else
+    {
+        ui->lbl_currentStationValue->setText("--");
+    }
 
-//    if(database->CTHM_NextStationID_U32>0&&database->CTHM_NextStationID_U32<62)
-//    {
-//        ui->lbl_nextStationValue->setText(m_StationIDHash[database->CTHM_NextStationID_U32]);
-//    }
-//    else
-//    {
-//        ui->lbl_nextStationValue->setText("--");
-//    }
+    if(database->CTD_NextStatiOLINEID_U32>0&&database->CTD_NextStatiOLINEID_U32<62)
+    {
+        ui->lbl_nextStationValue->setText(m_StationIDHash[database->CTD_NextStatiOLINEID_U32]);
+    }
+    else
+    {
+        ui->lbl_nextStationValue->setText("--");
+    }
 
-//    if(database->CTHM_LastStationID_U32>0&&database->CTHM_LastStationID_U32<62)
-//    {
-//        ui->lbl_terminalStationValue->setText(m_StationIDHash[database->CTHM_LastStationID_U32]);
-//    }
-//    else
-//    {
-//        ui->lbl_terminalStationValue->setText("--");
-//    }
+    if(database->CTD_LastStatiOLINEID_U32>0&&database->CTD_LastStatiOLINEID_U32<62)
+    {
+        ui->lbl_terminalStationValue->setText(m_StationIDHash[database->CTD_LastStatiOLINEID_U32]);
+    }
+    else
+    {
+        ui->lbl_terminalStationValue->setText("--");
+    }
 
     //网压
     ui->lbl_networkVoltageValue->setText(QString::number((int)(database->CTD_CatenaryVoltage_U16)));

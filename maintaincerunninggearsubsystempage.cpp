@@ -82,12 +82,19 @@ void MaintainceRunningGearSubsystemPage::updatePage()
     updateStatus(line,database->BMSiCT_TMPE_U8,metroNum -1);
 }
 
-void MaintainceRunningGearSubsystemPage::updateStatus(QList<QLabel *> lbl, unsigned char value[4][20], int index)
+void MaintainceRunningGearSubsystemPage::updateStatus(QList<QLabel *> lbl, int value[4][20], int index)
 {
     for (int i =0; i < 20; i++)
     {
 //        qDebug()<<"$$$$"<<value[index][i];
-        lbl.at(i)->setText(QString::number(value[index][i] - 55));
+        if (-1 == value[index][i])
+        {
+            lbl.at(i)->setText("--");
+        }
+        else
+        {
+            lbl.at(i)->setText(QString::number(value[index][i] - 55));
+        }
     }
 }
 

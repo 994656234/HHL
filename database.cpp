@@ -6,11 +6,13 @@
 
 #define TRUSTINVALID_CLEANDATA    1
 
+int Database::old_TMPE_U8[] = {1,1,1,1};
+
 Database::Database()
 {
 
     DiCT_HMISWVerH_U8=1;
-    DiCT_HMISWVerL_U8=6;
+    DiCT_HMISWVerL_U8=7;
 
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
     //init HMI-CCU
@@ -136,9 +138,14 @@ Database::Database()
     {
         for(int j = 0; j< 20; j++)
         {
-            BMSiCT_TMPE_U8[i][j] = 0;
+            BMSiCT_TMPE_U8[i][j] = -1;
+            BMSiCT_TMPEFlaValue_U8[i][j] = 0;
+            TMPcnt[i][j] = 0;
+            TMPcnt1[i][j] = 0;
+            TMPFlag[i][j] = 0;
         }
     }
+
 }
 
 void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
@@ -2851,6 +2858,27 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     ACVP3CT_IudHVACCns_U32 = crrcRicoMvb->getUnsignedInt32(0xA30,26);
     ACVP4CT_IudHVACCns_U32 = crrcRicoMvb->getUnsignedInt32(0xA40,26);
 
+    //*******************************************HVAC-CCU***********************************************//
+    CTACVP1_CusCTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA18,1);
+    CTACVP2_CusCTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA28,1);
+    CTACVP3_CusCTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA38,1);
+    CTACVP4_CusCTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA48,1);
+    CTACVP1_CusHTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA18,4);
+    CTACVP2_CusHTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA28,4);
+    CTACVP3_CusHTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA38,4);
+    CTACVP4_CusHTargTemp_U8 = crrcRicoMvb->getUnsignedChar(0xA48,4);
+
+    CTACVP1_CxManualC_B1 = crrcRicoMvb->getBool(0xA18,2,3);
+    CTACVP2_CxManualC_B1 = crrcRicoMvb->getBool(0xA28,2,3);
+    CTACVP3_CxManualC_B1 = crrcRicoMvb->getBool(0xA38,2,3);
+    CTACVP4_CxManualC_B1 = crrcRicoMvb->getBool(0xA48,2,3);
+    CTACVP1_CxManualW_B1 = crrcRicoMvb->getBool(0xA18,2,6);
+    CTACVP2_CxManualW_B1 = crrcRicoMvb->getBool(0xA28,2,6);
+    CTACVP3_CxManualW_B1 = crrcRicoMvb->getBool(0xA38,2,6);
+    CTACVP4_CxManualW_B1 = crrcRicoMvb->getBool(0xA48,2,6);
+
+
+
     //***********************************BMS-CCU*********************************************//
     BMS1CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD10,15);
     BMS2CT_SWVERSION_U16=crrcRicoMvb->getUnsignedInt(0xD20,15);
@@ -2865,26 +2893,35 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 //    BMS2CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD20,13);
 //    BMS3CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD30,13);
 //    BMS4CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD40,13);
+    old_TMPE_U8[0] = BMS1CT_FLAG_U8;
+    old_TMPE_U8[1] = BMS2CT_FLAG_U8;
+    old_TMPE_U8[2] = BMS3CT_FLAG_U8;
+    old_TMPE_U8[3] = BMS4CT_FLAG_U8;
+
     if (BMS1CT_FLAG_U8 > 0 && BMS1CT_FLAG_U8 <=20)
     {
         BMSiCT_TMPE_U8[0][BMS1CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD10,13);
     }
+    checkTMPFlag(BMS1CT_FLAG_U8,0);
 
     if (BMS2CT_FLAG_U8 > 0 && BMS2CT_FLAG_U8 <=20)
     {
         BMSiCT_TMPE_U8[1][BMS2CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD20,13);
     }
+    checkTMPFlag(BMS2CT_FLAG_U8, 1);
 
     if (BMS3CT_FLAG_U8 > 0 && BMS3CT_FLAG_U8 <=20)
     {
         BMSiCT_TMPE_U8[2][BMS3CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD30,13);
     }
-
+    checkTMPFlag(BMS3CT_FLAG_U8, 2);
 
     if (BMS4CT_FLAG_U8 > 0 && BMS4CT_FLAG_U8 <=20)
     {
         BMSiCT_TMPE_U8[3][BMS4CT_FLAG_U8 - 1] = crrcRicoMvb->getUnsignedChar(0xD40,13);
     }
+    checkTMPFlag(BMS4CT_FLAG_U8, 3);
+
 //    qDebug()<<"@@@@@"<<BMS1CT_FLAG_U8<<"@@@@@"<<BMS2CT_FLAG_U8<<"@@@@@"<<BMS3CT_FLAG_U8<<"@@@@@"<<BMS4CT_FLAG_U8;
 //    qDebug()<<"#####"<<crrcRicoMvb->getUnsignedChar(0xD10,13)<<"#####"<<crrcRicoMvb->getUnsignedChar(0xD20,13)
 //              <<"#####"<<crrcRicoMvb->getUnsignedChar(0xD30,13)<<"#####"<<crrcRicoMvb->getUnsignedChar(0xD40,13);
@@ -3543,6 +3580,66 @@ bool Database::checkCcu1Online(unsigned short lifeSignal)
         return false;
     }
 }
+
+void Database::checkTMPFlag(unsigned char flag, int index)
+{
+    static int TMPCNT[4] = {0,0,0,0};
+    TMPCNT[index]++;
+    if (flag > 0 && flag <= 20)
+    {
+        TMPFlag[index][flag-1] = flag;
+    }
+
+    if (TMPCNT[index] > 40)
+    {
+        TMPCNT[index] = 0;
+        for(int i =0; i < 20; i++)
+        {
+            if (TMPFlag[index][i] == (i + 1))
+            {
+                TMPFlag[index][i] = 0;
+                continue;
+            }
+            else
+            {
+                BMSiCT_TMPE_U8[index][i] = -1;
+            }
+            TMPFlag[index][i] = 0;
+        }
+    }
+}
+
+//void Database::checkTMPFlag(unsigned char flag, unsigned char oldflag, int index)
+//{
+//    const static int TMPCNT = 20;
+//    int tmp = 0;
+//    if (flag  == oldflag)
+//    {
+//        for (int i = 0; i< TMPCNT; i++)
+//        {
+//            if (i != int(flag-1))
+//            {
+//                BMSiCT_TMPE_U8[index][i] = -1;
+//            }
+//        }
+//    }
+//    else if (flag > (oldflag + 1))
+//    {
+//        tmp = flag - oldflag - 1;
+//        for (int i = 0; i < tmp; i++)
+//        {
+//            BMSiCT_TMPE_U8[index][oldflag + i] = -1;
+//        }
+//    }
+//    else if (flag < oldflag)
+//    {
+//        tmp = flag - (oldflag - TMPCNT) - 1;
+//        for (int i = 0; i < tmp; i++)
+//        {
+//            BMSiCT_TMPE_U8[index][oldflag + flag + 1] = -1;
+//        }
+//    }
+//}
 
 long Database::getAllHVACFault()
 {

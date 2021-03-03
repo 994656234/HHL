@@ -582,8 +582,8 @@ font:16px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="lbl_tmp1">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>120</y>
+     <x>201</x>
+     <y>177</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -607,8 +607,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_tmp3">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>120</y>
+     <x>621</x>
+     <y>177</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -632,8 +632,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_tmpToken4">
    <property name="geometry">
     <rect>
-     <x>880</x>
-     <y>120</y>
+     <x>881</x>
+     <y>177</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -653,8 +653,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_tmpToken3">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>120</y>
+     <x>671</x>
+     <y>177</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -674,8 +674,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_tmpToken2">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>120</y>
+     <x>461</x>
+     <y>177</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -695,8 +695,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_tmp2">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>120</y>
+     <x>411</x>
+     <y>177</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -720,8 +720,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_tmp4">
    <property name="geometry">
     <rect>
-     <x>830</x>
-     <y>120</y>
+     <x>831</x>
+     <y>177</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -745,8 +745,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_tmpToken1">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>120</y>
+     <x>251</x>
+     <y>177</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -766,10 +766,10 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_realtemperature">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>110</y>
+     <x>21</x>
+     <y>181</y>
      <width>121</width>
-     <height>41</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
@@ -795,10 +795,10 @@ font:20px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="lbl_settemperature">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>160</y>
+     <x>21</x>
+     <y>149</y>
      <width>121</width>
-     <height>41</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
@@ -824,8 +824,8 @@ font:20px &quot;微软雅黑&quot;;</string>
   <widget class="QLabel" name="lbl_settmp4">
    <property name="geometry">
     <rect>
-     <x>830</x>
-     <y>170</y>
+     <x>831</x>
+     <y>141</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -849,8 +849,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_settmp1">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>170</y>
+     <x>201</x>
+     <y>141</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -874,8 +874,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_settmp2">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>170</y>
+     <x>411</x>
+     <y>141</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -899,8 +899,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_settmp3">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>170</y>
+     <x>621</x>
+     <y>141</y>
      <width>41</width>
      <height>25</height>
     </rect>
@@ -924,8 +924,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_settmpToken1">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>170</y>
+     <x>251</x>
+     <y>141</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -945,8 +945,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_settmpToken4">
    <property name="geometry">
     <rect>
-     <x>880</x>
-     <y>170</y>
+     <x>881</x>
+     <y>141</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -966,8 +966,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_settmpToken3">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>170</y>
+     <x>671</x>
+     <y>141</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -987,8 +987,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_settmpToken2">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>170</y>
+     <x>461</x>
+     <y>141</y>
      <width>25</width>
      <height>25</height>
     </rect>
@@ -1032,7 +1032,7 @@ font:16px &quot;微软雅黑&quot;;</string>
   <widget class="QPushButton" name="BTN_comfirm1">
    <property name="geometry">
     <rect>
-     <x>680</x>
+     <x>570</x>
      <y>370</y>
      <width>98</width>
      <height>61</height>
@@ -1081,9 +1081,9 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="lbl_temperature_2">
    <property name="geometry">
     <rect>
-     <x>856</x>
+     <x>680</x>
      <y>370</y>
-     <width>141</width>
+     <width>121</width>
      <height>61</height>
     </rect>
    </property>
@@ -2531,6 +2531,269 @@ color: rgb(255, 255, 255);</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_temperature_3">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>370</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: yellow;
+font:14px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>手动暖温度设定范围：12-20℃
+手动冷温度设定范围：19-27℃</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_usertmp3">
+   <property name="geometry">
+    <rect>
+     <x>621</x>
+     <y>112</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 50);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>17</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_usertmp1">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>112</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 50);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>17</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_tmpToken2_2">
+   <property name="geometry">
+    <rect>
+     <x>461</x>
+     <y>112</y>
+     <width>25</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/tmptoken.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_usertmp4">
+   <property name="geometry">
+    <rect>
+     <x>831</x>
+     <y>112</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 50);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>17</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_realtemperature_2">
+   <property name="geometry">
+    <rect>
+     <x>21</x>
+     <y>113</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>设定温度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_tmpToken3_2">
+   <property name="geometry">
+    <rect>
+     <x>671</x>
+     <y>112</y>
+     <width>25</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/tmptoken.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_tmpToken1_2">
+   <property name="geometry">
+    <rect>
+     <x>251</x>
+     <y>112</y>
+     <width>25</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/tmptoken.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_tmpToken4_2">
+   <property name="geometry">
+    <rect>
+     <x>881</x>
+     <y>112</y>
+     <width>25</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image/tmptoken.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_usertmp2">
+   <property name="geometry">
+    <rect>
+     <x>411</x>
+     <y>112</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 50);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>17</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_settemperature_4">
+   <property name="geometry">
+    <rect>
+     <x>127</x>
+     <y>149</y>
+     <width>76</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>-1</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font:13px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>（空调反馈）</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>BTN7</zorder>
@@ -2635,6 +2898,17 @@ color: rgb(255, 255, 255);</string>
   <zorder>lbl_huifeng_MC2_1</zorder>
   <zorder>lbl_huifeng_MC2_2</zorder>
   <zorder>lbl_settmp1_49</zorder>
+  <zorder>lbl_temperature_3</zorder>
+  <zorder>lbl_usertmp3</zorder>
+  <zorder>lbl_usertmp1</zorder>
+  <zorder>lbl_tmpToken2_2</zorder>
+  <zorder>lbl_usertmp4</zorder>
+  <zorder>lbl_realtemperature_2</zorder>
+  <zorder>lbl_tmpToken3_2</zorder>
+  <zorder>lbl_tmpToken1_2</zorder>
+  <zorder>lbl_tmpToken4_2</zorder>
+  <zorder>lbl_usertmp2</zorder>
+  <zorder>lbl_settemperature_4</zorder>
  </widget>
  <resources/>
  <connections/>

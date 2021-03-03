@@ -796,6 +796,15 @@ public:
     unsigned int
     ACVP1CT_IudHVACCns_U32,ACVP2CT_IudHVACCns_U32,ACVP3CT_IudHVACCns_U32,ACVP4CT_IudHVACCns_U32;
 
+    //***************************************CCU-ACVP*************************************************//
+    unsigned char
+    CTACVP1_CusCTargTemp_U8,CTACVP2_CusCTargTemp_U8,CTACVP3_CusCTargTemp_U8,CTACVP4_CusCTargTemp_U8,
+    CTACVP1_CusHTargTemp_U8,CTACVP2_CusHTargTemp_U8,CTACVP3_CusHTargTemp_U8,CTACVP4_CusHTargTemp_U8;
+
+    bool
+    CTACVP1_CxManualC_B1,CTACVP2_CxManualC_B1,CTACVP3_CxManualC_B1,CTACVP4_CxManualC_B1,
+    CTACVP1_CxManualW_B1,CTACVP2_CxManualW_B1,CTACVP3_CxManualW_B1,CTACVP4_CxManualW_B1;
+
     //***************************************PAN-CCU*************************************************//
     bool
     PANCT_PGHA_B1,PANCT_ArcAlarmLevel1_B1,PANCT_ArcAlarmLevel2_B1,PANCT_ArcAlarmLevel3_B1,
@@ -813,16 +822,19 @@ public:
     BMS1CT_FLAG_U8,BMS2CT_FLAG_U8,BMS3CT_FLAG_U8,BMS4CT_FLAG_U8,
     BMS1CT_TMPE_U8,BMS2CT_TMPE_U8,BMS3CT_TMPE_U8,BMS4CT_TMPE_U8;
 
-    unsigned char BMSiCT_TMPE_U8[4][20];
-
-
-
+    int BMSiCT_TMPE_U8[4][20];
+    unsigned char BMSiCT_TMPEFlaValue_U8[4][20];
+    unsigned char TMPcnt[4][20];
+    unsigned char TMPcnt1[4][20];
+    static int old_TMPE_U8[4];
+    unsigned char TMPFlag[4][20];
 
 
 
 public:
     bool checkCcu1Online(unsigned short lifeSignal);
-
+    //void checkTMPFlag(unsigned char flag,unsigned char oldflag,int index);
+    void checkTMPFlag(unsigned char flag, int index);
 private:
      CrrcRicoMvb* crrcRicoMvb;
      void createEDCUList(bool edcu1Online, bool edcu2Online,QList<unsigned short int> virtualports,QList<unsigned short int> realports);
