@@ -27,7 +27,7 @@ private slots:
     void on_BTN_setLight_pressed();
     void on_BTN_setBrakeParam_pressed();
     void on_BTN_setAirCondition_pressed();
-    void on_BTN_queryStation_pressed();
+    //void on_BTN_queryStation_pressed();
     void on_BTN_simulateStation_pressed();
 };
 

@@ -6,8 +6,6 @@
 
 #define TRUSTINVALID_CLEANDATA    1
 
-int Database::old_TMPE_U8[] = {1,1,1,1};
-
 Database::Database()
 {
 
@@ -15,6 +13,7 @@ Database::Database()
     DiCT_HMISWVerL_U8=7;
 
     HMIPosition = MainGetDefaultPara::getInt("/Position/HMI");
+    //TrainNum1_2Flag = MainGetDefaultPara::getInt("/TrainNum/flag");
     //init HMI-CCU
     DiCT_Year_U8=0;
     DiCT_Month_U8=0;
@@ -133,15 +132,14 @@ Database::Database()
     DiCT_JUMP14_B1=false;
     DiCT_JUMP15_B1=false;
     DiCT_JUMP16_B1=false;
+    DiCT_HALFATOFLAG_B1 = false;
 
     for(int i = 0; i < 4;i++)
     {
         for(int j = 0; j< 20; j++)
         {
             BMSiCT_TMPE_U8[i][j] = -1;
-            BMSiCT_TMPEFlaValue_U8[i][j] = 0;
             TMPcnt[i][j] = 0;
-            TMPcnt1[i][j] = 0;
             TMPFlag[i][j] = 0;
         }
     }
@@ -1170,6 +1168,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     CTD_DccTestValid_B1 = crrcRicoMvb->getBool(0x30A,11,2);
     CTD_MP1WorkShop_B1 = crrcRicoMvb->getBool(0x30A,11,3);
     CTD_MP2WorkShop_B1 = crrcRicoMvb->getBool(0x30A,11,4);
+    CTD_HALFSTATUS_B1 = crrcRicoMvb->getBool(0x30A,11,5);
 
     CTD_LineNum_U8 = crrcRicoMvb->getUnsignedChar(0x308,10);
     CTD_TrainNum_U8 = crrcRicoMvb->getUnsignedChar(0x308,11);
@@ -1452,6 +1451,23 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 
     temp_virtualports.clear();
     temp_realports.clear();
+
+    /***********************ss***************************ATC-CCU*****************************************/
+    QList<unsigned short> ATCtemp_realports;
+    unsigned short ATCtemp_virtualports;
+    ATCtemp_realports.clear();
+
+    ATCtemp_realports<<0xB10<<0xB20;
+    ATCtemp_virtualports = 0xfB10;
+
+    createATCList(ATCtemp_virtualports,ATCtemp_realports);
+
+    ATCiCT_A13_U32 = crrcRicoMvb->getUnsignedInt32(ATCtemp_virtualports,6);
+    ATCiCT_A14_U32 = crrcRicoMvb->getUnsignedInt32(ATCtemp_virtualports,10);
+    ATCiCT_A5_B1 = crrcRicoMvb->getBool(ATCtemp_virtualports,2,3);
+    ATCiCT_A6_B1 = crrcRicoMvb->getBool(ATCtemp_virtualports,2,4);
+    ATCiCT_A4_B1 = crrcRicoMvb->getBool(ATCtemp_virtualports,2,2);
+    ATCiCT_A11_U8 = crrcRicoMvb->getUnsignedChar(0xA10,4);
 
     //****************************************TCU-CCU********************************//
 
@@ -2893,10 +2909,6 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
 //    BMS2CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD20,13);
 //    BMS3CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD30,13);
 //    BMS4CT_TMPE_U8 = crrcRicoMvb->getUnsignedChar(0xD40,13);
-    old_TMPE_U8[0] = BMS1CT_FLAG_U8;
-    old_TMPE_U8[1] = BMS2CT_FLAG_U8;
-    old_TMPE_U8[2] = BMS3CT_FLAG_U8;
-    old_TMPE_U8[3] = BMS4CT_FLAG_U8;
 
     if (BMS1CT_FLAG_U8 > 0 && BMS1CT_FLAG_U8 <=20)
     {
@@ -3250,6 +3262,22 @@ void Database::createBCUList( QList<unsigned short> virtualports, QList<unsigned
     }
 
 
+}
+
+void Database::createATCList(unsigned short virtualports, QList<unsigned short> realports)
+{
+    //if (CTD_MCTActive_B1 == true && CTD_AMCTOLINE_B1 == true)
+    {
+        this->copyPort(virtualports,realports.at(0));
+    }
+//    else if (CTD_MC2Active_B1 == true && CTD_AMC2OLINE_B1 == true)
+//    {
+//        this->copyPort(virtualports,realports.at(1));
+//    }
+//    else
+//    {
+//        this->copyPort( virtualports,0xfff);
+//    }
 }
 
 

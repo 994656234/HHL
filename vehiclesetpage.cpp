@@ -15,10 +15,10 @@ VehicleSetPage::~VehicleSetPage()
     delete ui;
 }
 
-void VehicleSetPage::on_BTN_queryStation_pressed()
-{
-    changePage(uVehicleSetStationPage);
-}
+//void VehicleSetPage::on_BTN_queryStation_pressed()
+//{
+//    changePage(uVehicleSetStationPage);
+//}
 
 void VehicleSetPage::on_BTN_setAirCondition_pressed()
 {

@@ -492,6 +492,12 @@ border:1px solid gray;
    <property name="text">
     <string/>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="LBL_Page">
    <property name="geometry">

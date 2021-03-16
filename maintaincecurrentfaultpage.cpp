@@ -168,6 +168,7 @@ void MaintainceCurrentFaultPage::Localareaupdate(int index)
     // detial label &&  fault position
     if(m_currentButtonsDown<index)
     {
+        this->ui->LBL_Datail->setWordWrap(true);
         this->ui->LBL_Datail->setText(CrrcFault::getCrrcFault()->getCurrentFaultDescription(m_currentButtonsDown+(m_currentPageIndex-1)*MAXCNTPERPAGE));
         QString tmp = CrrcFault::getCrrcFault()->getCurrentFaultPosition(m_currentButtonsDown+(m_currentPageIndex-1)*MAXCNTPERPAGE);
         this->ui->LBLTC1->setStyleSheet(TRAINNOFAULT);
@@ -227,6 +228,7 @@ void MaintainceCurrentFaultPage::DrawFaults(int i)
                                         CrrcFault::getCrrcFault()->getCurrentFaultTime(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
     this->m_labels.at(i).at(1)->setText(CrrcFault::getCrrcFault()->getCurrentFaultCode(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
     this->m_labels.at(i).at(2)->setText(CrrcFault::getCrrcFault()->getCurrentFaultName(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
+    this->m_labels.at(i).at(2)->setWordWrap(true);
     this->m_labels.at(i).at(3)->setText(CrrcFault::getCrrcFault()->getCurrentFaultLevel(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
     this->m_labels.at(i).at(4)->setText(CrrcFault::getCrrcFault()->getCurrentFaultDevice(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
 

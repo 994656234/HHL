@@ -172,6 +172,7 @@ void MaintainceHistoryFaultPage::Localareaupdate(int index)
     // detial label &&  fault position
     if(m_currentButtonsDown<index)
     {
+        this->ui->LBL_Datail->setWordWrap(true);
         this->ui->LBL_Datail->setText("代码: "+CrrcFault::getCrrcFault()->getHistoryFaultCode(m_currentButtonsDown+(m_currentPageIndex-1)*MAXCNTPERPAGE)+"\n"
                                       +CrrcFault::getCrrcFault()->getHistoryFaultDescription(m_currentButtonsDown+(m_currentPageIndex-1)*MAXCNTPERPAGE));
         QString tmp = CrrcFault::getCrrcFault()->getHistoryFaultPosition(m_currentButtonsDown+(m_currentPageIndex-1)*MAXCNTPERPAGE);
@@ -244,6 +245,7 @@ void MaintainceHistoryFaultPage::DrawFaults(int i)
 
     this->m_labels.at(i).at(2)->setText(CrrcFault::getCrrcFault()->getHistoryFaultCode(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
     this->m_labels.at(i).at(3)->setText(CrrcFault::getCrrcFault()->getHistoryFaultName(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
+    this->m_labels.at(i).at(3)->setWordWrap(true);
     this->m_labels.at(i).at(4)->setText(CrrcFault::getCrrcFault()->getHistoryFaultLevel(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
     this->m_labels.at(i).at(5)->setText(CrrcFault::getCrrcFault()->getHistoryFaultDevice(i+(m_currentPageIndex-1)*MAXCNTPERPAGE));
 }

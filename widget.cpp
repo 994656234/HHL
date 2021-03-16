@@ -798,6 +798,7 @@ void Widget::showEvent(QShowEvent *)
             //ATC-CCU
             crrcRicoMvb->addSinkPort(0xB10,MVB_FCode4,512);
             crrcRicoMvb->addSinkPort(0xB20,MVB_FCode4,512);
+            crrcRicoMvb->addVirtualPort(0xfB10,MVB_FCode4);
 
             //PIS-CCU
             crrcRicoMvb->addSinkPort(0x910,MVB_FCode4,256);

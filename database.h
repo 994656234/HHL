@@ -14,7 +14,7 @@ class Database
 
 public:
     Database();
-    int HMIPosition;
+    int HMIPosition,TrainNum1_2Flag;
     void updateDatabse(CrrcRicoMvb* crrcRicoMvb);
     long getAllHVACFault();
     long getAllSIVFault();
@@ -88,7 +88,7 @@ public:
     bool DiCT_JUMP1_B1, DiCT_JUMP2_B1, DiCT_JUMP3_B1,DiCT_JUMP4_B1, DiCT_JUMP5_B1,
     DiCT_JUMP6_B1, DiCT_JUMP7_B1, DiCT_JUMP8_B1, DiCT_JUMP9_B1, DiCT_JUMP10_B1,
     DiCT_JUMP11_B1, DiCT_JUMP12_B1, DiCT_JUMP13_B1, DiCT_JUMP14_B1,DiCT_JUMP15_B1,
-    DiCT_JUMP16_B1;
+    DiCT_JUMP16_B1,DiCT_HALFATOFLAG_B1;
 
     ///zaixian zhuangtai
     unsigned short B1CT_MstrGV_B1,B2CT_MstrGV_B1,B3CT_MstrGV_B1,B4CT_MstrGV_B1,
@@ -302,7 +302,7 @@ public:
     CTD_MC2Bg1TrustBCU2_B1, CTD_MC2Bg2TrustBCU1_B1,CTD_MC2Bg2TrustBCU2_B1, CTD_BCU1Trust_B1,
     CTD_BCU2Trust_B1, CTD_ATCTrustATCT_B1,CTD_ATCTrustATC2_B1, CTD_FASTrusFCU1_B1,
     CTD_FASTrusFCU2_B1, CTD_PISTrusPIS1_B1,CTD_PISTrusPIS2_B1, CTD_AccTest40Valid_B1,
-    CTD_AccTest80Valid_B1, CTD_DccTestValid_B1, CTD_MP1WorkShop_B1, CTD_MP2WorkShop_B1;
+    CTD_AccTest80Valid_B1, CTD_DccTestValid_B1, CTD_MP1WorkShop_B1, CTD_MP2WorkShop_B1,CTD_HALFSTATUS_B1;
 
     unsigned char
     CTD_LineNum_U8, CTD_TrainNum_U8, CTD_Grade_U8,CTD_DriveMode_U8,
@@ -823,13 +823,13 @@ public:
     BMS1CT_TMPE_U8,BMS2CT_TMPE_U8,BMS3CT_TMPE_U8,BMS4CT_TMPE_U8;
 
     int BMSiCT_TMPE_U8[4][20];
-    unsigned char BMSiCT_TMPEFlaValue_U8[4][20];
     unsigned char TMPcnt[4][20];
-    unsigned char TMPcnt1[4][20];
-    static int old_TMPE_U8[4];
     unsigned char TMPFlag[4][20];
 
-
+//**************************************ATC-CCU****************************************************//
+    unsigned int ATCiCT_A13_U32,ATCiCT_A14_U32;
+    bool ATCiCT_A5_B1,ATCiCT_A6_B1,ATCiCT_A4_B1;
+    unsigned char ATCiCT_A11_U8;
 
 public:
     bool checkCcu1Online(unsigned short lifeSignal);
@@ -839,6 +839,8 @@ private:
      CrrcRicoMvb* crrcRicoMvb;
      void createEDCUList(bool edcu1Online, bool edcu2Online,QList<unsigned short int> virtualports,QList<unsigned short int> realports);
      void createBCUList( QList<unsigned short> virtualports, QList<unsigned short> realports);
+     void createATCList( unsigned short virtualports, QList<unsigned short> realports);
+
      void createFAUList();
      void createRIOMList(bool riom1trust,bool riom7trust,bool riom6trust,bool riom8trust);
      void createPISList();

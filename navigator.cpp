@@ -8,10 +8,19 @@ Navigator::Navigator(QWidget *parent) :
     ui(new Ui::Navigator)
 {
     ui->setupUi(this);
+//    if (database->TrainNum1_2Flag == 0)
+//    {
+        buttons<<this->ui->BTNEvent<<this->ui->BTNSetting<<this->ui->BTNMaintaince<<this->ui->BTNByPass<<this->ui->BTNHelp
+                <<this->ui->BTNBogieLampSubsystem<<this->ui->BTNSkipback<<this->ui->BTNSkipforward<<this->ui->BTNSpare2<<this->ui->BTNHome;
+//        this->ui->BTNBogieLampSubsystem->setText("走行部\n系统");
+//    }
+//    else
+//    {
+//        buttons<<this->ui->BTNEvent<<this->ui->BTNSetting<<this->ui->BTNMaintaince<<this->ui->BTNByPass<<this->ui->BTNHelp
 
-    buttons<<this->ui->BTNEvent<<this->ui->BTNSetting<<this->ui->BTNMaintaince<<this->ui->BTNByPass<<this->ui->BTNHelp
-            <<this->ui->BTNBogieLampSubsystem<<this->ui->BTNSkipback<<this->ui->BTNSkipforward<<this->ui->BTNSpare2<<this->ui->BTNHome;
-
+//              <<this->ui->BTNSkipback<<this->ui->BTNSkipforward<<this->ui->BTNSpare2<<this->ui->BTNHome;
+//        this->ui->BTNBogieLampSubsystem->setText("");
+//    }
     foreach (QPushButton *button, buttons)
     {
         connect(button, SIGNAL(pressed()), this, SLOT(NBpressEvent()));

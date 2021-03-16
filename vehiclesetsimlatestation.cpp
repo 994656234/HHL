@@ -154,6 +154,7 @@ void VehicleSetSimlateStation::on_pushButton_pressed()
     database->DiCT_STARTLINENUM_U8=beginStationId;
     database->DiCT_ENDLINENUM_U8=terminalStationId;
     database->DiCT_HALFATOSTART_B1=true;
+    database->DiCT_HALFATOFLAG_B1 = true;
     ui->pushButton->setStyleSheet(BUTTONPRESSSTYLE);
     allButtonsUnable();
     qTimer1->start(2000);
@@ -166,6 +167,8 @@ void VehicleSetSimlateStation::on_pushButton_2_pressed()
     database->DiCT_STARTLINENUM_U8=0;
     database->DiCT_ENDLINENUM_U8=0;
     database->DiCT_HALFATOEND_B1=true;
+    database->DiCT_HALFATOFLAG_B1 = false;
+
     allButtonsUnable();
     qTimer1->start(2000);
     ui->pushButton_2->setStyleSheet(BUTTONPRESSSTYLE);

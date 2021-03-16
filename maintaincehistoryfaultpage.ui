@@ -694,6 +694,9 @@ font: 20px, &quot;微软雅黑&quot;;
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="LBLFaultName1_9">
    <property name="geometry">
@@ -714,6 +717,9 @@ font: 20px, &quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="LBLStarttime1_5">
@@ -756,6 +762,9 @@ font: 20px, &quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -816,6 +825,9 @@ font: 20px, &quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="LBLStarttime1_6">
@@ -879,6 +891,9 @@ font: 20px, &quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="LBLSystem1_5">
@@ -968,6 +983,9 @@ font: 20px, &quot;微软雅黑&quot;;
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="LBLStarttime1_2">
    <property name="geometry">
@@ -1032,6 +1050,9 @@ font: 20px, &quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="LBLCode1_4">
@@ -1202,6 +1223,9 @@ font: 20px, &quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="LBLLevel1_3">
@@ -1481,6 +1505,9 @@ font: 20px, &quot;微软雅黑&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="LBLLevel1_7">

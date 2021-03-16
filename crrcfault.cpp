@@ -103,6 +103,10 @@ void CrrcFault::run()
 
                 if((FaultTypeHash.value(key).FaultDevice == "PCU")&&(getParam->getInt("/TrainCode/Code")>3))
                     continue;
+
+//                if((FaultTypeHash.value(key).FaultDevice == "BMS")&&(getParam->getInt("/TrainNum/flag") == 1))
+//                    continue;
+
                 if (FaultTypeHash[key].FaultValid == CrrcRicoMvb::getcrrcRicoMvb()->getBool(FaultTypeHash[key].PortAddress, FaultTypeHash[key].ByteoffAddress, FaultTypeHash[key].BitoffAddress))
                 {
 
