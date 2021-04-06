@@ -18,7 +18,7 @@ public:
 
 private:
     Ui::VehicleStationBar *ui;
-    QHash<int, QString> m_StationIDHash;
+    QHash<unsigned int, QString> m_StationIDHash;
     QHash<int, QString> m_StationID;
 
     void SetAutoStation();

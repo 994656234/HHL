@@ -66,6 +66,7 @@ enum pageIndex
     uVehicleMaintainceAllPortsPage,
     uVehicleMaintainceInitSetPage,
     uVehicleMaintainceRIOMPage,
+    uVehicleMaintainceLAT_RLDPage,
     uVehicleMaintainceWheelDiameterSetPage,
     uVehicleMaintainceSoftwareVersionPage,
     uVehicleMaintainceDataManagePage,

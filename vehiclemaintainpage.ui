@@ -431,26 +431,24 @@ font:20px &quot;微软雅黑&quot;;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTN_CommunicationStatus">
+  <widget class="QPushButton" name="BTN_LAT_RLD">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>490</y>
-     <width>100</width>
-     <height>80</height>
+     <x>900</x>
+     <y>210</y>
+     <width>111</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="focusPolicy">
-    <enum>Qt::NoFocus</enum>
+    <enum>Qt::StrongFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 50);
-color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;</string>
+border:0px;</string>
    </property>
    <property name="text">
-    <string>通信
-状态</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_SoftwareVersion">
@@ -844,7 +842,6 @@ font:20px &quot;微软雅黑&quot;;</string>
   <zorder>BTN6</zorder>
   <zorder>BTNHome</zorder>
   <zorder>BTN2</zorder>
-  <zorder>BTN_CommunicationStatus</zorder>
   <zorder>BTN_SoftwareVersion</zorder>
   <zorder>BTN_DataMonitor</zorder>
   <zorder>BTN_TractSubsystem</zorder>
@@ -861,6 +858,7 @@ font:20px &quot;微软雅黑&quot;;</string>
   <zorder>BTN_Battery</zorder>
   <zorder>BTN_fangyou</zorder>
   <zorder>BTN_qiangqi</zorder>
+  <zorder>BTN_LAT_RLD</zorder>
  </widget>
  <resources/>
  <connections/>

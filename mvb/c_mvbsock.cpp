@@ -359,7 +359,7 @@ TCN_DECL_PUBLIC MUE_RESULT c_mvbSock::MVB_Put_Data(    WORD16      port_address,
             mue_pd_full_port_size_max,  \
             p_port_data\
         );
-    qDebug("pd_put_port_address == %x",pd_put_port_address);
+    //qDebug("pd_put_port_address == %x",pd_put_port_address);
     return result;
 }
 

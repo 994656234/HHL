@@ -62,7 +62,7 @@ VehicleStationBar::VehicleStationBar(QWidget *parent) :
     m_StationID.insert(9,"斜桥站");
     m_StationID.insert(10,"皮革城站");
     m_StationID.insert(11,"海昌路站");
-    m_StationID.insert(12,"浙大国际校区站");
+    m_StationID.insert(12,"浙大国际学院站");
 
 }
 
@@ -100,7 +100,7 @@ void VehicleStationBar::SetAutoStation()
 
     if(database->ATCiCT_A6_B1 == true)
     {
-        QHash<int, QString>::iterator i = m_StationIDHash.find(database->ATCiCT_A14_U32);
+        QHash<unsigned int, QString>::iterator i = m_StationIDHash.find(database->ATCiCT_A14_U32);
 
         while (i != m_StationIDHash.end())
         {
@@ -120,18 +120,6 @@ void VehicleStationBar::SetAutoStation()
                 {
                     if ("余杭高铁站" == m_StationIDHash[database->ATCiCT_A13_U32]) //上行
                     {
-                        if (key > 1)
-                        {
-                            ui->lbl_currentStationValue->setText(m_StationID[key-1]);
-                        }
-                        else
-                        {
-                            ui->lbl_currentStationValue->setText(m_StationID[1]);
-                        }
-                        break;
-                    }
-                    else if ("浙大国际学院站" == m_StationIDHash[database->ATCiCT_A13_U32])
-                    {
                         if (key < 12)
                         {
                             ui->lbl_currentStationValue->setText(m_StationID[key+1]);
@@ -139,6 +127,18 @@ void VehicleStationBar::SetAutoStation()
                         else
                         {
                             ui->lbl_currentStationValue->setText(m_StationID[12]);
+                        }
+                        break;
+                    }
+                    else if ("浙大国际学院站" == m_StationIDHash[database->ATCiCT_A13_U32])
+                    {
+                        if (key > 1)
+                        {
+                            ui->lbl_currentStationValue->setText(m_StationID[key-1]);
+                        }
+                        else
+                        {
+                            ui->lbl_currentStationValue->setText(m_StationID[1]);
                         }
                         break;
                     }

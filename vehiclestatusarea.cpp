@@ -292,6 +292,10 @@ void VehicleStatusArea::updatePage()
     {
         ui->lbl_mode->setText("CM模式");
     }
+    else if(database->CTD_DriveMode_U8==6)
+    {
+        ui->lbl_mode->setText("RM模式");
+    }
     else if(database->CTD_DriveMode_U8==7)
     {
         ui->lbl_mode->setText("无人折返");

@@ -37,6 +37,7 @@
 #include "maintainceallportspage.h"
 #include "maintainceinitsetpage.h"
 #include "maintainceriompage.h"
+#include "maintaincelat_rldpage.h"
 #include "maintaincewheeldiametersetpage.h"
 #include "maintaincesoftwareversionpage.h"
 #include "maintaincedatamanagepage.h"
@@ -237,6 +238,10 @@ Widget::Widget(QWidget *parent) :
     this->vehicleMaintainceRIOMPage->setMyBase(uMiddle,QString("RIOM界面"));
     this->vehicleMaintainceRIOMPage->hide();
 
+    this->vehicleMaintainceLAT_RLDPage=new MaintainceLAT_RLDPage(this);
+    this->vehicleMaintainceLAT_RLDPage->setMyBase(uMiddle,QString("LAT/RLD界面"));
+    this->vehicleMaintainceLAT_RLDPage->hide();
+
     this->vehicleMaintainceWheelDiameterSetPage=new MaintainceWheelDiameterSetPage(this);
     this->vehicleMaintainceWheelDiameterSetPage->setMyBase(uMiddle,QString("轮径设置界面"));
     this->vehicleMaintainceWheelDiameterSetPage->hide();
@@ -378,6 +383,7 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uVehicleMaintainceAllPortsPage,this->vehicleMaintainceAllPortsPage);
     this->widgets.insert(uVehicleMaintainceInitSetPage,this->vehicleMaintainceInitSetPage);
     this->widgets.insert(uVehicleMaintainceRIOMPage,this->vehicleMaintainceRIOMPage);
+    this->widgets.insert(uVehicleMaintainceLAT_RLDPage,this->vehicleMaintainceLAT_RLDPage);
     this->widgets.insert(uVehicleMaintainceWheelDiameterSetPage,this->vehicleMaintainceWheelDiameterSetPage);
     this->widgets.insert(uVehicleMaintainceSoftwareVersionPage,this->vehicleMaintainceSoftwareVersionPage);
     this->widgets.insert(uVehicleMaintainceDataManagePage,this->vehicleMaintainceDataManagePage);

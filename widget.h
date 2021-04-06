@@ -45,6 +45,7 @@ class VehicleMTTimeSetPage;
 class MaintainceAllPortsPage;
 class MaintainceInitSetPage;
 class MaintainceRIOMPage;
+class MaintainceLAT_RLDPage;
 class MaintainceWheelDiameterSetPage;
 class MaintainceSoftwareVersionPage;
 class MaintainceDataManagePage;
@@ -137,6 +138,7 @@ private:
     MaintainceAllPortsPage* vehicleMaintainceAllPortsPage;
     MaintainceInitSetPage* vehicleMaintainceInitSetPage;
     MaintainceRIOMPage* vehicleMaintainceRIOMPage;
+    MaintainceLAT_RLDPage* vehicleMaintainceLAT_RLDPage;
     MaintainceWheelDiameterSetPage* vehicleMaintainceWheelDiameterSetPage;
     MaintainceSoftwareVersionPage* vehicleMaintainceSoftwareVersionPage;
     MaintainceDataManagePage* vehicleMaintainceDataManagePage;

@@ -3266,18 +3266,18 @@ void Database::createBCUList( QList<unsigned short> virtualports, QList<unsigned
 
 void Database::createATCList(unsigned short virtualports, QList<unsigned short> realports)
 {
-    //if (CTD_MCTActive_B1 == true && CTD_AMCTOLINE_B1 == true)
+    if (CTD_MCTActive_B1 == true && CTD_AMCTOLINE_B1 == true)
     {
         this->copyPort(virtualports,realports.at(0));
     }
-//    else if (CTD_MC2Active_B1 == true && CTD_AMC2OLINE_B1 == true)
-//    {
-//        this->copyPort(virtualports,realports.at(1));
-//    }
-//    else
-//    {
-//        this->copyPort( virtualports,0xfff);
-//    }
+    else if (CTD_MC2Active_B1 == true && CTD_AMC2OLINE_B1 == true)
+    {
+        this->copyPort(virtualports,realports.at(1));
+    }
+    else
+    {
+        this->copyPort( virtualports,0xfff);
+    }
 }
 
 

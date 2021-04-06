@@ -5,7 +5,7 @@
 #-------------------------------------------------
 TRANSLATIONS += lang_Portuguese.ts
 
-#DEFINES += USER_DEBUG_MODE
+DEFINES += USER_DEBUG_MODE
 #DEFINES += MVB_CX
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -141,8 +141,8 @@ SOURCES += main.cpp\
     signal/ccustomevent.cpp \
     crrcricomvb.cpp \
     log4qt/log4qt_init.cpp \
-    qextserial/qextserialport.cpp \
-    qextserial/qextserialport_unix.cpp \
+#    qextserial/qextserialport.cpp \
+#    qextserial/qextserialport_unix.cpp \
     cxExtDev/blacklightthread.cpp \
     cxExtDev/externaldevicelib.cpp \
     avic_externaldevice.cpp \
@@ -151,7 +151,8 @@ SOURCES += main.cpp\
     emdooropen.cpp \
     vehiclesetsimlatestation.cpp \
     stationchoicebox.cpp \
-    maintaincebatterysubsystempage.cpp
+    maintaincebatterysubsystempage.cpp \
+    maintaincelat_rldpage.cpp
 
 
 
@@ -320,9 +321,9 @@ HEADERS  += widget.h \
     passwordpage.h \
     drivers/c_io.h \
     log4qt/custom.h \
-    qextserial/qextserialport.h \
-    qextserial/qextserialport_global.h \
-    qextserial/qextserialport_p.h \
+#    qextserial/qextserialport.h \
+#    qextserial/qextserialport_global.h \
+#    qextserial/qextserialport_p.h \
     signal/ccustomevent.h \
     sqlite3.h \
     crrcricomvb.h \
@@ -335,7 +336,8 @@ HEADERS  += widget.h \
     emdooropen.h \
     vehiclesetsimlatestation.h \
     stationchoicebox.h \
-    maintaincebatterysubsystempage.h
+    maintaincebatterysubsystempage.h \
+    maintaincelat_rldpage.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -407,7 +409,8 @@ FORMS    += widget.ui \
     emdooropen.ui \
     vehiclesetsimlatestation.ui \
     stationchoicebox.ui \
-    maintaincebatterysubsystempage.ui
+    maintaincebatterysubsystempage.ui \
+    maintaincelat_rldpage.ui
 
 RESOURCES += \
     Resource.qrc

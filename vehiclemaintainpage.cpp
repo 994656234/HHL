@@ -13,7 +13,7 @@ VehicleMaintainPage::VehicleMaintainPage(QWidget *parent) :
     ui->setupUi(this);
     buttons<<ui->BTN1<<ui->BTN2<<ui->BTN3<<ui->BTN4<<ui->BTN5<<ui->BTN6<<ui->BTN7<<ui->BTN8<<ui->BTN9<<ui->BTNHome
             <<ui->BTN_AuxiliarySubsystem<<ui->BTN_BogieLampSubsystem<<ui->BTN_BrakeSubsystem
-            <<ui->BTN_CommunicationStatus<<ui->BTN_DataManage<<ui->BTN_DataMonitor<<ui->BTN_HistoryFault<<ui->BTN_MetroSet
+            <<ui->BTN_LAT_RLD<<ui->BTN_DataManage<<ui->BTN_DataMonitor<<ui->BTN_HistoryFault<<ui->BTN_MetroSet
             <<ui->BTN_RIOMTest<<ui->BTN_SoftwareVersion<<ui->BTN_TractSubsystem<<ui->BTN_HMIInitSet
             <<ui->BTN_autoStationTest<<ui->BTN_cumulateData<<ui->BTN_speedTest<<ui->BTN_Cut<<ui->BTN_Battery;
     foreach(QPushButton* button,buttons)
@@ -31,9 +31,6 @@ VehicleMaintainPage::VehicleMaintainPage(QWidget *parent) :
     ui->BTN_BogieLampSubsystem->setEnabled(false);
     //ui->BTN_Accumulate->hide();
     //ui->BTN_Accumulate->setEnabled(false);
-    ui->BTN_CommunicationStatus->hide();
-    ui->BTN_CommunicationStatus->setEnabled(false);
-
     this->fangyouFlag=true;
     this->qiangqiflag = true;
 
@@ -63,9 +60,10 @@ void VehicleMaintainPage::NBpressEvent()
     {
         changePage(uMaintaincePasswordPage);
     }
-    else if(BTNName=="BTN_CommunicationStatus")
+    else if(BTNName=="BTN_LAT_RLD")
     {
-        changePage(uVehicleMaintainceCommunicationStatePage);
+        //changePage(uVehicleMaintainceCommunicationStatePage);
+        changePage(uVehicleMaintainceLAT_RLDPage);
     }
     else if(BTNName=="BTN_SoftwareVersion")
     {
