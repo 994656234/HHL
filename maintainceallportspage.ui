@@ -89,10 +89,10 @@ border-radius:8px;
   <widget class="QPushButton" name="BTN_Return">
    <property name="geometry">
     <rect>
-     <x>920</x>
+     <x>930</x>
      <y>710</y>
-     <width>100</width>
-     <height>50</height>
+     <width>81</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="focusPolicy">
