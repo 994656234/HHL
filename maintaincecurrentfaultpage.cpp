@@ -109,11 +109,11 @@ void MaintainceCurrentFaultPage::updatePage()
         this->ui->LBLM1->setStyleSheet(TRAINNOFAULT);
         this->ui->LBLM2->setStyleSheet(TRAINNOFAULT);
         this->ui->LBL_Datail->setText("");
-        for(int i = 0;i<this->m_buttons.size();i++)
-           {
-              this->m_buttons.at(i)->setText("");
-              this->m_buttons.at(i)->setStyleSheet(LEVEL0BTNUP);
-           }
+//        for(int i = 0;i<this->m_buttons.size();i++)
+//           {
+//              this->m_buttons.at(i)->setText("");
+//              this->m_buttons.at(i)->setStyleSheet(LEVEL0BTNUP);
+//           }
         return ;
     }
 

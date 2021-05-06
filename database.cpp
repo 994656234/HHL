@@ -462,6 +462,7 @@ void Database::updateDatabse(CrrcRicoMvb* crrcRicoMvb)
     FCU1CT_usSWRev_B1=crrcRicoMvb->getUnsignedChar(0x810,3);
     FCU2CT_usSWRev_B1=crrcRicoMvb->getUnsignedChar(0x820,3);
     //PIS
+    //quxch
     PIS1CT_P178_B1=crrcRicoMvb->getUnsignedChar(0x911,0);
     PIS1CT_P179_B1=crrcRicoMvb->getUnsignedChar(0x911,2);
     PIS1CT_P180_B1=crrcRicoMvb->getUnsignedChar(0x911,2);
@@ -3371,10 +3372,9 @@ void Database::updateSystemStatus()
   {
       Status_BCU = 2;
   }else if(//qiechu
-
-          (this->BiCT_EDCtOffMC1Bg2_B1)||(this->BiCT_EDCtOffMP1Bg1_B1)||
-          (this->BiCT_EDCtOffMP1Bg2_B1)||(this->BiCT_EDCtOffMP2Bg1_B1)||
-          (this->BiCT_EDCtOffMP2Bg2_B1)||(this->BiCT_EDCtOffMC2Bg2_B1)
+           (this->CTB_WheelCleaning_B1 ==false)&&((this->BiCT_EDCtOffMC1Bg2_B1)||(this->BiCT_EDCtOffMP1Bg1_B1)||
+           (this->BiCT_EDCtOffMP1Bg2_B1)||(this->BiCT_EDCtOffMP2Bg1_B1)||
+           (this->BiCT_EDCtOffMP2Bg2_B1)||(this->BiCT_EDCtOffMC2Bg2_B1))
            )
   {
       Status_BCU = 1;

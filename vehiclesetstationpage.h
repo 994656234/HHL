@@ -32,10 +32,14 @@ private:
 
 
 private slots:
-    void on_BTN9_pressed();
-    void on_BTNHome_pressed();
-    void on_BTN1_pressed();
+//    void on_BTN9_pressed();
+//    void on_BTNHome_pressed();
+//    void on_BTN1_pressed();
     void buttonPushEvent();
+    void on_BTNNext_pressed();
+    void on_BTNPre_pressed();
+    void on_BTNEmgyStart_pressed();
+    void on_BTNEmgyStop_pressed();
 };
 
 #endif // VEHICLESETSTATIONPAGE_H

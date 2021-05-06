@@ -5,7 +5,7 @@
 #-------------------------------------------------
 TRANSLATIONS += lang_Portuguese.ts
 
-DEFINES += USER_DEBUG_MODE
+#DEFINES += USER_DEBUG_MODE
 #DEFINES += MVB_CX
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -141,8 +141,8 @@ SOURCES += main.cpp\
     signal/ccustomevent.cpp \
     crrcricomvb.cpp \
     log4qt/log4qt_init.cpp \
-#    qextserial/qextserialport.cpp \
-#    qextserial/qextserialport_unix.cpp \
+    qextserial/qextserialport.cpp \
+    qextserial/qextserialport_unix.cpp \
     cxExtDev/blacklightthread.cpp \
     cxExtDev/externaldevicelib.cpp \
     avic_externaldevice.cpp \
@@ -319,11 +319,11 @@ HEADERS  += widget.h \
     addsubtracttestpage.h \
     emdialogpage.h \
     passwordpage.h \
+    qextserial/qextserialport.h \
+    qextserial/qextserialport_global.h \
     drivers/c_io.h \
     log4qt/custom.h \
-#    qextserial/qextserialport.h \
-#    qextserial/qextserialport_global.h \
-#    qextserial/qextserialport_p.h \
+    qextserial/qextserialport_p.h \
     signal/ccustomevent.h \
     sqlite3.h \
     crrcricomvb.h \
@@ -431,3 +431,12 @@ QMAKE_CXXFLAGS += -Wno-unused-variable
 
 #INCLUDEPATH += $$PWD/.
 #DEPENDPATH += $$PWD/.
+
+
+
+unix:!macx: LIBS += -L$$PWD/./ -lavic_imx
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
+
+unix:!macx: PRE_TARGETDEPS += $$PWD/./libavic_imx.a

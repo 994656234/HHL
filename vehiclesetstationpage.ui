@@ -19,185 +19,227 @@
   <widget class="QPushButton" name="BTNStation1">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>40</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>10</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="whatsThis">
     <string>1</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>1</string>
+    <string>临时停车:各位乘客请注意，现在是临时停车，为了您和他人的安全，请勿靠近车门，不要触动车上的设备，不便之处，敬请谅解。 </string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation2">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>40</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>60</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="whatsThis">
     <string>2</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>2</string>
+    <string>列车再次启动:各位乘客请注意，列车将再次启动，请坐好扶稳，请勿倚靠车门，谢谢合作。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation3">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>40</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>110</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="whatsThis">
     <string>3</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>3</string>
+    <string>限速行车:各位乘客请注意，由于运营需要，现在实行限速行车，不便之处，敬请谅解。 </string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation4">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>40</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>160</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="whatsThis">
     <string>4</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>4</string>
+    <string>高峰:各位乘客请注意，由于车厢内乘客较多，列车比较拥挤，下车乘客请提前做好准备，上车乘客请向车厢中部移动，谢谢合作。 </string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation7">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>120</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>310</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="whatsThis">
     <string>7</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>7</string>
+    <string>列车/设备故障停车:各位乘客请注意,由于临时故障,现正在加紧抢修,请您耐心等候,请勿触动车上的设备,请勿靠近车门,不便之处,敬请谅解。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation6">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>120</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>260</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="whatsThis">
     <string>6</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>6</string>
+    <string>停车不开门:各位乘客请注意，由于特殊原因，本次列车在本站不开门，请有需要的乘客在下一站下车，不便之处，敬请谅解。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation5">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>120</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>210</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
    <property name="whatsThis">
     <string>5</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>5</string>
+    <string>列车停站时间延长:各位乘客请注意，本次列车因故在本站停车时间将会延长，不便之处，敬请谅解。 </string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation8">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>120</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>10</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -209,20 +251,20 @@ border-radius:10px;</string>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>8</string>
+    <string>列车清客:各位乘客请注意，由于运营需要，本次列车将退出服务，请全体乘客带齐行李物品，抓紧时间下车，不便之处，敬请谅解。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation11">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>210</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>160</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -234,20 +276,20 @@ border-radius:10px;</string>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>11</string>
+    <string>全部车门打不开:各位乘客请注意，因车门不能开启，请按照车门开门指引，打开车门下车，不便之处，敬请谅解。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation10">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>210</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>110</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -259,20 +301,20 @@ border-radius:10px;</string>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>10</string>
+    <string>部分车门打不开:各位乘客请注意，因部分车门不能开启，请从开启的车门处下车，不便之处，敬请谅解。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation9">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>210</y>
-     <width>201</width>
-     <height>51</height>
+     <x>10</x>
+     <y>60</y>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -284,20 +326,20 @@ border-radius:10px;</string>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>9</string>
+    <string>紧急情况:各位乘客请注意，现在发生紧急情况，全体乘客不要惊慌，请听从工作人员指引，安全有序撤离。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNStation12">
    <property name="geometry">
     <rect>
-     <x>750</x>
+     <x>10</x>
      <y>210</y>
-     <width>201</width>
-     <height>51</height>
+     <width>1010</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -309,18 +351,18 @@ border-radius:10px;</string>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
 color: rgb(255, 255, 255);
-font:20px &quot;微软雅黑&quot;;
+font:16px &quot;微软雅黑&quot;;
 border-radius:10px;</string>
    </property>
    <property name="text">
-    <string>12</string>
+    <string>紧急疏散:各位乘客请注意，列车因故不能继续运行，现在需要紧急疏散，请乘客服从工作人员的指挥，有秩序的离开，谢谢配合。</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTNEmgyStart">
    <property name="geometry">
     <rect>
      <x>241</x>
-     <y>340</y>
+     <y>370</y>
      <width>161</width>
      <height>61</height>
     </rect>
@@ -329,7 +371,7 @@ border-radius:10px;</string>
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
-    <string>13</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;15&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
@@ -345,7 +387,7 @@ border-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>581</x>
-     <y>340</y>
+     <y>370</y>
      <width>161</width>
      <height>61</height>
     </rect>
@@ -354,7 +396,7 @@ border-radius:10px;</string>
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="whatsThis">
-    <string>14</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;16&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(187,188,247);
@@ -364,6 +406,118 @@ border-radius:10px;</string>
    </property>
    <property name="text">
     <string>紧急广播停止</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNStation13">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>1010</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;13&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>车站火灾:各位乘客请注意，由于车站发生火灾，请在该站下车的乘客到下一站下车，不便之处，敬请原谅！  </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNStation14">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>1010</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;14&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:16px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>列车火灾:各位乘客请注意，车厢内发生火情，请您保持镇定，取出灭火器扑灭火源，请勿触动车上的其它设备，工作人员将马上到现场处理。</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNPre">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>370</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>上一页</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTNNext">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>370</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(187,188,247);
+color: rgb(255, 255, 255);
+font:20px &quot;微软雅黑&quot;;
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>下一页</string>
    </property>
   </widget>
  </widget>

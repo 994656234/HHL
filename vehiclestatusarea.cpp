@@ -568,22 +568,22 @@ void VehicleStatusArea::showEvent(QTimerEvent *e)
     }
 }
 
-void VehicleStatusArea::on_BTN_fangyou_pressed()
-{
+//void VehicleStatusArea::on_BTN_fangyou_pressed()
+//{
 
-    if(fangyouFlag)
-    {
-        //ui->BTN_fangyou->setStyleSheet(BTNPRESS);
-        fangyouFlag=false;
-        database->fangyou=true;
-    }
-    else
-    {
-        //ui->BTN_fangyou->setStyleSheet(BTNRELEASE);
-        fangyouFlag=true;
-        database->fangyou=false;
-    }
-}
+//    if(fangyouFlag)
+//    {
+//        //ui->BTN_fangyou->setStyleSheet(BTNPRESS);
+//        fangyouFlag=false;
+//        database->fangyou=true;
+//    }
+//    else
+//    {
+//        //ui->BTN_fangyou->setStyleSheet(BTNRELEASE);
+//        fangyouFlag=true;
+//        database->fangyou=false;
+//    }
+//}
 
 int VehicleStatusArea::isDoorEmOpen()
 {

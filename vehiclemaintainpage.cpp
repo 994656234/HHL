@@ -62,8 +62,7 @@ void VehicleMaintainPage::NBpressEvent()
     }
     else if(BTNName=="BTN_LAT_RLD")
     {
-        //changePage(uVehicleMaintainceCommunicationStatePage);
-        changePage(uVehicleMaintainceLAT_RLDPage);
+        //changePage(uVehicleMaintainceLAT_RLDPage);
     }
     else if(BTNName=="BTN_SoftwareVersion")
     {

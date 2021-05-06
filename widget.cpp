@@ -84,11 +84,15 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    //avic_imx_init(1);
+
     QDesktopWidget *desktop = QApplication::desktop();
 
-    ExternalDevice = new AVIC_ExternalDevice(this);
-
+//    ExternalDevice = new AVIC_ExternalDevice();
+    //AVIC init
+#ifndef MVB_CX
+    avic_imx_init(0);
+#endif
+    AVicBeepState = false;
     if (desktop->width() == 800 && desktop->height() == 600)
     {
         this->showFullScreen();
@@ -355,8 +359,8 @@ Widget::Widget(QWidget *parent) :
     this->vehicleSetSimlateStation->hide();
 
     //init H8 config
-    H8::initH8("/dev/ttyUSB_SC");
-    H8::getH8()->setBrightness(0);
+//    H8::initH8("/dev/ttyUSB_SC");
+//    H8::getH8()->setBrightness(0);
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uVehicleStationBar,this->vehicleStationBar);
@@ -425,7 +429,9 @@ Widget::Widget(QWidget *parent) :
 
 Widget::~Widget()
 {
-    //avic_imx_destory();
+#ifndef MVB_CX
+    avic_imx_destory();
+#endif
     delete ui;
 }
 void Widget::updatePage()
@@ -480,11 +486,15 @@ void Widget::updatePage()
     this->crrcFault->getLocalDateTime(database->HMI_DateTime_foruse);
 
     // start fault scanning thread
-    static int faultdelaycnt = 0;
-    if ((faultdelaycnt++ > 0) )
+    if(this->database->CTALL_CCUOnline_B1)
     {
-        crrcFault->start();
-        faultdelaycnt = 60;
+        static int faultdelaycnt = 0;
+        if ((faultdelaycnt++ > 40) )
+        {
+            //crrcFault->start();
+            crrcFault->UpadateFaultList();
+            faultdelaycnt = 60;
+        }
     }
 
 
@@ -500,19 +510,29 @@ void Widget::updatePage()
 
 //    if(database->CTR1_DOBSOI_B1 || database->CTR4_DOBSOI_B1)
 //    {
-//        //avic_beep(1);
+//        avic_beep(1);
 //    }else
 //    {
 //        //avic_beep(0);
 //    }
-
-    if((database->CTD_TrainSpeed_U16*0.1)>=125)
+//quxch
+    if((database->CTD_TrainSpeed_U16*0.1)>=125 && AVicBeepState == false)
     {
+        AVicBeepState = true;
+#ifndef MVB_CX
+        avic_beep(1);
+#else
         AVIC_ExternalDevice::getAVIC_ExternalDevice()->setBuzzerOn();
+#endif
     }
-    else
+    else if ((database->CTD_TrainSpeed_U16*0.1) < 125 && AVicBeepState == true)
     {
+        AVicBeepState = false;
+#ifndef MVB_CX
+        avic_beep(0);
+#else
         AVIC_ExternalDevice::getAVIC_ExternalDevice()->setBuzzeroff();
+#endif
     }
 
 }
@@ -866,6 +886,7 @@ void Widget::showEvent(QShowEvent *)
 
             //CCU-ATC
             crrcRicoMvb->addSinkPort(0xB18,MVB_FCode3,512);
+            crrcRicoMvb->addSinkPort(0xD28,MVB_FCode4,512);
 
             //CCU-PIS
             crrcRicoMvb->addSinkPort(0x918,MVB_FCode4,256);

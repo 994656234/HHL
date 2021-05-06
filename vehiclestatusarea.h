@@ -64,7 +64,7 @@ private slots:
 
 
     void on_BTNEmergencyBrocast_pressed();
-    void on_BTN_fangyou_pressed();
+    //void on_BTN_fangyou_pressed();
 };
 
 #endif // VEHICLESTATUSAREA_H

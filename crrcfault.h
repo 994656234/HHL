@@ -55,6 +55,8 @@ private :
 public:
     static CrrcFault* getCrrcFault();
 
+    void UpadateFaultList();
+
     static bool initCrrcFault(QString faultListPath, QString historyFilePath);
 
     void synchronize(CrrcRicoMvb *crrcRicoMvb);
